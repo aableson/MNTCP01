@@ -1,0 +1,726 @@
+\documentclass[12pt]{amsart}
+\input{PreambleCommon}
+\input{../WeekTitles}
+\begin{document}
+
+\newpage
+\setfont
+\pagestyle{fancy}
+\renewcommand{\Week}{10}
+\renewcommand{\WeekTitle}{\WeekTitleTen}
+
+\fancyhead[LE,RO]{Week \Week}  % default, usually only for first page
+\fancyfoot{}
+\sectionbox{Week \#\Week: \WeekTitle}
+
+\vspace{5mm}
+\goals 
+\begin{itemize}
+\item Express vectors, linear combinations, and compute dot products.
+\item Write information in matrix form in the context of engineering applications.
+\item Understand the definition of the transpose, and use MATLAB to compute it.
+\item Use MATLAB to compute the inverse of a matrix.
+\end{itemize}
+
+\newpage
+\topic{Linear Algebra - Introduction}
+\subsection*{Linear Algebra}
+
+As pointed out on several other occasions in the course, most laws
+of nature and science, once they are translated into mathematics,
+take the form of a {\bf differential equation}.
+
+A differential equation is quite unlike the other equations we have
+studied. For one thing, it involves derivatives, often even second
+or higher derivatives.  But this is not the most important
+difference between a differential equation and the kinds of
+equations we have been used to and continue to study in our courses. 
+\begin{itemize}
+\item Solutions to {\bf algebraic} equations are {\bf real values} (or sets of values) \\[2ex]
+
+\item Solutions to {\bf differential} equations are {\bf functions} (or sets of functions) \\[2ex]
+
+\end{itemize}
+
+\newpage
+\begin{problem}
+Which of the following {\bf functions} is a solution to the
+{\bf differential} equation $x^{\prime\prime} (t) = - 36 ~x(t)$? \\[2ex]
+\begin{enumerate}[A.]
+\item $x(t)=-6 t^3$ \\[2ex]
+\item $x(t)=\cos(6 t)$ \\[2ex]
+\item $x(t)=e^{-6t}$ \\[2ex]
+\item $x(t)=-e^{-6t}$
+\end{enumerate}
+\end{problem}
+\bigskip
+
+\newpage
+
+\begin{problem}
+Confirm your answer.
+\end{problem}
+$x^{\prime\prime} (t) = - 36 ~x(t)$ 
+\hfill\begin{minipage}[t]{0.4\linewidth}
+\begin{enumerate}[A.]
+\item $x(t)=-6 t^3$ 
+\item $x(t)=\cos(6 t)$ 
+\item $x(t)=e^{-6t}$ 
+\item $x(t)=-e^{-6t}$
+\end{enumerate}
+\end{minipage}
+
+\newpage
+\topic{Differential Equations - Harmonic Motion}
+\subsection*{Modeling with Differential Equations}
+
+\subsection*{Harmonic Motion} 
+We will begin by studying the possible
+solutions of a particular differential equation that will be very
+important in your Physics course next term. Thinking about these
+solutions will help us understand what we mean when we say a function
+is a solution of a differential equation.  The differential equation
+we saw in the previous concept question arises when we study the
+motion of a block at the end of a spring, as in the next diagram:
+\begin{center}
+\includegraphics[width=0.5\linewidth]{graphics/w11_block_pstricks}
+\end{center}
+
+ In this system, how would you describe $x$ in words?
+
+
+\newpage
+\begin{problem}
+  
+ Draw a free-body diagram for the mass.  Indicate the magnitude of the forces, assuming 
+\begin{itemize}
+\item the mass of the block is $m$ kg, and
+\item the spring constant (in $N/m$) is
+  given by the constant $k$.
+\end{itemize}
+\end{problem}
+
+
+\newpage
+Let us work with our intuition about this system before beginning the mathematics.
+
+\begin{problem}
+ If the spring is very stiff, is $k$ large or small?
+\end{problem}
+\vfill
+
+ If we exchange a soft spring for a stiff spring, do you
+  expect the \emph{period} of the oscillations to increase or
+  decrease? Why?
+\vfill
+
+
+\newpage
+\begin{problem}
+ If we replace a small mass with a heavier mass, do you expect
+the \emph{period} of the oscillations to increase or decrease? Why?
+\end{problem}
+
+\vfill
+
+ If we know $k$ and $m$, and assume that friction is
+  negligible, should we be able to determine the exact period of the
+  oscillations?
+\vfill
+
+ Does anyone know the formula for the period of oscillations of a spring system?
+\vfill
+
+\newpage
+
+The spring system is an excellent introduction to differential equations because 
+\begin{itemize}
+\item we all know how it \emph{should} work physically, \\[1ex]
+\item the mathematics and physics are simple, {\bf but} \\[1ex]
+\item there's no obvious way to predict critical features (e.g. the
+  period) from the given information. \\[1ex]
+\end{itemize}
+We clearly need some new tools!
+
+\newpage
+\topic{Analysis of Mass/Spring System}
+\subsection*{Analysis of Mass/Spring System}
+\begin{problem}
+ Use Newton's second law, $F = ma$, to construct an
+  equation involving the position $x(t)$.
+\end{problem}
+\vfill
+
+ What are we solving for in this equation?  I.e., what is
+  the unknown?
+\vfill
+
+\newpage
+\begin{problem}
+  
+  To simplify matters temporarily, let us assume that both
+  $k = 1 $ N/m and $m = 1$ kg. Rewrite the previous differential
+  equation.
+\end{problem}
+\vfill
+
+ This differential equation invites us to find a function
+$x(t)$ whose second derivative is its own negative.  Try to think of
+such a function.
+\vfill
+
+\newpage
+
+We have found a set of solutions for the differential equation
+$$\displaystyle\frac{d^2x}{dt^2}= - x.$$ Does this help us discover
+solutions for the differential equation 
+$$m\frac{d^2x}{dt^2}= - kx?$$  
+
+\begin{problem}
+  
+ Find one or more solutions to this second differential equation.
+\end{problem}
+\vfill
+
+\newpage
+~\hfill$m\frac{d^2x}{dt^2}= - kx$
+
+\newpage
+\begin{problem}
+  Find {\bf the most general family} of solutions to this
+  differential equation.
+\end{problem}
+
+
+% \includesoln{\solntest}{}{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% After some experimentation, you will notice that if we let
+% $\omega=\sqrt{k/m}$, then $x(t)= \cos(\omega t)$ and
+% $x(t)=\sin(\omega t)$ work, and then that any function of the form
+% $x(t)= B\cos(\omega t) + C\sin(\omega t)$ is a solution to this
+% differential equation.
+% }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\newpage
+\begin{problem}
+ If we define $\ds \omega = \sqrt{\frac{k}{m}}$, can we simplify our solutions?
+\end{problem}
+\vfill
+
+ Why is the variable $\omega$ (usually associated with circular motion) an appropriate name for this constant?
+\vfill
+
+\newpage
+\topic{Two Formulas for Oscillations}
+\subsection*{Two Formulas for Oscillations}
+
+From our solution $x(t) = A \cos(\omega t) + B \sin(\omega t)$, we get
+the sense that the position of the mass attached to a spring will
+oscillate at frequency $\omega$ rad/s. But imagining what the sum of a
+sine and cosine curve together looks like is not easy: it is a
+simple-looking curve or not?  
+\\ 
+Fortunately, there is another way to
+write the solution that is much more easily sketched.
+
+\newpage
+A less obvious solution to the DE
+$$\frac{d^2x}{dt^2}= - \omega^2\, x $$
+is 
+$$x(t)= C\cos(\omega t - \phi)$$
+
+Through the use of the trig identity 
+$$\cos(x-y) = \cos(x)\cos(y) + \sin(x)\sin(y)$$ 
+we can derive the following relations:
+
+\begin{boxnote}
+$$A \cos(\omega t) + B \sin(\omega t) = C \cos(\omega t - \phi) $$
+$$\text{where} \quad C = \sqrt{A^2 + B^2} \quad \text{and} \quad \tan(\phi) = \frac{B}{A}$$
+\end{boxnote}
+
+\newpage
+$$A \cos(\omega t) + B \sin(\omega t) = C \cos(\omega t - \phi) $$
+$$\text{where} \quad C = \sqrt{A^2 + B^2} \quad \text{and} \quad \tan(\phi) = \frac{B}{A}$$
+
+\begin{problem}
+ Prove the equivalency of the two forms, and draw a
+  triangle that represents the relationship between all the
+  constants.
+\end{problem}
+
+\newpage
+\hfill
+\begin{minipage}{0.7\linewidth}
+$$A \cos(\omega t) + B \sin(\omega t) = C \cos(\omega t - \phi) $$
+$$\text{where} \quad C = \sqrt{A^2 + B^2} \quad \text{and} \quad \tan(\phi) = \frac{B}{A}$$
+\end{minipage}
+
+%  Confirm that this is in fact a solution to the spring
+%   DE.
+
+%  Are the functions of this form actually different than our earlier
+% $x(t) = A \cos(\omega t) + B \sin(\omega t)$ solutions?
+
+% No: 
+
+% In fact it does not, for we will
+% now show that these two only look like different functions, and
+% that, using appropriate trigonometric identities, we can show that
+% each $B\cos(\omega t) + C\sin(\omega t)$ is identically equal to
+% $A\cos(\omega t + \phi)$ for suitable $A$ and $\phi$, and
+% conversely.
+
+% First of all, you should note that allowing $A$ to be negative in
+% the expression $x(t)= A\cos(\omega t + \phi)$ amounts to unnecessary duplication, for if
+% we add $\pi$ to $\phi$ we change the sign of the expression:
+% $$ A\cos(\omega t + \phi +\pi) = -A\cos(\omega t + \phi)$$
+% The reason for this is that $\cos(x+\pi)=-\cos(x)$ for any $x$.
+% Thus, we may as well assume that $A$ is chosen to be positive.
+
+% Now there is a trigonometric identity for the cosine of the sum of two angles; it is proved in Appendix D in the textbook if you have not seen it before: $$\cos(a+b) = \cos a \cos b - \sin a \sin b\,
+% . $$ If we apply this with $a=\omega t$ and with $b=\phi$, we obtain
+% $$A\cos(\omega t + \phi)= A\left[ \cos(\omega t)\cos(\phi)-\sin(\omega
+% t)\sin(\phi)\right]$$
+% $$ = [A\cos(\phi)]\cos(\omega t) + [-A\sin(\phi)]\sin(\omega
+% t)\, . $$ Notice that $t$ is the only variable in this expression;
+% the other letters represent constants.  The question before us is:
+% Can $B$ and $C$ be chosen so that this is exactly the same as
+% $B\cos(\omega t) + C\sin(\omega t)$ {\bf for all $t$}?  Clearly we can,
+% by simply letting %
+% \[\begin{array}{lclcl}
+% B & = & A\cos(\phi) & = & A\cos(-\phi) \\
+% C & = & -A\sin(\phi) & = & A\sin(-\phi)\\
+% \end{array}\]
+
+% Conversely, we could ask whether we can always solve for $A$ and
+% $\phi$ in terms of $B$ and $C$.  We are not interested in knowing an
+% actual formula so much as knowing that it is possible, so that we
+% can say with confidence that the two families of solutions we found
+% are really one and the same - that for each expression in one family
+% there is a corresponding one (defining the same function) in the
+% other. To see that this can always be done, suppose a number $\phi$
+% and a (positive) number $A$ are given. The we can imagine a line
+% segment of length $A$ emanating from the origin and making the angle
+% $-\phi$ with the horizontal axis:
+
+% \includesoln{\solntest}{
+% \begin{center}
+% \begin{pspicture}(-3,-2.5)(3,2.5)
+% \psdot(0,0)\psline(0,0)(3,-2)
+% \psline[linestyle=dashed]{->}(-3,0)(3,0)
+% \psline[linestyle=dashed]{->}(0,-2.5)(0,2.5)\rput(.85,-.25){$-\phi$}
+% \psdot(3,-2) \rput(1.4,-1.2){$A$} \psline{->}(1.2,-1.1)(-.1,-.2)
+% \psline{->}(1.6,-1.3)(2.8,-2.1)
+% \end{pspicture}
+% \end{center}
+% }{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \begin{center}
+% \begin{pspicture}(-3,-2.5)(3,2.5)
+% \psdot(0,0)\psline(0,0)(3,-2)
+% \psline[linestyle=dashed]{->}(-3,0)(3,0)
+% \psline[linestyle=dashed]{->}(0,-2.5)(0,2.5)\rput(.85,-.25){$-\phi$}
+% \psdot(3,-2) \rput(1.4,-1.2){$A$} \psline{->}(1.2,-1.1)(-.1,-.2)
+% \psline{->}(1.6,-1.3)(2.8,-2.1) \rput(3.7,-2){$(B,C)$}
+% \end{pspicture}
+% \end{center}
+% }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% \ques{What are the coordinates of the endpoint of the line segment?}
+% \includesoln{\solntest}{\vspace{2cm}}{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% If we drop a perpendicular from the endpoint to the horizontal axis,
+% or think of the segment as a vector from the origin to its endpoint,
+% it is easy to see that the coordinates of the endpoint are
+% $(A\cos(-\phi),A\sin(-\phi))=(A\cos(\phi),-A\sin(\phi))$.
+
+% }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%  This shows that for any $A$ and any
+% $\phi$ the associated numbers $B$ and $C$ are just the coordinates
+% of the endpoint of the line segment we drew; and, conversely, if $B$
+% and $C$ are given, then we let $A$ be the length of the segment from
+% the origin to the point $(B,C)$ and $\phi$ the angle it makes with
+% the horizontal axis.  Thus we have shown geometrically that we can
+% always solve for $B$ and $C$ if we know $A$ and $\phi$, and
+% conversely.
+
+
+% The upshot of this discussion is that\\
+
+%  \thmbox{The family of functions
+% $$B\sin(\omega t) + C\cos(\omega t)\, ,$$
+% where $B$ and $C$ are arbitrary constants, and the family of
+% functions
+% $$A\cos(\omega t + \phi)\, ,$$
+% where $\phi$ is an arbitrary constant and $A$ an arbitrary positive
+% constant, are really the same family.  Each member of this family of
+% functions is a solution to the differential equation
+% $$ x^{\prime\prime} (t) = - \omega^2 x(t)$$
+% arising from Hooke's Law.}
+
+% By another, rather long, argument it can be shown that there are no
+% solutions arising from Hooke's Law, other than the ones in this
+% family of functions. We will simply assume this.
+
+
+% \paragraph{What do these solutions look like?}  We should now describe the functions
+% in this family of
+% solution, for they tell us how the block will move under the
+% influence of the spring.
+
+% To do this it is easiest to work with the expression
+% $$A\cos(\omega t + \phi)\, .$$  We begin by observing that these
+% functions are all periodic:
+
+% \conques{$x(t) = A\cos(\omega t + \phi)$ is periodic with period
+% \begin{enumerate}
+% \item[A. ] $2\pi$
+% \item[B. ] $\omega$
+% \item[C. ] $\phi/\omega$
+% \item[D. ] $2\pi/\omega$
+% \end{enumerate}
+% }
+
+% \includesoln{\solntest}{\vspace{6cm}}{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% The key question is: what fixed number $a$ is such that $x(t+a) =
+% x(t)$ for all $t$?  That is, we want $\cos(\omega (t+a) + \phi) =
+% \cos(\omega t + \phi)$.  That is, we want
+% $$\cos(\omega t + \phi + \omega a ) = \cos(\omega t + \phi)\, .$$
+% We know that the cosine function is periodic with period $2\pi$, so
+% we know that
+% $$\cos(\omega t + \phi + 2\pi ) = \cos(\omega t + \phi)\, .$$
+% Thus we want $2\pi = \omega a$.  That is, we want $a = 2\pi/\omega$.
+% In other words, D is the correct answer.
+% }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\newpage
+\topic{Graphs of Shifted Cosines}
+\subsection*{Graphs of $C \cos(\omega t - \phi)$ }
+
+We have now shown that the functions $x(t) = A \cos(\omega t) + B \sin(\omega t)$
+and $x(t) = C \cos(\omega t - \phi)$ are identical.  What do they look like?
+\vfill
+Stage 1: $y = \cos(t)$
+\begin{center}
+\includegraphics[width=0.8\linewidth]{graphics/week11_cos1}
+\end{center}
+\vfill
+
+Stage 2: $y = \cos(t - \phi)$
+\vfill
+\begin{center}
+\includegraphics[width=0.8\linewidth]{graphics/week11_cos2}
+\end{center}
+
+\newpage 
+
+Stage 3: $y = \cos(\omega t - \phi)$
+\begin{center}
+\includegraphics[width=0.8\linewidth]{graphics/week11_cos3}
+\end{center}
+\vfill
+
+Stage 4: $y = C \cos(\omega t - \phi)$
+\begin{center}
+\includegraphics[width=0.8\linewidth]{graphics/week11_cos4}
+\end{center}
+\vfill
+
+\newpage
+The upshot of this discussion is that $C\cos(\omega t - \phi)$ 
+\begin{itemize} 
+\item is a``sinusoidal'' function (that is, it is shaped like a sine or
+cosine function); \\[1ex]
+\item has {\bf amplitude} $C$; \\[1ex]
+\item is periodic with {\bf period} $2\pi/\omega$; \\[1ex]
+\item has its first peak at $\ds t = \frac{\phi}{\omega}$  (or when $(\omega t - \phi) = 0$). \\[1ex]
+\end{itemize}
+The motion described by the function $C\cos(\omega t - \phi)$ is known
+as {\bf simple harmonic motion}.
+
+\newpage
+\begin{problem}
+  Recall that in an application of spring motion
+  $\displaystyle\omega = \sqrt{\frac{k}{m}}$, where $k$ is the
+  stiffness of the spring and $m$ is the mass of the sliding block.
+  Suppose the motion of the block is started by releasing the block
+  from a non-equilibrium position.  Which of the following will change
+  the {\bf time it takes} for the block to go through {\bf one cycle} of its
+  periodic motion? \\[1ex]
+\begin{enumerate}[A.]
+\item The block is given a small push in the direction away from the equilibrium position. \\[1ex]
+\item The block is released closer to the equilibrium position. \\[1ex]
+\item A weight is attached to the top of the block.
+\end{enumerate}
+
+\end{problem}
+
+
+\newpage
+\begin{problem}
+For a block attached to a spring (with spring constant $k$) on a
+frictionless table, the potential energy is 0 when the block is in
+the equilibrium position. What is the potential energy when the
+extension of the spring is $x$?
+
+\end{problem}
+
+\newpage
+ \begin{problem}
+If an object undergoes harmonic motion, so that its
+position function is a solution of the differential equation
+$$ x^{\prime\prime} (t) = - \frac{k}{m} x(t)\, ,$$ prove using the
+differential equation that
+$$ m(x^\prime(t))^2 + k(x(t))^2 = \mbox{a constant}$$
+\end{problem}
+
+\newpage
+$$ m(x^\prime(t))^2 + k(x(t))^2 = \mbox{a constant}$$
+\begin{problem}
+What does this equation tell you physically?
+\end{problem}
+
+
+
+
+\newpage
+
+\topic{First-Order Differential Equations}
+\subsection*{First-Order Differential Equations}
+We have studied the differential equation for harmonic motion and
+found its solutions.  This differential equation 
+$$ m x'' = - k x$$
+was a {\bf second order} differential equation, by which we mean that
+it involved {\bf second derivatives} of the unknown function. 
+
+Our methods for finding solutions were ad hoc: there is no indication
+how the technique we used to find these solutions might be used to
+solve other differential equations.  In second year, you will have a
+full course on differential equations where you will learn a more
+systematic approach for solving second order DEs.
+
+In this class, we will limit ourselves to methods for solving {\bf
+  first order} DEs (equations which involves first derivatives only).
+
+\newpage
+ Consider the form
+$$\frac{dy}{dx} = f(x,y) $$
+where $f(x,y)$ indicates an expression involving $x$ and $y$ but no
+derivatives. 
+
+\begin{problem}
+What would we be trying to solve for in this equation?
+\end{problem}
+\vfill
+
+\begin{problem}
+ If we picked an arbitrary $(x,y)$ point on the graph of a
+  solution, $y(x)$, what graphical interpretation could we make about
+  the shape of the graph of $y(x)$ there?
+\end{problem}
+\vfill
+
+\newpage
+
+% This type of equation has a very nice visualization.
+% Think of the unknown function $y$ as measured along the dependent
+% axis, and $x$ as independent variable in the usual way.  We are
+% looking for a solution function $y(x)$.  The differential equation
+% tells you that when $x$ has a given value and $y$ has a particular
+% value, then the slope of the function you are trying to find is
+% equal to the value of $f(x,y)$.  For example, suppose the
+% differential equation is
+% and that a solution $y(x)$ of this equation has the value 3 when
+% $x=2$, then the slope of the graph of $y(x)$ at $x=2$ is 6.  This
+% observation allows us to think of finding a solution to this kind of
+% differential equation in terms of a picture.
+
+\begin{problem}
+On the following grid, draw the slopes for the differential equation
+equation 
+ $$\frac{dy}{dx} = xy$$
+ at a number of points.  The result is know as the {\bf slope field}
+ of the differential equation. 
+
+
+\hfill \includegraphics[width=0.4\linewidth]{graphics/w11_axes_pstricks}
+
+Once you have the slope field, use your picture to 
+sketch the graphs
+of some {\bf solutions} to this differential equation.
+\end{problem}
+
+\newpage
+Here is a computer-generated version of that slope field:
+\begin{center}
+\includegraphics[width=7in]{graphics/w11_slopefield}
+\end{center}
+\begin{problem}
+Sketch the graphs
+of some {\bf solutions} to this differential equation.
+\end{problem}
+
+\newpage
+\topic{Constant Solutions}
+\subsection*{Constant Solutions}
+$$ y' = xy$$
+\begin{problem}
+There was one solution that was perfectly horizontal.  Identify this {\bf constant solution}
+based only on the differential equation. 
+\end{problem}
+
+\vfill
+
+\begin{problem}
+Show that there are no other possible constant solutions to $y' = xy$. 
+\end{problem}
+
+\vfill
+\newpage
+\topic{Separable Differential Equations}
+\subsection*{Separable Differential Equations}
+A {\bf separable differential equation} is a differential equation
+in which the expression for the derivative can be isolated and
+written as a product of two functions, one involving only the
+independent variable and the other involving only the dependent
+variable.  That is, it is a separable differential equation if it
+can be written in the form
+$$ \frac{dy}{dx} = g(x) f(y)\, .$$
+
+\newpage
+\begin{problem}
+Which of the following are separable?
+\begin{center}\begin{tabular}{rlrl}
+1. & $\ds \frac{du}{dt} = u\cos(t)$ &
+\qquad \qquad 2. & $\ds x^\prime (t) = k t$ \\[2.5ex]
+3. & $\ds 4\frac{dy}{dx} = xy$  &
+4. & $\ds T^\prime (t) = T(t)-20$ \\[1ex]
+\end{tabular}\end{center}
+~\\[1ex]
+\begin{enumerate}[A.]
+\item All of them. \\[1ex]
+\item Number 3 only. \\[1ex]
+\item Numbers 1 and 3.
+\end{enumerate}
+
+\end{problem}
+
+\newpage
+
+Give examples of other DEs which are {\bf not} separable. 
+
+\newpage
+\topic{Separation of Variables - Example 1}
+\subsection*{Separation of Variables - Example 1}
+\begin{problem}
+Use separation of variables to find a solution to the differential equation $y' = xy$.
+\end{problem}
+
+
+\newpage
+\hfill $y' = xy$.
+
+\newpage
+
+\begin{problem}
+  Sketch the solutions you found on the earlier slope field for $y' = xy$.
+\begin{center}
+\includegraphics[width=7in]{graphics/w11_slopefield}
+\end{center}
+\end{problem}
+
+% For such values of $y$ it is convenient to define $h(y)
+% = 1/f(y)$.  The differential equation then becomes
+% $$\frac{dy}{dx} = \frac{g(x)}{h(y)}\, . $$
+% The method for solving separable equations hinges on our ability to
+% {\bf separate the variables} as follows:
+% $$ h(y) dy = g(x) dx\, . $$
+% Writing it this way, invites integrating both sides:
+% $$ \int h(y) dy = \int g(x) dx\, . $$
+% Before we go on, we should justify this formal pushing around of
+% symbols.  Do we have any justification for believing that doing this
+% will lead to a solution for the differential equation?  An
+% indefinite integral is an anti-derivative (and always involves an
+% arbitrary constant), so the last equation can be thought of as
+% follows:  Suppose we have found anti-derivatives $H(y) =  \int h(y)
+% dy $ and $G(x) = \int g(x)\,dx$ (each hiding an arbitrary constant
+% of course).  Now put these equal to each other, $H(y)=G(x)$, and
+% solve this for $y$ in terms of $x$.  Do we know that $y=y(x)$ will
+% then be a solution to the differential equation?
+
+% \ques{Use implicit differentiation on $H(y)=G(x)+C$ to show that $y$
+% is a solution to the differential equation $$\frac{dy}{dx} =
+% \frac{g(x)}{h(y)}\, . $$}
+% \includesoln{\solntest}{\mbox{}\\[8cm]}{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Differentiating with respect to $x$ we get $$H^\prime (y)
+% \frac{dy}{dx} = G^\prime (x)$$ and thus
+% $$h(y)\frac{dy}{dx} = g(x)\, .$$
+% That is,
+% $$\frac{dy}{dx} = \frac{g(x)}{h(y)}\, . $$
+% }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\topic{Separation of Variables - Method}
+The method for separation of variables can be summarized as follows:
+
+\begin{boxnote}
+{\bf Separable differential equations}
+\begin{center}
+\begin{minipage}{0.9\linewidth}
+ Separate the
+ variables to produce an equality of differential expressions
+ $$ h(y) dy =  g(x) dx\, , $$
+ Find anti-derivatives of both sides (thus introducing an arbitrary
+ constant) giving $$H(y)= G(x)$$ and solve for $y$ in terms of $x$.
+\end{minipage}
+\end{center}
+\end{boxnote}
+
+\newpage
+\topic{Separation of Variables - Example 2}
+\begin{problem}
+Find the solution to 
+\[ \frac{dC}{dt} =  r - kC.
+\]
+ 
+\end{problem}
+
+\newpage
+\hfill
+$\ds \frac{dC}{dt} =  r - kC$
+
+
+\newpage
+
+The differential equation in the previous example, $\ds \frac{dC}{dt} = r - kC$, shows up in many applications.
+\begin{itemize}
+\item This model can describe the concentration of a drug in a patient; if
+it is injected at a rate of $r$ g/hour, and metabolized at a rate
+proportional to the amount present, then the net rate of change is
+$$\mbox{net rate} = \mbox{ rate in} - \mbox{rate out} = r - kC$$
+\item The solutions to this DE are typical in that the ``+ D'' from
+  integration appears, but {\bf not as an additive term} in the final
+  solution.
+
+\end{itemize}
+
+\newpage
+$$\ds \frac{dC}{dt} = r - kC$$
+\begin{problem}
+If $C$ represents a concentration, what will the concentration value converge to in the long run? 
+
+\begin{enumerate}[A.]
+\item $0$ \\[1ex]
+\item $r$ \\[1ex]
+\item $k$ \\[1ex]
+\item $r-k$ \\[1ex]
+\item $r/k$
+\end{enumerate}
+\end{problem}
+
+\newpage
+$$\ds \frac{dC}{dt} = r - kC$$
+\begin{problem}
+Support your answer by looking for the constant solution(s) to the DE.
+\end{problem}
+
+
+\end{document}
