@@ -1,0 +1,50 @@
+
+% *** Setup Latex for the large version of the files ***
+%\usepackage[landscape]{geometry}
+\usepackage[letterpaper,landscape,hmargin={.8in,.8in}]{geometry}
+
+% **** RENEW SCALING COMMANDS HERE ****
+% *** Text in boxes ***
+\renewenvironment{boxnote}{\begin{noteinbox}[H] \huge}{\end{noteinbox}} 
+
+% *** Chapter lead in/summary boxes ***
+\renewcommand{\sectionbox}[1]{% 
+\begin{tabular}{|p{9.5in}|}%
+\hline%
+\ \\ %
+{\huge {\bf {#1}}}  \\%
+\ \\%
+\hline%
+\end{tabular}}
+
+% *** 'Section'' commands, which are sometimes used for spacing
+% From http://zoonek.free.fr/LaTeX/LaTeX_samples_section/0.html
+\makeatletter
+\renewcommand\section{\@startsection {section}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\huge\bf}}
+
+\renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+                                   {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                   {2.3ex \@plus.2ex}%
+                                   {\huge\bf}}
+
+% *** 'Goals' should be larger in the overheads ***
+\renewcommand\goals{\huge {\bf {Goals:}}}
+\renewcommand\setfont{\huge }
+
+% *** special pagebreaks for large notes 
+\renewcommand\newpagelarge{\newpage}
+
+% *** New line break for large versions ***
+\renewcommand\llb{ \\ }
+
+% *** Notes only / Large only commands ***
+\renewcommand{\notesonly}[1]{  }
+\renewcommand{\largeall}[1]{ #1 }
+\renewcommand{\landscapeonly}[1]{ #1 }
+
+\thispagestyle{empty}
+
+\setfont 

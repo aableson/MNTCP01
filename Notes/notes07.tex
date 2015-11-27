@@ -1,0 +1,475 @@
+\input{PreambleCommon}
+\input{../WeekTitles}
+
+\begin{document}
+\setfont
+\pagestyle{fancy}
+\renewcommand{\Week}{7 }
+\renewcommand{\WeekTitle}{\WeekTitleSeven }
+
+\fancyhead[LE,RO]{Week \Week}  % default, usually only for first page
+\fancyfoot{}
+\sectionbox{Week \#\Week: \WeekTitle}
+
+\vspace{5mm}
+\noindent
+
+\goals
+\begin{itemize}
+\item Determine how to calculate the area described by a function.
+\item Define the {\bf definite integral}.
+\item Explore the relationship between the definite integral and area.
+\item Explore ways to estimate the definite integral.
+\end{itemize}
+
+\newpage
+
+\topic{Integration} 
+\subsection*{Integration} 
+If we had to summarize the first half of
+the course, we would have to say that the focus was on {\bf
+  differentiation}. 
+
+All differentiation problems ask the same basic question: {\bf At what
+  rate does a process change}, and how does that rate of change relate
+to other characteristics of the process?
+
+The key observation was that {\bf at small scales, rates of change look linear}.
+
+\newpage
+
+In the remainder of the course we will study {\bf integration}.
+Again, the analysis will be made possible by the observation that on a very
+small scale all processes look linear.  This time, though, we will use
+this fact to see how regarding a process as an {\bf accumulation} of
+infinitely many small linear steps allows us to calculate the
+accumulated total even when the rate of accumulation is far from
+linear.  {\bf Integration is always in some way about finding the
+  total at the end of a process of accumulation.}
+
+\newpage
+
+
+ \topic{Distance and Velocity}
+ \subsection*{Distance and Velocity}
+
+ Recall that if we measure distance $x$ as a function of time $t$, the
+ velocity is determined by differentiating $x(t)$: 
+ \begin{center}
+{\bf Velocity} is the {\bf slope} on the {\bf position graph}.
+ \end{center}
+
+ But now suppose we begin with a {\bf graph of the velocity} with
+ respect to time.  How can we determine what {\bf distance} will be
+ traveled?  Does distance also ``appear'' in the velocity graph
+ somehow?
+
+\newpage
+
+\problem 
+ Consider the graph for the velocity of a particle shown below. 
+\begin{center}
+\includegraphics[width=0.25\linewidth]{graphics/w07_const_velocity}
+\end{center}
+How far did the particle travel between $t=0$ and $t=5$ seconds?
+\begin{enumerate}[(a)]
+\item 5 m\\[1ex]
+\item 10 m\\[1ex]
+\item 15 m\\[1ex]
+\item 20 m
+\end{enumerate}
+
+\newpage
+\problem 
+~
+\begin{center}
+\includegraphics[width=0.25\linewidth]{graphics/w07_const_velocity}
+\end{center}
+
+Where does the distance travelled between $t=0$ and $t=5$ ``appear''
+on this velocity graph?
+\begin{enumerate}[(a)]
+\item The distance travelled is the {\bf slope} between $t=0$ and $t=5$  \\[1ex]
+\item The distance travelled is the {\bf average height} of the graph between $t=0$ and $t=5$  \\[1ex]
+\item The distance travelled is the {\bf area} under the graph between $t=0$
+  and $t=5$.
+\end{enumerate}
+
+\newpage
+
+When the velocity is {\bf constant}, we have the equivalency:
+\vspace{0.2in}
+\begin{center}
+dist = vel $\times$ time ~~~~ $\Longleftrightarrow$ dist = area under the velocity graph
+\end{center}
+\vspace{0.2in}
+
+\problem 
+What about when the velocity is {\bf not} constant though?
+
+\begin{center}
+\includegraphics[width=0.35\linewidth]{graphics/w07_variable_velocity}
+\end{center}
+
+Do the units of the ``area'' under this graph still make sense as a
+distance value?
+
+
+\vfill
+\newpage
+ \topic{Calculating Areas}
+\subsection*{Calculating Areas}
+
+It appears that the distance traveled is the area under the graph of
+velocity, even when the velocity is changing. We'll see exactly why
+this is true very soon.
+
+If we are simply interested in the area under a graph, without any
+physical interpretation, we can already do so if the graph creates a
+shape that we recognize.
+\newpage
+
+\problem Calculate the area between the $x$-axis and the graph of $y = x+1$ from $x=-1$ and $x=1$.
+
+\hfill \includegraphics[width=0.25\linewidth]{graphics/w07_linear_area}
+\newpage
+
+\problem Calculate the area between the $x$-axis 
+and the graph of $y = \sqrt{1 - x^{2}}$ from $x = -1$ to $x = 1$.
+
+\hfill \includegraphics[width=0.3\linewidth]{graphics/w07_semi_circle_area}
+
+\vfill
+
+\problem What shapes do you know, right now, for which you can
+calculate the exact area?
+
+\vfill
+
+\newpage
+
+\topic{Estimating Areas}
+\subsection*{Estimating Areas}
+
+Unfortunately, many or most arbitrary areas are essentially impossible
+to find the area of when the shape isn't a simple composition of
+triangles, rectangles, or circles.
+
+In these cases, we must use less direct methods.  We will start by
+making an {\em estimate} of the area under the graph using shapes
+whose area is easier to calculate.
+
+\newpage
+
+\problem Suppose we are trying to find the area underneath the graph of the
+function $f(x)$ given below between $x = 1$ and $x=4$.  Shade in that
+region, and call that area $A$.
+
+\begin{center}
+\includegraphics[width=4in]{graphics/w07_graph06}
+\end{center}
+
+
+\newpage
+We can make a rough estimation of the area by drawing a rectangle that
+completely contains the area, or a rectangle that is completely
+contained by the area.
+
+
+\problem 
+{Calculate this overestimate and underestimate for the
+  area $A$.}
+  
+\hfill \includegraphics[width=4in]{graphics/w07_graph06}
+
+
+\newpage The next step is to use smaller rectangles to improve our
+estimate the area.  We can divide the interval from $x = 1$ to $x = 4$
+into 3 intervals of width 1, and use different size rectangles on each
+interval.
+
+
+
+\problem Estimate the area $A$ by using 3 rectangles of width 1.
+  Use the function value at the {\em left} edge of the interval as the
+  height of each rectangle.
+
+\hfill \includegraphics[width=0.43\linewidth]{graphics/w07_graph06}
+
+\newpage
+
+We can repeat this process for any number of rectangles, and we expect
+that our estimation of the area will get better the more rectangles we
+use.  The method we used above, choosing for the height of the
+rectangles the function at the left edge, is called the {\bf left hand
+  sum}, and is denoted {\em LEFT(n)} if we use $n$ rectangles.
+
+\newpage
+
+\topic{Generalizing Area Calculation with Summation Notation}
+\subsection*{Generalizing the Area Calculation}
+
+Suppose we are trying to estimate the area under the function $f(x)$
+from $x = a$ to $x = b$ via the left hand sum with $n$ rectangles.
+\begin{itemize}
+\item the {\bf width} of each rectangle will be $\Delta x =
+\displaystyle\frac{b-a}{n}$.  
+\item If we label the endpoints of the
+intervals to be $a = x_{0} < x_{1} < \cdots < x_{n-1} < x_{n} = b$,
+then the {\bf heights} of the rectangles will be $f(x_{i})$'s, and
+\item the formula for the left hand sum/area will be
+\end{itemize}
+
+\begin{align*}
+  LEFT(n) = & f(x_{0}) \Delta x+ 
+ f(x_{1}) \Delta x + \ldots + 
+ f(x_{n-1}) \Delta x 
+\\  = & \displaystyle\sum_{i=1}^{n} f(x_{i-1})\Delta x.
+\end{align*}
+
+\newpage
+
+\subsection*{Aside: Summation Notation}
+
+The capital greek letter sigma, $\sum$, is used as a shortform notation for long sums.
+E.g.
+$$\ds \sum_{i=1}^n x_i$$
+
+\newpage
+\problem 
+Translate the following into more traditional sums:
+
+$\ds \sum_{i=1}^{100} i= $ \vfill 
+
+$\ds \sum_{n=1}^{10} n^2 + n= $  \vfill
+
+$\ds \sum_{i=1}^{n}  f(x_{i-1}) ~\Delta x= $
+\vfill
+
+\newpage
+\topic{Back to Areas!} 
+\subsection*{Back to Areas!} 
+
+Thinking back to our LEFT sum to estimate areas, we have a similar
+definition for the {\bf right hand sum}, or {\em RIGHT(n)}. This is
+calculated by taking the height of each rectangle to be the height of
+the function at the {\bf right hand endpoint} of the interval.
+
+\begin{align*}
+RIGHT(n) = & f(x_{1}) \Delta x+ 
+f(x_{2}) \Delta x + \ldots + 
+ f(x_{n}) \Delta x \\ 
+= &  \displaystyle\sum_{i=1}^{n} f(x_{i})\Delta x.
+\end{align*}
+
+\bigskip
+
+\newpage 
+
+{Calculate LEFT(6) and RIGHT(6) for the function shown,
+  between $x=1$ and $x=4$.  You will need to estimate some rectangle
+  heights from the graph.}
+
+\includegraphics[width=0.4\linewidth]{graphics/w07_graph06}
+\hfill \includegraphics[width=0.4\linewidth]{graphics/w07_graph06}
+\newpage
+
+%{In general, when will LEFT(n) be greater than RIGHT(n)? }
+%\vfill 
+%
+%{ When will LEFT(n) be an overestimate for the
+%  area?}  \vfill 
+%
+%{ When will LEFT(n) be an underestimate?}
+%
+%\vfill
+%
+%\newpage
+
+\topic{Riemann Sums}
+\subsection*{Riemann Sums}
+
+Area estimations like $LEFT(n)$ and $RIGHT(n)$ are often called {\bf
+  Riemann sums}, after the mathematician Bernahrd Riemann (1826-1866)
+who formalized many of the techniques of calculus.  The general form
+for a Riemann Sum is
+
+\begin{align*}
+ f(x_{1}^{*}) \Delta x+ f(x_{2}^{*}) \Delta x + \ldots + f(x_{n}^{*}) \Delta x 
+ \\ = \displaystyle\sum_{i=1}^{n} f(x_{i}^{*})\Delta x
+\end{align*}
+
+where each $x_{i}^{*}$ is some point in the interval $[x_{i-1},
+x_{i}]$.  For $LEFT(n)$, we choose the left hand endpoint of the
+interval, so $x_{i}^* = x_{i-1}$; for $RIGHT(n)$, we choose the right
+hand endpoint, so $x_{i}^* = x_{i}$.  \newpage 
+
+The common property of all these
+approximations is that they involve
+\begin{itemize}
+\item a sum of rectangular areas, with \\[1ex]
+\item widths ($\Delta x$), and \\[1ex]
+\item heights ($f(x_i^*)$)
+\end{itemize}
+
+
+
+There are other Riemann Sums that give slightly better estimates of
+the area underneath a graph, but they often require extra computation.
+We will examine some of these other calculations a little later.
+
+\newpage
+
+\topic{The Definite Integral}
+\subsection*{The Definite Integral}
+
+We observed that as we increase the number of rectangles used to
+approximate the area under a curve, our estimate of the area under the
+graph becomes more accurate.  This implies that to obtain the {\bf
+  exact area}, we should use a {\bf limit} on our Riemann sums.
+
+\medskip
+\begin{center}
+The area underneath the graph of $f(x)$ between $x=a$ and $x=b$ is equal to $\displaystyle\lim_{n \to \infty} LEFT(n) = 
+\displaystyle\lim_{n \to \infty} \displaystyle\sum_{i=1}^{n} f(x_{i-1})\Delta x$, ~~~where $\Delta x = \displaystyle\frac{b-a}{n}$.
+\end{center}
+
+This limit is called the {\em definite integral} of $f(x)$ from $a$ to $b$, and is equal to the area under curve whenever $f(x)$ is a non-negative continuous function.  The definite integral is written with some special notation.
+
+\newpage
+
+  {\bf{Notation for the Definite Integral}} 
+  
+  The definite integral of $f(x)$ between $x=a$ and
+  $x=b$ is denoted by the symbol $$\int_{a}^{b} f(x) \,dx$$
+  We call $a$ and $b$ the {\bf{limits of integration}} and $f(x)$ the
+  {\bf{integrand}}.  The $dx$ denotes which variable we are using; this will become important for using some techniques for calculating definite integrals.
+Note that this notation shares the same common structure with Riemann sums: 
+\begin{itemize}
+\item a sum ($\ds \int $ sign) \\[1ex]
+\item widths ($dx$), and \\[1ex]
+\item heights ($f(x)$)
+\end{itemize}
+
+\newpage 
+
+\problem Write the definite integral representing the area underneath
+  the graph of $f(x) = x + \cos x$ between $x=2$ and $x=4$.
+
+\vfill
+
+\newpage
+
+\problem 
+  Use a right hand sum with $n=4$ to estimate $\displaystyle
+  \int_{0}^{2}x^2\,dx$.  
+
+\newpage
+
+\vfill Sketch how the $n=$ right hand sum calculation would be
+represented graphically, and how it differs from the exact value of
+$\ds \int_0^2 x^2~dx$.
+
+\includegraphics[width=0.3\linewidth]{graphics/w07_parabola_for_areas}
+\hfill
+\includegraphics[width=0.3\linewidth]{graphics/w07_parabola_for_areas}
+
+\newpage
+
+% You can get MuPAD to draw the diagram associated with the midpoint
+% rule for this integral by first creating the plot object for the graph:
+
+% [\, {\bf GRPH := plot::Function2d(x$\wedge$2, x=0..2)}
+
+% and then use this graph to produce the plot object for the midpoint rule with 4 intervals:
+
+% [\, {\bf RECTS := plot::Integral(GRPH, IntMethod=RiemannMiddle, Nodes=[4])}
+
+% You can then show them together by typing
+
+% [\, {\bf plot(GRPH, RECTS)}
+
+% The values of the Riemann sum and the integral are automatically printed on the diagram.
+
+%\newpage
+
+\topic{Negative Integral Values}
+\subsection*{Negative Integral Values}
+
+So far we have only dealt with the areas under/intergrals of {\bf
+  positive} functions.  Will the definite integral still be equal to
+the area underneath the graph if $f(x)$ is always negative?  What
+happens if $f(x)$ crosses the $x$-axis several times?
+
+
+
+\problem Suppose that $f(x)$ has the graph shown below, and that A, B,
+  C, D, and E are the areas of the regions shown.
+
+\begin{center}
+\includegraphics[width=0.6\linewidth]{graphics/w07_negative_area_example}
+\end{center}
+
+\newpage
+\begin{center}
+\includegraphics[width=0.4\linewidth]{graphics/w07_negative_area_example}
+\end{center}
+
+If we were to partition $[a,b]$ into small subintervals and construct a corresponding Riemann sum, then the first few terms in the Riemann sum would correspond to the region with area A, the next few to B, etc. 
+
+\problem 
+Which of these sets of terms have positive values?
+
+\vfill
+
+Which of these sets have negative values?
+\vfill
+
+\newpage
+
+\begin{center}
+\includegraphics[width=0.3\linewidth]{graphics/w07_negative_area_example}
+\end{center}
+\problem 
+{Express the integral $\displaystyle \int_a^b f(x) dx$ in
+  terms of the (positive) areas A, B, C, D, and E.  }
+
+\vfill
+\vfill
+
+{If $f$ were to represent velocity over time, what would the ``negative
+  areas'' represent?}
+
+\vfill
+\newpage
+
+
+%\newpage
+% \problem 
+% The answer we found in the preceding question is
+% \begin{enumerate}[A.]
+% \item An underestimate because the first rectangle is very small.
+% \item An overestimate because this is an increasing function.
+% \item An underestimate because the graph of $f$ is concave upward.
+% \item An overestimate because we used the midpoints.
+% \end{enumerate}
+% 
+
+\newpage
+\begin{boxnote}
+{\bf The Role of Riemann sums}
+\begin{enumerate}
+\item They are needed to say what we mean by an integral. \\[2ex]
+\item They enable us to decide which integral is appropriate in a word
+problem. \\[2ex]
+\item They can also be used to give an approximate value of the
+integral. 
+\end{enumerate}
+\end{boxnote}
+
+\vspace{0.5in}
+
+We will explore how to avoid needing Riemann sums for calculations next week, through the Fundamental Theorem of Calculus! 
+
+\end{document}
+
