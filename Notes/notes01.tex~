@@ -1,0 +1,741 @@
+\input{PreambleCommon}
+\input{../WeekTitles}
+
+\begin{document}
+\setfont
+\pagestyle{fancy}
+\renewcommand{\Week}{1 }
+\renewcommand{\WeekTitle}{\WeekTitleOne }
+
+\fancyhead[LE,RO]{Week \Week}  % default, usually only for first page
+\fancyfoot{}
+\sectionbox{Week \#\Week: \WeekTitle}
+
+
+\vspace{5mm}
+\goals
+\begin{itemize}
+\item Interpret the derivative, and be able to discuss the difference
+  between the secant line and the derivative (CLO1, CLO2)
+\item Compute the derivative of polynomial, exponential, logarithmic,
+  powers, trigonometric functions and their combinations, with the
+  correct application of the product and quotient rules, and the chain
+  rule (CLO2)
+\item Report the graphs, domain and range of the inverse trigonometric
+  functions arcsin, arccos and arctan. (CLO1)
+\item Apply the derivative rules for arcsin, arccos and arctan. (CLO2)
+ \end{itemize}
+
+\vspace{5mm}
+
+% topics
+% 2.6 - give examples of functions which are and are NOT differentiable.
+%  - graphical and formula
+ 
+ 
+\newpage
+\topic{Differential Calculus - Slopes, Secants and the Derivative}
+
+\subsection*{Slopes, Secants and the Derivative}
+
+
+The {\bf slope of a secant line} gives 
+\begin{itemize}
+\item the {\bf average rate of change} of $f(x)$ over some interval $\Delta x$.
+\item the {\bf average velocity} over an interval, if $f(t)$ represents {\bf position}.
+\item the {\bf average acceleration} over an interval, if $f(t)$ represents {\bf velocity}.
+\end{itemize}
+Give the units of the slope of a secant line.
+
+\vspace{1in}
+
+\newpage
+
+The {\bf derivative} gives 
+\begin{itemize}
+\item the {\bf limit of the average slope} as the interval $\Delta x $ approaches zero.
+\item a {\bf formula for slopes} for the tangent lines to $f(x)$.
+\item the {\bf instantaneous rate of change} of $f(x)$.
+\item the {\bf velocity}, if $f(t)$ represents {\bf position}.
+\item the {\bf acceleration}, if $f(t)$ represents {\bf velocity}.
+\end{itemize}
+
+\problem Give the units of the derivative.
+
+\vfill
+\newpage
+
+\topic{Differentiability}
+
+\section*{Differentiability}
+
+
+Recall the definition of the derivative. 
+\begin{align*} 
+f'(x) = \frac{d}{dx} f = \dfdx = \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\end{align*} 
+
+A function $f$ is {\bf{differentiable}} at a given point $a$ if it has
+a derivative at $a$, or the limit above exists.  There is also a
+graphical interpretation differentiability: {\bf{if the graph has a
+    unique and finite slope at a point}}.  Since the slope in question is
+automatically the slope of the tangent line, we could also say that
+
+\begin{quote} {\sc{$f$ is differentiable at $a$ if its graph has a
+      (non-vertical) tangent at $(a,f(a))$}}.
+\end{quote}
+
+\vfill
+
+For functions of the form $y = f(x)$, we do not consider points with
+vertical tangent lines to have a real-valued derivative, because a
+vertical line does not have a finite slope.
+
+\vsc
+\newpage
+
+
+Here are the ways in which a function can fail to be differentiable at a point $a$:
+\begin{enumerate}
+\item The function is not continuous at $a$.
+\item The function has a corner (or a cusp) at $a$.
+\item The function has a vertical tangent at $(a,f(a))$.
+\end{enumerate}
+
+\problem Sketch an example graph of each possible case.
+
+\vfill
+
+\newpage
+
+\problem Investigate the limits, continuity and differentiability
+  of $f(x) = |x|$ at $x=0$ graphically.   
+
+\includegraphics[width=4.5in]{graphics/empty_graph_square_8}
+
+\vspace{0.5in}
+
+\newpage
+
+\problem Use the definition of the derivative to confirm your
+  graphical analysis. 
+
+\vfill
+
+\newpage
+
+\problem We have seen at a point that a function can have, or fail
+  to have, the following descriptors: 
+\begin{itemize}
+\item continuous;
+\item limit exists;
+\item is differentiable.
+\end{itemize}
+
+Put these properties in decreasing order of stringency,
+  and sketch relevant illustrations.
+
+\vfill
+
+\newpage
+
+
+{\bf Reminder: Differentiability is Common}
+
+You will notice that, despite our concern about some functions {\em
+  not} being differentiable, most of our standard functions
+(polynomials, rationals, exponentials, logarithms, roots) {\bf are}
+differentiable at most points.  Therefore we should investigate what
+all these possible derivative/slope values could tell us.
+
+\vspace{0.5in}
+
+\topic{Interpreting the Derivative}
+
+{\bf Interpreting the Derivative}
+
+
+\begin{boxnote}
+
+\begin{itemize}
+\item Where $f'(x) > 0$, or the {\bf derivative is positive}, \\
+  $f(x)$ is {\bf increasing}. \\[1ex]
+\item Where $f'(x) < 0$, or the {\bf derivative is negative}, \\
+  $f(x)$ is {\bf decreasing}. \\[1ex]
+\item Where $f'(x) = 0$, or the {\bf tangent line to the graph is
+    horizontal}, $f(x)$ has a {\bf critical point}.
+\end{itemize}
+\end{boxnote}
+
+\newpage
+
+\problem Consider the graph of $f(x)$ shown below. 
+
+\begin{tabular}{ll}
+\begin{minipage}{5in}
+\includegraphics[width=5in]{graphics/notes_01_incr_decr}
+\end{minipage} &
+\begin{minipage}{4.5in}
+On what intervals is $f'(x) > 0$?
+\end{minipage}
+\end{tabular}
+
+\newpage
+
+\begin{tabular}{ll}
+\begin{minipage}{5in}
+\includegraphics[width=5in]{graphics/notes_01_incr_decr}
+\end{minipage} &
+\begin{minipage}{4.5in}
+\problem Where does $f'(x)$ takes on its {\bf largest negative value}?
+\end{minipage}
+\end{tabular}
+
+
+\newpage
+
+\topic{Graphs of the Derivative}
+
+\section*{Graphs, and Graphs of their Derivatives}
+
+
+\problem Consider the same graph again, and the graph of its derivative.
+Identify important features that associate the two. 
+
+\includegraphics[width=2.9in]{graphics/notes_01_incr_decr} \\[.1in]
+\includegraphics[width=2.9in]{graphics/notes_01_incr_decr_deriv}
+
+\newpage
+
+\problem  Consider the graph of $f(x)$ shown:
+
+\begin{minipage}[h]{0.3\linewidth}
+\begin{center}
+  \includegraphics[width=1.0\linewidth]{graphics/notes_01_f_and_deriv_graph_f} \\
+  $f(x)$
+\end{center}
+\end{minipage}
+\begin{minipage}[h]{0.65\linewidth}
+\begin{center}
+\begin{tabular}{cc}
+\includegraphics[width=2.5in]{graphics/notes_01_f_and_deriv_graph_c} &
+\includegraphics[width=2.5in]{graphics/notes_01_f_and_deriv_graph_b} \\
+{\bf A} &  {\bf B} \\ \hline
+\includegraphics[width=2.5in]{graphics/notes_01_f_and_deriv_graph_a} &
+\includegraphics[width=2.5in]{graphics/notes_01_f_and_deriv_graph_d} \\
+{\bf C} &  {\bf D} 
+\end{tabular}
+\end{center}
+\end{minipage}
+
+Which of the graphs on the right is the graph of the {\bf derivative} of
+$f(x)$?
+\newpage
+
+\topic{Computing Derivatives - Basic Formulas}
+
+\section*{Computing Derivatives}
+% {\bf Note:} The standard formulas for derivatives are covered in the
+% Grade 12 Ontario curriculum. While they will be reviewed here, {\bf
+%   students who are not familiar with them should begin both textbook
+%   reading and the assignment problems for this unit as soon as
+%   possible.}
+
+
+
+Beyond the graphical interpretation of derivatives, there are all the
+algebraic rules.  {\bf All of these rules} are based on the {\bf definition}
+of the derivative,
+\begin{align*} 
+f'(x) = \frac{d}{dx} f = \dfdx = \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\end{align*} 
+
+However, by finding common patterns in the derivatives of certain
+families of functions, we can compute derivatives much more quickly
+than by using the definition.
+
+\newpage
+
+\begin{boxnote}
+{\bf Sums, Powers, and Differences}
+
+\LARGE
+\begin{tabular}{lc}
+Constant Functions: & $\ds \ddx k = 0 $ \\[7ex]
+Power rule: & $\ds \ddx x^p = p x^{p-1}$ \\[7ex]
+Sums : & $\ds \ddx f(x) + g(x) = \left(\ddx f(x)\right) + \left(\ddx g(x) \right)$ \\[7ex]
+Differences: & $\ds \ddx f(x) - g(x) = \left(\ddx f(x)\right) - \left(\ddx g(x) \right)$ \\[7ex]
+Constant Multiplier: & $\ds \ddx \left[k f(x)\right] = k \left(\ddx f(x)\right)$, so long as $k$ is a constant
+\end{tabular}
+\setfont
+
+\end{boxnote}
+
+\newpage
+
+\problem Evaluate the following derivatives: 
+
+$\ds \ddx \left(x^4 + 3 x^2\right)$
+
+\vfill
+
+$\ds \ddx \left(2.6 \sqrt{x} - \pi x^3 + 4\right)$
+
+\vfill
+
+\newpage
+{\bf Question: } The derivative of $\ds -3x^2 - \frac{1}{x^2}$ is 
+
+\begin{enumerate}
+\item $\ds -6 x^3 + 2 \frac{1}{x^3} $
+\item $\ds -6 x + 2 \frac{1}{x^3} $
+\item $\ds -6 x - 2 \frac{1}{x^3} $
+\item $\ds -x^3 + 2 \frac{1}{x} $
+\end{enumerate}
+
+\newpage
+
+\begin{boxnote}
+{\bf Exponentials and Logs}
+\begin{center}
+\begin{tabular}{lp{0.2in}l}
+$e$ as a base: && $\ds \ddx e^x = e^x $ \\[7ex]
+Other bases: && $\ds \ddx a^x = a^x (\ln(a))$ \\[7ex]
+Natural Log: && $\ds \ddx \ln(x) = \frac{1}{x}$ \\[7ex]
+Other Logs: &&$\ds \ddx \log_a(x) = \frac{1}{x} \frac{1}{\ln(a)}$ \\[7ex]
+\end{tabular}
+\end{center}
+\end{boxnote}
+
+\newpage
+
+\problem Evaluate the following derivatives:
+
+$\ds \ddx \left( 4 \cdot 10^x + 10 \cdot x^4  \right)$
+
+\vfill
+
+$\ds \ddx \left( e^x + \log_{10}(x) \right)$
+
+\vfill
+
+(Exponential and log derivatives are relatively straightforward, until
+we mix in the product, quotient, and chain rules.)
+
+\newpage
+
+\topic{Computing Derivatives - Product and Quotient Rules }
+
+\begin{boxnote}
+{\bf Product and Quotient Rules}
+
+\begin{center}
+\begin{tabular}{lc}
+  Products: & \LARGE $\ds \ddx f(x) \cdot g(x) = f'(x) g(x) + f(x) g'(x)$ \\[1in]
+  Quotients: &\LARGE  $\ds \ddx \frac{f(x)}{g(x)} = \frac{f'(x) g(x) - f(x) g'(x)}{\left(g(x) \right)^2}$ \\ 
+\end{tabular}
+\end{center}
+
+
+
+\end{boxnote}
+
+\problem Evaluate the following derivatives: 
+
+$\ds \ddx \left( 4 x^2 e^x \right)$
+
+\vfill
+
+\newpage
+
+$\ds \ddx \left( x \ln(x) \right)$
+
+\vfill
+
+$\ds \ddx \left( 5 \frac{x^2}{\ln(x)} \right)$
+
+\vfill
+
+\newpage
+{\bf Question: } The derivative of $\ds \frac{10^x}{x^3}$ is 
+
+\begin{enumerate}[(a)]
+\item $\ds   \frac{10^x}{\ln(10)} x^{-3} + 10^x (-3 x^{-4})$  \\[3ex]
+\item $\ds \frac{10^x \ln(10) x^3  - 10^x (3x^2)} {x^6}$ \\[3ex]
+\item $\ds  \frac{10^x \frac{1}{\ln(10)} x^3  - 10^x (3x^2)} {x^6}$ \\[3ex]
+\item $\ds  \ln(10) 10^x x^{-3} + 10^x (-3 x^{-4})$  \\[3ex]
+\end{enumerate}
+
+\newpage
+
+\topic{Computing Derivatives - Chain Rule}
+
+\begin{boxnote}
+{\bf Chain Rule}
+
+\begin{center}
+\begin{tabular}{lc}
+Nested Functions: & \LARGE $\ds \ddx \left[ f(g(x)) \right] = f'(g(x))\cdot g'(x)$  \\
+~\\[1in]
+
+Liebnitz form & \LARGE $\ds \ddx f(g(x)) = \frac{df}{dg} \frac{dg}{dx}$ \\
+\end{tabular}
+\end{center}
+\end{boxnote}
+
+\newpage 
+
+\problem Evaluate the following derivatives: 
+
+$\ds \ddx e^{x^2}$ 
+
+\vfill
+
+\newpage
+
+$\ds \ddx  \ln(x^4) $
+
+\vfill
+
+\newpage
+$\ds \ddx \left( \frac{1}{1+x^3} \right)$
+
+\vfill
+
+\newpage
+
+$\ds \ddx \left( x^4 + 10^{3x} \right)$
+
+\vfill
+
+\newpage
+{\bf Question: } The derivative of $\ds e^{\sqrt{x}}$ is 
+
+\begin{enumerate}[(a)]
+\item $\ds  \frac{1}{2} e^{\frac{1}{\sqrt{x}}}$ \\[1ex]
+\item $\ds e^{\sqrt{x}} \left(\sqrt{x}\right)$  \\[1ex]
+\item $\ds \frac{1}{2} e^{\sqrt{x}} \left(\frac{1}{\sqrt{x}}\right)$ \\[1ex]
+\item $\ds \frac{1}{2} e^{\sqrt{x}} \left(\sqrt{x}\right)$
+\end{enumerate}
+
+\vfill
+
+\topic{Trigonometry Review}
+
+\section*{Trigonometry Review}
+
+In our earlier discussion of functions, we skipped over the
+trigonometric functions.  We return to them now to discuss both their
+properties and their derivative rules.
+
+\vspace{5mm}
+
+The trigonometric functions are usually defined for students first
+using triangles (recall the mnemonic device, ``SOHCAHTOA'').
+
+\vspace{1in}
+
+\newpage
+\problem Use the 45/45 and 60/30 triangles to compute the sine and
+cosine of these common angles.
+
+\includegraphics[height=2.5in]{graphics/notes_01_45_45_triangle}
+\hfill
+\includegraphics[height=2.5in]{graphics/notes_01_30_60_triangle}
+
+\vfill
+
+\newpage
+
+{\bf Extending Trigonometric Domains}
+
+One difficulty with limiting ourselves to the triangle ratio
+definition of the trig functions is that the possible angles are
+limited to the range $\theta \in [0, \frac{\pi}{2}]$ radians or
+$\theta \in [0, 90]$ degrees.
+
+
+To remove this limitation, mathematicians extended the definition of
+the trigonometric functions to a wider domain via the unit circle.
+
+% There are two fundamental interpretations of the sine and cosine
+% functions, from which all the other trigonometric functions are
+% defined:
+% \begin{itemize}
+% \item the point on the unit circle versus an angle
+% \item the traditional oscillating graphs   
+% \end{itemize}
+
+\includegraphics[height=3.5in]{graphics/notes_01_circle_with_angle}
+\includegraphics[height=3.5in]{graphics/notes_01_empty_graph_sine}
+
+\newpage
+\problem How does the circle definition lead to the trigonometric
+  identity $\ds \sin^2(\theta) + \cos^2(\theta) = 1$?
+\vfill
+
+\newpage
+
+\problem Show how the circle and triangle definitions define the same
+values in the first quadrant of the unit circle.
+
+\includegraphics[height=3.5in]{graphics/notes_01_circle}
+
+\vfill
+
+It is useful to understand both definitions of trig functions (circle
+and triangle) as sometimes one is more helpful than the other for a
+particular task.
+
+\topic{Sine and Cosine as Functions}
+
+\subsection*{Sine and Cosine as Oscillating Functions}
+
+Despite the geometric source of the trigonometric functions, they are
+used more commonly in biology and many other sciences as because their
+{\bf periodicity} and {\bf oscillatory shapes}.  For many cyclic
+behaviours in nature, trigonometric functions are a natural first
+choice for modeling.
+
+\vfill
+
+\newpage
+\problem  The graph of $y = 10 + 4 \cos(x)$ is shown in which of the
+following diagrams?
+
+\begin{tabular}{cc}
+\includegraphics[width=2.7in]{graphics/notes_01_cosq_1b} &
+\includegraphics[width=2.7in]{graphics/notes_01_cosq_1a} \\
+A & B \\ \hline
+\includegraphics[width=2.7in]{graphics/notes_01_cosq_1d} &
+\includegraphics[width=2.7in]{graphics/notes_01_cosq_1c} \\
+C & D \\ 
+\end{tabular}
+
+\vfill
+
+\newpage
+\problem Show the {\bf amplitude} and the {\bf average} for \\$y = 10 + 4 \cos(x)$
+
+\begin{tabular}{cc}
+\includegraphics[width=2.7in]{graphics/notes_01_cosq_1b} &
+\includegraphics[width=2.7in]{graphics/notes_01_cosq_1a} \\
+A & B \\ \hline
+\includegraphics[width=2.7in]{graphics/notes_01_cosq_1d} &
+\includegraphics[width=2.7in]{graphics/notes_01_cosq_1c} \\
+C & D \\ 
+\end{tabular}
+
+
+\newpage
+
+\subsection*{Period and Phase}
+
+\problem How can you find the period of the function $\cos(Ax)$? 
+\vfill
+
+\newpage
+
+\problem How can you reliably determine where the function
+  $\cos(Ax + B)$ `starts' on the graph? (For a cosine graph, where the
+  `start' represents a maximum, the starting time or $x$ value is
+  sometimes called the ``phase'' of the function.)
+
+\vfill
+\vfill
+\newpage
+
+Consider the function $y = 5 + 8 \cos(\pi (x - 1))$.
+
+\problem What are the following properties of the function?
+\begin{itemize}
+\item {\bf Amplitude:} \vfill
+\item {\bf Period:} \vfill
+\item {\bf Average:} \vfill
+\item {\bf Phase:} \vfill
+\end{itemize}
+
+
+\newpage
+\problem Sketch the graph on the axes below.  Include at least one
+  full period of the function. 
+\begin{center}
+\includegraphics[height=4.5in]{graphics/empty_graph_wide_12}
+\end{center}
+
+
+
+\newpage
+
+\topic{Non-Constant Amplitudes}
+
+\subsection*{More complicated amplitudes}
+
+In the form $y = A + B \cos(Cx + D)$, the $B$ factor sets the amplitude.
+In many interesting cases, however, that amplitude need not be
+constant.
+
+\problem Sketch the graph of $|y|=5$, and the graph of $y = 5
+  \cos(x)$ on the axes below. 
+
+\includegraphics[height=4.1in]{graphics/empty_graph_wide_12}
+
+
+\newpage
+
+\problem Sketch the graph of $|y|=x$, and the graph of $y = x
+  \cos(\pi x)$ on the axes below.  Use only $x \ge 0$ 
+
+\includegraphics[height=5.0in]{graphics/empty_graph_wide_12}
+
+
+\newpage
+
+\problem Use your intuition to sketch the graph of $y = e^{x}
+  \cos(\pi x)$ on the axes below.  
+
+\includegraphics[height=5.0in]{graphics/empty_graph_wide_12}
+
+
+\newpage
+
+\topic{Derivatives of Trigonometric Functions}
+
+\section*{Derivatives of Trigonometric Functions}
+
+Having covered the graphs and properties of trigonometric functions,
+we can now review the derivative formulae for those same functions.
+
+The derivation of the formulas for the derivatives of $\sin$ and
+$\cos$ are an interesting study in both limits and trigonometric
+identities.  For those who are interested, many such derivations can
+be found on the web\footnote{For example,
+  http://www.math.com/tables/derivatives/more/trig.htm\#sin}.
+However, it is in some ways more useful to derive the formula in a
+graphical manner.
+
+\newpage
+Below is a graph of $\sin(x)$.  Use the graph to sketch the graph of
+its derivative.
+
+\begin{center}
+\includegraphics[width=0.8\linewidth]{graphics/notes_01_sine}
+\end{center}
+
+\vfill
+
+\begin{center}
+\includegraphics[width=0.8\linewidth]{graphics/notes_01_cos_axes}
+\end{center}
+
+\newpage
+
+From this sketch, we have evidence (though not a proof) that \vsc
+\begin{boxnote}
+{\bf Theorem} 
+$$\ds \diff \sin x = $$
+\end{boxnote}
+
+\newpage
+
+Most students will also be familiar with the other derivative rules
+for trig functions:
+
+\begin{boxnote}
+$$ \ds \diff \cos( x) = - \sin (x)$$
+$$ \ds \diff \tan(x) = \sec^2 (x)$$
+$$ \ds \diff \sec(x) = \sec(x)\tan(x)$$
+$$ \ds \diff \csc(x) = -\csc(x)\cot(x)$$
+$$ \ds \diff \cot(x) = -\csc^2(x)$$
+\end{boxnote}
+
+\newpage
+\problem Prove the secant derivative rule, using the definition
+  $\ds \sec(x)= \frac{1}{\cos(x)}$ and the other derivative rules. 
+
+\vfill
+
+\newpage
+
+{\bf Question:} Find the derivative of $4 + 6 \cos(\pi x^2 + 1)$
+
+\begin{enumerate}[(a)]
+\item $4 - 6 \sin(\pi x^2 + 1) \cdot (2 \pi x)$ \\[2ex]
+\item $- 6 \cos(\pi x^2 + 1) \cdot (2 \pi x)$ \\[2ex]
+\item $- 6 \sin(\pi x^2 + 1) \cdot (2 \pi x)$ \\[2ex]
+\item $-6 \sin(\pi x^2 + 1) \cdot (\pi x^2 + 1)$ \\[2ex]
+\item $6 \sin(2 \pi x)$ 
+\end{enumerate}
+
+%\newpage
+%\Example{What is the derivative of $\cos^3(x)$?}
+
+\newpage
+
+ \topic{Inverse Trig Functions}
+
+ \subsection*{Inverse Trig Functions}
+
+
+ In addition to the 6 trig functions just seen, there are 6 inverse
+ functions as well, though the inverses of sine, cosine, and tangent
+ are the most commonly used.
+
+ \problem Sketch the graph of $sin(x)$ on the axes below.
+
+ \includegraphics[width=3.2in]{graphics/empty_graph_wide_12}
+
+
+ On the same axes, sketch the graph of $\arcsin(x)$, or $\sin^{-1}{x}$,
+ or the inverse of $\sin(x)$.  \vsc
+
+ \newpage
+   What is the domain of $\arcsin(x)$?
+ \vspace{1in}
+
+   What is the range of $\arcsin(x)$?
+ \vspace{1in}
+
+
+ \newpage
+
+ \topic{Derivative of arcsin}
+
+ \subsection*{Derivative of arcsin}
+ \vsc
+ \problem Simplify $\sin (\arcsin x)$.
+
+ \vspace{4cm} Differentiate both sides of this equation, using the
+ chain rule on the left.  You should end up with an equation involving
+ $\ds{ \diff \arcsin x}$.
+
+ \vfill
+
+ \newpage
+
+ \problem  Solve for $\ds{\diff \arcsin x}$, and simplify the resulting
+ expression by means of the formula
+ $$
+ \cos \theta = \sqrt{1-\sin^2 \theta}, 
+ $$
+ which is valid if $ \ds{\theta \in [-\frac{\pi}{2},\,\frac{\pi}{2}]}$.
+
+ \vfill
+
+\newpage
+\begin{center}
+Graph of $\arcsin(x)$ \\
+\includegraphics[width=3.5in]{graphics/empty_graph_wide_12}
+
+Graph of $\ds \ddx \arcsin(x)$ \\
+\includegraphics[width=3.5in]{graphics/empty_graph_wide_12}
+\end{center}
+
+{\em From this, we see that }
+
+ \begin{center}
+  \fbox{$\ds \diff \arcsin x =$ \hspace{2in}~}
+ \end{center}
+
+  \end{document}
+

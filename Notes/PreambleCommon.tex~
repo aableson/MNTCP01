@@ -1,0 +1,161 @@
+\documentclass[12pt,twoside]{article}
+
+% *** Set page dimensions ***
+\raggedbottom
+\parindent=0in
+%\setlength{\topmargin}{-0.5in}
+%\setlength{\oddsidemargin}{0.1875in}
+%\setlength{\evensidemargin}{0in}
+%\setlength{\textheight}{8.5in}
+%\setlength{\textwidth}{6.225in}
+%\addtolength{\oddsidemargin}{-0.7in}
+%\addtolength{\evensidemargin}{-1.2in}
+%\setlength{\oddsidemargin}{-0.2in}
+%\setlength{\evensidemargin}{-0.2in}
+%\addtolength{\textwidth}{1.4in}
+%\addtolength{\topmargin}{-.875in}
+%\addtolength{\textheight}{2.00in}
+
+% *** Packages ***
+\usepackage{tocloft}
+\usepackage{graphicx}
+\usepackage{lscape}
+\usepackage{amssymb}
+\usepackage{float}
+\usepackage{amsmath}
+\usepackage{gensymb}
+%\usepackage{subfigure}
+\usepackage{lscape}
+\usepackage{epsfig}
+\usepackage{enumerate}
+\usepackage{multicol}
+\usepackage{fancyhdr}
+\usepackage{epstopdf}
+
+% *** Table of contents and Sectioning *** 
+\setcounter{secnumdepth}{0}
+\setcounter{tocdepth}{5}
+
+% *** Table of contents and Sectioning *** 
+\newcommand{\next}{\addtocounter{enumi}{9} \item}
+\newcommand{\now}[1]{\setcounter{enumi}{#1}}
+\newcommand{\Z}{\mbox{\sf Z\hspace{-1.5mm}Z}}
+\newcommand{\R}{\mbox{\rm I\hspace{-0.75mm}R}}
+\columnsep=0.75in
+
+% *** Shortcuts for syntax ***
+\newcommand{\ds}{\displaystyle }
+\newcommand{\vsc}{\vspace{4mm}}
+\newcommand{\dd}[1]{\frac{d}{d{#1}} \,} 
+\newcommand{\ddx}{\frac{d}{dx} \,} 
+\newcommand{\ddy}{\frac{d}{dy} \,} 
+\newcommand{\ddz}{\frac{d}{dz} \,} 
+\newcommand{\dydx}{\frac{dy}{dx} \,} 
+\newcommand{\dydt}{\frac{dy}{dt} \,} 
+\newcommand{\dfdx}{\frac{df}{dx} \,} 
+\newcommand{\ddt}[1]{  \frac{d{#1}}{dt} }
+\newcommand{\pp}[2]{  \frac{\partial{#1}}{\partial {#2}} }
+\newcommand{\zx}{\frac{\partial z}{\partial x} \,}
+\newcommand{\zy}{\frac{\partial z}{\partial y} \,}
+\newcommand{\limh}{\lim_{h \rightarrow 0} \;}
+\newcommand{\diff}{\frac{d}{dx} \,}
+\newcommand{\de}{\Delta}
+\renewcommand{\thesection}{\Roman{section}}
+\newcommand{\bfr}{\begin{flushright}}
+\newcommand{\efr}{\end{flushright}}
+\newcommand{\dx}{\frac{\partial f}{\partial x} \,}
+\newcommand{\dy}{\frac{\partial f}{\partial y} \,}
+\newcommand{\p}{\partial}
+\newcommand{\vi}{\vec{i}}
+\newcommand{\vj}{\vec{j}}
+\newcommand{\vk}{\vec{k}}
+\newcommand{\lan}{\left\langle}
+\newcommand{\ran}{\right\rangle}
+\newcommand{\reading}[1] { {\em Reading: #1}}
+\renewcommand{\Pr}{ \mbox{Pr}}
+
+% *** Commands related to textbook references
+\newcommand{\problem}{{\bf Problem.} }
+
+% *** Footnoting with symbols ***
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}
+
+% *** Defining a boxed note ***
+\floatstyle{boxed}
+\newfloat{noteinbox}{htb}{loa}
+\newenvironment{boxnote}{\begin{noteinbox}[H]}{\end{noteinbox}}
+
+\newcommand{\Question}{ {\bf Question: }  }
+\newcommand{\Example}[1]{ {\bf Example: } {\em #1} }
+\newcommand{\ExampleCont}[1]{ {\em #1} }
+
+% *** Define the boxed Week #/summary at the beginning/end of every chapter ***
+\newcommand{\sectionbox}[1]{% 
+\begin{tabular}{|p{6in}|}%
+\hline%
+\ \\ %
+{\Large {\bf {#1}}}  \\%
+\ \\%
+\hline%
+\end{tabular}}
+
+% *** Shortcuts *** 
+\newcommand\goals{\large {\bf {Goals:}}}
+\newcommand\setfont{ }
+
+% *** Week commands: overwritten in each notes file
+\newcommand{\Week}{Null-InPreambleCommon}
+\newcommand{\WeekTitle}{Null-InPreambleCommon}
+\newcommand{\Course}{MNTC P04}
+\newcommand{\SetNum}{1 }
+\newcommand{\topic}[1]{
+\newpage
+\setcounter{page}{1}
+\fancyhead[LE,RO]{#1 - \thepage}
+}
+
+% *** Setup Latex for the large version of the files ***
+%\usepackage[landscape]{geometry}
+\usepackage[letterpaper,landscape,hmargin={.8in,.8in},vmargin={1in,0.2in}]{geometry}
+
+% Remove paragraph indents
+\setlength{\parindent}{0pt}
+
+% Spacing at the top for the header is too large by default
+\setlength{\voffset}{-5ex}
+
+% **** RENEW SCALING COMMANDS HERE ****
+% *** Text in boxes ***
+\renewenvironment{boxnote}{\begin{noteinbox}[H] \huge}{\end{noteinbox}} 
+
+% *** Chapter lead in/summary boxes ***
+\renewcommand{\sectionbox}[1]{% 
+\begin{tabular}{|p{9.5in}|}%
+\hline%
+\ \\ %
+{\huge {\bf {#1}}}  \\%
+\ \\%
+\hline%
+\end{tabular}}
+
+% *** 'Section'' commands, which are sometimes used for spacing
+% From http://zoonek.free.fr/LaTeX/LaTeX_samples_section/0.html
+\makeatletter
+ \renewcommand\section{\@startsection {section}{1}{\z@}%
+                                    {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                    {0.3ex \@plus.2ex}%
+                                    {\setfont\bf}}
+
+ \renewcommand\subsection{\@startsection {subsection}{1}{\z@}%
+                                    {-3.5ex \@plus -1ex \@minus -.2ex}%
+                                    {0.3ex \@plus.2ex}%
+                                    {\setfont\bf}}
+
+% *** 'Goals' should be larger in the overheads ***
+\renewcommand\goals{\huge {\bf {Goals:}}}
+\renewcommand\setfont{\huge }
+
+\thispagestyle{empty}
+
+\setfont 
