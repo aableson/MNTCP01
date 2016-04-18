@@ -4,8 +4,8 @@
 \begin{document}
 \setfont
 \pagestyle{fancy}
-\renewcommand{\Week}{1 }
-\renewcommand{\WeekTitle}{\WeekTitleOne }
+\renewcommand{\Week}{2 }
+\renewcommand{\WeekTitle}{\WeekTitleTwo }
 
 \fancyhead[LE,RO]{Week \Week}  % default, usually only for first page
 \fancyfoot{}
@@ -15,18 +15,228 @@
 \vspace{5mm}
 \goals
 \begin{itemize}
-\item Interpret the derivative, and be able to discuss the difference
-  between the secant line and the derivative 
-\item Compute the derivative of polynomial, exponential, logarithmic,
-  powers, trigonometric functions and their combinations, with the
-  correct application of the product and quotient rules, and the chain
-  rule 
-\item Report the graphs, domain and range of the inverse trigonometric
-  functions arcsin, arccos and arctan.
-\item Apply the derivative rules for arcsin, arccos and arctan.
+\item Describe the meaning and value of linearization
+\item Apply the technique of linearization to solve a variety of
+  nonlinear equations
+\item Use MATLAB to graph and compare functions with their
+  linearizations
+\item Use MATLAB to implement Newton's method
+\item Calculate and interpret the first and second derivatives, as
+  well as higher order derivatives
  \end{itemize}
 
 \vspace{5mm}
+
+\newpage
+\topic{Linear Approximations}
+\subsection*{Linear Approximations}
+
+You should now feel comfortable in finding the derivative of a wide
+variety of functions with formulas. \\[1ex]
+
+In this section, we will explore how the derivatives you can compute
+can be tied back to understanding the behaviour of the original
+function. \\[1ex]
+
+We will start by returning to the definition of the derivative, based
+on the $\ds \frac{\mbox{rise}}{\mbox{run}}$ formula for slopes: 
+\begin{align*} 
+  f'(x) = \frac{d}{dx} f = \dfdx = \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
+\end{align*} 
+
+
+
+\newpage 
+For example, if $y = f(x)$, then 
+\[ \lim_{\Delta x \to 0} \frac{\Delta y}{\Delta x} = f'(x) 
+\]
+\begin{problem}
+ What is the relationship between $f'$ and $\Delta y$,
+	$\Delta x$ for merely {\em small} delta values? 
+\end{problem}
+\vfill
+         Now sketch a graph, and label the two points
+        in the $\Delta x$ difference `$x$' and `$a$'.  What expression
+        do we obtain for $f(x)$?
+
+\newpage
+We want to have a name for the RHS of this approximation:
+\begin{boxnote}
+\[ L(x)=f(a) + f'(a) (x-a) 
+\]
+\end{boxnote}
+\begin{problem}
+ What are some names for this linear function?
+\end{problem}
+
+
+\newpage
+\begin{problem}
+Consider the tangent line approximation to the graph
+of $f(x)=e^x$ at $(0,1)$, where we know that $f^\prime (0) = 1$. 
+
+A good approximation for $e^{0.5}$ is therefore: \\[2ex]
+\begin{enumerate}[A.]
+\item $e^{0.5 }\approx 0.5$ \\[2ex]
+\item $e^{0.5 }\approx 1+e^{.5}$ \\[2ex]
+\item $e^{0.5 }\approx 1+.5$ \\[2ex]
+\end{enumerate}
+
+\end{problem}
+
+\newpage
+\topic{Linear Approximations for Error Estimation}
+\begin{problem}
+  A rock formation with high density ores was identified using gravity
+  measurements; the formation is roughly cubic in shape. The edge each
+  side of the cube was found to be 370 m, with a possible error in
+  measurement of 10 m.  Use the ideas of linear approximations to
+  estimate the maximum possible error (positive or negative) in
+  computing the {\bf volume} of the formation.
+\end{problem}
+	\vfill
+	\vfill
+
+\newpage
+\problem What are the trade-offs of using the linear approximation to
+obtain the above error estimate, compared to a direct calculation of
+the possible volumes with the error measurements?  \vfill
+
+\newpage
+
+%\conques{%
+% A function $f$ and its derivative have the following values at 0 and
+% 10:%
+% \begin{center}
+% \begin{tabular}{cc}
+% $f(0) = 2$ & $f(10) = 5$ \\
+% $f^\prime (0) = -1$ & $f^\prime (10) = 1$
+% \end{tabular}
+% \end{center}
+% Which of the following calculations produces the best estimate for
+% $f(0.2)$?
+% \begin{enumerate}
+% \item[A. ] $(0.02)\times (5-2) + 2 = 2.06$
+% \item[B. ] 2
+% \item[C. ] $(0.2)\times (-1) = -0.2$
+% \item[D. ] $(-1)\times (0.2) + 2 = 1.8$
+% \end{enumerate}
+% }%
+
+\topic{Tangent Lines to Graphs}
+
+\begin{problem}
+Sketch the function $\ds f(x)=\frac{1}{x}$.
+\end{problem}
+
+\includegraphics[width=4in]{graphics/empty_graph_square_12}
+
+\newpage
+
+\begin{problem}
+If we drew a tangent line to $f(x)$ at $x=4$, what range we would expect for the slope there?
+
+\begin{enumerate}[A.]
+\item Slope above 1. \\[2ex]
+\item Slope between 0 and 1.  \\[2ex]
+\item Slope between 0 and -1.\\[2ex] 
+\item Slope below -1.
+\end{enumerate}
+\end{problem}
+
+
+
+\newpage
+\begin{problem}
+ Find the linearization of $\ds f(x)=\frac{1}{x}$ at $a=4$.
+\end{problem}
+\vfill
+\vfill
+
+ Find the equation of the tangent line to the hyperbola $\ds y=\frac{1}{x} $ at $x=4$. 
+\vfill
+
+\newpage
+
+\problem Sketch the graph of $\ds y=\frac{1}{x}$, and its tangent line at $x=4$. 
+
+\includegraphics[width=4in]{graphics/empty_graph_square_12}
+
+
+
+
+% \noindent \ques{Find the linearization of $f(x)=1/x$ at $a=4$.}
+% %%%%% begin solution %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \includesoln{\solntest}{\mbox{}\\[11cm]}{
+% We can use our ``recipe'' to find the linearization of $f$:
+% $$L(x)=f(a)+f'(a)(x-a)$$
+% When $x=a$,
+% \begin{align*}
+% f(a) & = f(4)\\[0.1cm]
+% & =\frac{1}{4}
+% \end{align*}
+% and
+% \begin{align*}
+% f'(a) & =-\frac{1}{a^2}\\[0.1cm]
+% & = -\frac{1}{4^2}\\[0.1cm]
+% & = -\frac{1}{16}
+% \end{align*}
+% So the linearization of $f(x)$ at $x=a$ is
+% $$L(x)=\frac{1}{4}-\frac{1}{16}(x-4).\vi{1}$$}
+% %%%%% end solution %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \ques{Find the equation of the tangent line to the hyperbola $y=1/x$
+% at $x=4$.}
+% %%%%% begin solution %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% \includesoln{\solntest}{}{
+% The tangent line of $y=\frac{1}{x}$ at $x=4$ and the line
+% approximating the hyperbola $y=\frac{1}{x}$ at $x=4$ (linearization
+% of the hyperbola) are the same line!  So using the previous example,
+% we can write that the tangent line to the hyperbola at $x=4$ is
+% $$y=\frac{1}{4}-\frac{1}{16}(x-4).$$}
+%%%%% end solution %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\topic{The $\sin(x)$ Approximation}
+\subsection*{The $\sin(x)$ Approximation}
+One of the most commonly-used approximation in physics
+is the relationship
+\[ \sin(x) \approx x
+\]
+\begin{problem}
+ Derive this relationship using linearization. \vfill
+\end{problem}
+
+ What is the fine-print that should {\bf always} be associated with this approximation? \vspace{1in}
+
+\newpage
+
+Sketch the graphs of $y = \sin(x) $ and $y = x$. Focus on the domain $\ds \frac{-\pi}{2} \le x \le  \frac{\pi}{2}$.
+
+\includegraphics[width=4in]{graphics/empty_graph_square_12}
+
+
+\newpage  Below are more detailed calculations relating
+$\sin(x)$ and $x$.  
+
+By filling in some or all of the missing values, determine the range
+of angles which the {\em relative error} in the approximation $\sin(x)
+\approx x$ is {\bf less than 1\%}. State your answer in degrees and radians.
+\vspace{0.2in}
+
+{\LARGE
+	\begin{tabular}{||r||c|c|c|c|c|c|c|c||} \hline
+	$x$ (degrees) &  & & & & & & & \\ \hline
+	$x$ (rad) & 0.0500&          0.1000&          0.1500  & 0.2000  &0.2500 & 0.3000 & 0.3500 & 0.4000\\ \hline
+	$\sin(x)$ & 0.0500 &0.0998 &0.1494 &0.1987 &0.2474 &0.2955 &0.3429 &0.3894 \\ \hline
+	abs err & 0.0000 &0.0002 &0.0006 &0.0013 &0.0026 &0.0045 &0.0071 &0.0106 \\ \hline
+	rel err &  & & & & & & & \\ \hline
+	\end{tabular}
+}
+	
+
+\newpage
+ Just for fun, put your calculator into degree mode, and see whether $\sin(x) \approx x$ still holds for small $x$.
+	
 
 \newpage
   \end{document}
