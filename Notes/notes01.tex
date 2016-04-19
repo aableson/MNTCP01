@@ -64,9 +64,9 @@ related through derivatives and integrals.  For example: \\
 We will spend the first half of this course examining differential
 calculus and integral calculus.  \\[2ex]
 
-The assumption is that most of what is covered will be review so the
-pace will be fairly aggressive.  We will also start including
-some calculations and graphical analysis using MATLAB.  \\[2ex]
+The assumption for the derivative section is that the fundamental
+ideas will be review, so the pace will be fairly aggressive.  We will
+also start including some calculations and graphical analysis using MATLAB.  \\[2ex]
 
 Take advantage of the practice problems to practice your skills, and
 get in touch with the instructor if you need any help.
@@ -76,6 +76,9 @@ get in touch with the instructor if you need any help.
 \newpage
 \topic{Differential Calculus - Slopes, Secants and the Derivative}
 \subsection*{Slopes, Secants and the Derivative}
+A {\bf secant line} is a line connecting any two points on a graph.
+\vfill
+
 The {\bf slope of a secant line} gives 
 \begin{itemize}
 \item the {\bf average rate of change} of $f(x)$ over some interval $\Delta x$.
@@ -88,18 +91,22 @@ The {\bf slope of a secant line} gives
 
 \newpage
 
-The {\bf derivative} gives 
+The {\bf derivative} gives the {\bf slope of a tangent line} at a {\bf
+  single point} on a graph.
+
+\vfill
+
+The derivative gives:
 \begin{itemize}
 \item the {\bf limit of the average slope} as the interval $\Delta x $ approaches zero.
-\item a {\bf formula for slopes} for the tangent lines to $f(x)$.
 \item the {\bf instantaneous rate of change} of $f(x)$.
 \item the {\bf velocity}, if $f(t)$ represents {\bf position}.
 \item the {\bf acceleration}, if $f(t)$ represents {\bf velocity}.
 \end{itemize}
 
 \problem Give the units of the derivative.
+\vspace{1in}
 
-\vfill
 \newpage
 
 \topic{Differentiability}
@@ -107,7 +114,8 @@ The {\bf derivative} gives
 \section*{Differentiability}
 
 
-The definition of the derivative is based on the classic $\ds \frac{\mbox{rise}}{\mbox{run}}$ formula for slopes.
+The definition of the derivative is based on the classic
+$\ds \left(\frac{\mbox{rise}}{\mbox{run}}\right)$ formula for slopes.
 
 \begin{align*} 
   f'(x) = \frac{d}{dx} f = \dfdx = \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
@@ -360,7 +368,7 @@ $\ds \ddx \left( \frac{\sqrt{x}}{e^x} \right)$
 
 \vfill
 
-$\ds \ddt{} \left( 4 t^3 2^t \right)$
+$\ds \ddt{} \left( 7 t^3 2^t \right)$
 
 \vfill
 
@@ -435,11 +443,11 @@ $\ds \ddt{} \left( e^{5t-1} + 10^{3t} \right)$
 
 \subsection*{Derivatives of Trigonometric Functions}
 \begin{boxnote}
-$$ \ds \diff \sin( x) = \cos (x)$$
-$$ \ds \diff \cos( x) = - \sin (x)$$
-$$ \ds \diff \tan(x) = \sec^2 (x)$$
-$$ \ds \diff \sec(x) = \sec(x)\tan(x)$$
-$$ \ds \diff \csc(x) = -\csc(x)\cot(x)$$
+$$ \ds \diff \sin( x) = \cos (x)$$ \\[-2.0ex]
+$$ \ds \diff \cos( x) = - \sin (x)$$ \\[-2.0ex]
+$$ \ds \diff \tan(x) = \sec^2 (x)$$ \\[-2.0ex]
+$$ \ds \diff \sec(x) = \sec(x)\tan(x)$$ \\[-2.0ex]
+$$ \ds \diff \csc(x) = -\csc(x)\cot(x)$$ \\[-2.0ex]
 $$ \ds \diff \cot(x) = -\csc^2(x)$$
 \end{boxnote}
 
@@ -476,7 +484,15 @@ derivative rules.
 
  In addition to the 6 trig functions just seen, there are 6 inverse
  functions as well, though the inverses of sine, cosine, and tangent
- are the most commonly used.
+ are the most commonly used. \\[2ex]
+
+ Notation: $y = \arcsin(x)$ and $y = \sin^{-1}(x)$ are both commonly
+ used for the inverse of sine function. \\[1ex]
+ \begin{itemize}
+ \item We will use the $\arcsin$ notation as much as possible. \\[1ex]
+ \item On your calculator, you will typically see the $\sin^{-1}$
+   notation.
+ \end{itemize}
 
 \newpage
 
@@ -485,8 +501,7 @@ derivative rules.
  \includegraphics[width=0.5\linewidth]{graphics/empty_graph_wide_12}
 
 
- On the same axes, sketch the graph of $\arcsin(x)$, or $\sin^{-1}{x}$,
- or the inverse of $\sin(x)$.  \vsc
+ On the same axes, sketch the graph of $\arcsin(x)$, or $\sin^{-1}(x)$.
 
  \newpage
  \includegraphics[width=0.5\linewidth]{graphics/empty_graph_wide_12}
@@ -518,8 +533,7 @@ Graph of $\arctan(x)$ \\
  \topic{Derivative of Inverse Trig Functions}
 
  \subsection*{Derivative of Inverse Trig Functions}
- \vsc
- \problem Simplify $\sin (\arcsin x)$.
+ \vsc \problem Simplify the expression $\sin (\arcsin x)$.
 
  \vspace{4cm} Differentiate both sides of this equation, using the
  chain rule on the left.  You should end up with an equation involving
@@ -540,8 +554,7 @@ Graph of $\arctan(x)$ \\
 
 \newpage
 \begin{minipage}[t]{0.45\linewidth}
-\vspace{0pt}
-{\em From this, we see that }
+  \vspace{0pt} From this, we see that
 
  \begin{center}
   $\ds \diff \arcsin x =$ \hspace{2in}~
@@ -561,10 +574,11 @@ Graph of $\ds \ddx \arcsin(x)$ \\
 
 \newpage
 
-Through a similar process, we can also show that:
+Through a similar process, we can find the derivatives of all the
+commonly used inverse trig functions.
 \begin{boxnote}
-$$ \ds \diff \arcsin( x) = \frac{1}{\sqrt{1-x^2}}$$ \\[2ex]
-$$ \ds \diff \arccos( x) = \frac{-1}{\sqrt{1-x^2}}$$ \\[2ex]
+$$ \ds \diff \arcsin( x) = \frac{1}{\sqrt{1-x^2}}$$ \\
+$$ \ds \diff \arccos( x) = \frac{-1}{\sqrt{1-x^2}}$$ \\
 $$ \ds \diff \arctan(x) = \frac{1}{1+x^2}$$
 \end{boxnote}
 \problem Note any common themes or differences, related to the earlier
