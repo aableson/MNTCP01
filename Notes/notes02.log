@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  18 APR 2016 20:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  20 APR 2016 13:41
 entering extended mode
 **\input notes02.tex
 (notes02.tex (PreambleCommon.tex (C:\MiKTeX2.9\tex\latex\base\article.cls
@@ -17,6 +17,9 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \abovecaptionskip=\skip41
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
+)
+(C:\MiKTeX2.9\tex\latex\base\alltt.sty
+Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 (C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\tocloft\tocloft.sty
 Package: tocloft 2013/05/02 v2.3f parameterised ToC, etc., typesetting
@@ -427,29 +430,24 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  This may cause the page layout to be inconsistent, however.
 
 [1] [2] [3]
-Underfull \hbox (badness 10000) in paragraph at lines 84--85
+Underfull \hbox (badness 10000) in paragraph at lines 85--86
 []\OT1/cmr/m/n/24.88 Sketch the graph of
  []
 
-<graphics/empty_graph_square_12.png, id=20, 803.0pt x 803.0pt>
+<graphics/empty_graph_square_12.png, id=21, 803.0pt x 803.0pt>
 File: graphics/empty_graph_square_12.png Graphic file (type png)
 
 <use graphics/empty_graph_square_12.png>
 Package pdftex.def Info: graphics/empty_graph_square_12.png used on input line 
-89.
+90.
 (pdftex.def)             Requested size: 275.12798pt x 275.13612pt.
  [4 <./graphics/empty_graph_square_12.png>]
 File: graphics/empty_graph_square_12.png Graphic file (type png)
  <use graphics/empty_graph_square_12.png>
 Package pdftex.def Info: graphics/empty_graph_square_12.png used on input line 
-129.
+130.
 (pdftex.def)             Requested size: 289.07999pt x 289.07977pt.
  [1]
-Underfull \hbox (badness 10000) in paragraph at lines 137--138
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 138--139
 
  []
@@ -459,87 +457,142 @@ Underfull \hbox (badness 10000) in paragraph at lines 139--140
 
  []
 
+
+Underfull \hbox (badness 10000) in paragraph at lines 140--141
+
+ []
+
 [2] [3]
 File: graphics/empty_graph_square_12.png Graphic file (type png)
  <use graphics/empty_graph_square_12.png>
 Package pdftex.def Info: graphics/empty_graph_square_12.png used on input line 
-160.
+161.
 (pdftex.def)             Requested size: 289.07999pt x 289.07977pt.
  [4] [1] [2] [1]
 File: graphics/empty_graph_square_12.png Graphic file (type png)
 
 <use graphics/empty_graph_square_12.png>
 Package pdftex.def Info: graphics/empty_graph_square_12.png used on input line 
-234.
+236.
 (pdftex.def)             Requested size: 289.07999pt x 289.07977pt.
  [2]
-Underfull \hbox (badness 10000) in paragraph at lines 243--249
+Underfull \hbox (badness 10000) in paragraph at lines 245--251
 
  []
 
-[3]
-Underfull \hbox (badness 10000) in paragraph at lines 258--260
+[3] <graphics/notes_02_deflection.png, id=55, 612.03656pt x 128.73094pt>
+File: graphics/notes_02_deflection.png Graphic file (type png)
 
- []
+<use graphics/notes_02_deflection.png>
+Package pdftex.def Info: graphics/notes_02_deflection.png used on input line 27
+9.
+(pdftex.def)             Requested size: 645.3686pt x 135.74895pt.
+ [1 <./graphics/notes_02_deflection.png>]
+File: graphics/notes_02_deflection.png Graphic file (type png)
+<use graphics/notes_02_deflection.png>
+Package pdftex.def Info: graphics/notes_02_deflection.png used on input line 28
+5.
+(pdftex.def)             Requested size: 645.3686pt x 135.74895pt.
+ [2]
+File: graphics/notes_02_deflection.png Graphic file (type png)
 
-[4] [1] [1] [1] [1]
-Overfull \hbox (4.15549pt too wide) in paragraph at lines 308--310
+<use graphics/notes_02_deflection.png>
+Package pdftex.def Info: graphics/notes_02_deflection.png used on input line 29
+3.
+(pdftex.def)             Requested size: 645.3686pt x 135.74895pt.
+ [3]
+<graphics/notes_02_MATLAB_Windows.png, id=67, 688.82344pt x 527.72156pt>
+File: graphics/notes_02_MATLAB_Windows.png Graphic file (type png)
+
+<use graphics/notes_02_MATLAB_Windows.png>
+Package pdftex.def Info: graphics/notes_02_MATLAB_Windows.png used on input lin
+e 311.
+(pdftex.def)             Requested size: 543.47212pt x 416.36401pt.
+ [1 <./graphics/notes_02_MATLAB_Windows.png>] [1]
+Missing character: There is no ¡ in font cmr17!
+Missing character: There is no ° in font cmr17!
+Missing character: There is no ¡ in font cmr17!
+Missing character: There is no ± in font cmr17!
+Missing character: There is no ¡ in font cmr17!
+Missing character: There is no ° in font cmr17!
+Missing character: There is no ¡ in font cmr17!
+Missing character: There is no ± in font cmr17!
+ [2] [3] [4] [5] [1] [2] [1] [2] [1]
+Overfull \hbox (4.15549pt too wide) in paragraph at lines 457--459
 []\OT1/cmr/m/n/24.88 Some spe-cial types of non-linear equa-tions \OT1/cmr/bx/n
 /24.88 can \OT1/cmr/m/n/24.88 be solved al-ge-braically. 
  []
 
-[2] [3] [4] [5]
-<graphics/notes_02_MotorcycleJump_2014.png, id=83, 433.62pt x 124.21407pt>
+[2] [3] [4]
+<graphics/notes_02_MotorcycleJump_2014.png, id=115, 433.62pt x 124.21407pt>
 File: graphics/notes_02_MotorcycleJump_2014.png Graphic file (type png)
 
 <use graphics/notes_02_MotorcycleJump_2014.png>
 Package pdftex.def Info: graphics/notes_02_MotorcycleJump_2014.png used on inpu
-t line 362.
-(pdftex.def)             Requested size: 614.295pt x 175.99095pt.
- [6 <./graphics/notes_02_MotorcycleJump_2014.png>] [7] [8] [9] [10] [11]
-Underfull \hbox (badness 10000) in paragraph at lines 447--450
+t line 504.
+(pdftex.def)             Requested size: 475.53423pt x 136.22836pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 508--511
+
+ []
+
+[1 <./graphics/notes_02_MotorcycleJump_2014.png>] [2] [3] [4] [1] [2]
+Underfull \hbox (badness 10000) in paragraph at lines 596--599
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 453--454
+Underfull \hbox (badness 10000) in paragraph at lines 602--603
 
  []
 
-[12] [13] [14]
-<graphics/notes_02_secant_example_graph.png, id=115, 666.23906pt x 515.67656pt>
+[3] [1]
+<graphics/notes_02_secant_example_graph.png, id=142, 666.23906pt x 515.67656pt>
 File: graphics/notes_02_secant_example_graph.png Graphic file (type png)
 <use graphics/notes_02_secant_example_graph.png>
 Package pdftex.def Info: graphics/notes_02_secant_example_graph.png used on inp
-ut line 492.
+ut line 641.
+(pdftex.def)             Requested size: 271.73088pt x 210.32715pt.
+ [2 <./graphics/notes_02_secant_example_graph.png>]
+File: graphics/notes_02_secant_example_graph.png Graphic file (type png)
+ <use graphics/notes_02_secant_example_graph.png>
+Package pdftex.def Info: graphics/notes_02_secant_example_graph.png used on inp
+ut line 647.
 (pdftex.def)             Requested size: 505.89pt x 391.57204pt.
-
-<graphics/notes_02_secant_example_graph_zoom.png, id=116, 666.23906pt x 517.182
+ [3]
+<graphics/notes_02_secant_example_graph_zoom.png, id=150, 666.23906pt x 517.182
 19pt>
 File: graphics/notes_02_secant_example_graph_zoom.png Graphic file (type png)
  <use graphics/notes_02_secant_example_graph_zoom.png>
 Package pdftex.def Info: graphics/notes_02_secant_example_graph_zoom.png used o
-n input line 493.
+n input line 651.
 (pdftex.def)             Requested size: 505.89pt x 392.71532pt.
- [15 <./graphics/notes_02_secant_example_graph.png>] [16 <./graphics/notes_02_s
-ecant_example_graph_zoom.png>] [17] [18] [19] [1] [2] (notes02.aux) ) 
+ [4 <./graphics/notes_02_secant_example_graph_zoom.png>] [5] [1]
+File: graphics/notes_02_secant_example_graph_zoom.png Graphic file (type png)
+
+<use graphics/notes_02_secant_example_graph_zoom.png>
+Package pdftex.def Info: graphics/notes_02_secant_example_graph_zoom.png used o
+n input line 679.
+(pdftex.def)             Requested size: 289.07999pt x 224.40424pt.
+ [2] [1] [2] [1] [2]
+(notes02.aux) ) 
 Here is how much of TeX's memory you used:
- 3655 strings out of 493634
- 48200 string characters out of 3149836
- 120267 words of memory out of 3000000
- 6957 multiletter control sequences out of 15000+200000
+ 3677 strings out of 493634
+ 48735 string characters out of 3149836
+ 120476 words of memory out of 3000000
+ 6974 multiletter control sequences out of 15000+200000
  15643 words of font info for 60 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  44i,13n,43p,331b,270s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/MiKTeX
-2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX2.9/fonts/type1/public/
-amsfonts/cm/cmmi12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><
-C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX2.9/fonts/type1
-/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmt
-i12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on notes02.pdf (39 pages, 336440 bytes).
+<C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKT
+eX2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX2.9/fonts/type1/publi
+c/amsfonts/cm/cmmi12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb
+><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX2.9/fonts/typ
+e1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/c
+mti12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on notes02.pdf (49 pages, 437469 bytes).
 PDF statistics:
- 166 PDF objects out of 1000 (max. 8388607)
+ 206 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 21 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 31 words of extra memory for PDF output out of 10000 (max. 10000000)
 

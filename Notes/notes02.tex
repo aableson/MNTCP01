@@ -21,8 +21,8 @@
 \item Use MATLAB to graph and compare functions with their
   linearizations
 \item Use MATLAB to implement Newton's method
-\item Calculate and interpret the first and second derivatives, as
-  well as higher order derivatives
+%\item Calculate and interpret the first and second derivatives, as
+%  well as higher order derivatives
  \end{itemize}
 
 \vspace{5mm}
@@ -34,12 +34,13 @@
 You should now feel comfortable in finding the derivative of a wide
 variety of functions with formulas. \\[1ex]
 
-In this section, we will explore how the derivatives you can compute
-can be tied back to understanding the behaviour of the original
+In this section, we will explore how the derivatives you compute can
+be tied back to understanding the behaviour of the original
 function. \\[1ex]
 
 We will start by returning to the definition of the derivative, based
-on the $\ds \frac{\mbox{rise}}{\mbox{run}}$ formula for slopes: 
+on the $\ds \left(\frac{\mbox{rise}}{\mbox{run}}\right)$ formula for
+slopes:
 \begin{align*} 
   f'(x) = \frac{d}{dx} f = \dfdx = \lim_{\Delta x \to 0} \frac{\Delta f}{\Delta x} = \lim_{h \to 0} \frac{f(x+h) - f(x)}{h}
 \end{align*} 
@@ -162,7 +163,8 @@ $\ds y=\frac{1}{x} $ at $x=4$.  \vfill
 
 \newpage
 \topic{Linear Approximations for Error Estimation} Linear
-approximations can be useful for quick and simple error calculations.
+approximations can be useful for quick and (relatively) simple error
+calculations.
 
 \begin{problem}
   A rock formation with high density ores was identified using gravity
@@ -253,48 +255,195 @@ $\sin(x)$ and $x$.
 measured in degrees than radians: fill in the row indicating how many
 degrees are represented by the radian measures.  \vfill
 
-\newpage
+%\newpage
 
-Just for fun, put your calculator into degree mode, and see whether
-$\sin(x) \approx x$ still holds for small $x$.\\[1ex]
+% Just for fun, put your calculator into degree mode, and see whether
+% $\sin(x) \approx x$ still holds for small $x$.\\[1ex]
 
-\begin{tabular}{c|c}
-  $x$ (deg) & $\sin(x)$ \\ \hline
-  2$^o$ &  \\[2ex]
-  4$^o$ &  \\[2ex]
-  6$^o$  &  \\[2ex]
-\end{tabular}
-
-
-\newpage
-\topic{MATLAB Intro}
-\subsection*{MATLAB Intro}
-
+% \begin{tabular}{c|c}
+%   $x$ (deg) & $\sin(x)$ \\ \hline
+%   2$^o$ &  \\[2ex]
+%   4$^o$ &  \\[2ex]
+%   6$^o$  &  \\[2ex]
+% \end{tabular}
 
 \newpage
+
+\topic{Linear Approximation In Beam Deflection}
+\subsection*{Linear Approximation In Beam Deflection}
+
+Sometimes engineering texts will use linear approximations without
+explaining the source.  Here is a sample from a text on deflection of
+beams under load.
+
+\includegraphics[width=0.95\linewidth]{graphics/notes_02_deflection}
+
+\problem Compare the two meanings of $\theta_B$ highlighted.
+
+\newpage
+
+\includegraphics[width=0.95\linewidth]{graphics/notes_02_deflection}
+
+\problem Use linearization to show that the slope at $L$ is
+appromately equal to the angle of rotation.
+
+\vfill
+
+\newpage
+\includegraphics[width=0.95\linewidth]{graphics/notes_02_deflection}
+
+$$ \mbox{slope} = \tan(\theta_B) \approx \theta_B$$
+
+\problem As with any linear approximation, what is the fine print on this
+relationship?
+
+\vspace{1in}
+
+Extra caution: what units would the angle $\theta_B$ have to be in for
+this approximation to work?
+
+\newpage
+\topic{MATLAB Orientation}
+\subsection*{MATLAB Orientation}
+
+\vfill
+
+\includegraphics[width=0.8\linewidth]{graphics/notes_02_MATLAB_Windows}
+\vfill
+
+\newpage
+\topic{MATLAB - Basic Commands}
+\subsection*{MATLAB - Basic Commands}
+
+{\bf Basic Usage:}
+\begin{itemize}
+\item Enter simple calculations at the
+command prompt
+\item Define variables at the command prompt
+\item Use cursor keys to revisit previous
+commands
+\item Use first letters and cursor keys for more
+control
+\end{itemize}
+
+\newpage
+{\bf Scripts} 
+
+Once you get past using single commands, you should store your program
+in a `script', or M-file.
+\begin{itemize}
+\item File/New/Blank M-File, or
+\item ¡°New Document¡± button
+\end{itemize}
+You can run a script directly from the editor.
+\begin{itemize}
+\item F5, or
+\item Press the ¡°Play¡± button
+\end{itemize}
+
+\newpage
+{\bf Further Commands}
+\begin{itemize}
+\item Standard mathematical functions are
+built in:
+\begin{itemize}
+\item \texttt{cos, sin, log, log10, exp}
+\end{itemize}
+\item Suppress output with semi-colon
+\item User variable names should be different from built-in functions,
+  variables 
+\item File/Clear Workspace (or type \texttt{clear}) to clear all
+  variables
+\end{itemize}
+
+\newpage {\bf Matrices and MATLAB}
+
+(Nearly) all MATLAB variables are matrices.
+\begin{itemize}
+\item scalars are \texttt{1x1} matrices
+\item vectors are \texttt{1xn} or \texttt{nx1} matrices
+\item  \texttt{size} function gives dimensions of a matrix
+\end{itemize}
+\newpage
+
+{\bf Manually Creating Matrices}
+
+Use square brackets to create matrices or vectors from list of numbers.
+\begin{itemize}
+\item \verb+v = [1 3 10]+
+\end{itemize}
+\vfill
+
+Use colon notation to generate vectors by counting:
+\begin{itemize}
+\item \verb+w = 0:10+
+\item \verb+z = 10:0.1:12+
+\end{itemize}
+\vfill
+
+Use the \verb+linspace+ command to generate evenly-spaced values with
+over a range.
+\begin{itemize}
+\item \verb+x = linspace(0, 4)+
+\item \verb+x = linspace(0, 4, 10000)+
+\end{itemize}
+
 \topic{Graphing in MATLAB}
 \subsection*{Graphing in MATLAB}
 
-Summary:
-
+Basic syntax for generating a graph in MATLAB is:
 \begin{verbatim}
+close all
 x = linspace(-2, 2);
 y = exp(x);
 plot(x, y)
 \end{verbatim}
 
+\newpage
 
+{\bf Matrices and Graphing}
+
+Try the following code to plot of a parabola
+\begin{verbatim}
+x = linspace(-2, 2)
+y = x^2
+plot(x, y)
+\end{verbatim}
+This is a very common issue when using MATLAB.
+
+\verb+x^2+ means: \vfill
+
+\verb+x.^2+ means: \vfill
 \newpage
 \topic{Tangent Lines in MATLAB}
 \subsection*{Tangent Lines in MATLAB}
+
+\problem Use MATLAB to graph the function $\ds y = \frac{1}{x}$, and
+the tangent line to that graph at $x=4$.
+
+\vfill
+
+Useful new commands:
+\begin{itemize}
+\item \verb+hold on+ 
+\item \verb+xlim([2, 5])+ 
+\item \verb+ylim[[0, 1])+
+\end{itemize}
+
+\newpage
+
+\problem Use MATLAB to graphically show the relationship between
+$y = \tan(x)$ and its linear approximation $y = x$ for small $x$
+values.
+
 
 
 \newpage
 \topic{Solving Non-Linear Equations}
 \subsection*{Solving Non-Linear Equations}
 
-One surprisingly challenging area of mathematics is in pre-calculus:
-simply solving equations with non-linear elements.
+One surprisingly challenging area of mathematics is back in
+pre-calculus: simply solving equations with non-linear elements.
 
 \problem Compare the difficulty in solving these two single-variable
 equations.
@@ -319,9 +468,9 @@ to the following equations.
 \vfill 
 \newpage
 
-Unfortunately, solving using algebra requires you understanding how to
-manipulate particular functions.  Worse yet, equations can be simply
-too complex to solve algebraically.
+Unfortunately, solving using algebra requires understanding how to
+manipulate specific functions.  Worse yet, some equations can be
+simply too complex to solve algebraically.
 
 \problem Try to solve the following equations by hand: 
 \[ \sin(3x) = x \]
@@ -346,42 +495,40 @@ choice, compared to by-hand solving:
 
 \newpage
 
+\topic{Example - Trajectories}
 \subsection*{Example - Trajectories}
 To generate a motivation for solving non-linear equations, we are
-going to simulate the launch a motorcycle off the end of a ramp.  The
-launch parameters are $v_0$, $y_0$, and $\theta_0$.
+going to simulate the launch a motorcycle off the end of a ramp.  
 
-If you start with some basic physics equations, and break the trajectory into components,
-you can arrive at the following formula:
-$$ y= y_0 + \tan(\theta_0) ~x - \frac{1}{2} \frac{g}{\cos^2(\theta_0) (v_0)^2} ~x^2 $$
-
-
-
-\newpage
 \begin{center}
-\includegraphics[width=8.5in]{graphics/notes_02_MotorcycleJump_2014}
-
-
+\includegraphics[width=0.7\linewidth]{graphics/notes_02_MotorcycleJump_2014} \\
 Alex Harvill, age 19, lands 425 foot ramp-to-dirt record in May 2012.
 \end{center}
 
+The launch parameters are $v$, $\theta$, and $y_0$. \\
+If you start with some basic physics equations, and break the
+trajectory into components, you can arrive at the following formula:
+\\ \vfill
+$$ y= y_0 + \tan(\theta) ~x - \frac{1}{2} \frac{g}{\cos^2(\theta) (v)^2} ~x^2 $$
+
+
 \newpage
 
 
-\problem{Write a MATLAB script, \texttt{W2\_1.m} that plots the
-  trajectory of the motorcycle.  Use
+\problem Write a MATLAB script that plots the trajectory of the
+  motorcycle.  Use
 \begin{itemize}
 \item $y_0$ = 3 m, 
-\item $v_0 = 20$ m/s, and 
-\item $\theta_0$ = 30 degrees.
+\item $v = 20$ m/s, and 
+\item $\theta$ = 30 degrees.
 \end{itemize}
-and choose the $x$ interval so it shows the impact point.
-}
+Choose the $x$ interval so it shows the impact point.
+
 
 \vfill
 
-\problem{Add a horizontal line on the trajectory graph that shows the
-  ground level, $y=0$.  Draw it in black.}
+Add a horizontal line on the trajectory graph that shows the
+  ground level, $y=0$.  Draw it in black.
 
 \vfill
 
@@ -409,11 +556,13 @@ Comment on the simplicity and accuracy of this approach.
 
 \newpage
 
+\topic{Root-Finding vs Equation Solving}
 \subsection*{Root-Finding vs Equation Solving}
 
 In the ballistics example, it turns out to be very laborious, and
-fairly inaccurate, to find the launch angle that will launch a
-projectile on to a target.
+fairly inaccurate, to manually experiment with angles to find the
+launch angle that will launch a projectile on to a target. We would
+like to find a more systematic and robust approach.
 
 \problem Express the targeting problem as a solution to a non-linear
 equation.
@@ -457,18 +606,21 @@ The $f(x) = 0$ form is preferable because:
 
 \newpage
 
-\subsection*{Newton's Method}
+\topic{Newton's Method - Concept}
+\subsection*{Newton's Method - Concept}
 
 {\bf Concept:} If we are looking for the {\bf root of a non-linear
-  function},
-
-We can use that information to speed up our search.
+  function}, here is a reasonable search strategy.
 \begin{itemize}
-\item Pretend that $f(x)$ is linear, through some starting point
-  $x=a, y=f(a))$.
-\item Find the tangent line at $x=a$
-\item Find $c$, the root of the tangent line. This should be closer to
-  the real root of $f(x)$ than our original guess.
+\item Find a reasonable starting point for our solution search, \\
+  $x=a, y=f(a)$.
+\item Imagine that $f(x)$ is approximately linear.
+\item Find the tangent line to the function at $x=a$.
+\item Find $c$, the root of the tangent line. 
+  \begin{itemize}
+  \item The new $x=c$ point should be closer to the real root of
+    $f(x)$ than our original starting point, $x=a$.
+  \end{itemize}
 \end{itemize}
 
 \newpage
@@ -478,39 +630,66 @@ We can use that information to speed up our search.
 We want to find the $x$ values where the graph below crosses $y=0$.
 
 \begin{itemize}
-\item Suppose we start at initial guess of $a = 3$.
-\item Draw a line through the pair of points, and follow it to its
-  root, $x=c$.
+\item Suppose we start at initial starting point of $a = 4$.
+\item Draw the tangent line at $x=a$, and follow it to its root,
+  $x=c$.
 \item Replace $a$ with the new point $c$.
 \item Repeat the last two steps until $a$ and $c$ are almost the same,
   or don't change between iterations.
 \end{itemize}
+\begin{center}
+  \includegraphics[width=0.4\linewidth]{graphics/notes_02_secant_example_graph}
+\end{center}
 
 \newpage
 
 \begin{center}
   \includegraphics[width=7in]{graphics/notes_02_secant_example_graph}
+\end{center}
+\newpage
+\begin{center}
 \includegraphics[width=7in]{graphics/notes_02_secant_example_graph_zoom}
 \end{center}
 
 \newpage
 
-\subsection*{Computational Algorithm}
-The previous graph was the graph of $$f(x) = e^{x/2} -x -10 \mbox{, which
-came from the equation } e^{x/2} = x + 10$$
-
-\problem{Use an anonymous function to define this function in MATLAB.}
-
-\vfill
+{\bf MATLAB Simulation}
 
 \newpage
 
-How do we calculate the root of the tangent line to $f(x)$, if the
-line is based on the point $x=a$?
+\topic{Newton's Method - Computational Algorithm}
+\subsection*{Newton's Method - Computational Algorithm}
+
+The two key steps of Newton's method are:
+\begin{itemize}
+\item Find the tangent line to the function at $x=a$.
+\item Find $c$, the root of the tangent line. 
+\end{itemize}
+\problem How do we calculate the root of the tangent line to $f(x)$,
+if the line is based on the point $x=a$?
+
+
+\newpage
+
+\problem In MATLAB, use Newton's method to find an approximation solution to
+$$ e^{x/2} = x + 10$$
 
 \vfill
-\vfill
-\vfill
+\begin{center}
+\includegraphics[width=4in]{graphics/notes_02_secant_example_graph_zoom} \\
+Graph of $f(x) = e^{x/2}-x-10$
+\end{center}
+
+
+\newpage
+\topic{Newton's Method - Trajectory Solution}
+\subsection*{Newton's Method - Trajectory Solution}
+
+\problem In MATLAB, use Newton's method to find the launch angle that
+will land the a projectile at $x=30$, using the formula
+
+$$ y = y_0 + \tan(\theta) ~x - \frac{1}{2} \frac{g}{\cos^2(\theta) (v)^2} ~x^2 $$
+with $y_0 = 3$ m and $v = 20$ m/s.
 
 
 \newpage
@@ -539,7 +718,7 @@ equations. Some quick notes:
 $$x e^{-x} = 5$$
 
 \newpage
-\problem Use Newton's method to find an approximate solution to  $$sin(x) = \frac{1}{10}\ln(x)$$
+\problem Use Newton's method to find an approximate solution to  $$\sin(x) = \frac{1}{10}\ln(x)$$
 
 
 \end{document}
