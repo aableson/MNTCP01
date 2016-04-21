@@ -1,4 +1,5 @@
 % Animation of Newton's method
+clc
 close all
 hfig = figure();
 set(hfig,'Units', 'Normalized', 'OuterPosition', [0 0 1 1]);     hold on;
