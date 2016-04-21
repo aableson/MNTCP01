@@ -1,13 +1,13 @@
 \newcommand{\WeekTitleOne}{Derivatives - Foundations}
 \newcommand{\WeekTitleTwo}{Derivatives - Linearization}
-\newcommand{\WeekTitleThree}{Derivatives - Modelling}
-\newcommand{\WeekTitleFour}{Implicit Differentiation, Related Rates}
-\newcommand{\WeekTitleFive}{Families of Functions, Taylor Polynomials, l'Hopital's Rule} 
-\newcommand{\WeekTitleSix}{Optimization, Optimal Marginal Rates }
-\newcommand{\WeekTitleSeven}{The Integral }
-\newcommand{\WeekTitleEight}{Definite Integral Properties, Fundamental Theorem of Calculus}
-\newcommand{\WeekTitleNine}{Graphs of Antiderivatives, Substitution Integrals}
-\newcommand{\WeekTitleTen}{Integration by Parts, Average of a Function}  
-\newcommand{\WeekTitleEleven}{ }
-\newcommand{\WeekTitleTwelve}{ Exam Review }
+\newcommand{\WeekTitleThree}{Derivatives - Modeling}
+\newcommand{\WeekTitleFour}{Integrals - Foundations}
+\newcommand{\WeekTitleFive}{Integrals - Techniques}
+\newcommand{\WeekTitleSix}{Integrals - Modeling}
+\newcommand{\WeekTitleSeven}{Differential Equations - }
+\newcommand{\WeekTitleEight}{Differential Equations - }
+\newcommand{\WeekTitleNine}{Differential Equations - }
+\newcommand{\WeekTitleTen}{Linear Algebra - }
+\newcommand{\WeekTitleEleven}{Linear Algebra - }
+\newcommand{\WeekTitleTwelve}{Linear Algebra - }
 
