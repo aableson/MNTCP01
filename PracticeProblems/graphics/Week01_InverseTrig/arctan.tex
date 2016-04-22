@@ -2,17 +2,19 @@
 \usepackage{pstricks,auto-pst-pdf}
 \usepackage{pst-all}
 \begin{document}
-\psset{unit=2cm}
+\psset{unit=1cm}
 \psset{algebraic}
 \begin{pspicture}(-1.75,-.35)(1.75,4.1)
 \SpecialCoor
-\psaxes[labels=x,Dy=\pstPI2,linewidth=.5pt]{->}(0,0)(-1.5,0)(1.5,3.6)
-\uput[0](!0 PI 2 div){$\frac{\pi}{2}$}
-\uput[0](!0 PI){$\pi$}
-\uput[-90](-1.5,3.7){$f(x) = \arccos(x)$}
-\psplot[linewidth=1.5pt]{-1}{1}{x ACOS}
-\psdot(1,0)
-\psdot(!1 neg PI)
+\psplot[linewidth=1.5pt]{-4}{4}{2*ATAN(x)}
+\psaxes[trigLabelBase=4, dy=\pstPI2, yunit=\psPi, ytrigLabels]{->}(0,0)(-4.25,-1.2)(4.25,1.2)[$x$,0][$y$,90]
+\psline[linestyle=dotted,linewidth=2pt](0,3.14)(4.2,3.14)
+\psline[linestyle=dotted,linewidth=2pt](0,-3.14)(-4.2,-3.14)
+%\psaxes[labels=x,Dy=\pstPI2,linewidth=.5pt]{->}(0,0)(-1.5,0)(1.5,3.6)
+%\uput[0](!0 PI){$\pi$}
+%\uput[-90](-1.5,3.7){$f(x) = \arccos(x)$}
+%\psdot(1,0)
+%\psdot(!1 neg PI)
 \end{pspicture}
 
 \end{document}
