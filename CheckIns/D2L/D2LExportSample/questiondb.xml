@@ -1,0 +1,144 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop>
+  <objectbank ident="QLIB_50893" xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0">
+    <item d2l_2p0:id="1" d2l_2p0:page="1" ident="OBJ_115255" label="QUES_47571_56076" title="Question 1">
+      <itemmetadata>
+        <qtimetadata>
+          <qti_metadatafield>
+            <fieldlabel>qmd_computerscored</fieldlabel>
+            <fieldentry>yes</fieldentry>
+          </qti_metadatafield>
+          <qti_metadatafield>
+            <fieldlabel>qmd_questiontype</fieldlabel>
+            <fieldentry>Multiple Choice</fieldentry>
+          </qti_metadatafield>
+          <qti_metadatafield>
+            <fieldlabel>qmd_weighting</fieldlabel>
+            <fieldentry>1.000000000</fieldentry>
+          </qti_metadatafield>
+          <qti_metadatafield>
+            <fieldlabel>qmd_globalid</fieldlabel>
+            <fieldentry>8c61469b-13e8-4b17-825d-7a96d1cf3bdd</fieldentry>
+          </qti_metadatafield>
+          <qti_metadatafield>
+            <fieldlabel>qmd_displayid</fieldlabel>
+            <fieldentry>MNTC_P04 2015/16 W-396</fieldentry>
+          </qti_metadatafield>
+        </qtimetadata>
+      </itemmetadata>
+      <itemproc_extension>
+        <d2l_2p0:difficulty>1</d2l_2p0:difficulty>
+        <d2l_2p0:isbonus>no</d2l_2p0:isbonus>
+        <d2l_2p0:ismandatory>no</d2l_2p0:ismandatory>
+      </itemproc_extension>
+      <presentation>
+        <flow>
+          <material>
+            <mattext texttype="text/html">&lt;p>The graph of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> is shown below. &lt;br /> &lt;img src="http://www.mast.queensu.ca/~ableson/MNTCP04/CheckIns/Week09/AntiderivativeGraph_Original.png" alt="Graphs" width="300px" />&lt;/p>
+&lt;p>Which of the following graphs (a)-(d) could represent an &lt;b>anti&lt;/b>derivative of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>? &lt;br /> &lt;img src="http://www.mast.queensu.ca/~ableson/MNTCP04/CheckIns/Week09/Question1_AllGraphs.png" alt="Graphs" width="500px" />&lt;/p></mattext>
+          </material>
+          <response_extension>
+            <d2l_2p0:display_style>2</d2l_2p0:display_style>
+            <d2l_2p0:enumeration>6</d2l_2p0:enumeration>
+            <d2l_2p0:grading_type>0</d2l_2p0:grading_type>
+          </response_extension>
+          <response_lid ident="QUES_47571_56076_LID" rcardinality="Single">
+            <render_choice shuffle="no">
+              <flow_label class="Block">
+                <response_label ident="QUES_47571_56076_A176085">
+                  <flow_mat>
+                    <material>
+                      <mattext texttype="text/html">&lt;p>(a)&lt;/p></mattext>
+                    </material>
+                  </flow_mat>
+                </response_label>
+              </flow_label>
+              <flow_label class="Block">
+                <response_label ident="QUES_47571_56076_A176086">
+                  <flow_mat>
+                    <material>
+                      <mattext texttype="text/html">&lt;p>(b)&lt;/p></mattext>
+                    </material>
+                  </flow_mat>
+                </response_label>
+              </flow_label>
+              <flow_label class="Block">
+                <response_label ident="QUES_47571_56076_A176087">
+                  <flow_mat>
+                    <material>
+                      <mattext texttype="text/html">&lt;p>(c)&lt;/p></mattext>
+                    </material>
+                  </flow_mat>
+                </response_label>
+              </flow_label>
+              <flow_label class="Block">
+                <response_label ident="QUES_47571_56076_A176088">
+                  <flow_mat>
+                    <material>
+                      <mattext texttype="text/html">&lt;p>(d)&lt;/p></mattext>
+                    </material>
+                  </flow_mat>
+                </response_label>
+              </flow_label>
+            </render_choice>
+          </response_lid>
+        </flow>
+      </presentation>
+      <resprocessing>
+        <respcondition title="Response Condition 1">
+          <conditionvar>
+            <varequal respident="QUES_47571_56076_LID">QUES_47571_56076_A176085</varequal>
+          </conditionvar>
+          <setvar action="Set">0.000000000</setvar>
+          <displayfeedback feedbacktype="Response" linkrefid="QUES_47571_56076_IF176085"/>
+        </respcondition>
+        <respcondition title="Response Condition 2">
+          <conditionvar>
+            <varequal respident="QUES_47571_56076_LID">QUES_47571_56076_A176086</varequal>
+          </conditionvar>
+          <setvar action="Set">0.000000000</setvar>
+          <displayfeedback feedbacktype="Response" linkrefid="QUES_47571_56076_IF176086"/>
+        </respcondition>
+        <respcondition title="Response Condition 3">
+          <conditionvar>
+            <varequal respident="QUES_47571_56076_LID">QUES_47571_56076_A176087</varequal>
+          </conditionvar>
+          <setvar action="Set">0.000000000</setvar>
+          <displayfeedback feedbacktype="Response" linkrefid="QUES_47571_56076_IF176087"/>
+        </respcondition>
+        <respcondition title="Response Condition 4">
+          <conditionvar>
+            <varequal respident="QUES_47571_56076_LID">QUES_47571_56076_A176088</varequal>
+          </conditionvar>
+          <setvar action="Set">100.000000000</setvar>
+          <displayfeedback feedbacktype="Response" linkrefid="QUES_47571_56076_IF176088"/>
+        </respcondition>
+      </resprocessing>
+      <itemfeedback ident="QUES_47571_56076">
+        <material>
+          <mattext texttype="text/html">&lt;p>The values of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> are positive, then negative, so the &lt;b>slopes&lt;/b> of the anti-derivative are first positive (increasing function) then negative (decreasing function). &lt;br /> When the value of the function is zero (at &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>3&lt;/mn>&lt;/mrow>&lt;/math>), the anti-derivative isn't changing (zero slope).&lt;/p></mattext>
+        </material>
+      </itemfeedback>
+      <itemfeedback ident="QUES_47571_56076_IF176085">
+        <material>
+          <mattext texttype="text/html"/>
+        </material>
+      </itemfeedback>
+      <itemfeedback ident="QUES_47571_56076_IF176086">
+        <material>
+          <mattext texttype="text/html"/>
+        </material>
+      </itemfeedback>
+      <itemfeedback ident="QUES_47571_56076_IF176087">
+        <material>
+          <mattext texttype="text/html"/>
+        </material>
+      </itemfeedback>
+      <itemfeedback ident="QUES_47571_56076_IF176088">
+        <material>
+          <mattext texttype="text/html"/>
+        </material>
+      </itemfeedback>
+    </item>
+  </objectbank>
+</questestinterop>

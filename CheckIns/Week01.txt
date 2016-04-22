@@ -44,20 +44,20 @@ Which of the following graphis is the graph of \(y = \arccos(x)\)?
 <tr>
 <td><img src="arcsin.png" width="300px" alt="Graph (a)" /> </td>
 <td><img src="arctan.png" width="300px" alt="Graph (b)" /> </td>
-<td><img src="arcsin.png" width="300px" alt="Graph (c)" /> </td>
+<td><img src="arccos.png" width="300px" alt="Graph (c)" /> </td>
 </tr>
-<td>
-<td> (a) </td>
-<td> (b) </td>
-<td> (c) </td>
+<tr>
+<td style="text-align:center"> <b>(a)</b> </td>
+<td style="text-align:center"> <b>(b)</b> </td>
+<td style="text-align:center"> <b>(c)</b> </td>
 </tr>
 </table>
 ---Type
 multichoice
 ---Answers
 ~ (a)
-= (a)
-~ (c)
+~ (b)
+= (c)
 ---Comment
 The amplitude is 3.
 <br />

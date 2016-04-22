@@ -1,0 +1,402 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<questestinterop>
+  <objectbank ident="QLIB_50893" xmlns:d2l_2p0="http://desire2learn.com/xsd/d2lcp_v2p0">
+    <section d2l_2p0:id="2" ident="SECT_119460" title="Week02">
+      <sectionproc_extension>
+        <d2l_2p0:display_section_name>no</d2l_2p0:display_section_name>
+        <d2l_2p0:display_section_line>no</d2l_2p0:display_section_line>
+        <d2l_2p0:type_display_section>0</d2l_2p0:type_display_section>
+      </sectionproc_extension>
+      <item d2l_2p0:id="3" d2l_2p0:page="1" ident="OBJ_115255" label="Week02_Q1" title="Week02_Q1">
+        <itemmetadata>
+          <qtimetadata>
+            <qti_metadatafield>
+              <fieldlabel>qmd_computerscored</fieldlabel>
+              <fieldentry>yes</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_questiontype</fieldlabel>
+              <fieldentry>Multiple Choice</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_weighting</fieldlabel>
+              <fieldentry>1.000000000</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_globalid</fieldlabel>
+              <fieldentry>8c61469b-13e8-4b17-825d-7a96d1cf3bdd</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_displayid</fieldlabel>
+              <fieldentry>MNTC_P04 2015/16 W-396</fieldentry>
+            </qti_metadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <itemproc_extension>
+          <d2l_2p0:difficulty>1</d2l_2p0:difficulty>
+          <d2l_2p0:isbonus>no</d2l_2p0:isbonus>
+          <d2l_2p0:ismandatory>no</d2l_2p0:ismandatory>
+        </itemproc_extension>
+        <presentation>
+          <flow>
+            <material>
+              <mattext texttype="text/html">If the graph below represents &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>, which of the graphs (a)-(d) could represent the graph of the derivative, &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mo>'&lt;/mo>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>? &lt;br /> &lt;img src="http://www.mast.queensu.ca/~ableson/MNTCP04/CheckIns/Week02/Question2_AllGraphs.png" width="700px" alt="DerivativeGraphs" />
+
+</mattext>
+            </material>
+            <response_extension>
+              <d2l_2p0:display_style>2</d2l_2p0:display_style>
+              <d2l_2p0:enumeration>6</d2l_2p0:enumeration>
+              <d2l_2p0:grading_type>0</d2l_2p0:grading_type>
+            </response_extension>
+            <response_lid ident="Week02_Q1_LID" rcardinality="Single">
+              <render_choice shuffle="no">
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_1_ANS_1">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html"> (a)</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_1_ANS_2">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html"> (b)</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_1_ANS_3">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html"> (c)</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_1_ANS_4">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html"> (d)</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+              </render_choice>
+            </response_lid>
+          </flow>
+        </presentation>
+        <resprocessing>
+          <respcondition title="Response Condition 1">
+            <conditionvar>
+              <varequal respident="Week02_Q1_LID">Week02_QUES_1_ANS_1</varequal>
+            </conditionvar>
+            <setvar action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_1"> (a)</displayfeedback>
+          </respcondition>
+          <respcondition title="Response Condition 2">
+            <conditionvar>
+              <varequal respident="Week02_Q1_LID">Week02_QUES_1_ANS_2</varequal>
+            </conditionvar>
+            <setvar action="Set">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_2"> (b)</displayfeedback>
+          </respcondition>
+          <respcondition title="Response Condition 3">
+            <conditionvar>
+              <varequal respident="Week02_Q1_LID">Week02_QUES_1_ANS_3</varequal>
+            </conditionvar>
+            <setvar action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_3"> (c)</displayfeedback>
+          </respcondition>
+          <respcondition title="Response Condition 4">
+            <conditionvar>
+              <varequal respident="Week02_Q1_LID">Week02_QUES_1_ANS_4</varequal>
+            </conditionvar>
+            <setvar action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_4"> (d)</displayfeedback>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="Week02_Q1">
+          <material>
+            <mattext texttype="text/html">One feature: from &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>=&lt;/mo>&lt;mo>-&lt;/mo>&lt;mn>0.3&lt;/mn>&lt;/mrow>&lt;/math>-ish onwards, the function is always &lt;em>increasing&lt;/em>, or has &lt;em>positive slopes&lt;/em>. &lt;br /> Therefore the &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mo>'&lt;/mo>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> values for &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>&amp;gt;&lt;/mo>&lt;mo>-&lt;/mo>&lt;mn>0.3&lt;/mn>&lt;/mrow>&lt;/math>  point must always be &lt;b>positive&lt;/b>. &lt;br /> Other reference points: look for slope=0 points in the original graph, and map them  to zero &lt;b>y-values&lt;/b> on the &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mo>'&lt;/mo>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> graph (i.e. at &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>=&lt;/mo>&lt;mo>-&lt;/mo>&lt;mn>1.2&lt;/mn>&lt;mo>,&lt;/mo>&lt;mo>-&lt;/mo>&lt;mn>0.3&lt;/mn>&lt;/mrow>&lt;/math>).</mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item d2l_2p0:id="3" d2l_2p0:page="1" ident="OBJ_115255" label="Week02_Q2" title="Week02_Q2">
+        <itemmetadata>
+          <qtimetadata>
+            <qti_metadatafield>
+              <fieldlabel>qmd_computerscored</fieldlabel>
+              <fieldentry>yes</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_questiontype</fieldlabel>
+              <fieldentry>Multiple Choice</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_weighting</fieldlabel>
+              <fieldentry>1.000000000</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_globalid</fieldlabel>
+              <fieldentry>8c61469b-13e8-4b17-825d-7a96d1cf3bdd</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_displayid</fieldlabel>
+              <fieldentry>MNTC_P04 2015/16 W-396</fieldentry>
+            </qti_metadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <itemproc_extension>
+          <d2l_2p0:difficulty>1</d2l_2p0:difficulty>
+          <d2l_2p0:isbonus>no</d2l_2p0:isbonus>
+          <d2l_2p0:ismandatory>no</d2l_2p0:ismandatory>
+        </itemproc_extension>
+        <presentation>
+          <flow>
+            <material>
+              <mattext texttype="text/html">What is the derivative of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>=&lt;/mo>&lt;mfrac linethickness="1">&lt;mn>7&lt;/mn>&lt;mrow>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;/mrow>&lt;/mfrac>&lt;/mstyle>&lt;/mrow>&lt;/math>?
+
+</mattext>
+            </material>
+            <response_extension>
+              <d2l_2p0:display_style>2</d2l_2p0:display_style>
+              <d2l_2p0:enumeration>6</d2l_2p0:enumeration>
+              <d2l_2p0:grading_type>0</d2l_2p0:grading_type>
+            </response_extension>
+            <response_lid ident="Week02_Q2_LID" rcardinality="Single">
+              <render_choice shuffle="no">
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_2_ANS_1">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mn>7&lt;/mn>&lt;mi>ln&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>
+
+</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_2_ANS_2">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mfrac linethickness="1">&lt;mrow>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>-&lt;/mo>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;mrow>&lt;msup>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mn>2&lt;/mn>&lt;/msup>&lt;/mrow>&lt;/mfrac>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_2_ANS_3">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>+&lt;/mo>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>
+
+</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_2_ANS_4">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mfrac linethickness="1">&lt;mrow>&lt;mo>-&lt;/mo>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;mrow>&lt;msup>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mn>2&lt;/mn>&lt;/msup>&lt;/mrow>&lt;/mfrac>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+              </render_choice>
+            </response_lid>
+          </flow>
+        </presentation>
+        <resprocessing>
+          <respcondition title="Response Condition 1">
+            <conditionvar>
+              <varequal respident="Week02_Q2_LID">Week02_QUES_2_ANS_1</varequal>
+            </conditionvar>
+            <setvar action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_1">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mn>7&lt;/mn>&lt;mi>ln&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>
+
+</displayfeedback>
+          </respcondition>
+          <respcondition title="Response Condition 2">
+            <conditionvar>
+              <varequal respident="Week02_Q2_LID">Week02_QUES_2_ANS_2</varequal>
+            </conditionvar>
+            <setvar action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_2">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mfrac linethickness="1">&lt;mrow>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>-&lt;/mo>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;mrow>&lt;msup>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mn>2&lt;/mn>&lt;/msup>&lt;/mrow>&lt;/mfrac>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</displayfeedback>
+          </respcondition>
+          <respcondition title="Response Condition 3">
+            <conditionvar>
+              <varequal respident="Week02_Q2_LID">Week02_QUES_2_ANS_3</varequal>
+            </conditionvar>
+            <setvar action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_3">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>+&lt;/mo>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>
+
+</displayfeedback>
+          </respcondition>
+          <respcondition title="Response Condition 4">
+            <conditionvar>
+              <varequal respident="Week02_Q2_LID">Week02_QUES_2_ANS_4</varequal>
+            </conditionvar>
+            <setvar action="Set">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_4">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mfrac linethickness="1">&lt;mrow>&lt;mo>-&lt;/mo>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;mrow>&lt;msup>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mn>2&lt;/mn>&lt;/msup>&lt;/mrow>&lt;/mfrac>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</displayfeedback>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="Week02_Q2">
+          <material>
+            <mattext texttype="text/html">Rewriting using powers, &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>=&lt;/mo>&lt;mfrac linethickness="1">&lt;mn>7&lt;/mn>&lt;mrow>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;/mrow>&lt;/mfrac>&lt;mo>=&lt;/mo>&lt;mn>7&lt;/mn>&lt;msup>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mn>-1&lt;/mn>&lt;/msup>&lt;/mstyle>&lt;/mrow>&lt;/math>. &lt;br /> Using the chain rule, &lt;br /> &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>f&lt;/mi>&lt;mo>'&lt;/mo>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>=&lt;/mo>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;msup>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mn>-2&lt;/mn>&lt;/msup>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>=&lt;/mo>&lt;mfrac linethickness="1">&lt;mrow>&lt;mo>-&lt;/mo>&lt;mn>7&lt;/mn>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;mrow>&lt;msup>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msup>&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/msup>&lt;mo>+&lt;/mo>&lt;mn>8&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mn>2&lt;/mn>&lt;/msup>&lt;/mrow>&lt;/mfrac>&lt;/mstyle>&lt;/mrow>&lt;/math></mattext>
+          </material>
+        </itemfeedback>
+      </item>
+      <item d2l_2p0:id="3" d2l_2p0:page="1" ident="OBJ_115255" label="Week02_Q3" title="Week02_Q3">
+        <itemmetadata>
+          <qtimetadata>
+            <qti_metadatafield>
+              <fieldlabel>qmd_computerscored</fieldlabel>
+              <fieldentry>yes</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_questiontype</fieldlabel>
+              <fieldentry>Multiple Choice</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_weighting</fieldlabel>
+              <fieldentry>1.000000000</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_globalid</fieldlabel>
+              <fieldentry>8c61469b-13e8-4b17-825d-7a96d1cf3bdd</fieldentry>
+            </qti_metadatafield>
+            <qti_metadatafield>
+              <fieldlabel>qmd_displayid</fieldlabel>
+              <fieldentry>MNTC_P04 2015/16 W-396</fieldentry>
+            </qti_metadatafield>
+          </qtimetadata>
+        </itemmetadata>
+        <itemproc_extension>
+          <d2l_2p0:difficulty>1</d2l_2p0:difficulty>
+          <d2l_2p0:isbonus>no</d2l_2p0:isbonus>
+          <d2l_2p0:ismandatory>no</d2l_2p0:ismandatory>
+        </itemproc_extension>
+        <presentation>
+          <flow>
+            <material>
+              <mattext texttype="text/html"> Consider the function below.  &lt;br /> &lt;img src="http://www.mast.queensu.ca/~ableson/MNTCP04/CheckIns/Week02/TrigAmplitude.png" width="500px" alt="TrigGraph" /> &lt;br /> Select the formula that matches this graph. </mattext>
+            </material>
+            <response_extension>
+              <d2l_2p0:display_style>2</d2l_2p0:display_style>
+              <d2l_2p0:enumeration>6</d2l_2p0:enumeration>
+              <d2l_2p0:grading_type>0</d2l_2p0:grading_type>
+            </response_extension>
+            <response_lid ident="Week02_Q3_LID" rcardinality="Single">
+              <render_choice shuffle="no">
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_3_ANS_1">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>y&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>3&lt;/mn>&lt;mi>sin&lt;/mi>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mfrac linethickness="1">&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/mfrac>&lt;mo>+&lt;/mo>&lt;mfrac linethickness="1">&lt;mi>&amp;pi;&lt;/mi>&lt;mn>2&lt;/mn>&lt;/mfrac>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_3_ANS_2">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>y&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>3&lt;/mn>&lt;mi>sin&lt;/mi>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo>+&lt;/mo>&lt;mfrac linethickness="1">&lt;mi>&amp;pi;&lt;/mi>&lt;mn>2&lt;/mn>&lt;/mfrac>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_3_ANS_3">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>y&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>3&lt;/mn>&lt;mi>sin&lt;/mi>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+                <flow_label class="Block">
+                  <response_label ident="Week02_QUES_3_ANS_4">
+                    <flow_mat>
+                      <material>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>y&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>3&lt;/mn>&lt;mi>sin&lt;/mi>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mfrac linethickness="1">&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/mfrac>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</mattext>
+                      </material>
+                    </flow_mat>
+                  </response_label>
+                </flow_label>
+              </render_choice>
+            </response_lid>
+          </flow>
+        </presentation>
+        <resprocessing>
+          <respcondition title="Response Condition 1">
+            <conditionvar>
+              <varequal respident="Week02_Q3_LID">Week02_QUES_3_ANS_1</varequal>
+            </conditionvar>
+            <setvar action="Set">100</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_1">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>y&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>3&lt;/mn>&lt;mi>sin&lt;/mi>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mfrac linethickness="1">&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/mfrac>&lt;mo>+&lt;/mo>&lt;mfrac linethickness="1">&lt;mi>&amp;pi;&lt;/mi>&lt;mn>2&lt;/mn>&lt;/mfrac>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</displayfeedback>
+          </respcondition>
+          <respcondition title="Response Condition 2">
+            <conditionvar>
+              <varequal respident="Week02_Q3_LID">Week02_QUES_3_ANS_2</varequal>
+            </conditionvar>
+            <setvar action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_2">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>y&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>3&lt;/mn>&lt;mi>sin&lt;/mi>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo>+&lt;/mo>&lt;mfrac linethickness="1">&lt;mi>&amp;pi;&lt;/mi>&lt;mn>2&lt;/mn>&lt;/mfrac>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</displayfeedback>
+          </respcondition>
+          <respcondition title="Response Condition 3">
+            <conditionvar>
+              <varequal respident="Week02_Q3_LID">Week02_QUES_3_ANS_3</varequal>
+            </conditionvar>
+            <setvar action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_3">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>y&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>3&lt;/mn>&lt;mi>sin&lt;/mi>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mn>2&lt;/mn>&lt;mi>x&lt;/mi>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</displayfeedback>
+          </respcondition>
+          <respcondition title="Response Condition 4">
+            <conditionvar>
+              <varequal respident="Week02_Q3_LID">Week02_QUES_3_ANS_4</varequal>
+            </conditionvar>
+            <setvar action="Set">0</setvar>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_4">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>y&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>3&lt;/mn>&lt;mi>sin&lt;/mi>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mfrac linethickness="1">&lt;mi>x&lt;/mi>&lt;mn>2&lt;/mn>&lt;/mfrac>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+
+</displayfeedback>
+          </respcondition>
+        </resprocessing>
+        <itemfeedback ident="Week02_Q3">
+          <material>
+            <mattext texttype="text/html">The amplitude is 3. &lt;br /> The function is stretched horizontally by 2, so (&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>&amp;sol;&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mrow>&lt;/math>) is needed inside the function. &lt;br /> For &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mn>3&lt;/mn>&lt;mi>sin&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo>&amp;sol;&lt;/mo>&lt;mn>2&lt;/mn>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>, the function  would peak at input &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>=&lt;/mo>&lt;mi>&amp;pi;&lt;/mi>&lt;/mrow>&lt;/math>; combining the scaling and shifting needed to move that peak to &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>0&lt;/mn>&lt;/mrow>&lt;/math>, we need to add  &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mo>+&lt;/mo>&lt;mi>&amp;pi;&lt;/mi>&lt;mo>&amp;sol;&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mrow>&lt;/math> inside the function.</mattext>
+          </material>
+        </itemfeedback>
+      </item>
+    </section>
+  </objectbank>
+</questestinterop>

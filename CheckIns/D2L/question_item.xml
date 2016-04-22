@@ -1,0 +1,50 @@
+<item d2l_2p0:id="3" d2l_2p0:page="1" ident="OBJ_115255" label="QUES_47571_56076" title="Question 1">
+  <itemmetadata>
+    <qtimetadata>
+      <qti_metadatafield>
+        <fieldlabel>qmd_computerscored</fieldlabel>
+        <fieldentry>yes</fieldentry>
+      </qti_metadatafield>
+      <qti_metadatafield>
+        <fieldlabel>qmd_questiontype</fieldlabel>
+        <fieldentry>Multiple Choice</fieldentry>
+      </qti_metadatafield>
+      <qti_metadatafield>
+        <fieldlabel>qmd_weighting</fieldlabel>
+        <fieldentry>1.000000000</fieldentry>
+      </qti_metadatafield>
+      <qti_metadatafield>
+        <fieldlabel>qmd_globalid</fieldlabel>
+        <fieldentry>8c61469b-13e8-4b17-825d-7a96d1cf3bdd</fieldentry>
+      </qti_metadatafield>
+      <qti_metadatafield>
+        <fieldlabel>qmd_displayid</fieldlabel>
+        <fieldentry>MNTC_P04 2015/16 W-396</fieldentry>
+      </qti_metadatafield>
+    </qtimetadata>
+  </itemmetadata>
+  <itemproc_extension>
+    <d2l_2p0:difficulty>1</d2l_2p0:difficulty>
+    <d2l_2p0:isbonus>no</d2l_2p0:isbonus>
+    <d2l_2p0:ismandatory>no</d2l_2p0:ismandatory>
+  </itemproc_extension>
+  <presentation>
+    <flow>
+      <material>
+        <mattext texttype="text/html">&lt;p>The graph of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> is shown below. &lt;br /> &lt;img src="http://www.mast.queensu.ca/~ableson/MNTCP04/CheckIns/Week09/AntiderivativeGraph_Original.png" alt="Graphs" width="300px" />&lt;/p>
+	&lt;p>Which of the following graphs (a)-(d) could represent an &lt;b>anti&lt;/b>derivative of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>? &lt;br /> &lt;img src="http://www.mast.queensu.ca/~ableson/MNTCP04/CheckIns/Week09/Question1_AllGraphs.png" alt="Graphs" width="500px" />&lt;/p></mattext>
+      </material>
+      <response_extension>
+        <d2l_2p0:display_style>2</d2l_2p0:display_style>
+        <d2l_2p0:enumeration>6</d2l_2p0:enumeration>
+        <d2l_2p0:grading_type>0</d2l_2p0:grading_type>
+      </response_extension>
+      <response_lid ident="QUES_47571_56076_LID" rcardinality="Single">
+        <render_choice shuffle="no">
+        </render_choice>
+      </response_lid>
+    </flow>
+  </presentation>
+  <resprocessing>
+  </resprocessing>
+</item>

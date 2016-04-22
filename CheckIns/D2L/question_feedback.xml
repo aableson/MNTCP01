@@ -1,0 +1,5 @@
+<itemfeedback ident="QUES_47571_56076">
+  <material>
+    <mattext texttype="text/html">&lt;p>The values of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> are positive, then negative, so the &lt;b>slopes&lt;/b> of the anti-derivative are first positive (increasing function) then negative (decreasing function). &lt;br /> When the value of the function is zero (at &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>=&lt;/mo>&lt;mn>3&lt;/mn>&lt;/mrow>&lt;/math>), the anti-derivative isn't changing (zero slope).&lt;/p></mattext>
+  </material>
+</itemfeedback>

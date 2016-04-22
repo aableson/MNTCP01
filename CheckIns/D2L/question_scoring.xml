@@ -1,0 +1,7 @@
+<respcondition title="Response Condition 1">
+  <conditionvar>
+    <varequal respident="QUES_47571_56076_LID">QUES_47571_56076_A176085</varequal>
+  </conditionvar>
+  <setvar action="Set">0.000000000</setvar>
+  <displayfeedback feedbacktype="Response" linkrefid="QUES_47571_56076_IF176085"/>
+</respcondition>
