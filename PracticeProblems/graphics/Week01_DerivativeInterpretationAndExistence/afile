@@ -1,0 +1,6 @@
+convert -density 300 aableson-3980-setUnit_03_DerivativeInterpretationAndExistenceprob4image1.eps aableson-3980-setUnit_03_DerivativeInterpretationAndExistenceprob4image1.png
+convert -density 300 aableson-4803-setUnit_03_DerivativeInterpretationAndExistenceprob5image1.eps aableson-4803-setUnit_03_DerivativeInterpretationAndExistenceprob5image1.png
+convert -density 300 cos_piecewise.eps cos_piecewise.png
+convert -density 300 DerivCondition1.eps DerivCondition1.png
+convert -density 300 DerivCondition2.eps DerivCondition2.png
+convert -density 300 DerivCondition3.eps DerivCondition3.png

@@ -1,0 +1,2 @@
+rsync -arv --perms -e ssh ./*pdf ableson@mast.queensu.ca:/home/student1/ableson/WWW/MNTCP01/PracticeProblems/
+ssh ableson@mast.queensu.ca 'chmod -R a+rX WWW/MNTCP01'

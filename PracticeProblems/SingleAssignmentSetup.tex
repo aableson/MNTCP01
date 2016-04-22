@@ -1,0 +1,68 @@
+\documentclass[10pt]{article}
+
+\usepackage{graphicx,amsmath,amssymb,subfigure,enumerate,versions}
+\usepackage{multicol,multirow,mdframed}
+\usepackage{epstopdf}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\usepackage{pst-ode}
+\usepackage{pst-math}
+\DeclareGraphicsExtensions{.png,.jpg,.pdf}
+
+% ************ Page Margins *************
+\hoffset=-1.3in
+\setlength{\textwidth}{7.5in}
+%%%%% MARGINS
+\topmargin 0pt
+\advance \topmargin by -\headheight
+\advance \topmargin by -\headsep
+\textheight 9.5in
+
+% ************ Shortcuts *************
+\newcommand{\Z}{\mbox{\sf Z\hspace{-1.5mm}Z}}
+\newcommand{\SolutionSeparator}{ \hfill \hfill \hrule \hfill \hfill }
+\newcommand{\R}{\mbox{\rm I\hspace{-0.75mm}R}}
+\columnsep=0.75in
+\newcommand{\vsc}{\vspace{1mm}}
+\newcommand{\D}{\Delta }
+\newcommand{\ifd}{f(x)~dx}
+\newcommand{\dd}{\frac{dy}{dx} \,} 
+\newcommand{\der}[2]{\frac{d{#1}}{d{#2}} \,}
+\newcommand{\ddx}[1]{\frac{d {#1}}{dx} \,} 
+\newcommand{\ddy}[1]{\frac{d {#1}}{dy} \,} 
+\newcommand{\ddz}[1]{\frac{d {#1}}{dz} \,} 
+\newcommand{\ddt}[1]{\frac{d {#1}}{dt} \,} 
+\newcommand{\ds}{\displaystyle } 
+\newcommand{\la}{\lambda } 
+\newcommand{\del}{\nabla } 
+\newcommand{\zx}{\frac{\partial z}{\partial x} \,}
+\newcommand{\zy}{\frac{\partial z}{\partial y} \,}
+\newcommand{\dx}{\frac{\partial f}{\partial x} \,}
+\newcommand{\dy}{\frac{\partial f}{\partial y} \,}
+\newcommand{\pp}[2]{\frac{\partial {#1}}{\partial {#2}} \,}
+\newcommand{\ppx}{\frac{\partial }{\partial x} \,}
+\newcommand{\ppy}{\frac{\partial }{\partial y} \,}
+\renewcommand{\thesection}{\Roman{section}}
+\newcommand{\vi}{\vec{i}}
+\newcommand{\vj}{\vec{j}}
+\newcommand{\vk}{\vec{k}}
+\newcommand{\vv}{\vec{v}}
+\newcommand{\lan}{\left\langle}
+\newcommand{\ran}{\right\rangle}
+\newcommand{\degr}{^{\circ}}
+
+% *** Define the printed question style ***
+\newcommand{\q}[1]{ {\em #1} }
+% \renewcommand{\q}[1]{ {} }
+
+\newcommand{\notice}{ \begin{center}Some problems and solutions
+    selected or adapted from \\ Stewart {\em Calculus-Early
+      Transcendentals} and Hughes-Hallett {\em Calculus} .\end{center}
+}
+
+% *** Overwrite, if desired, the question format
+\input{DocumentFormat.tex}
+
+% *** Footnoting with symbols ***
+\long\def\symbolfootnote[#1]#2{\begingroup%
+\def\thefootnote{\fnsymbol{footnote}}\footnote[#1]{#2}\endgroup}

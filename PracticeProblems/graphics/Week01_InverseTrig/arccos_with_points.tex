@@ -1,0 +1,18 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\psset{unit=2cm}
+\begin{pspicture}(-1.75,-.35)(1.75,4.1)
+\SpecialCoor
+\psaxes[labels=x,Dy=\pstPI2,linewidth=.5pt]{->}(0,0)(-1.5,0)(1.5,3.6)
+\uput[0](!0 PI 2 div){$\frac{\pi}{2}$}
+\uput[0](!0 PI){$\pi$}
+\uput[-90](-1.5,3.7){$f(x) = \arccos(x)$}
+\psplot[linewidth=1.5pt]{-1}{1}{x ACOS}
+\psdot(1,0)
+\psdot(!1 neg PI)
+\psdots[linecolor=red,fillcolor=red,dotsize=10pt](1,0)(0,1.57)(-1,3.14)(0.5,1.047)
+\end{pspicture}
+
+\end{document}
