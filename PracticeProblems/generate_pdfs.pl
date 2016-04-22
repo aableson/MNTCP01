@@ -2,7 +2,7 @@
 
 @file_list = ( 
 	       "Week01",
-	       "Week02",
+#	       "Week02",
 #	       "Week03",
 #	       "Week04",
 #	       "Week05",
