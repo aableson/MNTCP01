@@ -1,0 +1,16 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\psset{unit=2cm}
+\begin{pspicture}(-1.75,-.35)(1.75,4.1)
+\SpecialCoor
+\psaxes[labels=x,Dy=\pstPI2,linewidth=.5pt]{->}(0,0)(-1.5,-1.6)(1.5,1.6)
+\uput[0](!0 PI 2 div){$\frac{\pi}{2}$}
+%\uput[0](!0 -PI 2 div){$-\frac{\pi}{2}$}
+\psplot[linewidth=1.5pt]{-1}{1}{x ASIN}
+\psdot(1,1.57)
+\psdot(-1,-1.57)
+\end{pspicture}
+
+\end{document}

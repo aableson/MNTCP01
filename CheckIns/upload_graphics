@@ -1,0 +1,3 @@
+rsync -arv --include='*.png' --include=*/ --exclude='*' . apsc171@mast.queensu.ca:~/WWW/MNTCP01/CheckIns
+ssh apsc171@mast.queensu.ca 'chmod -R a+rX WWW/MNTCP01'
+

@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage[pdf]{pstricks}                                                      
+\usepackage{pst-all}                                                      
+\begin{document}                                                                
+\psset{unit=1.3cm}
+\psset{algebraic}
+\begin{pspicture}[showgrid=false](-2.5,-2.5)(2.5,2.5)
+\psaxes[linewidth=2\pslinewidth]{-}(0,0)(-2.2,-2.2)(2.2,2.2)[$x$,0][$f'(x)$, 90]
+\psplot[yMaxValue=2,yMinValue=-2,linewidth=1.6pt,plotpoints=2000,
+        linecolor=black]{-2}{2}{-6*(x+1.1)*(x-1.1)*(x+0.25)*(x-0.25)}
+\end{pspicture}
+\end{document}

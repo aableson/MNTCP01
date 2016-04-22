@@ -1,0 +1,9 @@
+convert -density 200 -trim -background white -alpha remove -bordercolor white -border 2%x2% DerivativeGraphs_Original.pdf DerivativeGraphs_Original.png 
+convert -density 200 -trim -background white -alpha remove -bordercolor white -border 2%x2% DerivativeGraphs_DA.pdf DerivativeGraphs_DA.png 
+convert -density 200 -trim -background white -alpha remove -bordercolor white -border 2%x2% DerivativeGraphs_DB.pdf DerivativeGraphs_DB.png 
+convert -density 200 -trim -background white -alpha remove -bordercolor white -border 2%x2% DerivativeGraphs_DC.pdf DerivativeGraphs_DC.png 
+convert -density 200 -trim -background white -alpha remove -bordercolor white -border 2%x2% DerivativeGraphs_DD.pdf DerivativeGraphs_DD.png 
+
+convert -density 200 -trim -background white -alpha remove -bordercolor white -border 2%x2% arccos.pdf arccos.png 
+convert -density 200 -trim -background white -alpha remove -bordercolor white -border 2%x2% arcsin.pdf arcsin.png 
+convert -density 200 -trim -background white -alpha remove -bordercolor white -border 2%x2% arctan.pdf arctan.png 
