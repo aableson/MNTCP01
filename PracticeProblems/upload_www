@@ -1,2 +1,3 @@
 rsync -arv --perms -e ssh ./*pdf apsc171@mast.queensu.ca:/home/mast2/apsc171/WWW/MNTCP01/PracticeProblems/
+rsync -arv --perms -e ssh MATLAB/*m apsc171@mast.queensu.ca:/home/mast2/apsc171/WWW/MNTCP01/PracticeProblems/MATLAB
 ssh apsc171@mast.queensu.ca 'chmod -R a+rX WWW/MNTCP01'
