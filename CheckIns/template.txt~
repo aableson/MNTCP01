@@ -1,0 +1,21 @@
+
+
+---Question
+
+<img src="Question2_AllGraphs.png" width="700px" alt="DerivativeGraphs" />
+
+---Type
+onechoice
+---Answers
+~ (a)
+= (b)
+~ (c)
+~ (d)
+---Comment
+One feature: from \(x=-0.3\)-ish onwards, the function is always <em>increasing</em>, or has <em>positive slopes</em>.
+<br />
+Therefore the \(f'(x)\) values for \(x > - 0.3\)  point must always be <b>positive</b>.
+<br />
+Other reference points: look for slope=0 points in the original graph, and map them 
+to zero <b>y-values</b> on the \(f'(x)\) graph (i.e. at \(x=-1.2, -0.3\)).
+

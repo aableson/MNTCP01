@@ -1,0 +1,75 @@
+
+---Question
+For the graph defined by \(y = 2x^3 - x\), which of the following
+would be the tangent line to the graph at \(x=1\)?
+---Type
+onechoice
+---Answers
+~ \(y = 6x^2 - 1\)
+~ \(y = (6x^2 - 1)(x-1) + 1\)
+= \(y = (6 - 1)(x-1) + 1\)
+---Comment
+To compute the formula for the tangent line, we use
+<br />
+\(f(x) = 2 x^3 - x\) and its derivative
+<br />
+\(f'(x) = 6 x^2 - 1\).
+<br />
+These need to be evaluated at the point \(a=1\), and then we are
+ready to use our linearization formula,
+<br />
+\(y = f'(a) (x-a) + f(a)\)
+
+
+---Question
+
+Consider the graph below, and the point indicated in red.
+<br />
+<img src="tangentline.png" width="400px" alt="tangentline" />
+<br />
+Which of the following is the formula for the tangent line at the point?
+<br />
+Note: you do <b>not</b> need the formula for the graph to answer this question.
+---Type
+onechoice
+---Answers
+~ \(y = 2.2 (x-1.25) + 0.7 \)
+~ \(y = -2.2 (x-1.25) + 0.7 \)
+~ \(y = 2.2 (x-1.25) - 0.7 \)
+= \(y = -2.2 (x-1.25) - 0.7 \)
+---Comment
+
+Note that the tangent line at the red dot has the same slope at value
+as the graph.  We are essentially
+asking whether:
+<br />the slope is -2.2 or +2.2, and whether
+<br />the \(y\) value is -0.7 or +0.7.
+
+<p>From the graph, we can see that at the red dot location, both the
+slope and the \(y\) value are negative.
+
+
+---Question
+
+The updating formula for Newton's method is
+<br />
+\(\displaystyle c = a - \frac{f(a)}{f'(a)} \)
+<br />
+Where is that formula derived from?
+
+---Type
+onechoice
+---Answers
+~ By solving the tangent line formula for the point where \(x=0\).
+= By solving the tangent line formula for the point where \(y=0\).
+~ By solving for where \(f(x)\) satisfies \(y=0\).
+~ By solving for where \(f(x)\) satisfies \(x=0\).
+---Comment
+
+Newton's method is <em>approximating</em> the actual graph of \(f(x)\)
+with its tangent line, so the method does not use the function
+directly, but only indirectly using the tangent line formula.
+
+<p> We are interested in solving for the roots (or "zeros") of a
+function, and a root/zero is where \(y = 0\).
+

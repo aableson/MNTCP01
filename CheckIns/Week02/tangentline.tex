@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\psset{unit=2cm}
+\begin{pspicture}
+\psaxes{-}(0,0)(-1.2,-1.2)(2.2,1.2)[$x$,0][$y$,0]       
+\psplot[linewidth=1.5pt,algebraic,plotpoints=1000]{-1}{2}{sin(x*PI)}
+\psdot[dotsize=8pt,linecolor=red,fillcolor=red](1.25,-0.7071)
+\end{pspicture}
+
+\end{document}

@@ -1,0 +1,66 @@
+
+---Question
+If the graph below represents \(f(x)\), which of the graphs
+(a)-(d) could represent the graph of the derivative, \(f'(x)\)?
+<br />
+<img src="Question2_AllGraphs.png" width="700px" alt="DerivativeGraphs" />
+
+---Type
+multichoice
+---Answers
+~ (a)
+= (b)
+~ (c)
+~ (d)
+---Comment
+One feature: from \(x=-0.3\)-ish onwards, the function is always <em>increasing</em>, or has <em>positive slopes</em>.
+<br />
+Therefore the \(f'(x)\) values for \(x > - 0.3\)  point must always be <b>positive</b>.
+<br />
+Other reference points: look for slope=0 points in the original graph, and map them 
+to zero <b>y-values</b> on the \(f'(x)\) graph (i.e. at \(x=-1.2, -0.3\)).
+
+---Question
+What is the derivative of \(\displaystyle f(x) = \frac{7}{x^2 + 8}\)?
+---Type
+onechoice
+---Answers
+~ \( 7 \ln(x^2 + 8) \)
+~ \(\displaystyle \frac{7(x^2 + 8) - 7(2x)}{ (x^2 + 8)^2} \)
+~ \( 7 (x^2 + 8 ) + 7(2x) \)
+= \(\displaystyle \frac{-7(2x)}{ ( x^2 + 8)^2} \)
+---Comment
+Rewriting using powers, \(\displaystyle f(x) = \frac{7}{x^2 + 8} = 7 (x^2 + 8)^{-1}\).
+<br />
+Using the chain rule,
+<br />
+\(\displaystyle f'(x) = 7 (-1) (x^2 + 8)^{-2} (2x) = \frac{-7(2x)}{(x^2 +8 )^2}  \)
+
+
+---Question
+Which of the following graphis is the graph of \(y = \arccos(x)\)?
+<br />
+<table>
+<tr>
+<td><img src="arcsin.png" width="300px" alt="Graph (a)" /> </td>
+<td><img src="arctan.png" width="300px" alt="Graph (b)" /> </td>
+<td><img src="arccos.png" width="300px" alt="Graph (c)" /> </td>
+</tr>
+<tr>
+<td style="text-align:center"> <b>(a)</b> </td>
+<td style="text-align:center"> <b>(b)</b> </td>
+<td style="text-align:center"> <b>(c)</b> </td>
+</tr>
+</table>
+---Type
+multichoice
+---Answers
+~ (a)
+~ (b)
+= (c)
+---Comment
+The amplitude is 3.
+<br />
+The function is stretched horizontally by 2, so (\(x/2\)) is needed inside the function.
+<br />
+For \(3 \sin(x/2)\), the function  would peak at input \(x=\pi\); combining the scaling and shifting needed to move that peak to \(x=0\), we need to add  \(+\pi/2\) inside the function.

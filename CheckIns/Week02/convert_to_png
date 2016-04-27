@@ -1,0 +1,1 @@
+convert -density 200 -trim -background white -alpha remove -bordercolor white -border 2%x2% tangentline.pdf tangentline.png 

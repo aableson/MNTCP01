@@ -1,0 +1,18 @@
+
+
+---Question
+
+<img src="Question2_AllGraphs.png" width="700px" alt="DerivativeGraphs" />
+
+---Type
+onechoice
+---Answers
+~ (a)
+= (b)
+~ (c)
+~ (d)
+---Comment
+
+<br />
+\( f(x) = x \)
+
