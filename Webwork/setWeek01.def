@@ -1,0 +1,17 @@
+ 
+openDate          = 01/01/2011 at 01:00am MST 
+dueDate           = 01/01/2011 at 01:00am MST 
+answerDate        = 01/01/2011 at 01:00am MST 
+paperHeaderFile   = 
+screenHeaderFile  = 
+problemList       =  
+group:T2_constant,	1,	-1
+group:T2_dec_powers,	1,	-1
+group:T2_trig,	1,	-1
+group:T2_exp,	1,	-1
+group:T2_not_natural_exp,	1,	-1
+group:T2_logs,	1,	-1
+group:T2_Prod_Rule,	1,	-1
+group:T2_Quot_Rule,	1,	-1
+group:T2_Chain_Rule,	1,	-1
+group:T2_Two_rules,	1,	-1
