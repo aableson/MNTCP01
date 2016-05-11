@@ -22,30 +22,279 @@
   polynomial approximations.
 \item Find and use critical points for global and local optimization
   problems.
-\item Use MATLAB single-variable optimizers to identify optimal values
-  for functions.
-\item Use MATLAB single-variable equation solvers to identify critical
-  points given the derivative function
+\item Use MATLAB optimizers and equation solvers to identify optimal
+  values and critical points.
 \end{itemize}
 
 \vspace{5mm}
+
 
 \newpage
 \topic{Second and Higher Derivatives}
 \subsection*{Second and Higher Derivatives}
 
+
+The information about the graph of a function $f$ provided by the sign
+of $f'(x)$ and $f''(x)$ on an interval $(a,b)$ is expressed in the
+following table. ($a$ and $b$ are assumed to be finite.)
+
+{\huge
+\vsc
+\begin{center}
+\begin{tabular}{|l|l|} \hline
+\qquad \qquad \qquad \qquad \qquad  \qquad \qquad & \qquad  \qquad \qquad \qquad \qquad  \qquad \qquad \\
+\qquad $f'(x) > 0 {\mbox{ on }} (a,b)$  &  \qquad $f$ increasing on $[a,b]$  \\
+\qquad \qquad \qquad \qquad \qquad & \qquad \qquad \qquad  \qquad \qquad \\
+ \hline
+\qquad \qquad \qquad \qquad \qquad & \qquad \qquad \qquad  \qquad \qquad \\
+\qquad $f'(x) < 0 {\mbox{ on }} (a,b)$  &  \qquad $f$ decreasing on $[a,b]$  \\
+\qquad \qquad \qquad \qquad \qquad & \qquad \qquad \qquad  \qquad \qquad \\
+ \hline
+\qquad \qquad \qquad \qquad \qquad & \qquad \qquad \qquad  \qquad \qquad \\
+\qquad $f''(x) > 0 {\mbox{ on }} (a,b)$  &  \qquad $f$ concave up on $[a,b]$  \\ \qquad \qquad \qquad \qquad \qquad & \qquad \qquad \qquad  \qquad \qquad \\
+\hline
+\qquad \qquad \qquad \qquad \qquad & \qquad \qquad \qquad  \qquad \qquad \\
+\qquad $f''(x) < 0 {\mbox{ on }} (a,b)$  &  \qquad $f$ concave down on $[a,b]$ \qquad  \qquad  \\ 
+\qquad \qquad \qquad \qquad \qquad & \qquad \qquad \qquad  \qquad \qquad \\
+\hline
+\end{tabular}
+\end{center}
+}
+\setfont
+
+\newpage
+
+Aside from their graphical interpretation, second derivatives
+frequently have important physical interpretations in kinematics
+problems.
+
+\problem If $x(t) = 4 \sin(2t)$ gives the position of a particle at
+time $t$, what is particle's {\bf speed} at $\ds t=\frac{\pi}{6}$?
+
+\vfill
+
+For the same particle, what is its {\bf acceleration} at
+$\ds t=\frac{\pi}{6}$?
+
+\vfill
+
+\newpage
+
+
+
+While their interpretations are not as immediately obvious, it is
+possible to compute 3rd and higher derivatives of function if we want.
+
+\problem Find the first four derivatives of the function
+$$f(x) = 7 (2^x) + \ln(x).$$
+
+
 \newpage
 \topic{Taylor Polynomials}
 \subsection*{Taylor Polynomials}
 
-\newpage
-\topic{Taylor Polynomials in MATLAB - Demonstration}
-\subsection*{Taylor Polynomials in MATLAB - Demonstration}
+One application of higher derivative information is to help us build
+{\bf polynomial approximations} to complicated functions.
+
+Previously we found a formula for linear approximations to functions
+$f(x)$ around a point $x=a$:
+
+\vspace{1.5in}
+
+This linear approximation, or tangent line formula, can also be called
+the {\bf Taylor polynomial of degree 1 approximating $f(x)$ near
+  $x=a$.}
 
 \newpage
-\topic{Taylor Polynomials in MATLAB - Example}
-\subsection*{Taylor Polynomials in MATLAB - Example}
 
+Sketch the graph of $\cos(x)$ around $x=0$, and add its
+  tangent line based at $x=0$.
+
+\includegraphics[width=3in]{graphics/empty_graph_square_12}
+
+
+The linearization or tangent line is clearly a very
+  limited approximation to this function.  What might be a {\em
+    slightly} more complex form of function that would work better in
+  this case?
+
+\vfill
+
+\newpage
+
+\begin{boxnote}
+
+{\bf Taylor Polynomial of Degree 2}
+\vspace{1in}
+
+$$ f(x) \approx ~~~~~f(a) ~~~~~+ f'(a) (x-a) ~~~~~+ \frac{f''(a)}{2} (x-a)^2$$  
+
+\vspace{1in}
+
+is a {\em quadratic} approximation to $f(x)$ near $x=a$.
+\end{boxnote}
+
+
+For values of $x$ close to $a$ do you think this
+  quadratic approximation will be a better or worse approximation than
+  the tangent line?  Why?
+
+\vfill
+
+\newpage
+\topic{Taylor Polynomials - Examples}
+
+\problem Find the quadratic Taylor approximation to \\$f(x) = \cos(x)$
+  near $x=0$.
+
+\vfill
+
+\newpage
+
+\problem Use MATLAB to draw the graph of $\cos(x)$ around $x=0$, and
+add both its 1st and 2nd degree Taylor polynomial approximations for
+$x$ near 0.
+
+
+\newpage
+
+There is a very good reason for the particular form of the Taylor
+polynomial.
+
+\problem What mathematical features will $f(x)$ and its 2nd degree
+Taylor approximation share at $x=a$?
+
+\vfill
+
+\newpage
+\topic{Taylor Polynomials of Higher Degree}
+\subsection{Taylor Polynomials of Higher Degree}
+
+\problem If we wanted a still-better approximation for a function
+$f(x)$ near a specific point $x=a$, how could we generalize our
+earlier 1st and 2nd degree Taylor polynomials?
+
+\vfill
+
+\newpage 
+
+This is the general formula for the terms in a Taylor polynomial, up
+to degree $n$.  \\ 
+
+$$ f(x) \approx ~~f(a) ~~+ f'(a) (x-a) ~~+ \frac{f''(a)}{2} (x-a)^2 + \ldots 
++ \frac{f^{(n)}(a)}{n!} (x-a)^n$$   \\
+
+\begin{itemize}
+\item $f^{(n)}$ means ``the $n$-th derivative of $f$''. \\
+\item $n!$ means ``$n$ factorial''
+\end{itemize}
+
+\newpage
+\subsection*{Higher Degree Taylor Polynomials - Example}
+
+Consider the function $f(x) = \sin(x)$.
+
+\problem Find the first four derivatives of $f(x)$.
+
+\newpage
+
+\problem Write out the Taylor poylnomial of degree 5 for
+$f(x) = \sin(x)$.
+
+\vfill
+
+\problem Write out the general form of the Taylor poylnomial of degree
+$n$ for $f(x) = \sin(x)$.
+
+\vfill
+
+\newpage
+
+\problem Use MATLAB to plot the graph of $f(x) = \sin(x)$ and the
+Taylor polynomial approximations up to degree 5.
+
+\newpage
+
+MATLAB Demo of increasing higher degrees.
+
+
+\newpage
+\topic{Critical Points}
+
+\section*{Critical Points} 
+
+\begin{boxnote}
+
+  If $f(x)$ is defined on the interval $(a,b)$, then we call a point
+  $c$ in the interval a {\bf critical point} if:
+\begin{itemize}
+	\item $f'(c) = 0$, or
+	\item $f'(c)$ does not exist.
+\end{itemize}
+We will also refer to the point $(c,f(c))$ on the graph of $f(x)$ as a
+critical point.  We call the function value $f(c)$ at a critical point
+$c$ a {\bf critical value}.
+
+\vsc
+\end{boxnote}
+
+\newpage
+
+Technical Notes:
+\begin{enumerate} 
+\item By this definition, $f(c)$ must be {\bf defined} for
+  $c$ to be a critical point.  
+
+  Sketch $f(x) = 1/x$, and decide whether $x=0$ is a
+    critical point.
+
+\vfill
+  Sketch $g(x) = |x|$, and decide whether $x=0$ is a
+    critical point.
+
+\vfill
+
+\newpage
+
+\item By the definition, if a function is defined on a closed
+  interval, the endpoints of interval {\bf cannot} be critical points.
+
+  Sketch the graph of $f(x) = \sqrt{x}$ and decide
+    whether $x=0$ is a critical point.
+
+\vfill
+
+\newpage
+
+Sketch the graph of $g(x) = \sqrt[3]{x}$ and decide
+  whether $x=0$ is a critical point.
+
+\vfill
+
+\end{enumerate}
+
+\newpage
+
+\problem Identify all the critical points on the graph below, and
+  characterize any other interesting points by continuity, limits, or
+  other properties.
+
+\includegraphics[width=8in]{graphics/notes06_crit_pnt_oddities}
+
+\newpage
+
+\topic{First and Second Derivative Sign Chart Example}
+
+\problem Consider the function  
+$$f(x) = \frac{x}{x^2 + 1}$$
+Construct a sign chart for both $f'$ and $f''$, and use this information to
+sketch $f(x)$.
+
+\vfill
+\newpage
+\vfill
+
+\hfill \includegraphics[width=4in]{graphics/empty_graph_square_12}
 
 \newpage
 \topic{Optimization - Introduction}
