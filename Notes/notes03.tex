@@ -254,12 +254,25 @@ $g(x) = x e^{-x}$ centered at $x=1$.
 \newpage
 
 \problem Use MATLAB to plot the graph of $g(x) = x e^{-x}$ and the
-Taylor polynomial approximations found earlier.
+Taylor polynomial approximation from degree 1, 2 and 3.
 
 \newpage
 \topic{Critical Points}
 
-\section*{Critical Points} 
+\subsection*{Critical Points} 
+
+Aside from understanding the shape of functions, derivative
+information can help us identify and classify interesting points of a
+function, like the highest and lowest values.
+
+\problem Sketch graphs which have high and low points.  
+
+\vfill 
+
+What do those extreme values have in common?
+
+
+\newpage
 
 \begin{boxnote}
 
@@ -283,7 +296,7 @@ Technical Notes:
 \item By this definition, $f(c)$ must be {\bf defined} for
   $c$ to be a critical point.  
 
-  Sketch $f(x) = 1/x$, and decide whether $x=0$ is a
+\problem   Sketch $f(x) = 1/x$, and decide whether $x=0$ is a
     critical point.
 
 \vfill
@@ -297,14 +310,14 @@ Technical Notes:
 \item By the definition, if a function is defined on a closed
   interval, the endpoints of interval {\bf cannot} be critical points.
 
-  Sketch the graph of $f(x) = \sqrt{x}$ and decide
+\problem   Sketch the graph of $f(x) = \sqrt{x}$ and decide
     whether $x=0$ is a critical point.
 
 \vfill
 
 \newpage
 
-Sketch the graph of $g(x) = \sqrt[3]{x}$ and decide
+\problem Sketch the graph of $g(x) = \sqrt[3]{x}$ and decide
   whether $x=0$ is a critical point.
 
 \vfill
@@ -313,35 +326,333 @@ Sketch the graph of $g(x) = \sqrt[3]{x}$ and decide
 
 \newpage
 
-\problem Identify all the critical points on the graph below, and
-  characterize any other interesting points by continuity, limits, or
-  other properties.
+% \problem Identify all the critical points on the graph below, and
+%   characterize any other interesting points by continuity, limits, or
+%   other properties.
 
-\includegraphics[width=8in]{graphics/notes06_crit_pnt_oddities}
+\problem Identify all the critical points on the graph below.
+
+\includegraphics[width=8in]{graphics/notes03_crit_pnt_oddities}
 
 \newpage
 
-\topic{First and Second Derivative Sign Chart Example}
+\topic{Classifying Critical Points}
 
-\problem Consider the function  
-$$f(x) = \frac{x}{x^2 + 1}$$
-Construct a sign chart for both $f'$ and $f''$, and use this information to
-sketch $f(x)$.
+\section*{Classifying Critical Points}
+
+We will now formalize two ways to determine if a critical point is a
+local min, max, or neither. This avoids the need for a sketch of the
+graph.
+
+\begin{boxnote}
+{\bf First Derivative Test}
+
+One way to decide whether at a critical point there is a local maximum
+or minimum is to examine the sign of the derivative on opposite sides
+of the critical point.  This method is called the {\bf{first
+    derivative test}}.  {\em{Complete this table:}}
+
+%\def\arraystretch{1.5}
+\vspace{1mm}
+\begin{center}
+\begin{tabular}{|l|c|c|p{1in}|} \hline
+\qquad \qquad \qquad \qquad \qquad &  $f'$ sign left of $c$ & $f'$ sign right of $c$ & Sketch\hspace{0.5in}  \\ \hline
+local minimum at $c$ & & &\\[1.0in] \hline
+local maximum at $c$ & & &\\[1.0in] \hline
+neither local max nor min & & &\\[1.0in] \hline
+\end{tabular}
+\end{center}
+
+%\def\arraystretch{1}
+\vspace{1.5mm}
+
+\end{boxnote}
+
+\newpage
+
+\problem Find the critical points of the function $f(x) = 2 x^3 - 9
+  x^2 + 12 x +3$.  Use the first derivative test to show whether each
+  critical point is a local maximum or a local minimum.
 
 \vfill
-\newpage
 \vfill
 
-\hfill \includegraphics[width=4in]{graphics/empty_graph_square_12}
+\newpage 
+
+Using your answer to the preceding question, determine
+  the number of real solutions of the equation $2 x^3 - 9 x^2 + 12 x +
+  3 = 0$.
+
+\vfill
+
+\newpage 
+\begin{boxnote}
+{\bf Second Derivative Test}
+
+You may also use the Second Derivative Test to determine if a critical
+point is a local minimum or maximum.  
+\begin{itemize}
+\item The first derivative test uses the {\bf first} derivative {\bf
+    around} the critical point.
+\item The second derivative test uses the {\bf second} derivative {\bf at} the critical point.
+\end{itemize}
+\begin{itemize}
+\item If $f'(c)$ = 0 and $f''(c) > 0$ then $f$ has a local minimum at $c$. \notesonly{\\[1.0in]}\largeall{\\[0.8in]}
+\item If $f'(c)$ = 0 and $f''(c) < 0$ then $f$ has a local maximum at $c$. \notesonly{\\[1.0in]}\largeall{\\[0.8in]}
+\item If $f'(c)$ = 0 and $f''(c) = 0$ then the test is inconclusive. \\[0.3in] 
+\end{itemize}
+\end{boxnote}
+
+\vsc
+\newpage
+\problem A function $f$ has derivative $f'(x) = \cos(x^2) + 2x - 1$.
+  Does it have a local maximum, a local minimum, or neither at its
+  critical point $x=0$?
+
+\newpage 
+
+\topic{Global vs. Local Optimization}
+\section*{Global vs. Local Optimization}
+
+\reading{Section 4.2}
+
+The first and second derivative tests only give us {\em local}
+information in most cases.  However, if there are multiple local
+maxima or minima, we usually want the {\bf global} max or min.  The
+ease of determining when we have found the global max or min of a
+function depends strongly on the properties of the question.
+
+\begin{boxnote}
+
+  \subsection*{Local vs Global Extrema}
+
+  A {\bf local max} occurs at $x=c$ when $f(c) > f(x)$ for $x$ values
+  near $c$.
+
+  A {\bf global max} occurs at $x=c$ if $f(c) \ge f(x)$ for {\bf all}
+  values of $x$ in the domain.  It is possible to have several global
+  maxima if the function reaches its peak value at more than one
+  point.
+
+  Corresponding definitions apply for local and global minima.
+
+\end{boxnote}
 
 \newpage
-\topic{Optimization - Introduction}
-\subsection*{Optimization - Introduction}
+
+\problem Give an example of a simple function with multiple global
+  maxima.
+
+\vfill
+
+\problem Give an example of a simple function with a single global
+  maximum, but no global minimum.
+
+\vfill
+
+\problem Give an example of a simple function with neither a global
+  maximum nor a global minimum.
+
+\vfill
+
+
+\newpage \problem Earlier we worked with the function $f(x) = 2 x^3 -
+  9 x^2 + 12 x +3$.  If we limit the function to the interval $x \in
+  [0, 2.5]$, what are the {\bf global max} and {\bf global minimum}
+  values on that interval?  
+
+
+
+\vfill
+\vfill
 
 \newpage
-\topic{Optimization - Critical Points}
-\subsection*{Optimization - Critical Points}
 
+\topic{Global Extrema on Closed and Open Intervals}
+
+\begin{boxnote}
+\subsection*{Global Extrema on Closed Intervals}
+
+A continuous function on a closed interval will {\bf always} have a
+global max and a global min value.  These values will occur at either
+\begin{itemize}
+\item a critical point {\em or}
+\item an end point of the interval.
+\end{itemize}
+To find which value is the global extrema, you can compute the
+original function's values at all the critical points and end points,
+and select the point with the highest/lowest value of the function.
+
+\end{boxnote}
+
+
+\newpage
+\begin{boxnote}
+\subsection*{Global Extrema on Open Intervals}
+
+A function defined on an open interval may or may not have global
+maxima or minima.  
+\vsc
+
+If you are trying to demonstrate that a point is a global max or min,
+and you are working with an open interval, including the possible
+interval $(-\infty, \infty)$, proving that a particular point is a global
+max or min requires a careful argument.  A recommendation is to look
+at either:
+\begin{itemize}
+\item values of $f$ when $x$ approaches the endpoints of the interval,
+  or $\pm \infty$, as appropriate; or
+\item if there is only one critical point, look at the sign of $f'$ on
+  either side of the critical point.
+\end{itemize}
+With that information, you can often construct an argument about a
+particular point being a global max or min.
+
+\end{boxnote}
+
+\newpage
+
+\problem Determine whether the function $f(x) = 2 x^3 - 9 x^2 + 12 x
+  +3$ has a global max and/or min.
+
+\vfill
+
+
+\newpage
+\problem Determine whether the function $f(x) = (x-2)^4$ has a global
+  max/and or min.
+
+\vfill
+
+\newpage
+
+\topic{Optimization - Fencing Example}
+\section*{Optimization}
+
+\reading{Section 4.4}
+\vsc
+
+An optimization problem is one in which we have to find the maximum or
+minimum value of some quantity.  In principle, we already know how to
+find the maximum and minimum values of a function if we are given a
+formula for the function and the interval on which the maximum or
+minimum is sought.  Usually the hard part in an optimization problem
+is interpreting the word problem in order to find the formula of the
+function to be optimized.
+
+\vsc 
+
+\newpage 
+
+\problem A farmer wants to build a rectangular enclosure to contain
+  livestock.  The farmer has 120 meters of wire fencing with which to
+  build a fence, and one side of the enclosure will be part of the
+  side an already existing building (so there is no need to put up
+  fence on that side). What should the dimensions of each side be to
+  maximize the area of the enclosure? 
+
+\vsc
+
+
+What is the quantity to be maximized in this example?
+
+\vspace{2cm}
+
+\newpage
+
+What are the variables in this question, and how are they
+  related?  You may want to draw a picture.
+
+\vfill
+
+Express the quantity to be optimized in terms of the
+  variables.  Try to eliminate all but one of the variables.
+
+  \vfill
+
+  What is the domain on which the one remaining variable
+    makes sense?
+
+\vspace{2cm} 
+  \newpage 
+
+Use the techniques learned earlier in the course to
+  maximized the function on this domain.  Give reasons explaining why
+  the answer you found is the {\bf global} maximum.
+
+\vspace{5cm}
+
+\newpage
+
+\hfill (continued)
+
+
+\newpage
+
+\topic{Optimization - Storage Example}
+\problem Storage Container)\\ A rectangular storage container with an
+  open top is to have a volume of 10 m$^3$.  The length of its base is
+  to be twice its width.  Material for the base costs \$10.00 per
+  m$^2$, and material for the sides costs \$6.00 per m$^2$.  Determine
+  the cost of the material for the cheapest such container.
+~ \hfill \includegraphics[width=1.5in]{graphics/week07_storage_container}
+
+\newpage
+~ \hfill \includegraphics[width=1.5in]{graphics/week07_storage_container}
+
+\newpage
+~ \hfill \includegraphics[width=1.5in]{graphics/week07_storage_container}
+
+\newpage 
+
+\topic{Optimization - Fisher Example}
+{\bf Example} (Taken from 2004 Dec Exam)
+
+A fisher is in a boat at point A, which is 2 km from the nearest
+point on the shoreline.  He is to go to a lighthouse at point B, which
+is 3 km down the coast (see figure below).
+
+\hfill \includegraphics[height=\notesonly{3in}\largeall{4in}]{graphics/notes08_graph01}
+\newpage If the fisher can row at 4 km per hour, and walk
+  at 5 km per hour, find an expression for $T(x)$, the travel time if
+  the fisher lands the boat $x$ km down the shore from the nearest
+  approach.
+
+\hfill \includegraphics[height=\notesonly{3in}\largeall{4in}]{graphics/notes08_graph01}
+
+\newpage 
+
+If the fisher can row at 4 km per hour, and walk at 5 km
+  per hour, how far from the point B should he land the boat to
+  minimize the time it takes to get to the lighthouse?  Make sure to
+  indicate how you know your answer is the global minimum.
+
+\hfill \includegraphics[height=3in]{graphics/notes08_graph01}
+\vsc
+
+\newpage
+
+\hfill \includegraphics[height=3in]{graphics/notes08_graph01}
+
+\newpage
+
+\topic{Optimization - Fisher General Case}
+
+Often, the numerical values in an optimization problem are somewhat
+arbitrary, or estimated using best guesses.  It is often more
+important to discover the response in the solution to a {\em range} of
+possible problem values.  In that vein, we now suppose the fisher
+has a motor that will drive his boat at a speed of $v$ km per hour.
+
+If the fisher's walking speed is still 5 km per hour,
+  for what values of $v$ will it be fastest to simply drive the boat
+  directly to the lighthouse (i.e. do no walking)?
+
+\hfill \includegraphics[height=3in]{graphics/notes08_graph01}
+
+\newpage
+
+\hfill \includegraphics[height=3in]{graphics/notes08_graph01}
 
 
 
