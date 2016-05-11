@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  11 MAY 2016 11:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  11 MAY 2016 11:21
 entering extended mode
 **\input notes03.tex
 (notes03.tex (PreambleCommon.tex (C:\MiKTeX2.9\tex\latex\base\article.cls
@@ -420,47 +420,47 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[1]
-Overfull \hbox (9.23065pt too wide) in paragraph at lines 67--70
+[1] [2]
+Overfull \hbox (9.23065pt too wide) in paragraph at lines 83--86
 []\OT1/cmr/m/n/24.88 Aside from their graph-i-cal in-ter-pre-ta-tion, sec-ond d
 eriva-tives fre-quently
  []
 
-[2] [3] [1] <graphics/empty_graph_square_12.png, id=22, 803.0pt x 803.0pt>
+[3] [4] [1] <graphics/empty_graph_square_12.png, id=25, 803.0pt x 803.0pt>
 File: graphics/empty_graph_square_12.png Graphic file (type png)
 
 <use graphics/empty_graph_square_12.png>
 Package pdftex.def Info: graphics/empty_graph_square_12.png used on input line 
-113.
+130.
 (pdftex.def)             Requested size: 216.81pt x 216.8129pt.
  [2 <./graphics/empty_graph_square_12.png>] [3] [1] [2] [3] [1]
-Underfull \hbox (badness 10000) in paragraph at lines 181--183
+Underfull \hbox (badness 10000) in paragraph at lines 198--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 185--186
+Underfull \hbox (badness 10000) in paragraph at lines 202--203
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 188--189
+Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
 [2] [3] [4] [5] [6] [1] [2] [3] [4]
-<graphics/notes06_crit_pnt_oddities.pdf, id=73, 944.52875pt x 625.33624pt>
+<graphics/notes06_crit_pnt_oddities.pdf, id=76, 944.52875pt x 625.33624pt>
 File: graphics/notes06_crit_pnt_oddities.pdf Graphic file (type pdf)
 
 <use graphics/notes06_crit_pnt_oddities.pdf>
 Package pdftex.def Info: graphics/notes06_crit_pnt_oddities.pdf used on input l
-ine 282.
+ine 300.
 (pdftex.def)             Requested size: 578.15999pt x 382.78087pt.
  [5 <./graphics/notes06_crit_pnt_oddities.pdf>] [1]
 File: graphics/empty_graph_square_12.png Graphic file (type png)
  <use graphics/empty_graph_square_12.png>
 Package pdftex.def Info: graphics/empty_graph_square_12.png used on input line 
-297.
+315.
 (pdftex.def)             Requested size: 289.07999pt x 289.07977pt.
  [2] [1] [1]
 (notes03.aux) ) 
@@ -477,9 +477,9 @@ eX2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/MiKTeX2.9/fonts/type1/publi
 c/amsfonts/cm/cmr12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb>
 <C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/typ
 e1/public/amsfonts/cm/cmti12.pfb>
-Output written on notes03.pdf (25 pages, 127820 bytes).
+Output written on notes03.pdf (26 pages, 129076 bytes).
 PDF statistics:
- 113 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

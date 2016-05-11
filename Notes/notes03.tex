@@ -62,6 +62,22 @@ following table. ($a$ and $b$ are assumed to be finite.)
 }
 \setfont
 
+\newpage 
+
+\problem Sketch the possible graphs combining different signs of
+positive and negative first and second derivatives.
+
+\vfill
+\vfill
+
+
+\problem Sketch graphs where the {\bf first} derivative has a zero value. 
+
+\vfill \problem Sketch graphs where the {\bf second} derivative has a
+zero value.
+
+\vfill
+
 \newpage
 
 Aside from their graphical interpretation, second derivatives
@@ -83,7 +99,8 @@ $\ds t=\frac{\pi}{6}$?
 
 
 While their interpretations are not as immediately obvious, it is
-possible to compute 3rd and higher derivatives of function if we want.
+possible to compute 3rd, 4th, or higher derivatives of function if we
+want.
 
 \problem Find the first four derivatives of the function
 $$f(x) = 7 (2^x) + \ln(x).$$
@@ -107,8 +124,8 @@ the {\bf Taylor polynomial of degree 1 approximating $f(x)$ near
 
 \newpage
 
-Sketch the graph of $\cos(x)$ around $x=0$, and add its
-  tangent line based at $x=0$.
+\problem Sketch the graph of $\cos(x)$ around $x=0$, and add its
+tangent line based at $x=0$.
 
 \includegraphics[width=3in]{graphics/empty_graph_square_12}
 
@@ -135,9 +152,9 @@ is a {\em quadratic} approximation to $f(x)$ near $x=a$.
 \end{boxnote}
 
 
-For values of $x$ close to $a$ do you think this
-  quadratic approximation will be a better or worse approximation than
-  the tangent line?  Why?
+\problem For values of $x$ close to $a$ do you think this quadratic
+approximation will be a better or worse approximation than the tangent
+line?  Why?
 
 \vfill
 
@@ -161,8 +178,8 @@ $x$ near 0.
 There is a very good reason for the particular form of the Taylor
 polynomial.
 
-\problem What mathematical features will $f(x)$ and its 2nd degree
-Taylor approximation share at $x=a$?
+\problem What mathematical features will the original $f(x)$ share
+with its 2nd degree Taylor approximation at the point $x=a$?
 
 \vfill
 
@@ -178,8 +195,8 @@ earlier 1st and 2nd degree Taylor polynomials?
 
 \newpage 
 
-This is the general formula for the terms in a Taylor polynomial, up
-to degree $n$.  \\ 
+Below is the general formula for the terms in a Taylor polynomial, up
+to degree $n$.  \\
 
 $$ f(x) \approx ~~f(a) ~~+ f'(a) (x-a) ~~+ \frac{f''(a)}{2} (x-a)^2 + \ldots 
 + \frac{f^{(n)}(a)}{n!} (x-a)^n$$   \\
@@ -190,11 +207,12 @@ $$ f(x) \approx ~~f(a) ~~+ f'(a) (x-a) ~~+ \frac{f''(a)}{2} (x-a)^2 + \ldots
 \end{itemize}
 
 \newpage
-\subsection*{Higher Degree Taylor Polynomials - Example}
+\subsection*{Higher Degree Taylor Polynomials - Example 1}
 
 Consider the function $f(x) = \sin(x)$.
 
-\problem Find the first four derivatives of $f(x)$.
+\problem Find the first five derivatives of $f(x)$, and evaluate them at $x=0$.
+
 
 \newpage
 
@@ -217,6 +235,26 @@ Taylor polynomial approximations up to degree 5.
 
 MATLAB Demo of increasing higher degrees.
 
+
+\subsection*{Higher Degree Taylor Polynomials - Example 2}
+
+Consider the function $g(x) = x e^{-x}$.
+
+\problem Find the first three derivatives of $g(x)$, and evaluate them
+at $x=1$.
+
+
+\newpage
+
+\problem Write out the Taylor poylnomial of degree 3 for
+$g(x) = x e^{-x}$ centered at $x=1$.
+
+\vfill
+
+\newpage
+
+\problem Use MATLAB to plot the graph of $g(x) = x e^{-x}$ and the
+Taylor polynomial approximations found earlier.
 
 \newpage
 \topic{Critical Points}
