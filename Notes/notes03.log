@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  11 MAY 2016 13:09
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  11 MAY 2016 16:10
 entering extended mode
 **\input notes03.tex
 (notes03.tex (PreambleCommon.tex (C:\MiKTeX2.9\tex\latex\base\article.cls
@@ -420,21 +420,16 @@ Package Fancyhdr Warning: \headheight is too small (12.0pt):
  We now make it that large for the rest of the document.
  This may cause the page layout to be inconsistent, however.
 
-[1] [2]
-Overfull \hbox (9.23065pt too wide) in paragraph at lines 83--86
-[]\OT1/cmr/m/n/24.88 Aside from their graph-i-cal in-ter-pre-ta-tion, sec-ond d
-eriva-tives fre-quently
- []
-
-[3] [4] [1] <graphics/empty_graph_square_12.png, id=25, 803.0pt x 803.0pt>
+[1] [2] [3] [4] [1]
+<graphics/empty_graph_square_12.png, id=25, 803.0pt x 803.0pt>
 File: graphics/empty_graph_square_12.png Graphic file (type png)
 
 <use graphics/empty_graph_square_12.png>
 Package pdftex.def Info: graphics/empty_graph_square_12.png used on input line 
-130.
+129.
 (pdftex.def)             Requested size: 216.81pt x 216.8129pt.
  [2 <./graphics/empty_graph_square_12.png>] [3] [1] [2] [3] [1]
-Underfull \hbox (badness 10000) in paragraph at lines 198--200
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
 
  []
 
@@ -444,269 +439,94 @@ Underfull \hbox (badness 10000) in paragraph at lines 202--203
  []
 
 
+Underfull \hbox (badness 10000) in paragraph at lines 198--203
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 205--206
 
  []
 
-[2] [3] [4] [5] [6] [7] [8] [1] [2] [3] [4] [5]
-<graphics/notes06_crit_pnt_oddities.pdf, id=85, 944.52875pt x 625.33624pt>
-File: graphics/notes06_crit_pnt_oddities.pdf Graphic file (type pdf)
+[2] [3] [4] [5] [6] [1] [2] [3] [1] [2] [3] [4] [5]
+<graphics/notes_03_crit_pnt_oddities.pdf, id=89, 944.52875pt x 625.33624pt>
+File: graphics/notes_03_crit_pnt_oddities.pdf Graphic file (type pdf)
 
-<use graphics/notes06_crit_pnt_oddities.pdf>
-Package pdftex.def Info: graphics/notes06_crit_pnt_oddities.pdf used on input l
-ine 335.
+<use graphics/notes_03_crit_pnt_oddities.pdf>
+Package pdftex.def Info: graphics/notes_03_crit_pnt_oddities.pdf used on input 
+line 341.
 (pdftex.def)             Requested size: 578.15999pt x 382.78087pt.
- [6 <./graphics/notes06_crit_pnt_oddities.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 359--359
-[]\OT1/cmr/m/n/24.88 Sketch
- []
-
-
-Overfull \hbox (17.3739pt too wide) in paragraph at lines 358--364
- [] 
- []
-
-[1]
-Overfull \vbox (51.4296pt too high) has occurred while \output is active []
-
-
-[2]
-notes03.tex:380: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[3]
-notes03.tex:400: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-notes03.tex:400: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 400--401
+ [6 <./graphics/notes_03_crit_pnt_oddities.pdf>]
+Underfull \hbox (badness 10000) in paragraph at lines 349--352
 
  []
-
-notes03.tex:401: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-notes03.tex:401: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 401--402
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 402--403
-
- []
-
-
-Overfull \vbox (266.3601pt too high) has occurred while \output is active []
-
-
-[4]
-notes03.tex:407: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[5]
-notes03.tex:441: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[1] [2]
-notes03.tex:469: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[3] [1]
-notes03.tex:513: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[2]
-notes03.tex:521: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-[3]
-notes03.tex:545: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
-
-notes03.tex:561: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
 
 [1] [2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
-notes03.tex:598: LaTeX Error: File `graphics/week07_storage_container' not foun
-d.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[1]
-
-notes03.tex:601: LaTeX Error: File `graphics/week07_storage_container' not foun
-d.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[2]
-
-notes03.tex:604: LaTeX Error: File `graphics/week07_storage_container' not foun
-d.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[3]
-
-notes03.tex:615: LaTeX Error: File `graphics/notes08_graph01' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[1]
-
-notes03.tex:621: LaTeX Error: File `graphics/notes08_graph01' not found.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-notes03.tex:623: Undefined control sequence
-The control sequence at the end of the top line
-of your error message was never \def'ed. If you have
-misspelled it (e.g., `\hobx'), type `I' and the correct
-spelling (e.g., `I\hbox'). Otherwise just continue,
-and I'll forget about whatever was undefined.
+ []
 
 
-notes03.tex:630: LaTeX Error: File `graphics/notes08_graph01' not found.
+Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ []
 
-[2]
 
-notes03.tex:635: LaTeX Error: File `graphics/notes08_graph01' not found.
+Underfull \hbox (badness 10000) in paragraph at lines 408--409
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+ []
 
-[3]
+[5] [6] [1] [2] [3] [1] [2] [3] [4] [1] [2] [3] [4] [5]
+<graphics/notes_03_storage_container.pdf, id=153, 322.20375pt x 364.36125pt>
+File: graphics/notes_03_storage_container.pdf Graphic file (type pdf)
 
-notes03.tex:651: LaTeX Error: File `graphics/notes08_graph01' not found.
+<use graphics/notes_03_storage_container.pdf>
+Package pdftex.def Info: graphics/notes_03_storage_container.pdf used on input 
+line 610.
+(pdftex.def)             Requested size: 108.405pt x 122.59132pt.
+ [1 <./graphics/notes_03_storage_container.pdf>]
+File: graphics/notes_03_storage_container.pdf Graphic file (type pdf)
+ <use graphics/notes_03_storage_container.pdf>
+Package pdftex.def Info: graphics/notes_03_storage_container.pdf used on input 
+line 613.
+(pdftex.def)             Requested size: 108.405pt x 122.59132pt.
+ [2]
+File: graphics/notes_03_storage_container.pdf Graphic file (type pdf)
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+<use graphics/notes_03_storage_container.pdf>
+Package pdftex.def Info: graphics/notes_03_storage_container.pdf used on input 
+line 616.
+(pdftex.def)             Requested size: 108.405pt x 122.59132pt.
+ [3] [1] [2]
+Overfull \hbox (34.46921pt too wide) in paragraph at lines 661--662
+[]\OT1/cmr/m/n/24.88 The single-variable op-ti-miza-tion func-tion in MAT-LAB i
+s called \OT1/cmtt/m/n/24.88 fminbnd\OT1/cmr/m/n/24.88 . 
+ []
 
-[1]
+[3] [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 693--697
 
-notes03.tex:655: LaTeX Error: File `graphics/notes08_graph01' not found.
+ []
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help
-I could not locate the file with any of these extensions:
-.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps
-Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
-
-[2] (notes03.aux) ) 
+[1] [2] [3] [4] [5] (notes03.aux) ) 
 Here is how much of TeX's memory you used:
- 3639 strings out of 493634
- 47629 string characters out of 3149836
+ 3640 strings out of 493634
+ 47899 string characters out of 3149836
  121497 words of memory out of 3000000
- 6937 multiletter control sequences out of 15000+200000
- 9934 words of font info for 37 fonts, out of 3000000 for 9000
+ 6950 multiletter control sequences out of 15000+200000
+ 12543 words of font info for 48 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 44i,10n,43p,331b,289s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/
-MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/MiKTeX2.9/fonts/type1/p
-ublic/amsfonts/cm/cmr12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr17.
-pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsl12.pfb><C:/MiKTeX2.9/fonts
-/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/
-cm/cmti12.pfb>
-Output written on notes03.pdf (48 pages, 171683 bytes).
+ 44i,10n,43p,331b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm
+/cmbx12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX2
+.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/MiKTeX2.9/fonts/type1/public/a
+msfonts/cm/cmr12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
+/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/
+public/amsfonts/cm/cmti12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmtt
+12.pfb>
+Output written on notes03.pdf (57 pages, 195323 bytes).
 PDF statistics:
- 191 PDF objects out of 1000 (max. 8388607)
+ 234 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 16 words of extra memory for PDF output out of 10000 (max. 10000000)
 

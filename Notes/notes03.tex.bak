@@ -249,7 +249,7 @@ at $x=1$.
 
 \newpage
 
-\problem Write out the Taylor polynomial of degree 3 for \\
+\problem Write out the Taylor poylnomial of degree 3 for \\
 $g(x) = x e^{-x}$ centered at $x=1$.
 
 \vfill
@@ -625,7 +625,7 @@ optimization, given the formula for a function.  However, those tools
 have the same limitations as our earlier work with numerical methods
 for solving equations.
 
-These {\bf numerical methods} are all {\bf fancy versions of guess and
+Thse {\bf numerical methods} are all {\bf fancy versions of guess and
   check}!  This means numerical solutions are a poor second choice,
 compared to by-hand solving:
 \begin{itemize}
