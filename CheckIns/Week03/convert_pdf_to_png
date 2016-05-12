@@ -1,0 +1,7 @@
+convert -density 300 -trim SlopeAndConcavityA.pdf SlopeAndConcavityA.png
+convert -density 300 -trim SlopeAndConcavityB.pdf SlopeAndConcavityB.png
+convert -density 300 -trim SlopeAndConcavityC.pdf SlopeAndConcavityC.png
+convert -density 300 -trim SlopeAndConcavityD.pdf SlopeAndConcavityD.png
+convert -density 300 -trim OptimizationGraph.pdf OptimizationGraph.png
+
+convert -trim -bordercolor white -border 5 SlopeAndConcavity_AllGraphs.png SlopeAndConcavity_AllGraphs_trimmed.png 

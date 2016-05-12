@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage[pdf]{pstricks}                                                      
+\usepackage{pst-all}                                                      
+\usepackage{pst-plot}                                                      
+\begin{document}                                                                
+\psset{unit=1.3cm}
+\psset{algebraic}
+\begin{pspicture}[showgrid=false](-2.5,-2.5)(2.5,2.5)
+\psplot[linewidth=1.5\pslinewidth,yMaxValue=4, yMinValue=-4, plotpoints=10000]{-3.6}{7.1}{tan(x)}
+\end{pspicture}
+\end{document}

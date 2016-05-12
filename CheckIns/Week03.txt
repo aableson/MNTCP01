@@ -1,0 +1,96 @@
+
+
+---Question
+
+Which of the following graphs has the properties
+<br />
+\(f'(x) < 0\) and
+<br />
+\(f''(x) > 0\)?
+
+<p>
+<img src="SlopeAndConcavity_AllGraphs_trimmed.png" width="400px" alt="Slope and Concavity Graphs" />
+
+---Type
+onechoice
+---Answers
+= (a)
+~ (b)
+~ (c)
+~ (d)
+---Comment
+
+<p>
+We are looking for a graph that is:
+<br />
+- sloping down (\(f'(x) < 0\)) and
+<br />
+- concave up (\(f''(x) > 0\)).
+
+
+
+
+---Question
+
+Consider the function \( g(x) = e^{3x} \), which has the derivatives
+<br />
+\(g'(x) = 3 e^{3x} \) and
+<br />
+\(g''(x) = 9 e^{3x} \).
+<p>
+
+Which of the following would be the quadratic Taylor polynomial approximating
+\(g(x)\) around the point \(x=2\)?
+
+---Type
+onechoice
+---Answers
+~ \(P_2(x) = e^{6} + 3 e^{6} (x-6) + \frac{9 e^{6}}{2} (x-6)^2 \)
+~ \(P_2(x) = e^{3} + 3 e^{3} (x-2) + \frac{9 e^{3}}{2} (x-2)^2 \)
+= \(P_2(x) = e^{6} + 3 e^{6} (x-2) + \frac{9 e^{6}}{2} (x-2)^2 \)
+~ \(P_2(x) = e^{3} + 3 e^{3} (x-6) + \frac{9 e^{3}}{2} (x-6)^2 \)
+---Comment
+
+<br />
+The formula for a quadratic Taylor polynomial is
+<br />
+\( P_2(x)  = g(a)  + g'(a) (x-a) + \frac{g''(a)}{2} (x-a)^2 \)
+<br />
+Given the formulas for \(g(x)\) and its derivatives, the coefficient we need are:
+<br />
+\( g(2) = e^6 \),  
+<br />
+\( g'(2) = 3e^6 \),   and
+<br />
+\( g''(2) = 9e^6 \).
+<br />
+Each term will be based on a factors of the form \( (x-2) \).
+
+
+---Question
+Consider the function
+<br />
+\( \displaystyle f(x) = \frac{1}{(x-1)^2} \)
+<p>
+Which description matches this function best <b>on the closed interval [0, 3]</b>?
+<br />
+Hint: a sketch of the graph might help.
+<p>
+---Type
+onechoice
+---Answers
+~(a)
+~(b)
+=(c)
+~(d)
+---Comment
+The function is always positive (due to the squared term).  Therefore the function increases towards \(+ \infty\) as \(x \to 1\) (vertical asymptote). As a result, there cannot be a global max on the interval, because the function increases forever towards the asymptote.
+<br />
+On the end points though, there will be a (global) minimum of the function reached.
+<p>
+<img src="OptimizationGraph.png" alt="Graphs" width="300px" />
+<p>
+Note that the rule about a function always having a global max or min on a closed interval does <b>not</b> apply here, because the function in that theorem <b>must be continuous on the interval</b>.  With the vertical asymptote at \(x=1\), \(f(x)\) is not continuous on the interval given, so the theorem doesn't apply. 
+
+
+

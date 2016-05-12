@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}                                                      
+\usepackage{pst-plot}                                                      
+\begin{document}                                                                
+\psset{unit=2.3cm}
+\psset{algebraic}
+\begin{pspicture}[showgrid=false](-2.5,-2.5)(2.5,2.5)
+\psplot[linewidth=0.5\pslinewidth,plotpoints=1000]{-0.8}{-0.2}{-x^2}
+\end{pspicture}
+\end{document}

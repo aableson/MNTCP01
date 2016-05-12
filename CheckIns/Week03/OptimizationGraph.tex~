@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage[pdf]{pstricks}                                                      
+\usepackage{pst-all}                                                      
+\begin{document}                                                                
+\psset{xunit=1.5cm,yunit=1.0cm}
+\psset{algebraic}
+\begin{pspicture}[showgrid=false](-0.5,-1)(6, 30)
+\psaxes[Dy=2,linewidth=1\pslinewidth]{-}(0,0)(-0.2,-2.2)(3.2,4.2)[$x$,0][$f(x)$, 90]
+\psplot[linewidth=2\pslinewidth,linecolor=black,yMaxValue=2,yMinValue=-20,plotpoints=1000,yMinValue=-2,yMaxValue=4]{0}{0.9}{1/(x-1)^2}
+\psplot[linewidth=2\pslinewidth,linecolor=black,yMaxValue=2,yMinValue=-20,plotpoints=1000,yMinValue=-2,yMaxValue=4]{1.01}{3}{1/(x-1)^2}
+\psdots[dotsize=7pt,linecolor=black](3,0.25)(0,1)
+\psline[linestyle=dashed,linecolor=blue](1,-2)(1,4)
+\end{pspicture}
+\end{document}
