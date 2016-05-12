@@ -158,7 +158,6 @@ line?  Why?
 \vfill
 
 \newpage
-\topic{Taylor Polynomials - Examples}
 
 \problem Find the quadratic Taylor approximation to \\$f(x) = \cos(x)$
   near $x=0$.

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  11 MAY 2016 16:10
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  12 MAY 2016 16:46
 entering extended mode
 **\input notes03.tex
 (notes03.tex (PreambleCommon.tex (C:\MiKTeX2.9\tex\latex\base\article.cls
@@ -428,23 +428,23 @@ File: graphics/empty_graph_square_12.png Graphic file (type png)
 Package pdftex.def Info: graphics/empty_graph_square_12.png used on input line 
 129.
 (pdftex.def)             Requested size: 216.81pt x 216.8129pt.
- [2 <./graphics/empty_graph_square_12.png>] [3] [1] [2] [3] [1]
-Underfull \hbox (badness 10000) in paragraph at lines 200--201
+ [2 <./graphics/empty_graph_square_12.png>] [3] [4] [5] [6] [1]
+Underfull \hbox (badness 10000) in paragraph at lines 199--200
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 202--203
+Underfull \hbox (badness 10000) in paragraph at lines 201--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 198--203
+Underfull \hbox (badness 10000) in paragraph at lines 197--202
 
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 205--206
+Underfull \hbox (badness 10000) in paragraph at lines 204--205
 
  []
 
@@ -454,14 +454,19 @@ File: graphics/notes_03_crit_pnt_oddities.pdf Graphic file (type pdf)
 
 <use graphics/notes_03_crit_pnt_oddities.pdf>
 Package pdftex.def Info: graphics/notes_03_crit_pnt_oddities.pdf used on input 
-line 341.
+line 340.
 (pdftex.def)             Requested size: 578.15999pt x 382.78087pt.
  [6 <./graphics/notes_03_crit_pnt_oddities.pdf>]
-Underfull \hbox (badness 10000) in paragraph at lines 349--352
+Underfull \hbox (badness 10000) in paragraph at lines 348--351
 
  []
 
 [1] [2] [3] [4]
+Underfull \hbox (badness 10000) in paragraph at lines 405--406
+
+ []
+
+
 Underfull \hbox (badness 10000) in paragraph at lines 406--407
 
  []
@@ -471,44 +476,39 @@ Underfull \hbox (badness 10000) in paragraph at lines 407--408
 
  []
 
-
-Underfull \hbox (badness 10000) in paragraph at lines 408--409
-
- []
-
 [5] [6] [1] [2] [3] [1] [2] [3] [4] [1] [2] [3] [4] [5]
 <graphics/notes_03_storage_container.pdf, id=153, 322.20375pt x 364.36125pt>
 File: graphics/notes_03_storage_container.pdf Graphic file (type pdf)
 
 <use graphics/notes_03_storage_container.pdf>
 Package pdftex.def Info: graphics/notes_03_storage_container.pdf used on input 
-line 610.
+line 609.
 (pdftex.def)             Requested size: 108.405pt x 122.59132pt.
  [1 <./graphics/notes_03_storage_container.pdf>]
 File: graphics/notes_03_storage_container.pdf Graphic file (type pdf)
  <use graphics/notes_03_storage_container.pdf>
 Package pdftex.def Info: graphics/notes_03_storage_container.pdf used on input 
-line 613.
+line 612.
 (pdftex.def)             Requested size: 108.405pt x 122.59132pt.
  [2]
 File: graphics/notes_03_storage_container.pdf Graphic file (type pdf)
 
 <use graphics/notes_03_storage_container.pdf>
 Package pdftex.def Info: graphics/notes_03_storage_container.pdf used on input 
-line 616.
+line 615.
 (pdftex.def)             Requested size: 108.405pt x 122.59132pt.
  [3] [1] [2]
-Overfull \hbox (34.46921pt too wide) in paragraph at lines 661--662
+Overfull \hbox (34.46921pt too wide) in paragraph at lines 660--661
 []\OT1/cmr/m/n/24.88 The single-variable op-ti-miza-tion func-tion in MAT-LAB i
 s called \OT1/cmtt/m/n/24.88 fminbnd\OT1/cmr/m/n/24.88 . 
  []
 
 [3] [4] [5]
-Underfull \hbox (badness 10000) in paragraph at lines 693--697
+Underfull \hbox (badness 10000) in paragraph at lines 692--696
 
  []
 
-[1] [2] [3] [4] [5] (notes03.aux) ) 
+[1] [2] [3] [4] (notes03.aux) ) 
 Here is how much of TeX's memory you used:
  3640 strings out of 493634
  47899 string characters out of 3149836
@@ -517,16 +517,15 @@ Here is how much of TeX's memory you used:
  12543 words of font info for 48 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  44i,10n,43p,331b,283s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm
-/cmbx12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX2
-.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/MiKTeX2.9/fonts/type1/public/a
-msfonts/cm/cmr12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:
-/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/
-public/amsfonts/cm/cmti12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmtt
-12.pfb>
-Output written on notes03.pdf (57 pages, 195323 bytes).
+<C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmb
+x12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/MiKTeX2.9/f
+onts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfon
+ts/cm/cmr17.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiK
+TeX2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/MiKTeX2.9/fonts/type1/publ
+ic/amsfonts/cm/cmtt12.pfb>
+Output written on notes03.pdf (56 pages, 186267 bytes).
 PDF statistics:
- 234 PDF objects out of 1000 (max. 8388607)
+ 227 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  16 words of extra memory for PDF output out of 10000 (max. 10000000)
 
