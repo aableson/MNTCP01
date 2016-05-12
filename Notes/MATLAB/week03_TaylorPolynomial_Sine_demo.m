@@ -14,9 +14,9 @@ plot(x, 0*x, 'k');
 plot([0, 0], [-2, 2], 'k');
 
 plot(x, y, 'linewidth', 3);
-% pause(2);
+pause(2);
 plot(0, 0, '.k', 'markersize', 14);
-% pause(2);
+pause(2);
 
 polynomial_str = '\displaystyle y =';
 y2 = 0*x;
@@ -42,7 +42,7 @@ for (i = 1:24)
     plot(x, 0*x, 'k');
     plot([0, 0], [-2, 2], 'k');
     plot(0, 0, '.k', 'markersize', 14);
-    text(min(x), 1.5, strcat('$', polynomial_str, '$'), 'interpreter','latex', 'fontsize', 24);
+    text(min(x), 1.5, strcat('$', polynomial_str, '$'), 'interpreter','latex', 'fontsize', 16);
     disp(polynomial_str)
     pause(1);
 end
