@@ -8,9 +8,414 @@
 \subsection*{MNTC P01 - Week \#3 - \WeekTitleThree}
 \end{center}
 
+\subsection*{Taylor Polynomials}
+
+For reference, the general formula for the Taylor polynomial centered at x = a is:
+\[P(x) = f(a) + \frac{f'(a)}{1!} (x-a) + \frac{f''(a)}{2!} (x-a)^2 + ... + \frac{f^n(a)}{n!} (x-a)^n\]
+where $n!$ means ``n factorial'', or $n \times (n-1) \times (n-2) \times ... 2 \times 1$.  E.g. $4! = 4 \cdot 3 \cdot 2 \cdot 1 = 24$.
+
+\begin{enumerate}[1.]
+\begin{multicols}{2}
+
+\item
+\begin{Question}
+ Suppose \(g\) is a function which has continuous derivatives, and that
+\(g(5)=-3, g'(5)=-2\), \(g''(5)=1\),
+\(g'''(5)=-5\).
+\begin{enumerate}[(a)]
+\item What is the Taylor polynomial of degree 2 for \(g\) near 
+\(5\)?
+\item What is the Taylor polynomial of degree 3 for \(g\) near 
+\(5\)? \\
+\item Use the two polynomials that you found in parts (a) and (b) to
+approximate \(g(5.1)\).
+\end{enumerate}
+\par  \end{Question}
+\begin{Solution}
+ 
+We have
+\[g(x) = g(5) + g'(5)(x-5) + \frac{g''(5)}{2!}(x-5)^2
++\frac{g'''(5)}{3!}(x-5)^3+\cdots\]
+Substituting gives
+\[g(x) = -3  - 2(x-5) + \frac{1}{2!}(x-5)^2
+  +\frac{-5}{3!}(x-5)^3+\cdots\]
+  \begin{enumerate}[(a)]
+\item 
+The degree 2 Taylor polynomial, \(P_2 (x)\), is obtained by truncating
+after the \((x-5)^2\) term:
+\[P_2(x) = -3+\left(-2\right)\!\left(x-5\right)+\frac{1}{2!}\cdot 1\!\left(x-5\right)^{2}.\]
+\par 
+\item 
+The degree 3 Taylor polynomial, \(P_3 (x)\), is obtained by truncating
+after the
+\((x-5)^3\) term:
+\[P_3 (x) = -3+\left(-2\right)\!\left(x-5\right)+\frac{1}{2!}\cdot 1\!\left(x-5\right)^{2}+\frac{1}{3!}\!\left(-5\right)\!\left(x-5\right)^{3}\]
+\par 
+\item 
+Substitute \(x=5.1\) into the Taylor polynomial of degree 2:
+\[P_2(5.1) = -3+\left(-2\right)\!\left(5.1-5\right)+\frac{1}{2!}\cdot 1\!\left(5.1-5\right)^{2} = -3.195.\]
+From the Taylor polynomial of degree 3, we obtain
+\begin{align*}
+P_3(5.1) =&  -3+\left(-2\right)\!\left(5.1-5\right)+\frac{1}{2!}\cdot 1\!\left(5.1-5\right)^{2}+ \\
+& \frac{1}{3!}\!\left(-5\right)\!\left(5.1-5\right)^{3} \\
+ =& -3.19583.
+\end{align*}
+  \end{enumerate}
+\par\end{Solution}
+
+% ******************************
+\item
+\begin{Question}
+  Find the Taylor polynomial of degree \(n = 4\) for \(x\) near the
+  point \(a = \frac{\pi }{4}\) for the function
+  \(\cos\!\left(4x\right)\).\\
+  Use MATLAB to graph both the function and the Taylor polynomial on a
+  reasonable interval around $x=\pi/4$.
+\par  \end{Question}
+\begin{Solution}
+ 
+Let \(f(x)= \cos\!\left(4x\right)\). Then \(f(\frac{\pi }{4}) = -1\), and
+\par\smallskip\begin{center}\begin{tabular}{|c|c|} \hline
+\(f'(x) = -4\sin\!\left(4x\right)\) &\(f'(\frac{\pi }{4}) = 0\) \\ \hline 
+\(f''(x) = -16\cos\!\left(4x\right)\) &\(f'''(\frac{\pi }{4}) = 16\) \\ \hline 
+\(f'''(x) = 64\sin\!\left(4x\right)\) &\(f'''(\frac{\pi }{4}) = 0\) \\ \hline 
+\(f''''(x) = 256\cos\!\left(4x\right)\) &\(f''''(\frac{\pi }{4}) = -256\) \\ \hline 
+\end {tabular}\end{center}\par\smallskip
+So,
+\(P_4(x) = -1+\frac{16}{2}\!\left(x-\frac{\pi }{4}\right)^{2}+\frac{-256}{24}\!\left(x-\frac{\pi }{4}\right)^{4}\).
+
+MATLAB graphing: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W03TaylorTrig1.m}{W03TaylorTrig1.m}
+\par\end{Solution}
+% ******************************
+\item
+\begin{Question}
+  Find the fifth order Taylor polynomial for
+  \(\sin\!\left(x\right)\) near $x = \pi/4$. \\
+  Use MATLAB to graph both the function and the Taylor polynomial on
+  a reasonable interval around $x = \pi/4$.
+  \end{Question}
+
+\begin{Solution}
+The fifth order Taylor polynomial is based on the first five derivatives of $\sin(x)$.
+\begin{align*}
+f(x) &= \sin(x) &  f(\pi/4) = \frac{1}{\sqrt{2}} \approx 0.7071\\
+f'(x) &= \cos(x) &  f'(\pi/4) = \frac{1}{\sqrt{2}} \approx 0.7071\\
+f''(x) &= -\sin(x) & f''(\pi/4) \approx -0.7071\\
+f'''(x) &= - \cos(x)& f'''(\pi/4) \approx -0.7071\\
+f^{(4)}(x) &= \sin(x)& f^{(4)}(\pi/4)\approx  0.7071\\
+f^{(5)}(x) &= \cos(x)& f^{(5)}(\pi/4) \approx 0.7071\\
+\end{align*}
+Using the Taylor polynomial formula, 
+\begin{align*}
+P_5(x) = &
+\frac{1}{\sqrt{2}} + 
+\frac{1}{\sqrt{2}} (x-\pi/4)  - 
+\frac{1}{2}\frac{1}{\sqrt{2}} (x-\pi/4)^2  \\
+& - 
+\frac{1}{3!}\frac{1}{\sqrt{2}} (x-\pi/4)^3  + 
+\frac{1}{4!}\frac{1}{\sqrt{2}} (x-\pi/4)^4 \\
+& + 
+\frac{1}{5!}\frac{1}{\sqrt{2}} (x-\pi/4)^5   
+\end{align*}
+
+MATLAB graphing: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W03TaylorTrig2.m}{W03TaylorTrig2.m}
+\par\end{Solution}
+% ******************************
+\item
+\begin{Question}
+ Find the Taylor polynomial of degree 3 around the point \(x = -4\) of
+\(f(x) = \sqrt{5+x}\). \\
+  Use MATLAB to graph both the function and the Taylor polynomial on
+  a reasonable interval around the reference point.
+\par  \end{Question}
+\begin{Solution}
+ 
+Let \(f(x) = \sqrt{5+x} = (5 +x)^{1/2}\).
+\par 
+Then
+\[f'(x) = \frac{1}{2\sqrt{5 + x}},\]
+\[f''(x) = -\frac{1}{4(5 + x)^{3/2}},\]
+and
+\[f'''(x) = \frac{3}{8(5 + x)^{5/2}}.\]
+The Taylor polynomial of degree three about \(x =-4\) is thus
+\begin{align*}
+P_3(x) & = \sqrt{5  - 4} + \frac{1}{2\sqrt{5 - 4}} (x  + 4 ) + (\frac{1}{2!})\,\left(-\frac{1}{4(5 - 4)^{3/2}}\right)
+    (x  + 4)^2 + \\
+&(\frac{1}{3!})\left(\frac{3}{8(5 - 4)^{5/2}}\right) (x  + 4)^3. \\
+& = 1 + \frac{1}{2} (x+4) + \frac{1}{2!} \frac{-1}{4} (x+4)^2
++ \frac{1}{3!} \frac{3}{8} (x+4)^3
+\end{align*}
+MATLAB graphing: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W03TaylorRoot1.m}{W03TaylorRoot1.m}
+\par\end{Solution}
+% ******************************
+\item
+\begin{Question}
+ 
+  Calculate the Taylor polynomials \(P_2(x)\) and \(P_3(x)\) centered
+  at \(x = 1\) for \(f(x) = \ln\!\left(x+1\right)\). \\
+  Use MATLAB to graph the function and both the Taylor polynomials on
+  a reasonable interval around the reference point.
+\par  \end{Question}
+\begin{Solution}
+ 
+Recall the general formula for the Taylor polynomial centered at \(x\) = a:
+\[P(x) = f(a) + \frac{f'(a)}{1!} (x-a) + \frac{f''(a)}{2!} (x-a)^2 + ... + \frac{f^n(a)}{n!} (x-a)^n\]
+\[f(x) = \ln\!\left(x+1\right)\]
+\[f'(x) = \frac{1}{x+1}\]
+\[f''(x) = \frac{-1}{\left(x+1\right)^{2}}\]
+\[f'''(x) = \frac{2}{\left(x+1\right)^{3}}\]
+So, \(f(x) = \ln\!\left(x+1\right)\) and 
+\(P_2(x) = A + B(x-1) + C(x-1)^2\)  \\
+where  \\
+\(A=f(1)=\ln (2)=0.693147\)  \\
+\(B=f'(1)=\frac{1}{(2)}=0.5\)  \\
+\(C=\frac{f''(1)}{2!}=-\frac{1}{(8)}=-0.125\)  \\
+Thus, 
+\[P_2(x) = \ln (2) + \frac{1}{(2)} (x - 1)  - \frac{1}{(8)} (x - 1)^2\] \\
+or,
+\[P_2(x) = 0.693147+0.5\!\left(x-1\right)-0.125\!\left(x-1\right)^{2}\] \\
+Similarly,  \\
+\(P_3(x) = D + E(x-1) + F(x-1)^2 + G(x-1)^3\)  \\
+where  \\
+\(D=f(1)=\ln (2)=0.693147\)  \\
+\(E=f'(1)=\frac{1}{(2)}=0.5\)  \\
+\(F=\frac{f''(1)}{2!}=-\frac{1}{(8)}=-0.125\)  \\
+\(G=\frac{f'''(1)}{3!}=\frac{1}{(24)}=0.0416667\)  \\
+Thus, 
+\[P_3(x) = \ln (2) + \frac{1}{(2)} (x - 1)  - \frac{1}{(8)} (x - 1)^2 + \frac{1}{(24)}  (x - 1)^3\] \\
+or,
+\[P_3(x) = P_2(x)  + 0.0417 (x-1)^3\] 
+
+MATLAB graphing: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W03TaylorLn1.m}{W03TaylorLn1.m}
+\par\end{Solution}
+% ******************************
+\item
+\begin{Question}
+ 
+  Calculate the Taylor polynomials \(P_2(x)\) and \(P_3(x)\) centered
+  at \(x = \frac{\pi }{6}\) for \(f(x) = \sin\!\left(x\right)\). \\
+Use MATLAB to graph the function and both the Taylor polynomials on a
+reasonable interval around the reference point.
+\end{Question}
+\begin{Solution}
+The 2nd and 3rd order Taylor polynomials are based on the first three derivatives of $\sin(x)$.
+\begin{align*}
+f(x) &= \sin(x) &  f(\pi/6) = \frac{1}{2} \\
+f'(x) &= \cos(x) &  f'(\pi/6) = \frac{\sqrt{3}}{2} \approx 0.866\\
+f''(x) &= -\sin(x) & f''(\pi/6) = \frac{-1}{2} \\ 
+f'''(x) &= - \cos(x)& f'''(\pi/6) = \frac{-\sqrt{3}}{2} \approx -0.866\\
+\end{align*}
+Using the Taylor polynomial formula, 
+\begin{align*}
+P_2(x) = &
+\frac{1}{2} + 
+\frac{\sqrt{3}}{2} (x-\pi/6)  - 
+\frac{1}{2!}\frac{1}{2} (x-\pi/6)^2  
+\end{align*}
+and $P_3$ will be the same, just with the cubic term added at the end.
+\begin{align*}
+P_3(x) = &
+\frac{1}{2} + 
+\frac{\sqrt{3}}{2} (x-\pi/6)  - 
+\frac{1}{2!}\frac{1}{2} (x-\pi/6)^2   - 
+\frac{1}{3!}\frac{\sqrt{3}}{2} (x-\pi/6)^3  
+\end{align*}
+
+
+MATLAB graphing: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W03TaylorTrig3.m}{W03TaylorTrig3.m}
+ 
+\end{Solution}
+% ******************************
+\item
+\begin{Question}
+ 
+  Calculate the Taylor polynomials \(P_2(x)\) and \(P_3(x)\) centered
+  at \(x = 7\) for \(f(x) = \frac{1}{1+x}\).  \\
+  Use MATLAB to graph both the function and the Taylor polynomial on a
+  reasonable interval around the reference point.
+\par  \end{Question}
+\begin{Solution}
+ 
+\[f(x) = \frac{1}{1+x}\]
+\[f'(x) = \frac{-1}{(1+x)^2}\]
+\[f''(x) = \frac{2}{(1+x)^3}\]
+\[f'''(x) = \frac{-6}{(1+x)^4}\]
+and 
+\(P_2(x) = A + B(x-7) + C(x-7)^2\)  \\
+where  \\
+\(A=f(7)=\frac{1}{(8)}=0.125\)  \\
+\(B=f'(7)=-\frac{1}{(64)}\approx-0.0156\)  \\
+\(C=\frac{f''(7)}{2!}=\frac{1}{(512)}=0.00195\)  \\
+Thus, 
+\[P_2(x) = \frac{1}{(8)}  - \frac{1}{(64)} (x - 7) + \frac{1}{(512)} (x - 7)^2\] \\
+or,
+\[P_2(x) = 0.125-0.0156\!\left(x-7\right)+0.00195\!\left(x-7\right)^{2}\] \\
+Similarly,  \\
+\(P_3(x) = D + E(x-7) + F(x-7)^2 + G(x-7)^3\)  \\
+where  \\
+\(D=f(7)=\frac{1}{(8)}=0.125\)  \\
+\(E=f'(7)=-\frac{1}{(64)}=-0.0156\)  \\
+\(F=\frac{f''(7)}{2!}=\frac{1}{(512)}=0.00195\)  \\
+\(G=\frac{f'''(7)}{3!}=-\frac{1}{(4096)}=-0.000244\)  \\
+Thus, 
+\[P_3(x) = \frac{1}{(8)}  - \frac{1}{(64)} (x - 7) + \frac{1}{(512)} (x - 7)^2  - \frac{1}{(4096)}  (x - 7)^3\] \\
+or,
+\[P_3(x) = P_2(x)  - 0.000244 (x-7)^3\] \\
+MATLAB graphing: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W03TaylorRecip1.m}{W03TaylorRecip1.m}
+\par\end{Solution}
+% ******************************
+\item
+\begin{Question}
+  Calculate the Taylor polynomials \(P_2(x)\) and \(P_3(x)\) centered
+  at \(x = 2\) for \(f(x) = e^{-x}+e^{-2x}\). \\
+  Use MATLAB to graph the function and both the Taylor polynomials on a
+  reasonable interval around the reference point.
+\end{Question}
+\begin{Solution}
+ 
+\[f(x) = e^{-x}+e^{-2x}\]
+\[f'(x) = -e^{-x}-2e^{-2x}\]
+\[f''(x) = e^{-x}+4e^{-2x}\]
+\[f'''(x) = -e^{-x}-8e^{-2x}\]
+and 
+\(P_2(x) = A + B(x-2) + C(x-2)^2\)  \\
+where  \\
+\(A=f(2)=e^{-2}+e^{-4}\)  \\
+\(B=f'(2)=-\left(e^{-2}+2e^{-4}\right)\)  \\
+\(C=\frac{f''(2)}{2!}=\frac{e^{-2}+4e^{-4}}{2}\)  \\
+Thus, 
+\[P_2(x) = (e^{-2}+e^{-4})-\left(e^{-2}+2e^{-4}\right)\!\left(x-2\right)+\frac{e^{-2}+4e^{-4}}{2}\!\left(x-2\right)^{2}\] \\
+Similarly,  \\
+\(P_3(x) = D + E(x-2) + F(x-2)^2 + G(x-2)^3\)  \\
+where  \\
+\(D=f(2)=e^{-2}+e^{-4}\)  \\
+\(E=f'(2)=-\left(e^{-2}+2e^{-4}\right)\)  \\
+\(F=\frac{f''(2)}{2!}=\frac{e^{-2}+4e^{-4}}{2}\)  \\
+\(G=\frac{f'''(2)}{3!}=-\frac{e^{-2}+8e^{-4}}{6}\)  \\
+Thus, \(P_3(x) =\)
+\[\begin{array}{lcl} 
+& = & e^{-2}+e^{-4}-\left(e^{-2}+2e^{-4}\right)\!\left(x-2\right)+\frac{e^{-2}+4e^{-4}}{2}\!\left(x-2\right)^{2}  \cr\cr 
+& & - {\frac{e^{-2}+8e^{-4}}{6}} (x-2)^3 
+\end{array}\] 
+MATLAB graphing: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W03TaylorExp1.m}{W03TaylorExp1.m}
+\par\end{Solution}
+% ******************************
+\item
+\begin{Question}
+ 
+  Calculate the Taylor polynomials \(P_2(x)\) and \(P_3(x)\) centered
+  at \(x = \frac{\pi }{4}\) for \(f(x) = \tan\!\left(x\right)\).
+
+  Use MATLAB to graph the function and both the Taylor polynomials on
+  a reasonable interval around the reference point.
+\end{Question}
+\begin{Solution}
+ 
+\[f(x) = \tan\!\left(x\right)\]
+\[\frac{d}{dx}\tan\!\left(x\right) = \frac{1}{\cos^{2}\!\left(x\right)}\]
+\[\frac{d^2}{dx^2}\tan\!\left(x\right) = \frac{2\sin\!\left(x\right)}{\cos^{3}\!\left(x\right)}\]
+\[\frac{d^3}{dx^3}\tan\!\left(x\right) = \frac{2\!\left(2\sin^{2}\!\left(x\right)+1\right)}{\cos^{4}\!\left(x\right)}\]
+So, in this case, 
+\[P_2(x) = 1+2\!\left(x-\frac{\pi }{4}\right)+2\!\left(x-\frac{\pi }{4}\right)^{2}\]
+and
+\[P_3(x) = 1+2\!\left(x-\frac{\pi }{4}\right)+2\!\left(x-\frac{\pi }{4}\right)^{2} + \frac{8}{3} (x-\frac{\pi }{4})^3\]
+MATLAB graphing: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W03TaylorTrig4.m}{W03TaylorTrig4.m}
+\par\end{Solution}
+% ******************************
+\item
+\begin{Question}
+  Find the second-degree Taylor polynomial \(P_2(x)\) for the function
+  \(f(x) = \sqrt{15+x^2}\) at the number \(x=1\).
+
+  Use MATLAB to graph both the function and the Taylor polynomial on a
+  reasonable interval around $x = \pi/4$.
+\par\end{Question}
+\begin{Solution}
+$P_2(x)= 4+(1/4)*(x-1)+(15/(2(16)4))(x-1)^2$
+
+MATLAB graphing: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W03TaylorRoot2.m}{W03TaylorRoot2.m}
+\end{Solution}
+% ******************************
+\item
+\begin{Question}
+ Find the second-degree Taylor polynomial for
+\(f(x)=2 x^2 - 3 x + 8\) about
+\(x=0\).
+What do you notice about your polynomial?
+\par  \end{Question}
+\begin{Solution}
+ 
+We note that \(f(0) = 8\);
+\(f'(x) = 4 x - 3\), so that \(f'(0) = -3\); and
+\(f''(x) = 4\), so that \(f''(0) = 4\).
+\par 
+Thus
+\[P_2(x) = 8 - 3 x + {4\over 2!} x^2
+          = 8 - 3 x + 2 x^2.\]
+We notice that \(f(x) = P_2(x)\) in this case, which makes
+sense because \(f(x)\) is a polynomial.
+\par\end{Solution}
+% ******************************
+\item
+\begin{Question}
+ Suppose that \(P_2(x)=a+bx+cx^2\) is the
+second degree Taylor polynomial for the function \(f\) about \(x=0\).
+What can you say about the signs of
+\(a\), \(b\), \(c\) if \(f\) has the graph given below? \\
+Note that the central lines are the $x$ and $y$ axes.
+\begin{center} 
+\includegraphics[width=0.25\linewidth]{graphics/Week03_TaylorPolynomials/aableson-2281-setUnit_06_TaylorPolynomialsprob16image1}
+\end{center} 
+\par  \end{Question}
+\begin{Solution}
+ 
+Since \(P_2(x)\) is the second degree Taylor polynomial for \(f(x)\)
+about \(x=0\), \(P_2(0)=f(0)\), which says \(a=f(0)\).  Since
+\(\frac{d}{dx}P_2(x) \big|_{x=0} = f'(0)\),
+\(b=f'(0)\); and since
+\(\frac{d^2}{dx^2} P_2(x) \big|_{x=0} = f''(0)\),
+\(2c=f''(0)\).  In other words, \(a\) is the \(y\)-intercept of
+\(f(x)\), \(b\) is the slope of the tangent line to \(f(x)\) at
+\(x=0\) and \(c\) tells us the concavity of \(f(x)\) near \(x=0\).
+\par 
+Thus
+\(a < 0\); \(b > 0\); and \(c > 0\)
+\par\end{Solution}
+% ******************************
+\item
+\begin{Question}
+ The function \(f(x)\) is approximated near \(x=0\) by the second
+degree Taylor polynomial \(P_2(x) = 3x-3+8x^{2}\).
+\par 
+Give values the values of $f(0)$, $f'(0)$, and $f''(0)$.
+\par  \end{Question}
+\begin{Solution}
+ 
+Using the fact that
+\[f(x)\approx
+P_2(x)=f(0)+f'(0)x+\frac{f''(0)}{2!}x^2\]
+and identifying coefficients with those given for \(P_2(x)\), we obtain:
+\par 
+\(f(0)=\) the constant term, which equals \(-3\), so \(f(0)=-3\).
+\(f'(0)=\) the coefficient of \(x\), which equals \(3\), so
+\(f'(0)=3\).
+\(\frac{f''(0)}{2!}=\) the coefficient of \(x^2\), which equals \(8\),
+so \(f''(0)=16\).
+\par\end{Solution}
+\end{multicols} 
+
+\hrulefill
 
 \subsection*{Optimization Introduction}
-\begin{enumerate}[1.]
 \begin{multicols}{2}
 
 \item
