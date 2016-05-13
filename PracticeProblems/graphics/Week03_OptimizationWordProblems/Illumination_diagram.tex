@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage[pdf]{pstricks}
+\usepackage{pst-all}
+\begin{document}
+\psset{xunit=1cm,yunit=0.01cm}
+\begin{pspicture}[](-4,-2)(4, 4)
+\psaxes[linewidth=0.5\pslinewidth,Dy=150]{-}(0,0)(0,0)(7.5,450)[$t$ (days),0][CO$_2$ (ppm),90]       %creates axes
+\psset{algebraic}
+\pscurve[linewidth=1.5\pslinewidth](0,300)(1,350)(2,360)(3,340)(4,410)(5,470)(6,450)(7,450)
+%\psline[linewidth=2.5\pslinewidth](-4,0)(-4,1.81)
+%\psline[linewidth=2.5\pslinewidth](4.1,0)(4.1,2.65)
+%\rput(-3.5,0.7){A}
+%\rput(-2,-0.3){B}
+%\rput(0.5,1.5){C}
+%\rput(2.1,-0.3){D}
+%\rput(3.6,0.5){E}
+%\rput(-4,-0.3){$a$}
+%\rput(4.1,-0.3){$b$}
+\end{pspicture}
+\end{document}
