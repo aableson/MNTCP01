@@ -1,0 +1,41 @@
+---Question
+Turn the following system into an augmented matrix.
+
+\begin{array} -10a + 4b &=& 3 -c\\ a + c + b &=& 0\\ 2 + b - c - a &=& a + 4 \end{array}
+---Type
+onechoice
+---Answers
+~\(\displaystyle \left( \begin{array}{ccc|c} -10 &4&-1&3\\1&1&1&0\\2&1&-1&2 \end{array} \right) \)
+~\(\displaystyle \left( \begin{array}{ccc|c} -10 &4&1&3\\1&1&1&0\\0&1&-1&-2 \end{array} \right) \)
+=\(\displaystyle \left( \begin{array}{ccc|c} -10 &4&1&3\\1&1&1&0\\-2&1&-1&2 \end{array} \right) \)
+---Comment
+Remember to keep everything in the same order in each equation
+
+
+---Question
+If \textbf{A} = \begin{pmatrix} 2&3\\1&2 \end{pmatrix} \textbf{B} = \begin{pmatrix} -1&-1\\2&-3 \end{pmatrix} and \overrightarrow{v} = \begin{bmatrix}-2\\-1\end{bmatrix}, find \textbf{B}\textbf{A}\textbf{B}\overrightarrow{v}.
+---Type
+onechoice
+---Answers
+=\(\displaystyle \begin{bmatrix} -4\\3 \end{bmatrix} \)
+~\(\displaystyle \begin{bmatrix} 4\ -3 \end{bmatrix} \)
+~\(\displaystyle \begin{bmatrix} 0\\0 \end{bmatrix} \)
+---Comment
+Remember that order of matrix and vector multiplication really matters!
+
+
+---Question
+What is the transpose and inverse of
+\begin{pmatrix}
+1&3\\
+1&4
+\end{pmatrix}
+
+---Type
+onechoice
+---Answers
+~\( \displaystyle Transpose: \begin{pmatrix}1&1\\3&4\end{pmatrix} Inverse: \begin{pmatrix} 4&-3//1&1 \end{pmatrix} \)
+~\( \displaystyle Transpose: \begin{pmatrix}4&3\\1&1\end{pmatrix} Inverse: \begin{pmatrix} 4&-3//-1&1 \end{pmatrix} \)
+=\( \displaystyle Transpose: \begin{pmatrix}1&1\\3&4\end{pmatrix} Inverse: \begin{pmatrix} 4&-3//-1&1 \end{pmatrix} \)
+---Comment
+Use MATLAB to help you find the answer.
