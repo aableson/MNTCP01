@@ -1,0 +1,15 @@
+\begin{pspicture}(4,5.15)
+\rput(0,0.6){\psaxes[ticksize=1pt,tickstyle=top,dx=0.3,dy=4cm,labels=y]{->}(4.3,4.5)
+\cesplot{\exonefortythree}{ex143.dat}{\exonefortythree}
+\psline(0,0)(4,4) \psdots(4,4) \rput(1.5,2.3){\small $y=x$}
+\rput(3.3,1.3){\small $y=x^2$} \rput[l](4.1,4){(1,1)}
+\input{areapoly.tex}
+\rput(3.95,-0.3){1}
+\psline[fillstyle=solid,fillcolor=lightgray](2.1,1.265625000)(2.4,1.265625000)(2.4,2.25)(2.1,2.25)(2.1,1.265625000)
+\psline[linestyle=dashed](2.25,1.265625000)(2.25,0)
+\psline(2.1,1.265625000)(2.1,0) \psline(2.4,1.265625000)(2.4,0)
+\psline{<-}(2.1,-0.05)(1.5,-0.3) \psline{<-}(2.4,-0.05)(3,-0.3)
+\psline{<-}(2.25,-0.05)(2.25,-0.3) \rput(1.5,-0.45){\scriptsize
+$x_{i-1}$} \rput(2.25,-0.45){\scriptsize $x_i^*$}
+\rput(3,-0.45){\scriptsize $x_i$}}
+\end{pspicture}

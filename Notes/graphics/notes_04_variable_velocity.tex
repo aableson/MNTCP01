@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\begin{pspicture}(0,0)(6,5.5)
+    \def\f(#1){5*sin(#1*0.3)}
+    \psaxes[ticksize=-2pt 2pt]{-}(0,0)(0,0)(6,6)[$t \mbox{ (s)}$,0][$v(t) \mbox{ (m/s)}$,90]
+    \psplot[linewidth=2\pslinewidth,linecolor=blue,algebraic]{0}{6}{\f(x)}
+%    \rput(6.5, 1){$y=f(x)$}
+    \psgrid[subgriddiv=1, gridcolor=black,griddots=10,gridlabels=0pt](0,0)(0,0)(6,6)
+\end{pspicture}
+\end{document}

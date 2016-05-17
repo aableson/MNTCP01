@@ -1,0 +1,12 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\begin{pspicture}(-1,0)(1,2)
+    \def\f(#1){#1+1}
+    \psaxes[ticksize=-2pt 2pt]{-}(0,0)(-1,-1)(1,2)[$x$,0][$y$,90]
+    \psplot[linecolor=black,algebraic]{-1}{1}{\f(x)}
+%    \rput(6.5, 1){$y=f(x)$}
+    \psgrid[subgriddiv=1, gridcolor=black,griddots=10,gridlabels=0pt](0,0)(-1,-1)(1,2)
+\end{pspicture}
+\end{document}

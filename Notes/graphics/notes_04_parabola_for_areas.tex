@@ -1,0 +1,14 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\psset{xunit=2.0cm,yunit=1.0cm}
+\begin{pspicture}[](0,0)(2, 4)
+\psaxes[labels=both,Dx=0.5]{-}(0,0)(0,0)(2,4.3)[$x$,0][$y$,90]       %creates axes
+{\psset{yunit=1,xunit=0.5}
+\psgrid[subgriddiv=1, Dx=0.5,gridcolor=black,griddots=8,gridlabels=0pt](0,0)(0,0)(4,4)
+}
+\psset{algebraic}
+\psplot[linewidth=1.5\pslinewidth]{0}{2.1}{x^2}
+\end{pspicture}
+\end{document}

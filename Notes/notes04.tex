@@ -75,7 +75,7 @@ far from linear.  {\bf Integration is always in some way about finding
 \problem 
  Consider the graph for the velocity of a particle shown below. 
 \begin{center}
-%\includegraphics[width=0.25\linewidth]{graphics/w07_const_velocity}
+\includegraphics[width=0.25\linewidth]{graphics/notes_04_const_velocity}
 \end{center}
 How far did the particle travel between $t=0$ and $t=5$ seconds?
 \begin{enumerate}[(a)]
@@ -89,7 +89,7 @@ How far did the particle travel between $t=0$ and $t=5$ seconds?
 \problem 
 ~
 \begin{center}
-%\includegraphics[width=0.25\linewidth]{graphics/w07_const_velocity}
+\includegraphics[width=0.25\linewidth]{graphics/notes_04_const_velocity}
 \end{center}
 
 Where does the distance travelled between $t=0$ and $t=5$ ``appear''
@@ -114,7 +114,7 @@ dist = vel $\times$ time ~~~~ $\Longleftrightarrow$ dist = area under the veloci
 What about when the velocity is {\bf not} constant though?
 
 \begin{center}
-%\includegraphics[width=0.35\linewidth]{graphics/w07_variable_velocity}
+\includegraphics[width=0.35\linewidth]{graphics/notes_04_variable_velocity}
 \end{center}
 
 Do the units of the ``area'' under this graph still make sense as a
@@ -123,47 +123,21 @@ distance value?
 
 \vfill
 \newpage
- \topic{Calculating Areas}
-\subsection*{Calculating Areas}
-
-It appears that
-\begin{center}
-  
-{\bf distance traveled} = {\bf area under the graph of velocity}
-\end{center}
-even when the velocity is changing. We'll see exactly why this is true
-very soon.
-
-If we are simply interested in the area under a graph, without any
-physical interpretation, we can already do so if the graph creates a
-shape that we recognize.
-\newpage
-
-\problem Calculate the area between the $x$-axis and the graph of $y = x+1$ from $x=-1$ and $x=1$.
-
-\hfill %\includegraphics[width=0.25\linewidth]{graphics/w07_linear_area}
-\newpage
-
-\problem Calculate the area between the $x$-axis 
-and the graph of $y = \sqrt{1 - x^{2}}$ from $x = -1$ to $x = 1$.
-
-\hfill %\includegraphics[width=0.3\linewidth]{graphics/w07_semi_circle_area}
-
-\vfill
-
-\problem What shapes do you know, right now, for which you can
-calculate the exact area?
-
-\vfill
-
-\newpage
-
 \topic{Estimating Areas}
 \subsection*{Estimating Areas}
 
+It appears that
+\begin{center}
+{\bf distance traveled} = {\bf area under the graph of velocity}
+\end{center}
+even when the velocity is changing.  This means that we've found two
+equivalent problems, and
+can work with whichever version benefits us the most at a particular moment. \\
+
+
 Unfortunately, many or most arbitrary areas are essentially impossible
 to find the area of when the shape isn't a simple composition of
-triangles, rectangles, or circles.
+triangles, rectangles, or circles. \\[1ex]
 
 In these cases, we must use less direct methods.  We will start by
 making an {\em estimate} of the area under the graph using shapes
@@ -176,12 +150,12 @@ function $f(x)$ given below between $x = 1$ and $x=4$.  Shade in that
 region, and call that area $A$.
 
 \begin{center}
-%\includegraphics[width=4in]{graphics/w07_graph06}
+\includegraphics[width=4in]{graphics/notes_04_graph06}
 \end{center}
 
 
 \newpage
-We can make a rough estimation of the area by drawing a rectangle that
+We can make a rough estimate of the area by drawing a rectangle that
 completely contains the area, or a rectangle that is completely
 contained by the area.
 
@@ -190,7 +164,7 @@ contained by the area.
 {Calculate this overestimate and underestimate for the
   area $A$.}
   
-\hfill %\includegraphics[width=4in]{graphics/w07_graph06}
+\hfill \includegraphics[width=4in]{graphics/notes_04_graph06}
 
 
 \newpage The next step is to use smaller rectangles to improve our
@@ -204,7 +178,7 @@ interval.
   Use the function value at the {\em left} edge of the interval as the
   height of each rectangle.
 
-\hfill %\includegraphics[width=0.43\linewidth]{graphics/w07_graph06}
+\hfill \includegraphics[width=0.43\linewidth]{graphics/notes_04_graph06}
 
 \newpage
 
@@ -224,9 +198,9 @@ from $x = a$ to $x = b$ via the left hand sum with $n$ rectangles.
 \begin{itemize}
 \item the {\bf width} of each rectangle will be $\Delta x =
 \displaystyle\frac{b-a}{n}$.  
-\item If we label the endpoints of the
-intervals to be $a = x_{0} < x_{1} < \cdots < x_{n-1} < x_{n} = b$,
-then the {\bf heights} of the rectangles will be $f(x_{i})$'s, and
+\item If we label the endpoints of the intervals to be
+  $a = x_{0} < x_{1} < \cdots < x_{n-1} < x_{n} = b$, then the {\bf
+    heights} of the rectangles will be $f(x_{i})$'s, and
 \item the formula for the left hand sum/area will be
 \end{itemize}
 
@@ -309,12 +283,13 @@ the area underneath a graph, but they often require extra computation.
 
 We observed that as we increase the number of rectangles used to
 approximate the area under a curve, our estimate of the area under the
-graph becomes more accurate.
+graph becomes more accurate.  We can see that based on an example like
+the graph below:
 
 \begin{center}
-\includegraphics[height=6cm]{graphics/notes_04_f_lhr_5_intervals}
-\includegraphics[height=6cm]{graphics/notes_04_f_lhr_50_intervals}
-\includegraphics[height=6cm]{graphics/notes_04_f_lhr_500_intervals}
+\includegraphics[height=4cm]{graphics/notes_04_f_lhr_5_intervals}
+\includegraphics[height=4cm]{graphics/notes_04_f_lhr_50_intervals}
+\includegraphics[height=4cm]{graphics/notes_04_f_lhr_500_intervals}
 \end{center}
 
 This implies that to obtain the {\bf
@@ -322,12 +297,12 @@ This implies that to obtain the {\bf
 
 \medskip
 \begin{center}
-The area underneath the graph of $f(x)$ between $x=a$ and $x=b$ is equal to $\displaystyle\lim_{n \to \infty} LEFT(n) = 
+The area underneath the graph of $f(x)$ between $x=a$ and $x=b$ is equal to $\displaystyle\lim_{n \to \infty} \mbox{LEFT}(n) = 
 \displaystyle\lim_{n \to \infty} \displaystyle\sum_{i=1}^{n} f(x_{i-1})\Delta x$, ~~~where $\Delta x = \displaystyle\frac{b-a}{n}$.
 \end{center}
 
 This limit, which gives the {\bf exact value of the accumulation of
-  $f(x)$} is called the {\em definite integral} of $f(x)$ from $a$ to
+  $f(x)$} is called the {\bf definite integral} of $f(x)$ from $a$ to
 $b$, and is equal to the area under curve whenever $f(x)$ is a
 non-negative continuous function.
 
@@ -352,47 +327,30 @@ non-negative continuous function.
 \vfill
 
 \newpage
+\problem Write an integral that represents the area under the graph of
+$f(x) = x^2$ on the interval $x \in [0, 2]$.
 
+\vfill \problem Sketch how the LEFT(4) sum would be represented
+graphically, and how it differs from the integral value.
+
+\includegraphics[width=0.3\linewidth]{graphics/notes_04_parabola_for_areas}
+\hfill
+\includegraphics[width=0.3\linewidth]{graphics/notes_04_parabola_for_areas}
+
+
+\newpage
 \problem Use a LEFT sum with $n=4$ to estimate
 $\displaystyle \int_{0}^{2}x^2\,dx$.
 
 \vfill
+\vfill
 
-Repeat your LEFT estimate, but in MATLAB.  
+Repeat your LEFT estimate, but using MATLAB.
 
 \vfill Repeat the calculation again in MATLAB, but now with 100
 intervals.
 
 \vfill
-
-\newpage
-
-\vfill \problem Sketch how the LEFT sum would be represented
-graphically, and how it differs from the exact value of
-$\ds \int_0^2 x^2~dx$.
-
-%\includegraphics[width=0.3\linewidth]{graphics/w07_parabola_for_areas}
-\hfill
-%\includegraphics[width=0.3\linewidth]{graphics/w07_parabola_for_areas}
-
-\newpage
-
-% You can get MuPAD to draw the diagram associated with the midpoint
-% rule for this integral by first creating the plot object for the graph:
-
-% [\, {\bf GRPH := plot::Function2d(x$\wedge$2, x=0..2)}
-
-% and then use this graph to produce the plot object for the midpoint rule with 4 intervals:
-
-% [\, {\bf RECTS := plot::Integral(GRPH, IntMethod=RiemannMiddle, Nodes=[4])}
-
-% You can then show them together by typing
-
-% [\, {\bf plot(GRPH, RECTS)}
-
-% The values of the Riemann sum and the integral are automatically printed on the diagram.
-
-%\newpage
 
 \newpage
 \begin{boxnote}
@@ -422,12 +380,12 @@ happens if $f(x)$ crosses the $x$-axis several times?
   C, D, and E are the areas of the regions shown.
 
 \begin{center}
-%\includegraphics[width=0.6\linewidth]{graphics/w07_negative_area_example}
+\includegraphics[width=0.6\linewidth]{graphics/notes_04_negative_area_example}
 \end{center}
 
 \newpage
 \begin{center}
-%\includegraphics[width=0.4\linewidth]{graphics/w07_negative_area_example}
+\includegraphics[width=0.4\linewidth]{graphics/notes_04_negative_area_example}
 \end{center}
 
 If we were to partition $[a,b]$ into small subintervals and construct a corresponding Riemann sum, then the first few terms in the Riemann sum would correspond to the region with area A, the next few to B, etc. 
@@ -443,7 +401,7 @@ Which of these sets have negative values?
 \newpage
 
 \begin{center}
-%\includegraphics[width=0.3\linewidth]{graphics/w07_negative_area_example}
+\includegraphics[width=0.3\linewidth]{graphics/notes_04_negative_area_example}
 \end{center}
 \problem 
 {Express the integral $\displaystyle \int_a^b f(x) dx$ in
@@ -457,19 +415,6 @@ Which of these sets have negative values?
 
 \vfill
 \newpage
-
-
-%\newpage
-% \problem 
-% The answer we found in the preceding question is
-% \begin{enumerate}[A.]
-% \item An underestimate because the first rectangle is very small.
-% \item An overestimate because this is an increasing function.
-% \item An underestimate because the graph of $f$ is concave upward.
-% \item An overestimate because we used the midpoints.
-% \end{enumerate}
-% 
-
 
 \topic{The Fundamental Theorem of Calculus}
 \subsection*{The Fundamental Theorem of Calculus}
@@ -491,18 +436,20 @@ If we want to evaluate this integral exactly, we need a new tool.
 
 \newpage
 
-The new idea 
+The new idea is one of the most important discoveries in calculus: the
+connection between integrals and the {\bf inverse of
+  differentiation}. \\[1ex]
 
-{\bf Fundamental Theorem of Calculus}
+\begin{boxnote} ~\\ 
+{\bf Fundamental Theorem of Calculus} \\
 
-If $f$ is continuous and $F$ is an anti-derivative of $f$, then 
-\begin{boxnote}
+If $f$ is continuous and $F$ is an {\bf anti-derivative} of $f$, then 
 \[ \int_a^b f(x)\,dx=F(b)-F(a).
-\]
+\] 
 \end{boxnote}
 
- Explain in words how we would use this to evaluate an
-  integral over the interval $x =a \ldots b$.
+\problem Explain in words how we would use this to evaluate an
+integral over the interval $x =a \ldots b$.
 
 \vfill
 
@@ -514,7 +461,7 @@ for the anti-derivatives of functions.  We already know quite a few.
 
 \newpage
 
-\begin{problem} 
+\problem
 Complete the following table of basic anti-derivatives by
 asking yourself the question, ``$f(x)$ is the derivative of what
 function, $F(x)$?''.
@@ -532,62 +479,20 @@ $\displaystyle \frac{1}{\sqrt{1-x^2}}$ & \\[0.5cm]
 $\displaystyle \frac{1}{1+x^2}$ & \\[0.5cm]
 \end{tabular}}
 \end{center}
-\end{problem}
 
 \newpage
-\subsection*{The Special Case of $\ds f(x) = \frac{1}{x}$}
+\topic{Fundamental Theorem - Simple Examples}
+\subsection*{Fundamental Theorem - Simple Examples}
 
-\begin{problem}
-Sketch the graphs of $\ds f(x) = \frac{1}{x}$ and $F(x) = \ln(x)$.
-
-\end{problem}
-\includegraphics[width=4.5in]{graphics/empty_graph_square_12}
-\includegraphics[width=4.5in]{graphics/empty_graph_square_12}
-
-\newpage
- A technical fact about integrals is that if $f(x)$ is continuous on its
-  domain, it must have an anti-derivative on that domain.  How is that
-  seemingly violated by the pair $\ds f(x) = \frac{1}{x}$ and $F(x) = \ln(x)$?
-
-
-\newpage
-
- Show that $F(x) = \ln(|x|)$ satisfies $F'(x) = 1/x$ for
-  both positive {\bf and} negative $x$ values.
-\vfill
-
- Correct your anti-derivative entry for $\ds \frac{1}{x}$
-  in the earlier table if necessary.
-
-
-\newpage
-\begin{problem} 
-Find the most general anti-derivative of $\displaystyle f(x)=\frac{x^3-3x+5}{x}$.
-
-\end{problem}
-
-\newpage
-
-\begin{problem}
-Suppose we want to calculate the area under one section of the graph
-of $\sin x$, the part from 0 to $\pi$.
+\problem Use the Fundamental Theorem to calculate the area under one
+section of the graph of $\sin x$, the part from 0 to $\pi$.
 \begin{center}
-%\includegraphics[width=7.5cm]{graphics/week06_sin}
+\includegraphics[width=7.5cm]{graphics/notes_04_sin}
 \end{center}
-Then we should calculate
-\begin{enumerate}[A.]
-\item $\cos(\pi)$ \\[2ex]
-\item $\cos(0) - \cos (\pi)$ \\[2ex]
-\item $\cos(\pi)-\cos (0)$ \\[2ex]
-\item $\sin(\pi)-\sin(0)$
-\end{enumerate}
-\end{problem}
 
 \newpage
-\begin{problem}
+\problem
 Calculate $\displaystyle \int_0^4 \sqrt{x}\,dx$.
-
-\end{problem}
 
 \newpage
 \noindent{\bf Notation}\medskip
@@ -602,7 +507,7 @@ $$F(x)\Bigg\arrowvert_a^b \text{ or } \left[ F(x) \right]_a^b$$
 
 
 \begin{problem}
-Calculate $\displaystyle \int_{\pi/4}^{\pi/3} 3 \sec^2 (\theta) \, d \theta$.
+Calculate $\displaystyle \int_{\pi/4}^{\pi/3} \sec^2 (\theta) \, d \theta$.
  
 \end{problem}
 
@@ -612,6 +517,7 @@ Calculate $\displaystyle \int_{\pi/4}^{\pi/3} 3 \sec^2 (\theta) \, d \theta$.
 % [\, {\bf int(3*(sec(x))$\wedge$2, x=PI/4..PI/3)}
 
 \newpage
+\topic{Properties of Integrals}
 \subsection*{Properties of Integrals}
 Before we go on to refine our skill at calculating integrals, we
 should first reflect on some basic properties of integrals that
@@ -631,80 +537,25 @@ Riemann sums.
 \end{boxnote}
 
 \newpage
-\vspace{.3cm} Properties 3-6 need proofs; they depend on the analogous
-properties for \mbox{Riemann} Sums.  See Section 5.2 in the textbook
-for careful proofs of all of these properties, as well as for
-properties 7-10 appearing later.
 
-\newpage
-\begin{problem}
-Prove Property 4 below using the definition of the integral.  
-\[ \int_a^b\bigl[ f(x)\pm g(x) \bigr] \,dx=\int_a^bf(x)\,dx \pm\int_a^bg(x)\,dx
-\]
- 
-\end{problem}
+\problem Find the value of the integral $\ds \int_{-2}^2 (4x^2 - 3e^{x})~dx$
 
 \newpage
 
-\begin{problem}
-Given that $\displaystyle \,\int_{0}^{2}f(x)\,dx=3\,$, $\displaystyle \,\int_{1}^{4}f(x)\,dx = 2\,$ and 
-$\displaystyle \,\int_{0}^{4}f(x)\,dx=4$, what is the value of $\displaystyle \,\int_{1}^{2}f(x)\,dx\,$? A sketch might help you.
-
-\end{problem}
+\problem Evaluate $\ds \int_{3}^3 \sin(x^3)~dx$
 
 \newpage
 
-\subsection*{Other Properties of Integrals}
-\begin{boxnote}
-\begin{enumerate}
-\setcounter{enumi}{6}
-\item If $\,f(x)\geq 0\,$ for $\,a\leq x \leq b\,$ then $\,\displaystyle \int_a^bf(x)\,dx\geq 0$. \\[2ex]
-\item If $\,f(x)\geq g(x)\,$ for $\,a\leq x \leq b\,$ then $\displaystyle \int_a^bf(x)\,dx\geq \int_a^bg(x)\,dx$. \\[2ex]
-\item If $\,m\leq f(x)\leq M\,$ for $\,a\leq x \leq b\,$ then $\displaystyle \,m\,(b-a)\leq \int_a^bf(x)\,dx\leq M\,(b-a)$. \\[2ex]
-\item $\displaystyle \left|\int_a^bf(x)\,dx\right| \leq \int_a^b|f(x)|\,dx$.
-\end{enumerate}
-\end{boxnote}
+\problem Compute both  \\
+$\ds \int_{-1}^3 x^2 ~ dx$, and \vfill $\ds \int_{-1}^0 x^2 ~ dx$ +
+$\ds \int_{0}^3 x^2 ~ dx$.  \vfill 
+
+Explain the relationship between the two answers with a sketch.
 
 \newpage
 
- The following diagrams illustrate the ideas of Properties
-8 and 9:
-
-%\lscapepstricks{graphics/w06.intproperties.pstricks}
-%\lscapepstricks{graphics/w06.intpropertiesB.pstricks}
-
-In the second diagram, it can be observed that the area under $f(x)$
-in $[\,a,b\,]$ is greater than the area under $m$ in $[\,a,b\,]$ but
-less than the area under $M$.
-
-
-%%%%%% DAWN omitted this proof on AUGUST 8, 2007 %%%%%%%%%%%%%%%%%%%%%%%
- %\ques{Prove Property 8 using Property 7.}
-%\includesoln{\solntest}{}{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%We have to prove that if $f(x)\geq g(x)$, then $$\int_a^b
-%f(x)\,dx-\int_a^b g(x)\,dx\geq 0.$$ By Property 4, the left hand side of
-%this inequality is equivalent to
-%$$\int_a^b\bigr[\underbrace{f(x)-g(x)}_{positive}\bigl]dx.$$
-%We know that $f(x)-g(x)\geq 0$. We could let $h(x)=f(x)-g(x)$, so
-%therefore $h(x)\geq 0$.  But by Property 7 we know that if $h(x)\geq 0$
-%then $\displaystyle\int_a^b h(x)\geq 0.$  So therefore $$\int_a^b
-%f(x)\,dx-\int_a^b g(x)\,dx\geq 0.$$ \mbox{}\hfill $\blacksquare$
-%}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\newpage %%%%%%%%%%%%%%%%%%%%%%New page%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\newpage
-\begin{problem}Let $f(x)$ be as shown
-
-%\lscapepstricks{graphics/w06.function.pstricks}
-
-Sketch $|f(x)|$ and so demonstrate one instance of Property 10.
-
-\end{problem}
-
-
-\newpage
-
-\subsection*{Net Change Theorem}{}
+\topic{Net Change Theorem}
+\subsection*{Net Change Theorem}
 
 Note that we create an anti-derivative $F(x)$, we are building it such
 that $f(x)=F'(x)$. This means that $f$ gives the rate of change of
@@ -724,45 +575,12 @@ Part 2 would then be
 \]
 \end{boxnote}
 
-``The integral of a rate of change is the
-total change''.  The textbook calls this the {\bf Net Change Theorem}. 
-\bigskip
+``The integral of a rate of change is the total change''.  Textbooks
+refer to this the {\bf Net Change Theorem}.  \bigskip
 
-\newpage
-\begin{problem}
-  If $h(t)$ represents the height of a child (in cm) at time $t$ (in
-  years), and the child is 120 cm tall at age 10, which of the
-  following would represent the amount the child grew between $t=10$
-  and $t=18$ years?
-\begin{enumerate}[A.]
-\item $\ds \int_{10}^{18} h(t)~dt$ \\[2ex]
-\item $\ds \int_{10}^{18} h(t)~dt + 120$ \\[2ex]
-\item $\ds \int_{10}^{18} h'(t)~dt$ \\[2ex]
-\item $\ds \int_{10}^{18} h'(t)~dt + 120$
-\end{enumerate}
+\problem State what this means if $F(t)$ represents the position of an
+object at time $t$.
 
-\end{problem}
-
-
-%Once we recognize that solving an integral boils down to finding an
-%anti-derivative for the integrand, this business of finding
-%anti-derivatives suddenly becomes very important, and it makes sense
-%to do exercises asking for them.
-% \conques{%
-% If $\displaystyle G(u) = \int_a^u F^\prime (x) \, dx$, then
-% \begin{enumerate}%
-% \item[A. ] $F$ is the derivative of $G$
-% \item[B. ] $G$ is the derivative of $F$
-% \item[C. ] $F$ and $G$ are equal
-% \item[D. ] $F$ and $G$ differ by a constant
-% \end{enumerate}
-% }%
-% \includesoln{\solntest}{\vspace{3cm}}{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% By the first part of the Fundamental Theorem of Calculus, $G^\prime$
-% is equal to the integrand.  That is, $G^\prime=F^\prime$.  But that
-% means that $F$ and $G$ differ by a constant.  Thus D is the correct
-% answer.
-% }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 \newpage
 
@@ -775,13 +593,14 @@ total change''.  The textbook calls this the {\bf Net Change Theorem}.
 
 \newpage
 
- What is an assumption you would have to make about the
+\problem What is an assumption you would have to make about the
   initial amount of water in the tank for this to make sense?
 
 
 
 \newpage
 
+\topic{The Indefinite Integral}
 \subsection*{The Indefinite Integral}
 The second part of the Fundamental Theorem of Calculus,
 $$\int_a^b f(x)\,dx = F(b)-F(a),$$ reduces the problem of evaluating
@@ -834,6 +653,8 @@ indicate that there is more than one anti-derivative, and that all
 of them differ from each other by a constant.\medskip
 
 \newpage
+\topic{Finding Anti-Derivatives - Guess and Check}
+\subsection*{Finding Anti-Derivatives - Guess and Check}
 Finding antiderivatives is surprisingly difficult.  You would think
 that if we know how to find derivatives then we should know how to
 find antiderivatives.  In fact, however, the latter is much more

@@ -1,0 +1,13 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\psset{unit=0.75cm}
+\begin{pspicture}(0,0)(6,5.5)
+    \def\f(#1){4}
+    \psaxes[ticksize=-2pt 2pt]{-}(0,0)(0,0)(6,6)[$t \mbox{ (s)}$,0][$v(t) \mbox{ (m/s)}$,90]
+%    \rput(6.5, 1){$y=f(x)$}
+    \psgrid[subgriddiv=1, gridcolor=black,griddots=10,gridlabels=0pt](0,0)(0,0)(6,6)
+    \psplot[linecolor=blue,algebraic]{-0.2}{6.2}{\f(x)}
+\end{pspicture}
+\end{document}

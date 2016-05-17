@@ -1,0 +1,567 @@
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  17 MAY 2016 14:57
+entering extended mode
+**\input notes_04_variable_velocity.tex
+(notes_04_variable_velocity.tex
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\standalone\standalone.c
+ls
+Document Class: standalone 2015/07/15 v1.2 Class to compile TeX sub-files stand
+alone
+(C:\MiKTeX2.9\tex\generic\oberdiek\ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+)
+(C:\MiKTeX2.9\tex\generic\oberdiek\ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+(C:\MiKTeX2.9\tex\generic\ifxetex\ifxetex.sty
+Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
+)
+(C:\MiKTeX2.9\tex\latex\xkeyval\xkeyval.sty
+Package: xkeyval 2014/12/03 v2.7a package option processing (HA)
+
+(C:\MiKTeX2.9\tex\generic\xkeyval\xkeyval.tex
+(C:\MiKTeX2.9\tex\generic\xkeyval\xkvutils.tex
+\XKV@toks=\toks14
+\XKV@tempa@toks=\toks15
+
+(C:\MiKTeX2.9\tex\generic\xkeyval\keyval.tex))
+\XKV@depth=\count79
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+\sa@internal=\count80
+\c@sapage=\count81
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\standalone\standalone.c
+fg
+File: standalone.cfg 2015/07/15 v1.2 Default configuration file for 'standalone
+' class
+) (C:\MiKTeX2.9\tex\latex\base\article.cls
+Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
+(C:\MiKTeX2.9\tex\latex\base\size10.clo
+File: size10.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+)
+\c@part=\count82
+\c@section=\count83
+\c@subsection=\count84
+\c@subsubsection=\count85
+\c@paragraph=\count86
+\c@subparagraph=\count87
+\c@figure=\count88
+\c@table=\count89
+\abovecaptionskip=\skip41
+\belowcaptionskip=\skip42
+\bibindent=\dimen102
+)
+\sa@box=\box26
+)
+(C:\MiKTeX2.9\tex\latex\pstricks\pstricks.sty
+Package: pstricks 2015/11/14 v0.62 LaTeX wrapper for `PSTricks' (RN,HV)
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\xcolor\xcolor.sty
+Package: xcolor 2007/01/21 v2.11 LaTeX color extensions (UK)
+
+(C:\MiKTeX2.9\tex\latex\00miktex\color.cfg
+File: color.cfg 2007/01/18 v1.5 color configuration of teTeX/TeXLive
+)
+Package xcolor Info: Driver file: pdftex.def on input line 225.
+
+(C:\MiKTeX2.9\tex\latex\pdftex-def\pdftex.def
+File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
+
+(C:\MiKTeX2.9\tex\generic\oberdiek\infwarerr.sty
+Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
+)
+(C:\MiKTeX2.9\tex\generic\oberdiek\ltxcmds.sty
+Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
+)
+\Gread@gobject=\count90
+)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1337.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1341.
+Package xcolor Info: Model `RGB' extended on input line 1353.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1355.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1356.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1357.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1358.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1359.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1360.
+)
+(C:\MiKTeX2.9\tex\generic\pstricks\base\pstricks.tex
+(C:\MiKTeX2.9\tex\generic\xkeyval\pst-xkey.tex
+File: pst-xkey.tex 2005/11/25 v1.6 PSTricks specialization of xkeyval (HA)
+)
+(C:\MiKTeX2.9\tex\generic\pstricks\base\pst-fp.tex
+`pst-fp' v0.05, 2010/01/17 (hv)
+\pstFP@xs=\count91
+\pstFP@xia=\count92
+\pstFP@xib=\count93
+\pstFP@xfa=\count94
+\pstFP@xfb=\count95
+\pstFP@rega=\count96
+\pstFP@regb=\count97
+\pstFP@regs=\count98
+\pstFP@times=\count99
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil
+-common.tex
+\pgfutil@everybye=\toks16
+\pgfutil@tempdima=\dimen103
+\pgfutil@tempdimb=\dimen104
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfutil
+-common-lists.tex))
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys
+.code.tex
+\pgfkeys@pathtoks=\toks17
+\pgfkeys@temptoks=\toks18
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgfkeys
+filtered.code.tex
+\pgfkeys@tmptoks=\toks19
+))
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\utilities\pgffor.
+code.tex
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmath.code
+.tex
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathcalc.
+code.tex
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathutil.
+code.tex
+\pgf@x=\dimen105
+\pgf@xa=\dimen106
+\pgf@xb=\dimen107
+\pgf@xc=\dimen108
+\pgf@y=\dimen109
+\pgf@ya=\dimen110
+\pgf@yb=\dimen111
+\pgf@yc=\dimen112
+\c@pgf@counta=\count100
+\c@pgf@countb=\count101
+\c@pgf@countc=\count102
+\c@pgf@countd=\count103
+\pgfutil@tempcnta=\count104
+\pgfutil@tempcntb=\count105
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathparse
+r.code.tex
+\pgfmath@dimen=\dimen113
+\pgfmath@count=\count106
+\pgfmath@box=\box27
+\pgfmath@toks=\toks20
+\pgfmath@stack@operand=\toks21
+\pgfmath@stack@operation=\toks22
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
+ions.code.tex
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
+ions.basic.code.tex)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
+ions.trigonometric.code.tex)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
+ions.random.code.tex)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
+ions.comparison.code.tex)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
+ions.base.code.tex)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
+ions.round.code.tex)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
+ions.misc.code.tex)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfunct
+ions.integerarithmetics.code.tex)))
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pgf\math\pgfmathfloat
+.code.tex
+\c@pgfmathroundto@lastzeros=\count107
+))
+\pgffor@iter=\dimen114
+\pgffor@skip=\dimen115
+\pgffor@stack=\toks23
+\pgffor@toks=\toks24
+)
+\psLoopIndex=\count108
+
+`PSTricks' v2.64b  <2015/14/11> (tvz)
+\pst@dima=\dimen116
+\pst@dimb=\dimen117
+\pst@dimc=\dimen118
+\pst@dimd=\dimen119
+\pst@dimg=\dimen120
+\pst@dimh=\dimen121
+\pst@dimm=\dimen122
+\pst@dimn=\dimen123
+\pst@dimo=\dimen124
+\pst@dimp=\dimen125
+\pst@hbox=\box28
+\pst@ibox=\box29
+\pst@boxg=\box30
+\pst@cnta=\count109
+\pst@cntb=\count110
+\pst@cntc=\count111
+\pst@cntd=\count112
+\pst@cntg=\count113
+\pst@cnth=\count114
+\pst@cntm=\count115
+\pst@cntn=\count116
+\pst@cnto=\count117
+\pst@cntp=\count118
+\@zero=\count119
+\pst@toks=\toks25
+(C:\MiKTeX2.9\tex\generic\pstricks\base\pstricks.con)
+\psunit=\dimen126
+\psxunit=\dimen127
+\psyunit=\dimen128
+\pst@C@@rType=\count120
+\pslinewidth=\dimen129
+\psk@startLW=\dimen130
+\psk@endLW=\dimen131
+\pst@customdefs=\toks26
+\pslinearc=\dimen132
+\pst@symbolStep=\dimen133
+\pst@symbolWidth=\dimen134
+\pst@symbolLinewidth=\dimen135
+\everypsbox=\toks27
+\psframesep=\dimen136
+\pslabelsep=\dimen137
+\sh@wgridXunit=\dimen138
+\sh@wgridYunit=\dimen139
+\pst@shift=\dimen140
+)
+File: pstricks.tex 2015/14/11 v2.64b `PSTricks' (tvz,hv)
+
+(C:\MiKTeX2.9\tex\generic\pstricks\base\pst-fp.tex)
+File: pst-fp.tex 2015/14/11 v2.64b `PST-fp' (hv)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\auto-pst-pdf\auto-pst-p
+df.sty
+Package: auto-pst-pdf 2009/04/26 v0.6 Wrapper for pst-pdf
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\ifplatform\ifplatform.s
+ty
+Package: ifplatform 2010/10/22 v0.4 Testing for the operating system
+ (C:\MiKTeX2.9\tex\generic\oberdiek\pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(C:\MiKTeX2.9\tex\generic\oberdiek\catchfile.sty
+Package: catchfile 2011/03/01 v1.6 Catch the contents of a file (HO)
+
+(C:\MiKTeX2.9\tex\generic\oberdiek\etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+\c@app@runs=\count121
+runsystem(echo " ")...executed.
+
+runsystem(echo "-------------------------------------------------")...executed.
+
+runsystem(echo "auto-pst-pdf: Auxiliary LaTeX compilation")...executed.
+
+runsystem(echo "-------------------------------------------------")...executed.
+
+runsystem(del "notes_04_variable_velocity-pics.pdf")...executed.
+
+runsystem(latex -disable-write18 -jobname="notes_04_variable_velocity-autopp" -
+interaction=batchmode  "\let \APPmakepictures \empty \input  notes_04_variable_
+velocity.tex")...executed.
+
+runsystem(dvips -Ppdf -o "notes_04_variable_velocity-autopp.ps" "notes_04_varia
+ble_velocity-autopp.dvi")...executed.
+
+runsystem(ps2pdf  "notes_04_variable_velocity-autopp.ps" "notes_04_variable_vel
+ocity-autopp.pdf")...executed.
+
+runsystem(pdfcrop  "notes_04_variable_velocity-autopp.pdf" "notes_04_variable_v
+elocity-pics.pdf")...executed.
+
+runsystem(del "notes_04_variable_velocity-autopp.log")...executed.
+
+runsystem(del "notes_04_variable_velocity-autopp.dvi")...executed.
+
+runsystem(del "notes_04_variable_velocity-autopp.ps")...executed.
+
+runsystem(del "notes_04_variable_velocity-autopp.pdf")...executed.
+
+runsystem(echo "-------------------------------------------------")...executed.
+
+runsystem(echo "auto-pst-pdf: End auxiliary LaTeX compilation")...executed.
+
+runsystem(echo "-------------------------------------------------")...executed.
+
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-pdf\pst-pdf.sty
+Package: pst-pdf 2008/10/09 v1.1v PS graphics for pdfLaTeX (RN,HjG)
+\c@pspicture=\count122
+
+(C:\MiKTeX2.9\tex\latex\graphics\graphicx.sty
+Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+
+(C:\MiKTeX2.9\tex\latex\graphics\graphics.sty
+Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+
+(C:\MiKTeX2.9\tex\latex\graphics\trig.sty
+Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
+)
+(C:\MiKTeX2.9\tex\latex\00miktex\graphics.cfg
+File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
+)
+Package graphics Info: Driver file: pdftex.def on input line 94.
+)
+\Gin@req@height=\dimen141
+\Gin@req@width=\dimen142
+)
+Package pst-pdf Info: MODE: 1 (pdfTeX mode) on input line 214.
+\ppf@output=\toks28
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\preview\preview.sty
+Package: preview 2010/02/14 11.89 (AUCTeX/preview-latex)
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\preview\prtightpage.def
+\PreviewBorder=\dimen143
+)
+\pr@snippet=\count123
+\pr@box=\box31
+\pr@output=\toks29
+) (C:\MiKTeX2.9\tex\latex\graphics\dvips.def
+File: dvips.def 2014/10/14 v3.0j Driver-dependent file (DPC,SPQR)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\environ\environ.sty
+Package: environ 2014/05/04 v0.3 A new way to define environments
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\trimspaces\trimspaces.s
+ty
+Package: trimspaces 2009/09/17 v1.1 Trim spaces around a token list
+)
+\@envbody=\toks30
+))) (C:\MiKTeX2.9\tex\latex\pstricks\pst-all.sty
+Package: pst-all 2008/01/01 the main pstricks tools
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-plot\pst-plot.sty
+Package: pst-plot 2011/06/05 v1.00 LaTeX wrapper for `pst-plot' (HV)
+
+(C:\MiKTeX2.9\tex\latex\xkeyval\pst-xkey.sty
+Package: pst-xkey 2005/11/25 v1.6 package wrapper for pst-xkey.tex (HA)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\multido\multido.sty
+Package: multido 2004/05/17 package wrapper for PSTricks `multido.tex', (HV/RN)
+
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\multido\multido.tex
+ v1.42, 2010/05/14 <tvz>
+\multido@count=\count124
+\multidocount=\count125
+\multido@stuff=\toks31
+)
+File: multido.tex 2010/05/14 v1.42 `multido' (tvz,hv)
+)
+Package: pst-plot 2011/04/13 package wrapper for pst-plot.tex (hv)
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-plot\pst-plot.tex
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-tools\pst-tools.t
+ex `PST-tools' v0.05, 2014/05/12 (hv))  v1.70, 2014/08/23 (tvz,hv)
+\pstRadUnit=\dimen144
+\pstRadUnitInv=\dimen145
+\pst@linecnt=\count126
+\RCD@file=\read1
+\psxlabelsep=\dimen146
+\psylabelsep=\dimen147
+\psk@subticksize=\dimen148
+\pst@xticksizeA=\dimen149
+\pst@xticksizeB=\dimen150
+\pst@xticksizeC=\dimen151
+\pst@yticksizeA=\dimen152
+\pst@yticksizeB=\dimen153
+\pst@yticksizeC=\dimen154
+\@digitcounter=\count127
+\psk@llx=\dimen155
+\psk@lly=\dimen156
+\psk@urx=\dimen157
+\psk@ury=\dimen158
+\pst@xunit=\dimen159
+\pst@yunit=\dimen160
+)
+File: pst-plot.tex 2014/08/23 1.70 `pst-plot' (tvz,hv)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-node\pst-node.sty
+Package: pst-node 2012/09/18 v1.01 LaTeX wrapper for `pst-node' (HV)
+Package: pst-node 2010/04/22 package wrapper for pst-node.tex
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-node\pst-node.tex
+ v1.35, 2014/08/04
+\psrow=\count128
+\pscol=\count129
+\psmatrixcnt=\count130
+\psrowsep=\skip43
+\pscolsep=\skip44
+\pst@args=\count131
+\num@pts=\count132
+\pst@argcnt=\count133
+)
+File: pst-node.tex 2014/08/04 1.35 `pst-node' (tvz,hv)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-tree\pst-tree.sty
+Package: pst-tree 2009/01/25 package wrapper for pst-tree.tex
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-tree\pst-tree.tex
+ v1.12, 2011/02/28(tvz,dg,hv)
+\pstree@rootbox=\box32
+\pstree@box=\box33
+\psnodecnt=\count134
+\pstreelevel=\count135
+\pstreecnt=\count136
+\pstree@cnt=\count137
+\pstree@stop=\count138
+)
+File: pst-tree.tex 2011/02/28 1.12 `pst-tree' (tvz,hv)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-grad\pst-grad.sty
+Package: pst-grad 2004/07/15 package wrapper for pst-grad.tex (hv)
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-grad\pst-grad.tex
+`pst-grad' v1.06, 2006/11/27 (tvz,dg,hv))
+File: pst-grad.tex 2006/11/27 1.06 `pst-grad' (tvz)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-coil\pst-coil.sty
+Package: pst-coil 2010/02/01 package wrapper for pst-coil.tex (hv)
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-coil\pst-coil.tex
+ v1.06, 2006/11/27
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-node\pst-node.tex
+))
+File: pst-coil.tex 2015/05/13 v1.07 `PST-coil' (tvz,hv)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-text\pst-text.sty
+Package: pst-text 2006/01/01 package wrapper for pst-text.tex (hv)
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-text\pst-text.tex
+ v1.00, 2006/11/05(tvz,hv))
+File: pst-text.tex 2006/11/05 1.00 `pst-text' (tvz)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-3d\pst-3d.sty
+Package: pst-3d 2009/07/28 package wrapper for pst-3d.tex (hv)
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-3d\pst-3d.tex
+`PST-3d' v1.11, 2010/02/14 (tvz))
+File: pst-3d.tex 2010/02/14 v1.11 `PST-3d' (hv)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-eps\pst-eps.sty
+Package: pst-eps 2005/05/20 package wrapper for pst-eps.tex (hv)
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-eps\pst-eps.tex
+ v1.00, 2006/11/04
+\pst@epsout=\write3
+\pst@tempout=\write4
+)
+File: pst-eps.tex 2006/11/04 1.00 `pst-eps' (tvz)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-fill\pst-fill.sty
+Package: pst-fill 2005/09/13 package wrapper for pst-fill.tex (hv)
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-fill\pst-fill.tex
+`PST-Fill' v1.01, 2007/03/10 (tvz,dg,hv)
+\pst@fillbox=\box34
+)
+File: pst-fill.tex 2007/03/10 v1.01 `PST-fill' (tvz,dg)
+)
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pstricks-add\pstricks-a
+dd.sty
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pst-math\pst-math.sty
+Package: pst-math 2014/07/30 package wrapper for PSTricks pst-math.tex
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pst-math\pst-math.tex
+`pst-math' v0.63 , (CJ,hv))
+File: pst-math.tex 2014/07/30 v0.63 `PST-math' (hv)
+)
+Package: pstricks-add 2010/02/11 v. 0.14 package wrapper for pstricks-add.tex (
+hv)
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\generic\pstricks-add\pstricks
+-add.tex `pstricks-add' v3.79, 2016/02/09 (dr,hv)
+\psparallelogramsep=\dimen161
+\pshooklength=\dimen162
+\pshookwidth=\dimen163
+\pst@cntC=\count139
+\chart@ColorIndex=\dimen164
+\chart@ColorStep=\dimen165
+\pst@chartHeight=\dimen166
+\pst@chartStackDepth=\dimen167
+\pst@chartStackWidth=\dimen168
+\chart@Toggle=\count140
+\psVectorCtr=\count141
+)
+File: pstricks-add.tex 2016/02/09 v3.79 `PSTricks-add' (hv)
+Package pstricks-add Info: Local config file pstricks-add.cfg used on input lin
+e 20.
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\pstricks-add\pstricks-a
+dd.cfg
+File: pstricks-add.cfg 2005/01/10 v0.1 addtional user stuff (hv)
+))) (notes_04_variable_velocity.aux)
+\openout1 = `notes_04_variable_velocity.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
+LaTeX Font Info:    ... okay on input line 4.
+
+(C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count142
+\scratchdimen=\dimen169
+\scratchbox=\box35
+\nofMPsegments=\count143
+\nofMParguments=\count144
+\everyMPshowfont=\toks32
+\MPscratchCnt=\count145
+\MPscratchDim=\dimen170
+\MPnumerator=\count146
+\makeMPintoPDFobject=\count147
+\everyMPtoPDFconversion=\toks33
+)
+Preview: Fontsize 10pt
+Preview: PDFoutput 1
+<notes_04_variable_velocity-pics.pdf, id=2, page=1, 216.81pt x 199.74625pt>
+File: notes_04_variable_velocity-pics.pdf Graphic file (type pdf)
+
+<use notes_04_variable_velocity-pics.pdf, page 1>
+Package pdftex.def Info: notes_04_variable_velocity-pics.pdf, page1 used on inp
+ut line 6.
+(pdftex.def)             Requested size: 216.80946pt x 199.74576pt.
+ [1
+
+
+Non-PDF special ignored!
+Non-PDF special ignored!
+Non-PDF special ignored! <./notes_04_variable_velocity-pics.pdf>]
+(notes_04_variable_velocity.aux) ) 
+Here is how much of TeX's memory you used:
+ 11179 strings out of 493634
+ 200630 string characters out of 3149836
+ 308296 words of memory out of 3000000
+ 14366 multiletter control sequences out of 15000+200000
+ 3640 words of font info for 14 fonts, out of 3000000 for 9000
+ 1025 hyphenation exceptions out of 8191
+ 44i,5n,56p,611b,258s stack positions out of 5000i,500n,10000p,200000b,50000s
+
+Output written on notes_04_variable_velocity.pdf (1 page, 6868 bytes).
+PDF statistics:
+ 19 PDF objects out of 1000 (max. 8388607)
+ 0 named destinations out of 1000 (max. 500000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
+

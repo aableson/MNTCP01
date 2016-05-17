@@ -1,0 +1,20 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\psset{unit=0.75cm,yunit=0.5cm}
+\begin{pspicture}[](-4,-2)(4, 4)
+\psaxes[labels=none,ticks=none,linewidth=0.5\pslinewidth]{-}(0,0)(-4.2,-2)(4.2,4)[$x$,0][$y$,90]       %creates axes
+\psset{algebraic}
+\pscurve[linewidth=1.5\pslinewidth](-4.1,1.7)(-3.8,1.9)(-2,-1)(0.5,4)(2,-0.7)(4.2,3)
+\psline[linewidth=2.5\pslinewidth](-4,0)(-4,1.81)
+\psline[linewidth=2.5\pslinewidth](4.1,0)(4.1,2.65)
+\rput(-3.5,0.7){A}
+\rput(-2,-0.3){B}
+\rput(0.5,1.5){C}
+\rput(2.1,-0.3){D}
+\rput(3.6,0.5){E}
+\rput(-4,-0.3){$a$}
+\rput(4.1,-0.3){$b$}
+\end{pspicture}
+\end{document}

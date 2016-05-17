@@ -1,0 +1,15 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\begin{pspicture}(-0.7,-0.5)(8,4.3)
+\psaxes[labels=none,ticks=none]{->}(7.8,4)
+\psline[linestyle=dashed](0,4)(1,4)\psline[linestyle=dashed](7,0)(7,4)
+\psline[linestyle=dashed](0,1)(1,1)\psline[linestyle=dashed](1,0)(1,4)
+\psline(1,4)(7,4)\psline(1,1)(7,1) \rput(-0.5,4.05){\mbox{$M$}}
+\rput(-0.5,1){\mbox{$m$}} \rput(1,-0.3){\mbox{$a$}}
+\rput(7,-.3){\mbox{$b$}}
+\pscurve[linewidth=0.95pt](1,3)(2,2)(5,3)(7,2)
+\rput(5,3.5){\mbox{$f$}}
+\end{pspicture}
+\end{document}
