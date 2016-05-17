@@ -49,7 +49,7 @@ Again, the analysis will be made possible by the observation that on a
 very small scale all processes look linear.  This time, though, we
 will use this fact to see how regarding a process as an {\bf
   accumulation} of infinitely many small linear steps allows us to
-calculate the accumulated total even when the rate of accumulation is
+calculate the accumulated total, even when the rate of accumulation is
 far from linear.  {\bf Integration is always in some way about finding
   the total at the end of a process of accumulation.}
 
@@ -136,12 +136,11 @@ can work with whichever version benefits us the most at a particular moment. \\
 
 
 Unfortunately, many or most arbitrary areas are essentially impossible
-to find the area of when the shape isn't a simple composition of
-triangles, rectangles, or circles. \\[1ex]
+to find when the shape isn't a composition of simple shapes (e.g. triangles, rectangles, or circles). \\[1ex]
 
-In these cases, we must use less direct methods.  We will start by
-making an {\em estimate} of the area under the graph using shapes
-whose area is easier to calculate.
+In these cases, we must compute the area using less direct methods.
+We will start by making an {\em estimate} of the area under the graph
+using shapes whose area is easier to calculate.
 
 \newpage
 
@@ -278,8 +277,6 @@ the area underneath a graph, but they often require extra computation.
 
 \newpage
 
-\topic{The Definite Integral}
-\subsection*{The Definite Integral}
 
 We observed that as we increase the number of rectangles used to
 approximate the area under a curve, our estimate of the area under the
@@ -287,9 +284,9 @@ graph becomes more accurate.  We can see that based on an example like
 the graph below:
 
 \begin{center}
-\includegraphics[height=4cm]{graphics/notes_04_f_lhr_5_intervals}
-\includegraphics[height=4cm]{graphics/notes_04_f_lhr_50_intervals}
-\includegraphics[height=4cm]{graphics/notes_04_f_lhr_500_intervals}
+\includegraphics[height=4.5cm]{graphics/notes_04_f_lhr_5_intervals}
+\includegraphics[height=4.5cm]{graphics/notes_04_f_lhr_50_intervals}
+\includegraphics[height=4.5cm]{graphics/notes_04_f_lhr_500_intervals}
 \end{center}
 
 This implies that to obtain the {\bf
@@ -301,15 +298,24 @@ The area underneath the graph of $f(x)$ between $x=a$ and $x=b$ is equal to $\di
 \displaystyle\lim_{n \to \infty} \displaystyle\sum_{i=1}^{n} f(x_{i-1})\Delta x$, ~~~where $\Delta x = \displaystyle\frac{b-a}{n}$.
 \end{center}
 
+\newpage
+
 This limit, which gives the {\bf exact value of the accumulation of
   $f(x)$} is called the {\bf definite integral} of $f(x)$ from $a$ to
 $b$, and is equal to the area under curve whenever $f(x)$ is a
 non-negative continuous function.
 
-  {\bf{Notation for the Definite Integral}} 
+\newpage
+\topic{The Definite Integral}
+\subsection*{The Definite Integral}
+
   
   The definite integral of $f(x)$ between $x=a$ and $x=b$ is denoted
-  by the symbol $$\int_a^b f(x) \,dx$$ We call $a$ and $b$ the
+  by the symbol
+  $$\int_a^b f(x) \,dx ~~~~= \lim_{n \to \infty}
+  \displaystyle\sum_{i=1}^{n} f(x_{i-1})\Delta x$$
+
+We call $a$ and $b$ the
   {\bf{limits of integration}} and $f(x)$ the {\bf{integrand}}.  Note
   that this notation shares the same common structure with Riemann
   sums:
@@ -330,7 +336,7 @@ non-negative continuous function.
 \problem Write an integral that represents the area under the graph of
 $f(x) = x^2$ on the interval $x \in [0, 2]$.
 
-\vfill \problem Sketch how the LEFT(4) sum would be represented
+\vfill \problem Sketch how the LEFT(4) estimate would be represented
 graphically, and how it differs from the integral value.
 
 \includegraphics[width=0.3\linewidth]{graphics/notes_04_parabola_for_areas}
@@ -353,6 +359,9 @@ intervals.
 \vfill
 
 \newpage
+Students often ask why instructors discuss Riemann sums, if they just
+lead to definite integrals.
+
 \begin{boxnote}
 {\bf The Role of Riemann sums}
 \begin{enumerate}
@@ -542,7 +551,7 @@ Riemann sums.
 
 \newpage
 
-\problem Evaluate $\ds \int_{3}^3 \sin(x^3)~dx$
+\problem Evaluate $\ds \int_{3}^3 \sin(x^{10})~dx$
 
 \newpage
 
@@ -596,6 +605,17 @@ object at time $t$.
 \problem What is an assumption you would have to make about the
   initial amount of water in the tank for this to make sense?
 
+\newpage
+\problem If the velocity of a particle is given by $v(t) = x^3$, find
+$\int_{-1}^{2} v(t)~dt$.
+
+\vfill
+\vfill
+
+How should this value be interpreted, based on the Net Change Theorem?
+
+\vfill
+
 
 
 \newpage
@@ -603,10 +623,12 @@ object at time $t$.
 \topic{The Indefinite Integral}
 \subsection*{The Indefinite Integral}
 The second part of the Fundamental Theorem of Calculus,
-$$\int_a^b f(x)\,dx = F(b)-F(a),$$ reduces the problem of evaluating
-an integral to that of finding the anti-derivative $F$.  For that
-reason the anti-derivative is often called the {\bf indefinite
-  integral} and written as $$\int f(x)\,dx\;\biggl(=F(x)\biggr).$$
+$$\int_a^b f(x)\,dx = F(b)-F(a),$$ focuses the problem of evaluating
+an integral to the step of finding an anti-derivative $F$.  
+
+To isolate that anti-derivative step, we define a related notation
+called the {\bf indefinite integral}, and written as
+$$\int f(x)\,dx\;\biggl(=F(x)\biggr).$$
 
 \newpage
 \begin{itemize}
