@@ -31,5 +31,1037 @@
 
 
 
+\topic{Integration} 
+\subsection*{Integration} 
+If we had to summarize the first three weeks of the course, we would
+say that the focus was on {\bf differentiation}.
+
+All differentiation problems ask the same basic question: {\bf At what
+  rate does a process change}, and how does that rate of change relate
+to other characteristics of the process?
+
+The key observation was that {\bf at small scales, rates of change look linear}.
+
+\newpage
+
+In the next three weeks of the course we will study {\bf integration}.
+Again, the analysis will be made possible by the observation that on a
+very small scale all processes look linear.  This time, though, we
+will use this fact to see how regarding a process as an {\bf
+  accumulation} of infinitely many small linear steps allows us to
+calculate the accumulated total even when the rate of accumulation is
+far from linear.  {\bf Integration is always in some way about finding
+  the total at the end of a process of accumulation.}
+
+\newpage
+
+
+ \topic{Distance and Velocity}
+ \subsection*{Distance and Velocity}
+
+ Recall that if we measure distance $x$ as a function of time $t$, the
+ velocity is determined by differentiating $x(t)$: 
+ \begin{center}
+{\bf Velocity} is the {\bf slope} on the {\bf position graph}.
+ \end{center}
+
+ But now suppose we begin with a {\bf graph of the velocity} with
+ respect to time.  How can we determine what {\bf distance} will be
+ traveled?  Does distance also ``appear'' in the velocity graph
+ somehow?
+
+\newpage
+
+\problem 
+ Consider the graph for the velocity of a particle shown below. 
+\begin{center}
+%\includegraphics[width=0.25\linewidth]{graphics/w07_const_velocity}
+\end{center}
+How far did the particle travel between $t=0$ and $t=5$ seconds?
+\begin{enumerate}[(a)]
+\item 5 m\\[1ex]
+\item 10 m\\[1ex]
+\item 15 m\\[1ex]
+\item 20 m
+\end{enumerate}
+
+\newpage
+\problem 
+~
+\begin{center}
+%\includegraphics[width=0.25\linewidth]{graphics/w07_const_velocity}
+\end{center}
+
+Where does the distance travelled between $t=0$ and $t=5$ ``appear''
+on this velocity graph?
+\begin{enumerate}[(a)]
+\item The distance travelled is the {\bf slope} between $t=0$ and $t=5$  \\[1ex]
+\item The distance travelled is the {\bf average height} of the graph between $t=0$ and $t=5$  \\[1ex]
+\item The distance travelled is the {\bf area} under the graph between $t=0$
+  and $t=5$.
+\end{enumerate}
+
+\newpage
+
+When the velocity is {\bf constant}, we have the equivalency:
+\vspace{0.2in}
+\begin{center}
+dist = vel $\times$ time ~~~~ $\Longleftrightarrow$ dist = area under the velocity graph
+\end{center}
+\vspace{0.2in}
+
+\problem 
+What about when the velocity is {\bf not} constant though?
+
+\begin{center}
+%\includegraphics[width=0.35\linewidth]{graphics/w07_variable_velocity}
+\end{center}
+
+Do the units of the ``area'' under this graph still make sense as a
+distance value?
+
+
+\vfill
+\newpage
+ \topic{Calculating Areas}
+\subsection*{Calculating Areas}
+
+It appears that
+\begin{center}
+  
+{\bf distance traveled} = {\bf area under the graph of velocity}
+\end{center}
+even when the velocity is changing. We'll see exactly why this is true
+very soon.
+
+If we are simply interested in the area under a graph, without any
+physical interpretation, we can already do so if the graph creates a
+shape that we recognize.
+\newpage
+
+\problem Calculate the area between the $x$-axis and the graph of $y = x+1$ from $x=-1$ and $x=1$.
+
+\hfill %\includegraphics[width=0.25\linewidth]{graphics/w07_linear_area}
+\newpage
+
+\problem Calculate the area between the $x$-axis 
+and the graph of $y = \sqrt{1 - x^{2}}$ from $x = -1$ to $x = 1$.
+
+\hfill %\includegraphics[width=0.3\linewidth]{graphics/w07_semi_circle_area}
+
+\vfill
+
+\problem What shapes do you know, right now, for which you can
+calculate the exact area?
+
+\vfill
+
+\newpage
+
+\topic{Estimating Areas}
+\subsection*{Estimating Areas}
+
+Unfortunately, many or most arbitrary areas are essentially impossible
+to find the area of when the shape isn't a simple composition of
+triangles, rectangles, or circles.
+
+In these cases, we must use less direct methods.  We will start by
+making an {\em estimate} of the area under the graph using shapes
+whose area is easier to calculate.
+
+\newpage
+
+\problem Suppose we are trying to find the area underneath the graph of the
+function $f(x)$ given below between $x = 1$ and $x=4$.  Shade in that
+region, and call that area $A$.
+
+\begin{center}
+%\includegraphics[width=4in]{graphics/w07_graph06}
+\end{center}
+
+
+\newpage
+We can make a rough estimation of the area by drawing a rectangle that
+completely contains the area, or a rectangle that is completely
+contained by the area.
+
+
+\problem 
+{Calculate this overestimate and underestimate for the
+  area $A$.}
+  
+\hfill %\includegraphics[width=4in]{graphics/w07_graph06}
+
+
+\newpage The next step is to use smaller rectangles to improve our
+estimate the area.  We can divide the interval from $x = 1$ to $x = 4$
+into 3 intervals of width 1, and use different size rectangles on each
+interval.
+
+
+
+\problem Estimate the area $A$ by using 3 rectangles of width 1.
+  Use the function value at the {\em left} edge of the interval as the
+  height of each rectangle.
+
+\hfill %\includegraphics[width=0.43\linewidth]{graphics/w07_graph06}
+
+\newpage
+
+We can repeat this process for any number of rectangles, and we expect
+that our estimation of the area will get better the more rectangles we
+use.  The method we used above, choosing for the height of the
+rectangles the function at the left edge, is called the {\bf left hand
+  sum}, and is denoted $\mbox{LEFT}(n)$ if we use $n$ rectangles.
+
+\newpage
+
+\topic{Generalizing Area Calculation with Summation Notation}
+\subsection*{Generalizing the Area Calculation}
+
+Suppose we are trying to estimate the area under the function $f(x)$
+from $x = a$ to $x = b$ via the left hand sum with $n$ rectangles.
+\begin{itemize}
+\item the {\bf width} of each rectangle will be $\Delta x =
+\displaystyle\frac{b-a}{n}$.  
+\item If we label the endpoints of the
+intervals to be $a = x_{0} < x_{1} < \cdots < x_{n-1} < x_{n} = b$,
+then the {\bf heights} of the rectangles will be $f(x_{i})$'s, and
+\item the formula for the left hand sum/area will be
+\end{itemize}
+
+\begin{align*}
+  \mbox{LEFT}(n) = & f(x_{0}) \Delta x+ 
+ f(x_{1}) \Delta x + \ldots + 
+ f(x_{n-1}) \Delta x 
+\\  = & \displaystyle\sum_{i=1}^{n} f(x_{i-1})\Delta x.
+\end{align*}
+
+\newpage
+
+\subsection*{Aside: Summation Notation}
+
+The capital greek letter sigma, $\sum$, is used as a shortform notation for long sums.
+E.g.
+$$\ds \sum_{i=1}^n x_i$$
+
+\newpage
+\problem 
+Translate the following into more traditional sums:
+
+$\ds \sum_{i=1}^{100} i= $ \vfill 
+
+$\ds \sum_{n=1}^{10} n^2 + n= $  \vfill
+
+$\ds \sum_{i=1}^{n}  f(x_{i-1}) ~\Delta x= $
+\vfill
+
+\newpage 
+
+Summation notation lends itself very nicely to translations between
+hand-written sums and MATLAB computations.  A \texttt{for} loop can be
+mapped easily on to a sum.
+
+\problem Implement each of the sums below as a MATLAB loop and compute
+the total. \\
+
+$\ds \sum_{i=1}^{100} i= $ \vfill 
+
+$\ds \sum_{n=1}^{10} n^2 + n= $  \vfill
+
+\newpage
+
+
+\topic{Riemann Sums}
+\subsection*{Riemann Sums}
+
+Area estimations like $\mbox{LEFT}(n)$ are examples of {\bf Riemann sums},
+after the mathematician Bernahrd Riemann (1826-1866) who formalized
+many of the techniques of calculus.  The general form for a Riemann
+Sum is
+
+\begin{align*}
+ f(x_{1}^{*}) \Delta x+ f(x_{2}^{*}) \Delta x + \ldots + f(x_{n}^{*}) \Delta x 
+ \\ = \displaystyle\sum_{i=1}^{n} f(x_{i}^{*})\Delta x
+\end{align*}
+
+where each $x_{i}^{*}$ is some point in the interval $[x_{i-1},
+x_{i}]$.  For $\mbox{LEFT}(n)$, we choose the left hand endpoint of the
+interval, so $x_{i}^* = x_{i-1}$.
+
+\newpage
+
+The common property of all these
+approximations is that they involve
+\begin{itemize}
+\item a sum of rectangular areas, with \\[1ex]
+\item widths ($\Delta x$), and \\[1ex]
+\item heights ($f(x_i^*)$)
+\end{itemize}
+
+There are other Riemann Sums that give slightly better estimates of
+the area underneath a graph, but they often require extra computation.
+
+\newpage
+
+\topic{The Definite Integral}
+\subsection*{The Definite Integral}
+
+We observed that as we increase the number of rectangles used to
+approximate the area under a curve, our estimate of the area under the
+graph becomes more accurate.
+
+\begin{center}
+\includegraphics[height=6cm]{graphics/notes_04_f_lhr_5_intervals}
+\includegraphics[height=6cm]{graphics/notes_04_f_lhr_50_intervals}
+\includegraphics[height=6cm]{graphics/notes_04_f_lhr_500_intervals}
+\end{center}
+
+This implies that to obtain the {\bf
+  exact area}, we should use a {\bf limit} on our Riemann sums.
+
+\medskip
+\begin{center}
+The area underneath the graph of $f(x)$ between $x=a$ and $x=b$ is equal to $\displaystyle\lim_{n \to \infty} LEFT(n) = 
+\displaystyle\lim_{n \to \infty} \displaystyle\sum_{i=1}^{n} f(x_{i-1})\Delta x$, ~~~where $\Delta x = \displaystyle\frac{b-a}{n}$.
+\end{center}
+
+This limit, which gives the {\bf exact value of the accumulation of
+  $f(x)$} is called the {\em definite integral} of $f(x)$ from $a$ to
+$b$, and is equal to the area under curve whenever $f(x)$ is a
+non-negative continuous function.
+
+  {\bf{Notation for the Definite Integral}} 
+  
+  The definite integral of $f(x)$ between $x=a$ and $x=b$ is denoted
+  by the symbol $$\int_a^b f(x) \,dx$$ We call $a$ and $b$ the
+  {\bf{limits of integration}} and $f(x)$ the {\bf{integrand}}.  Note
+  that this notation shares the same common structure with Riemann
+  sums:
+\begin{itemize}
+\item a sum ($\ds \int $ sign) \\
+\item widths ($dx$), and \\
+\item heights ($f(x)$)
+\end{itemize}
+
+\newpage 
+
+\problem Write the definite integral representing the area underneath
+  the graph of $f(x) = x + \cos x$ between $x=2$ and $x=4$.
+
+\vfill
+
+\newpage
+
+\problem Use a LEFT sum with $n=4$ to estimate
+$\displaystyle \int_{0}^{2}x^2\,dx$.
+
+\vfill
+
+Repeat your LEFT estimate, but in MATLAB.  
+
+\vfill Repeat the calculation again in MATLAB, but now with 100
+intervals.
+
+\vfill
+
+\newpage
+
+\vfill \problem Sketch how the LEFT sum would be represented
+graphically, and how it differs from the exact value of
+$\ds \int_0^2 x^2~dx$.
+
+%\includegraphics[width=0.3\linewidth]{graphics/w07_parabola_for_areas}
+\hfill
+%\includegraphics[width=0.3\linewidth]{graphics/w07_parabola_for_areas}
+
+\newpage
+
+% You can get MuPAD to draw the diagram associated with the midpoint
+% rule for this integral by first creating the plot object for the graph:
+
+% [\, {\bf GRPH := plot::Function2d(x$\wedge$2, x=0..2)}
+
+% and then use this graph to produce the plot object for the midpoint rule with 4 intervals:
+
+% [\, {\bf RECTS := plot::Integral(GRPH, IntMethod=RiemannMiddle, Nodes=[4])}
+
+% You can then show them together by typing
+
+% [\, {\bf plot(GRPH, RECTS)}
+
+% The values of the Riemann sum and the integral are automatically printed on the diagram.
+
+%\newpage
+
+\newpage
+\begin{boxnote}
+{\bf The Role of Riemann sums}
+\begin{enumerate}
+\item They are needed to say what we mean by an integral. \\[2ex]
+\item They enable us to decide which integral is appropriate in a word
+problem. \\[2ex]
+\item They can also be used, with a finite number of intervals, to
+  give an approximate value of the integral. \\[1ex]
+\end{enumerate}
+\end{boxnote}
+
+\vspace{0.5in}
+
+\topic{Negative Integral Values}
+\subsection*{Negative Integral Values}
+
+So far we have only dealt with the areas under/intergrals of {\bf
+  positive} functions.  Will the definite integral still be equal to
+the area underneath the graph if $f(x)$ is always negative?  What
+happens if $f(x)$ crosses the $x$-axis several times?
+
+
+
+\problem Suppose that $f(x)$ has the graph shown below, and that A, B,
+  C, D, and E are the areas of the regions shown.
+
+\begin{center}
+%\includegraphics[width=0.6\linewidth]{graphics/w07_negative_area_example}
+\end{center}
+
+\newpage
+\begin{center}
+%\includegraphics[width=0.4\linewidth]{graphics/w07_negative_area_example}
+\end{center}
+
+If we were to partition $[a,b]$ into small subintervals and construct a corresponding Riemann sum, then the first few terms in the Riemann sum would correspond to the region with area A, the next few to B, etc. 
+
+\problem 
+Which of these sets of terms have positive values?
+
+\vfill
+
+Which of these sets have negative values?
+\vfill
+
+\newpage
+
+\begin{center}
+%\includegraphics[width=0.3\linewidth]{graphics/w07_negative_area_example}
+\end{center}
+\problem 
+{Express the integral $\displaystyle \int_a^b f(x) dx$ in
+  terms of the (positive) areas A, B, C, D, and E.  }
+
+\vfill
+\vfill
+
+{If $f$ were to represent velocity over time, what would the ``negative
+  areas'' represent?}
+
+\vfill
+\newpage
+
+
+%\newpage
+% \problem 
+% The answer we found in the preceding question is
+% \begin{enumerate}[A.]
+% \item An underestimate because the first rectangle is very small.
+% \item An overestimate because this is an increasing function.
+% \item An underestimate because the graph of $f$ is concave upward.
+% \item An overestimate because we used the midpoints.
+% \end{enumerate}
+% 
+
+
+\topic{The Fundamental Theorem of Calculus}
+\subsection*{The Fundamental Theorem of Calculus}
+We started our discussion of integration by stressing
+the fact that an integral problem is always at heart a problem in
+which something {\bf accumulates}. 
+
+We then converted that accumulation problem into the problem of
+computing the {\bf area under a graph}, and representing 
+both using the notation
+
+$$\ds \int_a^b f(x)~dx.$$
+
+So far, we don't know how to evaluate that exactly: we can only use our approximation
+based on a Riemann Sum,
+$$\ds \int_a^b f(x)~dx \approx \sum_{i=1}^n f(x_i*) ~dx$$
+
+If we want to evaluate this integral exactly, we need a new tool.
+
+\newpage
+
+The new idea 
+
+{\bf Fundamental Theorem of Calculus}
+
+If $f$ is continuous and $F$ is an anti-derivative of $f$, then 
+\begin{boxnote}
+\[ \int_a^b f(x)\,dx=F(b)-F(a).
+\]
+\end{boxnote}
+
+ Explain in words how we would use this to evaluate an
+  integral over the interval $x =a \ldots b$.
+
+\vfill
+
+\newpage
+
+\subsection*{Using the Fundamental Theorem of Calculus}
+To use the Fundamental Theorem of Calculus, we need to know formulas
+for the anti-derivatives of functions.  We already know quite a few.
+
+\newpage
+
+\begin{problem} 
+Complete the following table of basic anti-derivatives by
+asking yourself the question, ``$f(x)$ is the derivative of what
+function, $F(x)$?''.
+
+\begin{center}
+\fbox{\begin{tabular}{cp{0.5in}c} 
+{\bf Function $f(x)$} & & {\bf Anti-derivative $F(x)$}\\[0.25cm]
+$x^n$ ($n \neq -1$) &  \\[0.5cm]
+$\displaystyle \frac{1}{x}$ & \\[0.5cm]
+$e^x$ & \\[0.5cm]
+$\cos x$ & \\[0.5cm]
+$\sin x$ & \\[0.5cm]
+$\sec^2 x$ & \\[0.5cm]
+$\displaystyle \frac{1}{\sqrt{1-x^2}}$ & \\[0.5cm]
+$\displaystyle \frac{1}{1+x^2}$ & \\[0.5cm]
+\end{tabular}}
+\end{center}
+\end{problem}
+
+\newpage
+\subsection*{The Special Case of $\ds f(x) = \frac{1}{x}$}
+
+\begin{problem}
+Sketch the graphs of $\ds f(x) = \frac{1}{x}$ and $F(x) = \ln(x)$.
+
+\end{problem}
+\includegraphics[width=4.5in]{graphics/empty_graph_square_12}
+\includegraphics[width=4.5in]{graphics/empty_graph_square_12}
+
+\newpage
+ A technical fact about integrals is that if $f(x)$ is continuous on its
+  domain, it must have an anti-derivative on that domain.  How is that
+  seemingly violated by the pair $\ds f(x) = \frac{1}{x}$ and $F(x) = \ln(x)$?
+
+
+\newpage
+
+ Show that $F(x) = \ln(|x|)$ satisfies $F'(x) = 1/x$ for
+  both positive {\bf and} negative $x$ values.
+\vfill
+
+ Correct your anti-derivative entry for $\ds \frac{1}{x}$
+  in the earlier table if necessary.
+
+
+\newpage
+\begin{problem} 
+Find the most general anti-derivative of $\displaystyle f(x)=\frac{x^3-3x+5}{x}$.
+
+\end{problem}
+
+\newpage
+
+\begin{problem}
+Suppose we want to calculate the area under one section of the graph
+of $\sin x$, the part from 0 to $\pi$.
+\begin{center}
+%\includegraphics[width=7.5cm]{graphics/week06_sin}
+\end{center}
+Then we should calculate
+\begin{enumerate}[A.]
+\item $\cos(\pi)$ \\[2ex]
+\item $\cos(0) - \cos (\pi)$ \\[2ex]
+\item $\cos(\pi)-\cos (0)$ \\[2ex]
+\item $\sin(\pi)-\sin(0)$
+\end{enumerate}
+\end{problem}
+
+\newpage
+\begin{problem}
+Calculate $\displaystyle \int_0^4 \sqrt{x}\,dx$.
+
+\end{problem}
+
+\newpage
+\noindent{\bf Notation}\medskip
+
+\noindent The expression $F(b)-F(a)$ comes up so often that there is a special
+notation for it.  It is written as
+$$F(x)\Bigg\arrowvert_a^b \text{ or } \left[ F(x) \right]_a^b$$ 
+% Applying this notation
+% to the previous example gives $$\int_0^4 \sqrt{x}\,dx\; =\;
+% \frac{2}{3}x^{3/2}\Bigg\arrowvert_{0}^{4} = \frac{2}{3}(4)^{3/2} -
+% \frac{2}{3}(0)^{3/2} = \frac{16}{3}.$$
+
+
+\begin{problem}
+Calculate $\displaystyle \int_{\pi/4}^{\pi/3} 3 \sec^2 (\theta) \, d \theta$.
+ 
+\end{problem}
+
+% \newpage
+% MuPAD does integrals very easily. For this integral, all you have to do is to enter
+
+% [\, {\bf int(3*(sec(x))$\wedge$2, x=PI/4..PI/3)}
+
+\newpage
+\subsection*{Properties of Integrals}
+Before we go on to refine our skill at calculating integrals, we
+should first reflect on some basic properties of integrals that
+derive from their origins as limits of more and more accurate
+Riemann sums.
+
+\newpage
+\begin{boxnote}
+\begin{enumerate}
+\item If $a>b$ then $\displaystyle \int_a^bf(x)\,dx=-\int_b^af(x)\,dx$. \\[1.5ex]
+\item If $a=b$ then $\displaystyle \int_a^bf(x)\,dx=0$. \\[1.5ex]
+\item $\displaystyle \int_a^bc\,dx=c\,(b-a)$. \\[1.5ex]
+\item $\displaystyle \int_a^b\bigl[ f(x)\pm g(x) \bigr] \,dx=\int_a^bf(x)\,dx \pm\int_a^bg(x)\,dx$. \\[1.5ex]
+\item $\displaystyle \int_a^bc\,f(x)\,dx=c\int_a^bf(x)\,dx$. \\[1.5ex]
+\item $\displaystyle \int_a^bf(x)\,dx=\int_a^{c}f(x)\,dx+\int_{c}^bf(x)\,dx$.
+\end{enumerate}
+\end{boxnote}
+
+\newpage
+\vspace{.3cm} Properties 3-6 need proofs; they depend on the analogous
+properties for \mbox{Riemann} Sums.  See Section 5.2 in the textbook
+for careful proofs of all of these properties, as well as for
+properties 7-10 appearing later.
+
+\newpage
+\begin{problem}
+Prove Property 4 below using the definition of the integral.  
+\[ \int_a^b\bigl[ f(x)\pm g(x) \bigr] \,dx=\int_a^bf(x)\,dx \pm\int_a^bg(x)\,dx
+\]
+ 
+\end{problem}
+
+\newpage
+
+\begin{problem}
+Given that $\displaystyle \,\int_{0}^{2}f(x)\,dx=3\,$, $\displaystyle \,\int_{1}^{4}f(x)\,dx = 2\,$ and 
+$\displaystyle \,\int_{0}^{4}f(x)\,dx=4$, what is the value of $\displaystyle \,\int_{1}^{2}f(x)\,dx\,$? A sketch might help you.
+
+\end{problem}
+
+\newpage
+
+\subsection*{Other Properties of Integrals}
+\begin{boxnote}
+\begin{enumerate}
+\setcounter{enumi}{6}
+\item If $\,f(x)\geq 0\,$ for $\,a\leq x \leq b\,$ then $\,\displaystyle \int_a^bf(x)\,dx\geq 0$. \\[2ex]
+\item If $\,f(x)\geq g(x)\,$ for $\,a\leq x \leq b\,$ then $\displaystyle \int_a^bf(x)\,dx\geq \int_a^bg(x)\,dx$. \\[2ex]
+\item If $\,m\leq f(x)\leq M\,$ for $\,a\leq x \leq b\,$ then $\displaystyle \,m\,(b-a)\leq \int_a^bf(x)\,dx\leq M\,(b-a)$. \\[2ex]
+\item $\displaystyle \left|\int_a^bf(x)\,dx\right| \leq \int_a^b|f(x)|\,dx$.
+\end{enumerate}
+\end{boxnote}
+
+\newpage
+
+ The following diagrams illustrate the ideas of Properties
+8 and 9:
+
+%\lscapepstricks{graphics/w06.intproperties.pstricks}
+%\lscapepstricks{graphics/w06.intpropertiesB.pstricks}
+
+In the second diagram, it can be observed that the area under $f(x)$
+in $[\,a,b\,]$ is greater than the area under $m$ in $[\,a,b\,]$ but
+less than the area under $M$.
+
+
+%%%%%% DAWN omitted this proof on AUGUST 8, 2007 %%%%%%%%%%%%%%%%%%%%%%%
+ %\ques{Prove Property 8 using Property 7.}
+%\includesoln{\solntest}{}{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%We have to prove that if $f(x)\geq g(x)$, then $$\int_a^b
+%f(x)\,dx-\int_a^b g(x)\,dx\geq 0.$$ By Property 4, the left hand side of
+%this inequality is equivalent to
+%$$\int_a^b\bigr[\underbrace{f(x)-g(x)}_{positive}\bigl]dx.$$
+%We know that $f(x)-g(x)\geq 0$. We could let $h(x)=f(x)-g(x)$, so
+%therefore $h(x)\geq 0$.  But by Property 7 we know that if $h(x)\geq 0$
+%then $\displaystyle\int_a^b h(x)\geq 0.$  So therefore $$\int_a^b
+%f(x)\,dx-\int_a^b g(x)\,dx\geq 0.$$ \mbox{}\hfill $\blacksquare$
+%}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%\newpage %%%%%%%%%%%%%%%%%%%%%%New page%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+\begin{problem}Let $f(x)$ be as shown
+
+%\lscapepstricks{graphics/w06.function.pstricks}
+
+Sketch $|f(x)|$ and so demonstrate one instance of Property 10.
+
+\end{problem}
+
+
+\newpage
+
+\subsection*{Net Change Theorem}{}
+
+Note that we create an anti-derivative $F(x)$, we are building it such
+that $f(x)=F'(x)$. This means that $f$ gives the rate of change of
+$F$.  Notice that this observation was made much earlier, when we
+started our discussion of integration: when an integral is associated
+with a process of {\bf accumulation} then the {\bf rate of accumulation} is
+always precisely the integrand.  
+
+\newpage
+
+Consider $F(x)$ as the quantity we are tracking, so $F'$ is its rate
+of change.  Another statement of the Fundamental Theorem of Calculus
+Part 2 would then be
+
+\begin{boxnote} \label{thm:netchange}
+\[ \int_a^bF'(x)\,dx=F(b)-F(a).
+\]
+\end{boxnote}
+
+``The integral of a rate of change is the
+total change''.  The textbook calls this the {\bf Net Change Theorem}. 
+\bigskip
+
+\newpage
+\begin{problem}
+  If $h(t)$ represents the height of a child (in cm) at time $t$ (in
+  years), and the child is 120 cm tall at age 10, which of the
+  following would represent the amount the child grew between $t=10$
+  and $t=18$ years?
+\begin{enumerate}[A.]
+\item $\ds \int_{10}^{18} h(t)~dt$ \\[2ex]
+\item $\ds \int_{10}^{18} h(t)~dt + 120$ \\[2ex]
+\item $\ds \int_{10}^{18} h'(t)~dt$ \\[2ex]
+\item $\ds \int_{10}^{18} h'(t)~dt + 120$
+\end{enumerate}
+
+\end{problem}
+
+
+%Once we recognize that solving an integral boils down to finding an
+%anti-derivative for the integrand, this business of finding
+%anti-derivatives suddenly becomes very important, and it makes sense
+%to do exercises asking for them.
+% \conques{%
+% If $\displaystyle G(u) = \int_a^u F^\prime (x) \, dx$, then
+% \begin{enumerate}%
+% \item[A. ] $F$ is the derivative of $G$
+% \item[B. ] $G$ is the derivative of $F$
+% \item[C. ] $F$ and $G$ are equal
+% \item[D. ] $F$ and $G$ differ by a constant
+% \end{enumerate}
+% }%
+% \includesoln{\solntest}{\vspace{3cm}}{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% By the first part of the Fundamental Theorem of Calculus, $G^\prime$
+% is equal to the integrand.  That is, $G^\prime=F^\prime$.  But that
+% means that $F$ and $G$ differ by a constant.  Thus D is the correct
+% answer.
+% }%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\newpage
+
+\begin{problem}
+  Suppose water is flowing into/out of a tank at a rate given by $r(t)
+  = 200 -10t$ L/min, where {\em positive} rates indicate flow {\em
+    in}.  By how much does the water level in the tank change during
+  the first 45 minutes after $t=0$?   
+\end{problem}
+
+\newpage
+
+ What is an assumption you would have to make about the
+  initial amount of water in the tank for this to make sense?
+
+
+
+\newpage
+
+\subsection*{The Indefinite Integral}
+The second part of the Fundamental Theorem of Calculus,
+$$\int_a^b f(x)\,dx = F(b)-F(a),$$ reduces the problem of evaluating
+an integral to that of finding the anti-derivative $F$.  For that
+reason the anti-derivative is often called the {\bf indefinite
+  integral} and written as $$\int f(x)\,dx\;\biggl(=F(x)\biggr).$$
+
+\newpage
+\begin{itemize}
+\item A {\bf definite integral} has the form $\ds \int_a^b f(x) ~dx$.
+  \begin{itemize}
+  \item It represents 
+\vfill
+  \item Its value is  
+\vfill
+  \end{itemize}
+\vfill
+\item An {\bf indefinite integral} has the form $\ds \int f(x) ~dx$.
+  \begin{itemize}
+  \item It represents 
+\vfill
+  \item Its value is 
+\vfill 
+  \end{itemize}
+\end{itemize}
+
+\newpage
+\begin{problem}
+	Find $\ds \int\left(\sqrt{t}-\frac{3}{\sqrt{t}}\right)\,dt$.
+	
+\end{problem}
+%\includesoln[]{%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%Because this is an indefinite integral, this question is just asking
+%for an anti-derivative of $f(t)=\sqrt{t}-\frac{3}{\sqrt{t}}$.
+%Therefore
+%\begin{align*}
+%F(t) & = \frac{t^{3/2}}{3/2}-3\frac{t^{1/2}}{1/2}+C\\[0.3cm]
+%& = \frac{2}{3}t^{3/2}-6t^{1/2}+C
+%\end{align*}
+%Therefore
+%$$ \int
+%\left(\sqrt{t}-\frac{3}{\sqrt{t}}\right)\,dt =
+%\frac{2}{3}t^{3/2}-6t^{1/2}+C.$$
+%}%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\vfill
+{\bf Note:}  When you are asked to find an indefinite integral, as
+in the previous question, it is important to add the ``$+ C$'' to
+indicate that there is more than one anti-derivative, and that all
+of them differ from each other by a constant.\medskip
+
+\newpage
+Finding antiderivatives is surprisingly difficult.  You would think
+that if we know how to find derivatives then we should know how to
+find antiderivatives.  In fact, however, the latter is much more
+difficult, as illustrated next.
+
+\newpage
+\begin{problem}
+	Calculate $\displaystyle \int \frac{1}{x^3+1}\, dx$
+	
+\end{problem}
+
+\newpage
+\subsection*{Guess and Check}{}
+Next week we will study the ``Substitution Rule'', or ``Method of
+Substitution'', the first of a list of techniques for finding
+anti-derivatives. To prepare us for the Method of Substitution, let's
+explain an informal method often called ``guess and check''.
+
+\begin{problem}
+	Find $\ds \int \cos (5x)\,dx$.
+	
+\end{problem}
+
+\newpage
+\begin{problem}
+	Find $\ds \int \cos (x^2)\,dx$.
+	
+\end{problem}
+
+\newpage
+
+\begin{problem}
+Now what if we were given the problem $\ds \int x\cos (x^2)\,dx$?
+\end{problem}
+
+
+\vfill
+
+So why does ``guess and check'' work for $\ds \int x \cos(x^2)~dx$ but
+not for $\ds \int \cos(x^2)~dx$?
+\vspace{1in}
+
+%  In the case of $\int \cos (5x)\,dx$, we were
+% successful essentially because we were able to rewrite it as
+% \picb{6}{3.5}
+% \rput(3,2.75){\large\mbox{\madis{\textstyle\frac{1}{5}\displaystyle\int
+% \underbrace{5}\; \underbrace{\cos}\, (5x)\,dx}}.}
+% \psline{<-}(2,2.2)(1,1.5) \rput[t](0,1.3){\mbox{derivative of}}
+% \rput[t](0,0.8){\mbox{``inner function'' $5x$}}
+% \psline{<-}(3.3,2.2)(4.2,1.5) \rput[t](4.2,1.3){\mbox{``outer
+% function''}} \pice In other words, we were able to interpret the
+% integrand as the result of a chain-rule differentiation:
+% \picb{6}{2.5}
+% \rput(3,1.75){\large\mbox{\madis{\textstyle\frac{1}{5}\displaystyle\int
+% \underbrace{{\textstyle\frac{du}{dx}}}\; \cos \,
+% (\underbrace{u})\,dx}}.} \psline{<-}(2,1)(2,0.6)
+% \rput[t](2,0.4){\mbox{5}} \rput[t](4,0.4){\mbox{$5x$}}
+% \psline{<-}(4,1.2)(4,0.6) \pice The same does not work for $$\int
+% \cos (x^2)\,dx.$$  You cannot turn this integral into $$\int
+% \underbrace{2x}_{\frac{du}{dx}}\,\cos (\underbrace{x^2}_{u})\,dx.$$
+
+\newpage
+\begin{problem}
+  Which of the following anti-differentiations would you predict can
+  be evaluated by the guess-and-check method? \\[2ex]
+\begin{center}
+%\begin{tabular}{ll}
+1. $\displaystyle \int\;  x^2 e^{x^3}   \;dx$\hfill
+2. $\displaystyle \int\; x^2 e^{x^2}   \;dx$\hfill
+3. $\displaystyle \int\;  x e^{x^2}   \;dx$  \\[2ex]
+%\end{tabular}
+\end{center}
+\begin{enumerate}[A.]
+\item 1 \\[1ex]
+\item 2 \\[1ex]
+\item 3 \\[1ex]
+\item 1 and 3 \\[1ex]
+\item 1 and 2
+\end{enumerate}
+\end{problem}
+
+\newpage
+\begin{problem}
+	Calculate $\ds \int\cos (x)\,e^{\sin (x)}\,dx$.
+	
+\end{problem}
+\vfill
+
+Next week we will turn these ideas into a formal procedure called ``Substitution''.
+
+% \section{Challenge Problem \#2}
+
+% For those of you who would like a break from integration, here is the second (and last) challenge problem for the term. Remember, doing one challenge problem well will earn you one bonus percentage on the final mark. The due date will be announced on the course web site. You may have to look ahead to week 12 to complete the solution. Remember that when we mark a solution we mark it not only for the correct answer, but also for the clarity of the solution. Review the Solution Exercise in Week 2 if you have forgotten what a good submission looks like.  Have fun!
+
+% Two 100 litre tanks are filled with water.  The water in the first tank has 5 kilograms of salt dissolved in it.  The tanks are connected by two pipes that pump water between the tanks, one pipe pumping in one direction at a flow rate of 3 litres per minutes, the other pumping in the opposite direction at the same rate.  The first tank also has a drain, from which water flows out at 8 litres per minute, while brine (salty water) is pumped into the first tank from an outside source, also at 8 litres per minute.  The water in both of the tanks is kept stirred, so that any salt in the water is evenly distributed throughout each tank.
+
+% \begin{center}
+% \begin{pspicture}(0,-1)(9,5)
+% \rput(1.5,.5){
+% \psellipse(0,0)(1.5,.5)
+% \psellipse(0,2.5)(1.5,.5)
+% \psline(-1.5,0)(-1.5,2.5)
+% \psline(1.5,0)(1.5,2.5)
+% \rput(0,1.5){100$\ell$}
+% }
+% \rput(8.5,.5){
+% \psellipse(0,0)(1.5,.5)
+% \psellipse(0,2.5)(1.5,.5)
+% \psline(-1.5,0)(-1.5,2.5)
+% \psline(1.5,0)(1.5,2.5)
+% \rput(0,1.5){100$\ell$}
+% }
+% \rput(3,1){
+% \psline(0,0)(4,0)
+% \psline(0,.4)(4,.4)
+% \psellipse[fillstyle=solid, fillcolor=white](0,.2)(.1,.2)
+% \psellipse[fillstyle=solid, fillcolor=white](4,.2)(.1,.2)
+% }
+% \rput(3,2){
+% \psline(0,0)(4,0)
+% \psline(0,.4)(4,.4)
+% \psellipse[fillstyle=solid, fillcolor=white](0,.2)(.1,.2)
+% \psellipse[fillstyle=solid, fillcolor=white](4,.2)(.1,.2)
+% }
+% \rput(5,2.8){$\rightarrow 3 \ell / min$}
+% \rput(5,0.6){$\leftarrow 3 \ell / min$}
+% \rput(0,4){
+% \psline(0,0)(1,0)
+% \psline(0,.4)(1,.4)
+% \psellipse[fillstyle=solid, fillcolor=white](1,.2)(.1,.2)
+% \pscurve(1.2,0)(1.3,-.1)(1.4,-.8)
+% \rput(0,.1){\pscurve(1.2,0)(1.35,-.1)(1.45,-.8)}
+% \rput(0,.2){\pscurve(1.2,0)(1.4,-.1)(1.5,-.8)}
+% }
+% \rput(0,.5){
+% \psline(0,0)(-.5,0)
+% \psline(0,.4)(-.5,.4)
+% \psellipse[fillstyle=solid, fillcolor=white](0,.2)(.1,.2)
+% \psellipse[fillstyle=solid, fillcolor=white](-.5,.2)(.1,.2)
+% \pscurve(-.6,.1)(-.7,0)(-.8,-.7)
+% \pscurve(-.6,.2)(-.75,.1)(-.85,-.65)
+% \pscurve(-.6,.3)(-.8,.2)(-.9,-.6)
+% }
+% \rput(1.5,1.3){
+% \psellipse(-.2,0)(.2,.1)\psellipse(.2,0)(.2,.1)
+% \psline(0,0)(0,-.8)
+% }
+% \rput(8.5,1.3){
+% \psellipse(-.2,0)(.2,.1)\psellipse(.2,0)(.2,.1)
+% \psline(0,0)(0,-.8)
+% }
+% \end{pspicture}
+% \end{center}
+
+
+% Let the amount of salt dissolved in the first tank at time $t$ be
+% $S_1(t)$ kilograms  and the amount of salt in the second tank is
+% $S_2(t)$, and suppose the brine coming in from the outside source
+% contains $\mu$ kg of salt per litre.  Our goal is to use
+% differential equations to determine a formula for the amount of salt
+% in each tank at any given time, and especially to determine the salt
+% concentration that will be found in the tanks after a very long
+% time.
+
+% \noindent (a.)  Write down expressions in terms of $S_1$, $S_2$, and
+% $\mu$ for the rate (in kilograms per minute) at which salt  flows in
+% and out of each of the two tanks through the various pipes.\\[0.3cm]
+
+% \noindent (b.) Use your answer in (a.) to write down differential
+% equations for the two functions $S_1$ and $S_2$.  You should find
+% one differential equation for each of the two functions, and you
+% will find that (unfortunately) each equation will involve both
+% functions.\\[0.3cm]
+
+
+% \noindent (c.) To solve these differential equations the first thing
+% you should do is to combine $S_1$ and $S_2$ in such a way that the
+% combined function satisfies a differential equation that involves
+% only itself.  More precisely, find numbers $a$, $b$ and $\sigma$ so
+% that if you let $S = aS_1+bS_2$ then combining the differential
+% equations you found in (b.) gives rise to a differential equation of
+% the form $$\frac{dS}{dt} = \sigma S + k$$ where $k$ is a constant.
+% [Hint: To find these constants, use the differential equations to
+% calculate $(aS_1+bS_2)^\prime$, and then put the right hand side
+% equal to $\sigma (aS_1+bS_2)$ plus a constant term.  You should get
+% two linear equations in the ``unknowns'' $a$ and $b$, with some of
+% the coefficients involving $\sigma$, and with 0 on the right side of
+% each equation. Since both equations should be satisfied at the same
+% time by the numbers $a$ and $b$ you are looking for, the
+% coefficients of the two equations should be proportional.  Writing
+% down the proportionality conditions creates a quadratic equation in
+% $\sigma$.]\\[0.3cm]
+
+
+
+% You will find that there are two choices for $\sigma$ and for each
+% of these you can find a choice of $a$, $b$ that satisfy the two
+% equations. So in fact we will get two functions which we will call
+% $U$ and $V$ rather than $S$, each of them satisfying a differential
+% equation of the above form (but with different values for the
+% constant $k$). What matters most is that each of these differential
+% equations involves only one function, unlike the differential
+% equations found in (b.), each of which involved both functions.  We
+% express this by saying that the original two differential equations
+% (in two unknown functions) have been ``decoupled''.\\[0.3cm]
+
+
+% \noindent (d.) We would like to solve these new differential
+% equations to get formulas for $U$ and $V$, and then to use these to
+% get formulas for $S_1$ and $S_2$. In week 12 we will study the
+% differential equation that gives rise to exponential growth.  In
+% fact, we will discover that if a function $Y$ satisfies the
+% differential equation $\frac{dY}{dt} = \lambda Y$ then $Y$ has the
+% formula $Y(t)=Ae^{\lambda t}$ normally associated with exponential
+% growth. Even if we have not yet done this theorem in class you
+% should be able to verify that if $Y(t)$ has this form, then it
+% satisfies this differential equation.
+
+% Now notice that if we have
+% $$\frac{dU}{dt} = \sigma U+k$$
+% and we let $Y = U+ k/\sigma$ we get that kind of equation for $Y$.
+% Use this idea to find formulas for  $U$ and $V$, and thus for $S_1$
+% and $S_2$.\\[0.3cm]
+
+
+% \noindent (e.) Describe what will happen in the long run to the salt
+% concentrations in the two tanks. Relate your answer clearly to the
+% formulas you have found for the functions  $S_1$ and $S_2$.\\[0.3cm]
+
 \end{document}
 

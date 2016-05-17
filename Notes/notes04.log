@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  17 MAY 2016 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  17 MAY 2016 12:34
 entering extended mode
 **\input notes04.tex
 (notes04.tex (PreambleCommon.tex (C:\MiKTeX2.9\tex\latex\base\article.cls
@@ -317,7 +317,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks25
 
 (C:\MiKTeX2.9\tex\latex\geometry\geometry.cfg))) (../WeekTitles.tex)
-No file notes04.aux.
+(notes04.aux)
 \openout1 = `notes04.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -332,6 +332,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
+
 (C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
@@ -419,21 +420,244 @@ als and their mean-
 [1
 
 {C:/Users/aableson/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
-(notes04.aux) ) 
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1] [2] [1]
+Underfull \hbox (badness 10000) in paragraph at lines 82--83
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 83--84
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 84--85
+
+ []
+
+[2]
+Underfull \hbox (badness 10000) in paragraph at lines 98--99
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 99--100
+
+ []
+
+[3] [4] [1] [2] [3] [1] [2] [3] [4] [5] [1] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 265--267
+
+ []
+
+[4] [1]
+Underfull \hbox (badness 10000) in paragraph at lines 297--298
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 298--299
+
+ []
+
+[2]
+<graphics/notes_04_f_lhr_5_intervals.png, id=76, 1982.40625pt x 1673.25125pt>
+File: graphics/notes_04_f_lhr_5_intervals.png Graphic file (type png)
+
+<use graphics/notes_04_f_lhr_5_intervals.png>
+Package pdftex.def Info: graphics/notes_04_f_lhr_5_intervals.png used on input 
+line 315.
+(pdftex.def)             Requested size: 202.2451pt x 170.71652pt.
+
+<graphics/notes_04_f_lhr_50_intervals.png, id=77, 1982.40625pt x 1673.25125pt>
+File: graphics/notes_04_f_lhr_50_intervals.png Graphic file (type png)
+
+<use graphics/notes_04_f_lhr_50_intervals.png>
+Package pdftex.def Info: graphics/notes_04_f_lhr_50_intervals.png used on input
+ line 316.
+(pdftex.def)             Requested size: 202.2451pt x 170.71652pt.
+
+<graphics/notes_04_f_lhr_500_intervals.png, id=78, 1982.40625pt x 1673.25125pt>
+File: graphics/notes_04_f_lhr_500_intervals.png Graphic file (type png)
+<use graphics/notes_04_f_lhr_500_intervals.png>
+Package pdftex.def Info: graphics/notes_04_f_lhr_500_intervals.png used on inpu
+t line 317.
+(pdftex.def)             Requested size: 202.2451pt x 170.71652pt.
+ [1 <./graphics/notes_04_f_lhr_5_intervals.png> <./graphics/notes_04_f_lhr_50_i
+ntervals.png> <./graphics/notes_04_f_lhr_500_intervals.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 342--343
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 343--344
+
+ []
+
+[2] [3] [4] [5]
+Underfull \hbox (badness 10000) in paragraph at lines 401--402
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 402--404
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 404--406
+
+ []
+
+[6] [1] [2] [3] [1] [2] [3] [4]
+<graphics/empty_graph_square_12.png, id=120, 803.0pt x 803.0pt>
+File: graphics/empty_graph_square_12.png Graphic file (type png)
+
+<use graphics/empty_graph_square_12.png>
+Package pdftex.def Info: graphics/empty_graph_square_12.png used on input line 
+544.
+(pdftex.def)             Requested size: 325.215pt x 325.22548pt.
+File: graphics/empty_graph_square_12.png Graphic file (type png)
+
+<use graphics/empty_graph_square_12.png>
+Package pdftex.def Info: graphics/empty_graph_square_12.png used on input line 
+545.
+(pdftex.def)             Requested size: 325.215pt x 325.22548pt.
+ [5 <./graphics/empty_graph_square_12.png>] [6] [7]
+Overfull \hbox (44.95128pt too wide) in paragraph at lines 564--566
+[]\OT1/cmr/bx/n/24.88 Problem.  \OT1/cmr/m/n/24.88 Find the most gen-eral anti-
+derivative of $\OML/cmm/m/it/24.88 f\OT1/cmr/m/n/24.88 (\OML/cmm/m/it/24.88 x\O
+T1/cmr/m/n/24.88 ) = []$. 
+ []
+
+[8]
+Underfull \hbox (badness 10000) in paragraph at lines 579--580
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 580--581
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 581--582
+
+ []
+
+[9] [10] [11] [12]
+Underfull \hbox (badness 10000) in paragraph at lines 624--625
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 625--626
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 626--627
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 627--628
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 628--629
+
+ []
+
+
+Overfull \vbox (43.57776pt too high) has occurred while \output is active []
+
+
+[13] [14] [15] [16]
+Underfull \hbox (badness 10000) in paragraph at lines 661--662
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 662--663
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 663--664
+
+ []
+
+[17] [18] [19] [20] [21]
+Underfull \hbox (badness 10000) in paragraph at lines 738--739
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 739--740
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 740--741
+
+ []
+
+[22] [23] [24] [25] [26] [27] [28] [29] [30] [31]
+Underfull \hbox (badness 10000) in paragraph at lines 868--871
+
+ []
+
+[32]
+Underfull \hbox (badness 10000) in paragraph at lines 899--902
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 910--911
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 911--912
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 912--913
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 913--914
+
+ []
+
+[33] [34] (notes04.aux) ) 
 Here is how much of TeX's memory you used:
- 3603 strings out of 493634
- 47035 string characters out of 3149836
- 119497 words of memory out of 3000000
- 6923 multiletter control sequences out of 15000+200000
- 8883 words of font info for 34 fonts, out of 3000000 for 9000
+ 3635 strings out of 493634
+ 47974 string characters out of 3149836
+ 120505 words of memory out of 3000000
+ 6944 multiletter control sequences out of 15000+200000
+ 9751 words of font info for 37 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 44i,8n,43p,331b,174s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKT
-eX2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX2.9/fonts/type1/public
-/amsfonts/cm/cmsy10.pfb>
-Output written on notes04.pdf (1 page, 35101 bytes).
+ 44i,10n,43p,662b,237s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmbx12.pf
+b><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX2.9/fonts/t
+ype1/public/amsfonts/cm/cmmi12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm
+/cmr12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX2.9
+/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/public/ams
+fonts/cm/cmti12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on notes04.pdf (64 pages, 366318 bytes).
 PDF statistics:
- 18 PDF objects out of 1000 (max. 8388607)
+ 245 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
