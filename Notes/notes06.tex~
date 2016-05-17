@@ -1,0 +1,30 @@
+\input{PreambleCommon}
+\input{../WeekTitles}
+
+\begin{document}
+\setfont
+\pagestyle{fancy}
+\renewcommand{\Week}{6 }
+\renewcommand{\WeekTitle}{\WeekTitleSix }
+
+\fancyhead[LE,RO]{Week \Week}  % default, usually only for first page
+\fancyfoot{}
+\sectionbox{Week \#\Week: \WeekTitle}
+
+
+\vspace{5mm}
+\goals
+\begin{itemize}
+\item Recognize the family of functions that can be solved with the technique of
+integration by substitution.
+\item Solve integration problems using the technique of substitution. 
+\item Recognize the family of functions that can be solved with the technique of
+integration by parts. 
+\item Solve integration problems using the technique of integration by parts. 
+\vspace{5mm}
+
+
+
+
+\end{document}
+
