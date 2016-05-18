@@ -25,17 +25,13 @@ Remember that order of matrix and vector multiplication really matters!
 
 
 ---Question
-What is the transpose and inverse of
-\begin{pmatrix}
-1&3\\
-1&4
-\end{pmatrix}
+Does \textbf{A} = \begin{pmatrix} -1&2&-1&2\\3&1&4&7\\8&-1&2&3\\5&6&5&-6 \end{pmatrix} form a basis?
 
 ---Type
 onechoice
 ---Answers
-~\( \displaystyle Transpose: \begin{pmatrix}1&1\\3&4\end{pmatrix} Inverse: \begin{pmatrix} 4&-3//1&1 \end{pmatrix} \)
-~\( \displaystyle Transpose: \begin{pmatrix}4&3\\1&1\end{pmatrix} Inverse: \begin{pmatrix} 4&-3//-1&1 \end{pmatrix} \)
-=\( \displaystyle Transpose: \begin{pmatrix}1&1\\3&4\end{pmatrix} Inverse: \begin{pmatrix} 4&-3//-1&1 \end{pmatrix} \)
+=\( \displaystyle Yes \)
+~\( \displaystyle No \)
+~\( \displaystyle Not enough information \)
 ---Comment
 Use MATLAB to help you find the answer.
