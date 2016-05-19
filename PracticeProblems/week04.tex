@@ -62,144 +62,6 @@
     
   \end{Solution}
 
-%*****************
-\item
-  \begin{Question}
-    Consider the following table of values for $f(t)$.
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|} \hline
-$t$&15&17&19&21&23\\ \hline
-$f(t)$& 10&13&18&20&30 \\ \hline
-\end{tabular}
-\end{center}
-\begin{enumerate}[(a)]
-\item If we divide the time interval into $n = 4$ sub-intervals, what is $\Delta t$? What are $t_0, t_1, t_2, t_3, t_4$? What are $f(t_0), f(t_1), f(t_2), f(t_3), f(t_4)$? 
-\item Find the left and right sums using $n = 4$. 
-\item If we divide the time interval into $n = 2$ sub-intervals, what is $\Delta t$? What are $t_0, t_1, t_2$? What
-  are $f(t_0), f(t_1), f(t_2)$?
-\item Find the left and right sums using $n = 2$. 
-\end{enumerate}
-    
-  \end{Question}
-  \begin{Solution}
-    \begin{enumerate}[(a)]
-    \item With $n=4$, we have $\Delta t = 2$.  Then \\
-$t_0 = 15, t_1 = 17, t_2 = 19, t_3 = 21, t_4 =23$, \\
-and \\
-$f(t_0) = 10, f(t_1) = 13, f(t_2) = 18, f(t_3) = 20, f(t_4) = 30$. \\
-\item \begin{align*}
-\mbox{Left sum} &= (10)(2) + (13)(2) + (18)(2) + (20)(2) & \\
-&= 122 \\
-\mbox{Right sum} &= (13)(2) + (18)(2) + (20)(2) + (30)(2) \\
-&= 162 \\
-\end{align*}
-\item  With $n = 2$,we have $\Delta t = 4$. Then \\
-$t_0 = 15; t_1 = 19; t_2 = 23$ and \\
-$f(t_0) = 10; f(t_1) = 18; f(t_2) = 30$.
-\item
-  \begin{align*}
-\mbox{Left sum} = (10)(4) + (18)(4) = 112 \\
-\mbox{Right sum} = (18)(4) + (30)(4) = 192 \\
-  \end{align*}
-    \end{enumerate}
-  \end{Solution}
-
-%*****************
-\item
-  \begin{Question}
-    Consider the following table of values for $f(t)$.
-\begin{center}
-\begin{tabular}{|c|c|c|c|c|c|} \hline
-$t$&0&4&8&12&16\\ \hline
-$f(t)$&25&23&22&20&17 \\ \hline
-\end{tabular}
-\end{center}
-    \begin{enumerate}[(a)]
-    \item If we divide the time interval into $n = 4$ subintervals,
-      what is $\Delta t$? What are $t_0, t_1, t_2, t_3, t_4$? What are
-      $f(t_0), f(t_1), f(t_2), f(t_3), f(t_4)$?
-    \item Find the left and right sums using $n = 4$.
-    \item If we divide the time interval into $n = 2$ subintervals,
-      what is $\Delta t$? What are $t_0, t_1, t_2$? What are $f(t_0),
-      f(t_1), f(t_2)$?
-    \item Find the left and right sums using $n = 2$.
-    \end{enumerate}
-  \end{Question}
-  \begin{Solution}
-    \begin{enumerate}[(a)]
-    \item With $n = 4$, we have $\Delta t$ = 4. Then \\
-$t_0 = 0; t_1 = 4; t_2 = 8; t_3 = 12; t_4 = 16$ and  \\
-$f(t_0) = 25; f(t_1) = 23; f(t_2) = 22; f(t_3) = 20; f(t_4) = 17$
-\item
-\begin{align*}
-\mbox{Left sum} & = (25)(4) + (23)(4) + (22)(4) + (20)(4) \\
-& = 360 \\
-\mbox{Right sum} & = (23)(4) + (22)(4) + (20)(4) + (17)(4) \\
-& = 328 \\
-\end{align*}
-\item  With $n = 2$,we have $\Delta t = 8$. Then\\
-$t_0 = 0; t_1 = 8; t_2 = 16$ and $f(t_0) = 25; f(t_1) = 22; f(t_2) = 17$
-\item 
-\begin{align*}
-\mbox{Left sum} & = (25)(8) + (22)(8) = 376\\
-\mbox{Right sum} & = (22)(8) + (17)(8) = 312 \\
-\end{align*}
-    \end{enumerate}
-  \end{Solution}
-
-%*****************
-\item
-  \begin{Question}
-    At time $t$, in seconds, your velocity, $v$, in meters/ second, is given by 
-$$v(t) = 1+ t^2 \mbox{ for } 0 \le t \le 6.$$ Use $\Delta t = 2$ to estimate the distance traveled during this time. Find the upper and lower estimates, and then average the two.
-\end{Question}
-
-  \begin{Solution}
-   Using $\Delta t = 2$,
-   \begin{align*}
-\mbox{Lower estimate} &= v(0) \cdot 2 + v(2) \cdot 2 + v(4) \cdot 2 \\
-&= 1(2) + 5(2) + 17(2) \\
-&= 46 \\
-\mbox{Upper estimate} &= v(2) \cdot 2 + v(4) \cdot 2 + v(6) \cdot 2 \\
-&= 5(2) + 17(2) + 37(2) \\
-&= 118 \\
-\mbox{Average} &= \frac{46+118}{2} \\
-&= 82 \\
-\mbox{Distance traveled} & \approx  82 \left(\frac{\mbox{m}}{\mbox{s}}\right) (\mbox{s}) = 82  \mbox{ meters.} 
-   \end{align*}
-  \end{Solution}
-
-%*****************
-\item
-  \begin{Question}
-    For time, $t$, in hours, $0 \le t \le 1$, a bug is crawling at a velocity, $v$, in meters/ hour given by 
-$$v = \frac{1}{ 1 + t}.$$ Use $\Delta t$ = 0.2 to estimate the distance that the bug crawls during this hour. Find an overestimate and an underestimate. Then average the two to get a new estimate.
-\end{Question}
-
-  \begin{Solution}
-    Using $\Delta t = 0.2$, our upper estimate is comes from using the
-    smallest possible $t$ value on each interval, because that leads
-    to the largest velocity.  I.e. we use $t_0 = 0$, $t_1 = 0.2$, etc.
-\begin{align*}
-\underbrace{\frac{1}{1 + 0}}_{v(t_0)} (0.2) +
-\frac{1}{1 + 0.2} (0.2) +
-\frac{1} {1 + 0.4} (0.2) \\ +
-\frac{1}{1 + 0.6}(0.2) +
-\frac{1}{1 + 0.8}
-(0.2) \approx 0.75
-\end{align*}
-The lower estimate is
-\begin{align*}
-\frac{1} {1 + 0.2} (0.2) +
-\frac{1} {1 + 0.4} (0.2) +
-\frac{1} {1 + 0.6} (0.2) \\+
-\frac{1} {1 + 0.8} (0.2) + 
-\frac{1} {1 + 1} (0.2) \approx 0.65
-\end{align*}
-Since $v$ is a decreasing function, the bug has crawled more than 0.65
-meters, but less than 0.75 meters. We average the two to get a better
-estimate: 0.65 + 0.75 2 = 0.70 meters:
-  \end{Solution}
 
 %*****************
   \begin{Question}
@@ -295,55 +157,6 @@ For questions \ref{q:graph1_start} to \ref{q:graph1_end}, the graph
 $$A = \frac{1}{2} \mbox{(base)(height)} = \frac{1}{2} (5 \mbox{ sec})(80 \mbox{ ft/s}) = 200 \mbox{ ft}$$
 %\item 
     \end{enumerate}
-    
-  \end{Solution}
-
-
-%******************
-\item
-  \begin{Question}
-    A student is speeding down Route 11 in his fancy red Porsche when his radar system warns him of an obstacle 400 feet ahead. He immediately applies the brakes, starts to slow down, and spots a skunk in the road directly ahead of him. The ``black box'' in the Porsche records the car's speed every two seconds, producing the following table. The speed decreases throughout the 10 seconds it takes to stop, although not necessarily at a uniform rate. 
-\begin{center}
-\begin{tabular}{|l|r|r|r|r|r|r|} \hline
-Time since &\multirow{2}{*}{0}&\multirow{2}{*}{2}&\multirow{2}{*}{4}&\multirow{2}{*}{6}&\multirow{2}{*}{8}&\multirow{2}{*}{10} \\ 
-brakes applied &&&&&& \\ 
-(sec) &&&&&& \\ \hline
-Speed (ft/sec) &100&80&50&25&10&0  \\ \hline
-\end{tabular}
-\end{center}
-
-    \begin{enumerate}[(a)]
-\item What is your best estimate of the total distance the student's car traveled before coming to rest? 
-\item Which one of the following statements can you justify from the information given? 
-    \begin{enumerate}[(i)]
-\item The car stopped before getting to the skunk. 
-\item The ``black box'' data is inconclusive. The skunk may or may not have been hit. 
-\item The skunk was hit by the car.
-    \end{enumerate}
-    \end{enumerate}
-  \end{Question}
-
-  \begin{Solution}
-    To find the distance the car moved before stopping, we estimate
-    the distance traveled for each two-second interval. Since speed
-    decreases throughout, we know that the left-hand sum will be an
-    overestimate to the distance traveled, and the right-hand sum an
-    underestimate. Applying the formulas for these sums with $\Delta t
-    = 2$ gives:
-\begin{align*}
-\mbox{LEFT} &= 2(100 + 80 + 50 + 25 + 10) = 530 \mbox{ ft} \\
-\mbox{RIGHT} &= 2(80 + 50 + 25 + 10 + 0) = 330 \mbox{ ft}
-\end{align*}
-\begin{enumerate}[(a)]
-\item The best estimate of the distance
-    traveled will be the average of these two estimates, or 
-    $\ds \frac{530 + 330}{2} = 430$ ft. 
-\item  All we can be sure of is that the distance traveled lies between the upper and lower estimates
-    calculated above. In other words, all the black-box data tells us
-    for sure is that the car traveled between 330 and 530 feet before
-    stopping.  So we can't be completely sure about whether it hit the
-    skunk or not: answer (ii). 
-\end{enumerate}
     
   \end{Solution}
 
@@ -472,31 +285,19 @@ Speed (ft/sec) &100&80&50&25&10&0  \\ \hline
 \includegraphics[width=0.5\linewidth]{graphics/Week04_TheDefiniteIntegral/DefiniteIntegral2}
 \begin{enumerate}[(a)]
 \item Left-hand sum with $\D t = 4.$
-\item Right-hand sum with $\D t = 4.$
 \item Left-hand sum with $\D t = 2$.
-\item Right-hand sum with $\D t = 2.$
 \end{enumerate}
   \end{Question}
 
   \begin{Solution}
 \begin{tabular}{cc}
 \includegraphics[width=0.4\linewidth]{graphics/Week04_TheDefiniteIntegral/DefiniteIntegral2_solutions1} & 
-\includegraphics[width=0.4\linewidth]{graphics/Week04_TheDefiniteIntegral/DefiniteIntegral2_solutions2} \\
+\includegraphics[width=0.4\linewidth]{graphics/Week04_TheDefiniteIntegral/DefiniteIntegral2_solutions3} \\
 (a) & (b) \\ 
 \end{tabular}
 
 (a) The left-hand sum with $n=2$ intervals, or $\D t = 4$: $32 \cdot 4 + 24 \cdot 4$ = 224. \\
-(b) The right-hand sum with $n=2$ intervals, or $\D t = 4$:  $24 \cdot 4 + 0 \cdot 4 = 96$.
-
-\begin{tabular}{cc}
-\includegraphics[width=0.4\linewidth]{graphics/Week04_TheDefiniteIntegral/DefiniteIntegral2_solutions3} & 
-\includegraphics[width=0.4\linewidth]{graphics/Week04_TheDefiniteIntegral/DefiniteIntegral2_solutions4} \\
-(c) & (d) \\ 
-\end{tabular}
-
-(c) Left-hand sum with $n=4$ intervals, or $\D t = 2$: $32 \cdot 2 + 30 \cdot 2 + 24 \cdot 2 + 14 \cdot 2 = 200$. \\
-(d) Right-hand sum with $n=4$ intervals, or $\D t = 2$: $30 \cdot 2 + 24 \cdot 2 + 14 \cdot 2 + 0 \cdot 2 = 136$.
-
+(b) Left-hand sum with $n=4$ intervals, or $\D t = 2$: $32 \cdot 2 + 30 \cdot 2 + 24 \cdot 2 + 14 \cdot 2 = 200$. \\
 
   \end{Solution}
 %*****************
@@ -549,11 +350,11 @@ $$\ds \int_0^5 f(x)~dx = \int_0^3 f(x)~dx + \int_3^5 f(x)dx = 7 - 6 = 1$$
 \item
   \begin{Question}
     \begin{enumerate}[(a)]
-    \item On a sketch of $y =\ln(x)$, represent the left Riemann sum with $n = 2$ approximating $\ds \int_1^2 \ln(x)~dx$. Write out the terms in the sum, but do not evaluate it. 
-    \item On another sketch, represent the {\em right} Riemann sum with $n =
-      2$ approximating $\ds \int_1^2 \ln(x)~dx$. Write out the terms in
-      the sum, but do not evaluate it.
-\item Which sum is an overestimate? Which sum is an underestimate?
+    \item On a sketch of $y =\ln(x)$, represent the left Riemann sum
+      with $n = 2$ approximating $\ds \int_1^2 \ln(x)~dx$. Write out
+      the terms in the sum, but do not evaluate it.
+    \item Will this LEFT(4) estimate be an overestimate or an
+      underestimate of $\ds \int_1^2 \ln(x)~dx$?
     \end{enumerate}
   \end{Question}
   \begin{enumerate}[(a)]
@@ -563,11 +364,9 @@ $$\ds \int_0^5 f(x)~dx = \int_0^3 f(x)~dx + \int_3^5 f(x)dx = 7 - 6 = 1$$
 \mbox{ Left sum} & = f(1) \Delta x + f(1.5) \Delta x  \\
 & = \underbrace{(\ln1)}_{=0}0.5 + \ln(1.5)0.5 = (\ln 1.5)0.5
 \end{align*}
-\item \begin{align*}
-\mbox{Right sum} & = f(1.5) \D x + f(2) \D x \\
-& = (\ln1.5)0.5 + (\ln2)0.5 \\
-\end{align*}
-\item Right sum is an overestimate, left sum is an underestimate.
+\item Because the $y$ values on the left end of each interval are the
+  smallest on that interval, the sum built on them will be an
+  underestimate of the exact integral value.
   \end{enumerate}
   \begin{Solution}
     
@@ -575,70 +374,35 @@ $$\ds \int_0^5 f(x)~dx = \int_0^3 f(x)~dx + \int_3^5 f(x)dx = 7 - 6 = 1$$
 %*****************
 \item
   \begin{Question}
-    Estimate $\ds \int_1^2 x^2~ dx$ using left- and right-hand sums
-    with four subdivisions, and then averaging them. How far from the
-    true value of the integral could your final estimate be?
+    Estimate $\ds \int_1^2 x^2~ dx$ using left-hand sum with four
+    subdivisions. 
   \end{Question}
 
   \begin{Solution}
  Left-hand sum gives: \\$1^2(1/4) + (1.25)^2(1/4) + (1.5)^2(1/4) + (1.75)^2(1/4) = 1.96875.$ 
 
-Right-hand sum gives: \\$(1.25)^2(1/4) + (1.5)^2(1/4) + (1.75)^2(1/4) + (2)^2(1/4) = 2.71875$.
-
-We improve our estimate the value of the integral by taking the
-average of these two sums, which is 2.34375.
-
-Since $x^2$ is always increasing on $1 \le x \le 2$, the true value
-of the integral lies between 1.96875 and 2.71875. Thus the most our
-estimate could be off is 0.375 (half of the range from 2.34 to the
-lower and upper bounds 1.97 and 2.72). We expect our 2.34 estimate to
-be much closer than that possible error bound though. (And it is: the
-true value of the integral is $7/3 \approx 2.333$.)
   \end{Solution}
 %*****************
 \item
   \begin{Question}
-    Without computing the sums, find the difference between the right-
-    and left-hand Riemann sums if we use $n = 500$ subintervals to
-    approximate $\ds \int_{-1}^1(2x^3 + 4)~dx$.
-  \end{Question}
-
-  \begin{Solution}
-    We have $\D x = 2/500 = 1/250$. The formulas for the left- and right-hand Riemann sums give us that
-\begin{align*}
-\mbox{Left} &= \D x[f(-1) + f(-1 + \D x) + \ldots \\
-& + f(1 - 2\D x) + f(1 - \D x)] \\
-\mbox{Right} & = \D x[f(-1 + \D x) + f(-1 + 2\D x) + \ldots \\
-& + f(1 - \D x) + f(1)]:
-\end{align*}
- Subtracting these yields
-\begin{align*}
-\mbox{Right - Left} & = \D x[f(1) - f(-1)] \\&=
-\frac{1}{ 250} [6 - 2] =
-\frac{4}{250}
-= \frac{2}{ 125}.
-\end{align*}
-The estimates from the Right and Left sums will differ by 2/125.
-  \end{Solution}
-%*****************
-\item
-  \begin{Question}
-    Without computation, decide if $\ds \int_0^{2\pi} e^{-x} \sin
-    x~dx$ is positive or negative. [Hint: Sketch $e^{-x} \sin(x)$].
+    Without computation, decide if
+    $\ds \int_0^{2\pi} e^{-x} \sin x~dx$ is positive or
+    negative. [Hint: use MATLAB to draw $e^{-x} \sin(x)$ over the
+    given interval.]
   \end{Question}
 
   \begin{Solution}
 
 \includegraphics[width=0.6\linewidth]{graphics/Week04_TheDefiniteIntegral/ExpSin_solutions} \\
 
-Looking at the graph of $y = e^{-x} \sin x$ shown above (remember the
-sketching of variable amplitudes earlier in the course!), for $0 \le x
-\le 2\pi$, we see that the area, $A_1$, which contributes a positive
-amount to the integral $\ds \int_0^{2 \pi} e^{-x} \sin(x)~dx$, is much
-larger than the area $A_2$, which contributes a negative amount to the
-integral.
+Looking at the graph of $y = e^{-x} \sin x$ shown above for
+$0 \le x \le 2\pi$, we see that the area, $A_1$, which contributes a
+positive amount to the integral
+$\ds \int_0^{2 \pi} e^{-x} \sin(x)~dx$, is much larger than the area
+$A_2$, which contributes a negative amount to the integral.
 
-Since the positive integral contributions are larger than the negative, the overall integral will be positive. 
+Since the positive integral contributions are larger than the
+negative, the overall integral $\ds \int_0^{\pi} e^{-x} \sin(x)~dx$ will be {\bf positive}.
   \end{Solution}
 %*****************
 \item
@@ -748,290 +512,50 @@ $\ds \int_a^c f(x)~dx = 13 - 2 = 11$.
 \end{align*}
     \end{enumerate}
   \end{Solution}
-%*****************
 
-\item
-  \begin{Question}
-Calculate the following approximations to $\ds \int_0^6 x^2~dx$.
-     (a) LEFT(2); (b) RIGHT(2); \\(c) TRAP(2); (d) MID(2)
-  \end{Question}
-
-  \begin{Solution}
-    \begin{enumerate}[(a)]
-    \item Since two rectangles are being used, the width of each
-      rectangle is $\D x = (6-0)/ 2 = 3$. The height is given by the
-      left-hand endpoint so we have
-\begin{align*}\mbox{LEFT}(2) & = f(0) \cdot 3 + f(3) \cdot 3   \\
-& = 0^2 \cdot 3 + 3^2 \cdot 3 = 27 \\
-\end{align*}
-\item Again, $\D x = 3$. The height of each rectangle is given by the right-hand
-  endpoint so we have
-\begin{align*}
-\mbox{RIGHT}(2) & = f(3) \cdot 3 + f(6) \cdot 3 \\
-& = 32 \cdot 3 + 62 \cdot 3 = 135
-\end{align*}
-\item We know that TRAP is the average of LEFT and RIGHT and so
-\begin{align*}
-TRAP(2) = \frac{27 + 135}{ 2} = 81
-\end{align*}
-\item  $\D x = 3$ again. The height of each rectangle is given by the height at the midpoint so we have
-  \begin{align*}
-    MID(2) & = f(1.5) \cdot 3 + f(4.5) \cdot 3 \\
-    & = (1.5)^2 \cdot 3 + (4.5)^2 \cdot 3 = 67.5
-  \end{align*}
-    \end{enumerate}
-  \end{Solution}
 %*****************
 \item
   \begin{Question}
-    \begin{enumerate}[(a)]
-    \item Find LEFT(2) and RIGHT(2) for $\ds \int_0^4 (x^2 + 1)~ dx$. 
-    \item Illustrate your answers to part (a) graphically. Is each
-      approximation an underestimate or overestimate?
-    \end{enumerate}
+    Find the exact value of $\ds \int_0^{2\pi} \sin \theta d\theta$
+    without calculation (i.e. from a sketch).
   \end{Question}
 
   \begin{Solution}
-    \begin{enumerate}
-\item  \begin{align*}
-\mbox{LEFT(2)} & = 2 \cdot f(0) + 2 \cdot f(2) \\
-& = 2 \cdot 1 + 2 \cdot 5 \\
-&= 12 \\
-\mbox{RIGHT(2)} & = 2 \cdot f(2) + 2 \cdot f(4) \\
-&= 2 \cdot 5 + 2 \cdot 17 \\
-&= 44   
-\end{align*}
-\item ~ \\ 
-\includegraphics[width=0.9\linewidth]{graphics/Week04_TheDefiniteIntegral/Methods1_solutions1}
-
-LEFT(2) will be an under-estimate, while RIGHT(2) will be an over-estimate. 
-    \end{enumerate}
-  \end{Solution}
-%*****************
-\item
-  \begin{Question}
-    \begin{enumerate}[(a)]
-    \item Find MID(2) and TRAP(2) for $\ds \int_0^4 (x^2 + 1)~ dx$. 
-    \item Illustrate your answers to part (a) graphically. Is each
-      approximation an underestimate or overestimate?
-    \end{enumerate}
-  \end{Question}
-
-  \begin{Solution}
-    \begin{enumerate}
-\item  \begin{align*}
-\mbox{MID(2)} & = 2 \cdot f(1) + 2 \cdot f(3) \\
-& = 2 \cdot 2 + 2 \cdot 10 \\
-&= 24 \\
-\mbox{TRAP(2)} & = \frac{\mbox{LEFT(2) + RIGHT(2)}}{2} \\
-&= \frac{12 + 44}{2} \\
-&= 28
-\end{align*}
-\item ~ \\ 
-\includegraphics[width=0.9\linewidth]{graphics/Week04_TheDefiniteIntegral/Methods1_solutions2}
-MID(2) is an underestimate, since $f(x) = x^2 + 1$ is concave up; this
-means that the new growth of the function after the midpoint (missed
-by MID) will be greater than extra area before (captured by MID).
-
-Since $f(x)$ is concave up, TRAP(2) is an overestimate, because the
-trapezoidal secant lines in the TRAP rule will always lie above the
-original curve, leading to more area in the trapezoids than under the
-curve.
-    \end{enumerate}
-  \end{Solution}
-%*****************
-\item
-  \begin{Question}
-   Calculate the following approximations to $\ds \int_0^{\pi} \sin(\theta) d\theta$. 
-(a) LEFT(2); (b) RIGHT(2); \\
- (c) TRAP(2); (d) MID(2)   
-  \end{Question}
-
-  \begin{Solution}
-    \begin{enumerate}
-    \item Since two rectangles are being used, the width of each rectangle is $\D x = (\pi-0)/2 = \pi/2$. The height is given by the left-hand endpoint so we have
-\begin{align*}
-\mbox{LEFT}(2) & = f(0) \cdot \frac{\pi}{2}
-+ f(\pi/2)  \cdot \frac{\pi}{2} \\
-& = \sin 0  \cdot \frac{\pi}{2}
-+ \sin(\pi/2)  \cdot \frac{\pi}{2} \\
-& = \frac{\pi}{2} \\
-\end{align*}
-
-(b) Again $\D x = \pi/2$.  The height of each rectangle is given by
-the right-hand endpoint so we have
-\begin{align*}
-RIGHT(2) & = f(\pi/2)  \cdot \frac{\pi}{2}
-+ f(\pi)  \cdot \frac{\pi}{2} \\
-& = \sin(\pi/2)  \cdot \frac{\pi}{2}
-+ \sin(\pi)  \cdot \frac{\pi}{2} \\
-& = \frac{\pi}{2}
-\end{align*}
-(c) We know that TRAP is the average of LEFT and RIGHT and so
-\begin{align*}
-\mbox{TRAP}(2) =\frac{\mbox{LEFT}(2) + \mbox{RIGHT}(2)}{2} = \frac{\pi/2 + \pi/2}{2} = \frac{\pi}{2}
-\end{align*}
-(d) Again, $\D x = \pi/2$.  The height of each rectangle is given by
-the height at the midpoint so we have
-\begin{align*}
-\mbox{MID}(2) & = f(\pi/ 4)  \cdot \frac{\pi}{2}
-+ f(3\pi/ 4)  \cdot \frac{\pi}{2} \\
-&= \sin(\pi/4) \cdot \frac{\pi}{2}
-+ \sin(3\pi/4)  \cdot \frac{\pi}{2} \\
-&= \frac{\sqrt{2}\pi }{2}
-\end{align*}
-    \end{enumerate}
-  \end{Solution}
-%*****************
-\item
-  \begin{Question}
-    Using the table below, estimate the total distance traveled from
-    time $t = 0$ to time $t = 6$ using LEFT, RIGHT, and TRAP.
-\begin{tabular}{lrrrrrrr} \hline
-Time, $t$ (s) &0&1&2&3&4&5&6\\ \hline
- Velocity, $v$ (m/s)&3&4&5&4&7&8&11 \\ \hline
-\end{tabular}
-  \end{Question}
-
-  \begin{Solution}
-    Let $s(t)$ be the distance traveled at time $t$, and $v(t)$ be the velocity at time $t$. Then the distance traveled during the interval
-$0 \le t \le 6$ is given by $\ds \int_0^6 v(t)~dt$.
-
-We estimate the distance by estimating this integral.
-From the table, we find: LEFT(6) = 31 m; RIGHT(6) = 39 m, TRAP(6) = 35 m.
-  \end{Solution}
-%*****************  
-
-\begin{Question}
-  For the functions in Problems \ref{q:choice_start} $-$
-  \ref{q:choice_end}, pick which approximation- left, right,
-  trapezoid, or midpoint- is guaranteed to give an {\em overestimate}
-  for $\ds \int_0^5f(x) ~dx$, and which is guaranteed to give an {\em
-    underestimate}. (There may be more than one.)
-\end{Question}
-
-\item ~\\ \label{q:choice_start}
-  \begin{Question}
-\includegraphics[width=0.4\linewidth]{graphics/Week04_TheDefiniteIntegral/Choice1}
-    
-  \end{Question}
-
-  \begin{Solution}
-$f(x)$ is increasing, so RIGHT gives an overestimate and LEFT gives an underestimate.
-    
-  \end{Solution}
-%*****************
-\item~ \\
-  \begin{Question}
-\includegraphics[width=0.4\linewidth]{graphics/Week04_TheDefiniteIntegral/Choice2}
-    
-  \end{Question}
-
-  \begin{Solution}
-$f(x)$ is concave down, so MID gives an overestimate and TRAP gives an underestimate.
-    
-  \end{Solution}
-%*****************
-\item~\\
-  \begin{Question}
-\includegraphics[width=0.4\linewidth]{graphics/Week04_TheDefiniteIntegral/Choice3}
-    
-  \end{Question}
-
-  \begin{Solution}
-$f(x)$ is decreasing and concave up, so LEFT and TRAP give overestimates and RIGHT and MID give underestimates.
-    
-  \end{Solution}
-%*****************
-\item~\\ \label{q:choice_end}
-  \begin{Question}
-\includegraphics[width=0.4\linewidth]{graphics/Week04_TheDefiniteIntegral/Choice4}
-    
-  \end{Question}
-
-  \begin{Solution}
-$f(x)$ is concave up, so TRAP gives an overestimate and MID gives an underestimate.
-    
-  \end{Solution}
-%*****************
-%\item
-%  \begin{Question}
-%    \begin{enumerate}[(a)]
-%    \item Values for $f(x)$ are in the table. Which of the four
-%      approximation methods in this section is most likely to give the
-%      best estimate of $\ds \int_0^{12} f( x)~ dx$? Estimate the
-%      integral using this method.
-%\item Assume $f(x)$ is continuous with no critical points or points of inflection on the interval $0 \le x \le 12$. Is the estimate found in part (a) an over- or underestimate? Explain. 
-%
-%\begin{tabular}{lrrrrr}\hline
-%$x$& 0&3&6&9&12 \\ \hline
-%$f(x)$&100&97&90&78&55    \\ \hline
-%\end{tabular}
-%    \end{enumerate}
-%  \end{Question}
-%
-%  \begin{Solution}
-%    
-%  \end{Solution}
-%*****************
-\item
-  \begin{Question}
-    \begin{enumerate}[(a)]
-    \item Find the exact value of $\ds \int_0^{2\pi} \sin \theta
-      d\theta$ without calculation (i.e. from a sketch).
-    \item Explain, using pictures, why the MID(1) and MID(2)
-      approximations to this integral give the exact value.
-    \item Does MID(3) give the exact value of this integral? How about
-      MID($n$)? Explain.
-    \end{enumerate}
-  \end{Question}
-
-  \begin{Solution}
-    \begin{enumerate}[(a)]
-    \item ~\\
 \includegraphics[width=0.6\linewidth]{graphics/Week04_TheDefiniteIntegral/Sine_solutions}
 
 From the graph of sine above, and the fact that the integral includes
 a complete $[0, 2\pi]$ cycle, it is clear from symmetry that the
 positive and negative contributions to the integral must be equal, so
 $$\int_0^{2 \pi} \sin(\theta)~d\theta = 0$$
-\item Again, refer to the graph above. MID(1) is 0 since the midpoint of 0 and $2\pi$ is $\pi$ and $\sin \pi = 0$. Thus MID(1) = $2\pi \sin \pi = 0$.
-
-The midpoints we use for MID(2) are $\pi/2$ and $3\pi/2$, and $\sin(\pi/2) = -\sin(3\pi/2)$. Thus MID(2) = $\pi \sin(\pi/2)+ \pi \sin(3\pi/2) = 0$.
-
-\item MID(3) = 0. In general, MID($n$) = 0 for all $n$, even though
-  your calculator (because of round-off error) might not return it as
-  such. The reason is that $\sin(x) = -sin(2\pi - x)$. If we use
-  MID($n$), we will always take sums where we are adding pairs of the
-  form $\sin(x)$ and $\sin(2\pi- x)$, so the sum will cancel to 0. (If $n$ is
-  odd, we will get a $\sin \pi$ in the sum which does not pair up with
-  anything, but $\sin \pi$ is already 0.)
-    \end{enumerate}
   \end{Solution}
 %*****************
 \item
   \begin{Question}
     The width, in feet, at various points along the fairway of a hole
     on a golf course is given in the figure below. If one pound of
-    fertilizer covers 200 square feet, estimate the amount of
-    fertilizer needed to fertilize the fairway.
+    fertilizer covers 200 square feet, use a LEFT estimate the amount
+    of fertilizer needed to fertilize the fairway.
 
 \includegraphics[width=0.9\linewidth]{graphics/Week04_TheDefiniteIntegral/GolfHole}
   \end{Question}
 
   \begin{Solution}
-    We approximate the area of the playing field by using Riemann sums. From the data provided,
-LEFT(10) = RIGHT(10) = TRAP(10) = 89,000 square feet.
+    We approximate the area of the playing field by using Riemann
+    sums. On each 100 m horizontal interval, we use the width printed at the left end of the
+interval as the other dimension.
+\begin{align*}
+ \mbox{LEFT}(10) = & (0)(100) + 80(100) +  \\
+&85(100) +95(100) + \\
+&110(100) + 105(100) + \\
+&100(100) + 100(100) + \\
+&105(100) + 110(100) \\
+= & 89,000 \mbox{ sq feet} 
+\end{align*}
 
-Thus approximately
-$\ds \frac{89,000 \mbox{ sq. ft.}}{200 \mbox{sq. ft./lb}} = 445$ lbs. of fertilizer
-should be necessary.
+    Thus approximately
+    $\ds \frac{89,000 \mbox{ sq. ft.}}{200 \mbox{ sq. ft./lb}} = 445$
+    lbs. of fertilizer should be necessary.
 
-Note that the fact that LEFT=RIGHT=TRAP doesn't mean there is no error
-in the estimate; it actually means that the error is completely
-unknown.  You will always have this relationship when the first and
-last heights are equal because that makes LEFT = RIGHT, and then TRAP
-(= average of LEFT and RIGHT) will equal the same value as well).
   \end{Solution}
 
 \end{multicols}
@@ -1108,41 +632,6 @@ $$\mbox{Acres defaced} \approx (1)(0.4 + 1 + 2 + 3.5) = 6.9 \mbox{ acres.}$$
     \end{enumerate}
   \end{Solution}
 
-
-%*****************
-\item
-  \begin{Question}
-    The following table gives the emissions, $E$, of nitrogen oxides,
-    in millions of metric tons per year, in the US. Let $t$ be the
-    number of years since 1970 and $E = f(t)$.
-  \begin{enumerate}[(a)]
-  \item  What are the units and meaning of $\ds \int^{30}_0 f(t)~dt$? 
-\item Estimate $\ds \int^{30}_0 f(t)~dt$. 
-
-\hspace{-0.5in}\begin{tabular}{lrrrrrrr} \hline
-Year&1970&1975&1980&1985&1990&1995&2000\\ \hline
-E&26.9&26.4&27.1&25.8&25.5&25.0&22.6  \\ \hline
-\end{tabular}
-  \end{enumerate}
-  \end{Question}
-
-  \begin{Solution}
-    \begin{enumerate}[(a)]
-    \item The integral $\ds \int^{30}_0 f(t)~dt$ represents the total
-      emissions of nitrogen oxides, in millions of metric tons, during
-      the period 1970 to 2000.
-\item We estimate the integral using left- and right-hand sums:
-\hspace{-0.5in}  \begin{align*}
-\mbox{Left sum} &= (26.9)5 + (26.4)5 + (27.1)5 + (25.8)5 \\ & + (25.5)5 + (25.0)5 \\ &
-= 783.5. \\
-\mbox{Right sum} &= (26.4)5 + (27.1)5 + (25.8)5 + (25.5)5 \\ &+ (25.0)5 + (22.6)5 \\ &
-= 762.0.\\
-  \end{align*}
-We average the left- and right-hand sums to find an improved estimate of the integral:
-$$\int^{30}_ 0 f(t)~dt \approx \frac{783.5 + 762.0}{ 2} = 772.8 \mbox{ million metric tons.}$$
-Between 1970 and 2000, about 772.8 million metric tons of nitrogen oxides were emitted.
-    \end{enumerate}
-  \end{Solution}
 
 %*****************
 \item
@@ -1315,87 +804,6 @@ possible time, $t = 1$. The maximal distance at that time equals 50/3
 
 \begin{multicols}{2}
 %*****************
-\begin{Question}
-\item[~] For questions \ref{q:even_odd_start} to \ref{q:even_odd_end} , find $\ds \int_2^5 f(x)~dx$.
-\end{Question}
-\item \label{q:even_odd_start}
-  \begin{Question}
-   $f(x)$ is odd and $\ds \int_{-2}^5 f(x)~dx = 8$.
-  \end{Question}
-
-  \begin{Solution}
-    To use the fact that $f$ is odd, we split the interval up into the
-    symmetric interval, [-2, 2], and the non-symmetric interval, [2,
-    5].
-
-    We have
- $$ 8 = \int_{-2}^5 \ifd = \int_{-2}^2 \ifd + \int_2^5 \ifd$$
- Since $f$ is odd, $\ds \int_{-2}^2 \ifd = 0$, so $\ds \int_{-2}^5
- \ifd = 8$.
-  \end{Solution}
-%*****************
-\item
-  \begin{Question}
-   $f(x)$ is even, $\ds \int_{-2}^2 f(x)~dx = 6$, and $\ds \int_{-5}^5 f(x)~dx = 14$.
-  \end{Question}
-
-  \begin{Solution}
-    Since $f$ is even,$ \ds \int_0^2 \ifd = (1/2) \cdot 6 = 3$  and $\ds \int_0^5
-f(x)~dx = (1/2)\cdot 14 = 7$.\\
- Therefore
-\begin{align*}
-\int_2^5 f(x)~dx & = \int_0^5
-f(x)~dx- \int_0^2 f(x)~dx \\
-& = 7 - 3 = 4.
-\end{align*}
-  \end{Solution}
-%*****************
-\item
-  \begin{Question}
-   $\ds \int_2^5 (3 f(x) + 4)~dx) = 18.$ 
-  \end{Question}
-
-  \begin{Solution}
-    We have
-\begin{align*}
-18 & = \int_2^5 (3f(x) + 4)~dx \\
-& = 3 \int_2^5 f(x)~dx + \int_2^5 4~dx \\
-\end{align*}
-Thus, since $\ds \int_2^5 4~dx = 4(5-2) = 12$,  we have
-$$3 \int_2^5 f(x)~dx = 18 - \underbrace{\int_2^5 4~dx}_{12} = 6$$
-so $$\ds \int_2^5 f(x)~dx = \frac{6}{3} = 2.$$
-  \end{Solution}
-%*****************
-\item\label{q:even_odd_end}
-  \begin{Question}
-   $\ds\int_2^4 2f(x)~dx = 8$ and $\ds \int_5^4 f(x)~dx = 1$. 
-  \end{Question}
-
-  \begin{Solution}
-    We have
-$\ds \int_2^4 f(x)~dx = 8/2 = 4$ and $\ds \int_4^5 f(x)~dx = - \int_5^4 f(x)~dx = -1$. Thus
-\begin{align*}
-\int_2^5 f(x)~dx & = \int^4_2 f(x)~dx +
-\int^5_4 f(x)~dx\\ & = 4 - 1 = 3
-\end{align*}
-  \end{Solution}
-%*****************
-\item
-  \begin{Question}
-   Without any computation, find the values of
-   \begin{enumerate}[(a)]
-   \item $\ds \int_{-2}^2 \sin x~dx$. 
-   \item $\ds \int_{-\pi}^\pi x^{113}~dx$.
-   \end{enumerate}
-  \end{Question}
-
-  \begin{Solution}
-    \begin{enumerate}[(a)]
-    \item  0, since the integrand is an odd function and the limits are symmetric around 0. \\
-\item 0, since the integrand is an odd function and the limits are symmetric around 0.   
-    \end{enumerate}
-  \end{Solution}
-%*****************
 \item
   \begin{Question}
     Without integrating, show that $$2 \le \ds \int_0^2 \sqrt{1 + x^3}
@@ -1436,24 +844,6 @@ $$\underbrace{1}_h\underbrace{(2 - 0)}_w \le \int^2_0 \sqrt{ 1 + x^3}~dx \le \un
     sign. If the integral = 0, then with a non-negative integrand, the
     integrand must be exactly 0 at every $x$ value on the interval,
     which is definitely not the case here.
-  \end{Solution}
-%*****************
-\item
-  \begin{Question}
-Based on the graph of $f(x)$ shown below, write $\ds \int_0^3 f(x)~dx$ in terms 
-of $\ds \int_{-1}^1 f(x)~dx$ and $\ds \int_{1}^3 f(x)~dx$.
-
-\includegraphics[width=0.4\linewidth]{graphics/Week04_PropertiesOfDefiniteIntegrals/EvenIntegral}
-  \end{Question}
-
-  \begin{Solution}
-We know that we can divide the integral up as follows:
-$$\ds \int^3_0 f(x)~dx = \int^1_0 f(x)~dx + \int^3_1 f(x)~dx.$$
-The graph suggests that $f$ is an even function for $-1 \le x \le 1$, so
-$\int^1_{-1} f(x)~dx = 2 \int^1_0 f(x)~dx$. Substituting this into
-the preceding equation, we have
-$$\int^3_0 f(x)~dx = \frac{1}{2} \int^1_{-1} f(x)~dx + \int^3_1 f(x)~dx.$$
-    
   \end{Solution}
 %*****************
 \item
@@ -1515,9 +905,9 @@ height 10 and width 1, so $-10 < A_2$. Thus:
 
   \begin{Solution}
     \begin{enumerate}[(a)]
-    \item Since the function is odd, and the interval used is
-      symmetric across $x=0$, the areas above and below the x-axis
-      cancel. Thus,
+    \item Since the function is symmetric around the origin, and the
+      interval used is also symmetric across $x=0$, the areas above
+      and below the x-axis cancel when we compute the integral. Thus,
 $$\ds\int^0_{-3} xe^{-x^2} dx = -
 \int^3_0 xe^{-x^2} dx,$$
  $$\mbox{ so } \ds \int^3_{-3} xe^{-x^2} dx =
@@ -1557,27 +947,16 @@ $$\ds\int^0_{-3} xe^{-x^2} dx = -
 \begin{Question}
   To practice computing anti-derivatives, do as many of the
   problems from the following section as you need.
+
+
+  These problems are a good start for practicing anti-derivatives or
+  integration.  If you want more though, consult any calculus
+  textbook.
 \end{Question}
 
-\begin{multicols}{2}
-
-From Hughes-Hallett 5th edition,  \\
-Section 6.2 - 1-63 (odd)
-\columnbreak
-
-From Hughes-Hallett 6th edition,  \\
-Section 6.2 - 1-60 (odd)
-
-\end{multicols}
-Note: In questions 53-63 (5th Ed.) and 51-60 (6th Ed.), `evaluate
-numerically'  means `plug the limit values into the anti-derivative
-using your calculator to get a decimal number'. It does {\em not} mean
-use rectangles/trapezoids/Riemann sums to approximate the integral
-values.  
-
-\hrulefill
-
-Additional problems. Evaluate the following integrals.
+\begin{Question}
+Evaluate the following integrals.
+\end{Question}
 
 \item \begin{Question}
   $\ds \int_{-1}^2 (x^3 - 2x) dx$
@@ -1912,17 +1291,160 @@ $\ds    \int_{-2}^2 f(x) dx \text{ where } f(x) =
     
 \end{Solution}
 
+%*******************************
+\item
+\begin{Question}
+    $\int (x^2 + x^{-2}) dx$
+\end{Question}
 
+\begin{Solution}
+    $\int (x^2 + x^{-2})dx = \frac{x^3}{3} + \frac{x^{-1}}{-1} + C =
+      \frac{1}{3} x^3 - \frac{1}{x} + C$
+    
+\end{Solution}
+      
+%*******************************
+\item
+\begin{Question}
+$\int (\sqrt{x^3} + \sqrt[3]{x^2}) dx$
+\end{Question}
 
-\end{enumerate}
-\end{document}
+\begin{Solution}
+  $\int (\sqrt{x^3} + \sqrt[3]{x^2}) dx = 
+  \int (x^{3/2} + x^{2/3})dx =
+  \frac{x^{5/2}}{5/2} + \frac{x^{5/3}}{5/3} + C =
+  \frac{2}{5} x^{5/2} + \frac{3}{5} x^{5/3} + C$
+    
+\end{Solution}
+      
+%*******************************
+\item
+\begin{Question}
+  $\int (x^4 - \frac{1}{2} x^3 + \frac{1}{4} x - 2) dx$
+\end{Question}
 
-%*****************
+\begin{Solution}
+  $\int (x^4 - \frac{1}{2} x^3 + \frac{1}{4} x - 2) dx = \frac{x^5}{5}
+  - \frac{1}{2} \frac{x^2}{4} + \frac{1}{4} \frac{x^2}{2} - 2x + C =
+  \frac{1}{5} x^5 - \frac{1}{8} x^4 + \frac{1}{8} x^2 - 2x + C$
+    
+\end{Solution}
+      
+      
+%*******************************
+\item
+\begin{Question}
+  $\int (u + 4)(2u + 1) du$
+\end{Question}
+
+\begin{Solution}
+  $\int (u + 4)(2u + 1) du =
+  \int (2u^2 + 9u + 4)du = 
+  2 \frac{u^3}{3} + 9 \frac{u^2}{2} + 4u + C =
+  \frac{2}{3} u^3 + \frac{9}{2} u^2 + 4u + c$
+\end{Solution}
+
+%*******************************
+\item
+\begin{Question}
+    $\int v (v^2 + 2)^2 dv$
+    
+\end{Question}
+
+\begin{Solution}
+  $\int v (v^2 + 2)^2 dv = \int v(v^4 + 4v^2 + 4)dv = \int (v^5 + 4v^3
+  + 4v)dv = \frac{v^6}{6} + 4 \frac{v^4}{4} + 4 \frac{v^2}{2} + C =
+  \frac{1}{6} v^6 + v^4 + 2 v^2 + C$
+    
+\end{Solution}
+      
+      
+%*******************************
+\item
+\begin{Question}
+    $\int \frac{x^3 - 2 \sqrt{x}}{x} dx$
+    
+\end{Question}
+
+\begin{Solution}
+  $\int \frac{x^3 - 2 \sqrt{x}}{x} dx = 
+  \int \left( \frac{x^3}{x} - \frac{2x^{1/2}}{x} \right) dx =
+  \int (x^2 - 2x^{-1/2})dx =
+  \frac{x^3}{3} - 2 \frac{x^{1/2}}{1/2} + C =
+  \frac{1}{3} x^3 - 4 \sqrt{x} + C$
+\end{Solution}
+
+      
+%*******************************
 \item
   \begin{Question}
-    
+    $\int \left( x^2 + 1 + \frac{1}{x^2 + 1} \right) dx$
   \end{Question}
-
+  
   \begin{Solution}
-    
+    $\int \left( x^2 + 1 + \frac{1}{x^2 + 1} \right) dx =
+    \frac{x^3}{3} + x + \tan^{-1} x + C$
   \end{Solution}
+
+
+\hrulefill
+
+\subsection*{Numerical Integration with MATLAB}
+
+\begin{Question}
+  In Questions \ref{qmat1}-\ref{qmat2}, consider the integrals which
+  were evaluated earlier in the practice problems using anti-derivatives
+and the Fundamental Theorem of Calculus.
+
+For each integral, in MATLAB, now use the LEFT$(n)$ rule with $n=1000$
+to approximate the value of the integral; this does {\bf not} require
+using anti-derivatives.
+\end{Question}
+\item \begin{Question} \label{qmat1}
+  $\ds \int_{-1}^2 (x^3 - 2x) dx$, which equals $\ds \frac{3}{4}$.
+\end{Question}
+
+\begin{Solution}
+  See the file linked here: \\
+  \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W04LEFT1.m}{W04LEFT1.m} \\
+  Estimate with $n = 1000$ is $\approx 0.7455$.  Exact value is $\frac{3}{4} = 0.75$.
+\end{Solution}
+% ******************************
+\item \begin{Question}
+  $\ds \int_{-1}^1 x^{100} dx$, which equals $\ds \frac{2}{101}$.
+\end{Question}
+
+\begin{Solution}
+See the file linked here: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W04LEFT2.m}{W04LEFT2.m} \\
+  Estimate with $n = 1000$ is $\approx 0.0199$.  Exact value is $\frac{2}{101} = 0.0198$.
+  
+\end{Solution}
+
+% ******************************
+\item \begin{Question}
+  $\ds \int_{1}^4 (5 - 2t +3t^2) dt$, which equals 63.
+\end{Question}
+
+\begin{Solution}
+See the file linked here: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W04LEFT3.m}{W04LEFT3.m} \\
+  Estimate with $n = 1000$ is $\approx 62.9415$.  Exact value is 63.0000.
+  
+\end{Solution}
+
+% ******************************
+\item \begin{Question} \label{qmat2}
+    $\ds \int_0^1 (1 + \frac{1}{2} u^4 - \frac{2}{5} u^9) du$, which
+    equals $\ds \frac{53}{50}$.
+\end{Question}
+
+\begin{Solution}
+See the file linked here: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W04LEFT4.m}{W04LEFT4.m} \\
+  Estimate with $n = 1000$ is $\approx 1.0599$.  Exact value is $\frac{53}{50} = 1.06$.
+\end{Solution}
+
+\end{enumerate}
+
+\end{document} 
