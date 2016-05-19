@@ -1,0 +1,6 @@
+convert -density 300 EvenIntegral.eps EvenIntegral.png
+convert -density 300 IntegralBound1_solutions.eps IntegralBound1_solutions.png
+convert -density 300 IntegralRanking.eps IntegralRanking.png
+convert -density 300 IntegralRanking_solutions.eps IntegralRanking_solutions.png
+convert -density 300 xexp_integral.eps xexp_integral.png
+convert -density 300 xexp_integral_solutions.eps xexp_integral_solutions.png

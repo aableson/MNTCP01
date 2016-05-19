@@ -1,0 +1,3 @@
+convert -density 300 WaterTower.eps WaterTower.png
+convert -density 300 WaterTower2.eps WaterTower2.png
+convert -density 300 WaterTower2_soln.eps WaterTower2_soln.png
