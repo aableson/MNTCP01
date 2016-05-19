@@ -1,0 +1,18 @@
+
+
+---Question
+
+What is the 
+
+---Type
+onechoice
+---Answers
+~ (a)
+= (b)
+~ (c)
+~ (d)
+---Comment
+
+<br />
+\( f(x) = x \)
+

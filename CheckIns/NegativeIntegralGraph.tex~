@@ -1,0 +1,9 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\psset{unit=1cm}
+\begin{pspicture}(0,0)(4, 4)
+\psaxes{-}(0,0)(0,0)(4,4)[$x$,0][$y$,0]       
+\end{pspicture}
+\end{document}

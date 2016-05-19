@@ -1,7 +1,7 @@
 ---Question
 Turn the following system into an augmented matrix.
 
-\begin{array} -10a + 4b &=& 3 -c\\ a + c + b &=& 0\\ 2 + b - c - a &=& a + 4 \end{array}
+\(\begin{array} -10a + 4b &=& 3 -c\\ a + c + b &=& 0\\ 2 + b - c - a &=& a + 4 \end{array}\)
 ---Type
 onechoice
 ---Answers
@@ -13,7 +13,7 @@ Remember to keep everything in the same order in each equation
 
 
 ---Question
-If \textbf{A} = \begin{pmatrix} 2&3\\1&2 \end{pmatrix} \textbf{B} = \begin{pmatrix} -1&-1\\2&-3 \end{pmatrix} and \overrightarrow{v} = \begin{bmatrix}-2\\-1\end{bmatrix}, find \textbf{B}\textbf{A}\textbf{B}\overrightarrow{v}.
+If \(\textbf{A} = \begin{pmatrix} 2&3\\1&2 \end{pmatrix} \textbf{B} = \begin{pmatrix} -1&-1\\2&-3 \end{pmatrix}\) and \(\overrightarrow{v} = \begin{bmatrix}-2\\-1\end{bmatrix}\), find \(\textbf{B}\textbf{A}\textbf{B}\overrightarrow{v}\).
 ---Type
 onechoice
 ---Answers
@@ -25,7 +25,7 @@ Remember that order of matrix and vector multiplication really matters!
 
 
 ---Question
-Does \textbf{A} = \begin{pmatrix} -1&2&-1&2\\3&1&4&7\\8&-1&2&3\\5&6&5&-6 \end{pmatrix} form a basis?
+Does \(\textbf{A} = \begin{pmatrix} -1&2&-1&2\\3&1&4&7\\8&-1&2&3\\5&6&5&-6 \end{pmatrix}\) form a basis for R\(^3\)?
 
 ---Type
 onechoice

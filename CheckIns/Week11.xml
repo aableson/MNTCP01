@@ -40,7 +40,7 @@
         <presentation>
           <flow>
             <material>
-              <mattext texttype="text/html">Turn the following system into an augmented matrix. &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;mi>a&lt;/mi>&lt;mo>+&lt;/mo>&lt;mn>4&lt;/mn>&lt;mi>b&lt;/mi>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>=&lt;/mo>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;mo>-&lt;/mo>&lt;mi>c&lt;/mi>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mi>a&lt;/mi>&lt;mo>+&lt;/mo>&lt;mi>c&lt;/mi>&lt;mo>+&lt;/mo>&lt;mi>b&lt;/mi>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>=&lt;/mo>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;mo>+&lt;/mo>&lt;mi>b&lt;/mi>&lt;mo>-&lt;/mo>&lt;mi>c&lt;/mi>&lt;mo>-&lt;/mo>&lt;mi>a&lt;/mi>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>=&lt;/mo>&lt;/mtd>&lt;mtd columnalign="left">&lt;mi>a&lt;/mi>&lt;mo>+&lt;/mo>&lt;mn>4&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;/mrow>&lt;/math>
+              <mattext texttype="text/html">Turn the following system into an augmented matrix. &lt;br /> &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;mi>a&lt;/mi>&lt;mo>+&lt;/mo>&lt;mn>4&lt;/mn>&lt;mi>b&lt;/mi>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>=&lt;/mo>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;mo>-&lt;/mo>&lt;mi>c&lt;/mi>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mi>a&lt;/mi>&lt;mo>+&lt;/mo>&lt;mi>c&lt;/mi>&lt;mo>+&lt;/mo>&lt;mi>b&lt;/mi>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>=&lt;/mo>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;mo>+&lt;/mo>&lt;mi>b&lt;/mi>&lt;mo>-&lt;/mo>&lt;mi>c&lt;/mi>&lt;mo>-&lt;/mo>&lt;mi>a&lt;/mi>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>=&lt;/mo>&lt;/mtd>&lt;mtd columnalign="left">&lt;mi>a&lt;/mi>&lt;mo>+&lt;/mo>&lt;mn>4&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;/mrow>&lt;/math>
 
 </mattext>
             </material>
@@ -55,7 +55,7 @@
                   <response_label ident="Week11_QUES_1_ANS_1">
                     <flow_mat>
                       <material>
-                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mrow>ccc&lt;mo>|&lt;/mo>&lt;mi>c&lt;/mi>&lt;/mrow>&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
 
 </mattext>
                       </material>
@@ -66,7 +66,7 @@
                   <response_label ident="Week11_QUES_1_ANS_2">
                     <flow_mat>
                       <material>
-                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mrow>ccc&lt;mo>|&lt;/mo>&lt;mi>c&lt;/mi>&lt;/mrow>&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
 
 </mattext>
                       </material>
@@ -77,7 +77,7 @@
                   <response_label ident="Week11_QUES_1_ANS_3">
                     <flow_mat>
                       <material>
-                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mrow>ccc&lt;mo>|&lt;/mo>&lt;mi>c&lt;/mi>&lt;/mrow>&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
 
 </mattext>
                       </material>
@@ -94,7 +94,7 @@
               <varequal respident="Week11_Q1_LID">Week11_QUES_1_ANS_1</varequal>
             </conditionvar>
             <setvar action="Set">0</setvar>
-            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_1">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mrow>ccc&lt;mo>|&lt;/mo>&lt;mi>c&lt;/mi>&lt;/mrow>&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_1">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
 
 </displayfeedback>
           </respcondition>
@@ -103,7 +103,7 @@
               <varequal respident="Week11_Q1_LID">Week11_QUES_1_ANS_2</varequal>
             </conditionvar>
             <setvar action="Set">0</setvar>
-            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_2">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mrow>ccc&lt;mo>|&lt;/mo>&lt;mi>c&lt;/mi>&lt;/mrow>&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_2">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
 
 </displayfeedback>
           </respcondition>
@@ -112,7 +112,7 @@
               <varequal respident="Week11_Q1_LID">Week11_QUES_1_ANS_3</varequal>
             </conditionvar>
             <setvar action="Set">100</setvar>
-            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_3">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mrow>ccc&lt;mo>|&lt;/mo>&lt;mi>c&lt;/mi>&lt;/mrow>&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_3">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-array">&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>10&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>0&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd columnalign="left">&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
 
 </displayfeedback>
           </respcondition>
@@ -156,7 +156,7 @@
         <presentation>
           <flow>
             <material>
-              <mattext texttype="text/html">If &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi mathvariant="bold">A&lt;/mi>&lt;mo>=&lt;/mo>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-pmatrix">&lt;mtr>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;mi mathvariant="bold">B&lt;/mi>&lt;mo>=&lt;/mo>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-pmatrix">&lt;mtr>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> and &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mover accent="true">&lt;mi>v&lt;/mi>&lt;mo stretchy="true">&amp;xrarr;&lt;/mo>&lt;/mover>&lt;mo>=&lt;/mo>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">[&lt;/mo>&lt;mtable class="m-bmatrix">&lt;mtr>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">]&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>, find &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi mathvariant="bold">B&lt;/mi>&lt;mi mathvariant="bold">A&lt;/mi>&lt;mi mathvariant="bold">B&lt;/mi>&lt;mover accent="true">&lt;mi>v&lt;/mi>&lt;mo stretchy="true">&amp;xrarr;&lt;/mo>&lt;/mover>&lt;/mrow>&lt;/math>.
+              <mattext texttype="text/html">If &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi mathvariant="bold">A&lt;/mi>&lt;mo>=&lt;/mo>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-pmatrix">&lt;mtr>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>,&lt;/mo>&lt;mi mathvariant="bold">B&lt;/mi>&lt;mo>=&lt;/mo>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-pmatrix">&lt;mtr>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> and &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mover accent="true">&lt;mi>v&lt;/mi>&lt;mo stretchy="true">&amp;xrarr;&lt;/mo>&lt;/mover>&lt;mo>=&lt;/mo>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">[&lt;/mo>&lt;mtable class="m-bmatrix">&lt;mtr>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">]&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>, find &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi mathvariant="bold">B&lt;/mi>&lt;mi mathvariant="bold">A&lt;/mi>&lt;mi mathvariant="bold">B&lt;/mi>&lt;mover accent="true">&lt;mi>v&lt;/mi>&lt;mo stretchy="true">&amp;xrarr;&lt;/mo>&lt;/mover>&lt;/mrow>&lt;/math>.
 
 </mattext>
             </material>
@@ -182,7 +182,7 @@
                   <response_label ident="Week11_QUES_2_ANS_2">
                     <flow_mat>
                       <material>
-                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">[&lt;/mo>&lt;mtable class="m-bmatrix">&lt;mtr>&lt;mtd>&lt;mn>4&lt;/mn>\&lt;mo>-&lt;/mo>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">]&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">[&lt;/mo>&lt;mtable class="m-bmatrix">&lt;mtr>&lt;mtd>&lt;mn>4&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">]&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
 
 </mattext>
                       </material>
@@ -219,7 +219,7 @@
               <varequal respident="Week11_Q2_LID">Week11_QUES_2_ANS_2</varequal>
             </conditionvar>
             <setvar action="Set">0</setvar>
-            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_2">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">[&lt;/mo>&lt;mtable class="m-bmatrix">&lt;mtr>&lt;mtd>&lt;mn>4&lt;/mn>\&lt;mo>-&lt;/mo>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">]&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_2">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">[&lt;/mo>&lt;mtable class="m-bmatrix">&lt;mtr>&lt;mtd>&lt;mn>4&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">]&lt;/mo>&lt;/mrow>&lt;/mstyle>&lt;/mrow>&lt;/math>
 
 </displayfeedback>
           </respcondition>
@@ -272,7 +272,7 @@
         <presentation>
           <flow>
             <material>
-              <mattext texttype="text/html">Does &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi mathvariant="bold">A&lt;/mi>&lt;mo>=&lt;/mo>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-pmatrix">&lt;mtr>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>7&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mn>8&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mn>5&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>6&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>5&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>6&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> form a basis for R&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;msup>&lt;mi>&lt;/mi>&lt;mn>3&lt;/mn>&lt;/msup>&lt;/mrow>&lt;/math>?
+              <mattext texttype="text/html">Do the columns of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi mathvariant="bold">A&lt;/mi>&lt;mo>=&lt;/mo>&lt;mrow>&lt;mo rspace="0.3em" lspace="0em" stretchy="true" fence="true" form="prefix">(&lt;/mo>&lt;mtable class="m-pmatrix">&lt;mtr>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>4&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>7&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mn>8&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>1&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>2&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>3&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;mtr>&lt;mtd>&lt;mn>5&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>6&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mn>5&lt;/mn>&lt;/mtd>&lt;mtd>&lt;mo>-&lt;/mo>&lt;mn>6&lt;/mn>&lt;/mtd>&lt;/mtr>&lt;/mtable>&lt;mo rspace="0em" lspace="0.3em" stretchy="true" fence="true" form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> form a basis for R&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;msup>&lt;mi>&lt;/mi>&lt;mn>4&lt;/mn>&lt;/msup>&lt;/mrow>&lt;/math>?
 
 </mattext>
             </material>
@@ -287,9 +287,7 @@
                   <response_label ident="Week11_QUES_3_ANS_1">
                     <flow_mat>
                       <material>
-                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>Y&lt;/mi>&lt;mi>e&lt;/mi>&lt;mi>s&lt;/mi>&lt;/mstyle>&lt;/mrow>&lt;/math>
-
-</mattext>
+                        <mattext texttype="text/html">Yes.</mattext>
                       </material>
                     </flow_mat>
                   </response_label>
@@ -298,9 +296,7 @@
                   <response_label ident="Week11_QUES_3_ANS_2">
                     <flow_mat>
                       <material>
-                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>N&lt;/mi>&lt;mi>o&lt;/mi>&lt;/mstyle>&lt;/mrow>&lt;/math>
-
-</mattext>
+                        <mattext texttype="text/html">No. </mattext>
                       </material>
                     </flow_mat>
                   </response_label>
@@ -309,9 +305,7 @@
                   <response_label ident="Week11_QUES_3_ANS_3">
                     <flow_mat>
                       <material>
-                        <mattext texttype="text/html">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>N&lt;/mi>&lt;mi>o&lt;/mi>&lt;mi>t&lt;/mi>&lt;mi>e&lt;/mi>&lt;mi>n&lt;/mi>&lt;mi>o&lt;/mi>&lt;mi>u&lt;/mi>&lt;mi>g&lt;/mi>&lt;mi>h&lt;/mi>&lt;mi>i&lt;/mi>&lt;mi>n&lt;/mi>&lt;mi>f&lt;/mi>&lt;mi>o&lt;/mi>&lt;mi>r&lt;/mi>&lt;mi>m&lt;/mi>&lt;mi>a&lt;/mi>&lt;mi>t&lt;/mi>&lt;mi>i&lt;/mi>&lt;mi>o&lt;/mi>&lt;mi>n&lt;/mi>&lt;/mstyle>&lt;/mrow>&lt;/math>
-
-</mattext>
+                        <mattext texttype="text/html">Not enough information. </mattext>
                       </material>
                     </flow_mat>
                   </response_label>
@@ -326,27 +320,21 @@
               <varequal respident="Week11_Q3_LID">Week11_QUES_3_ANS_1</varequal>
             </conditionvar>
             <setvar action="Set">100</setvar>
-            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_1">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>Y&lt;/mi>&lt;mi>e&lt;/mi>&lt;mi>s&lt;/mi>&lt;/mstyle>&lt;/mrow>&lt;/math>
-
-</displayfeedback>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_1">Yes.</displayfeedback>
           </respcondition>
           <respcondition title="Response Condition 2">
             <conditionvar>
               <varequal respident="Week11_Q3_LID">Week11_QUES_3_ANS_2</varequal>
             </conditionvar>
             <setvar action="Set">0</setvar>
-            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_2">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>N&lt;/mi>&lt;mi>o&lt;/mi>&lt;/mstyle>&lt;/mrow>&lt;/math>
-
-</displayfeedback>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_2">No. </displayfeedback>
           </respcondition>
           <respcondition title="Response Condition 3">
             <conditionvar>
               <varequal respident="Week11_Q3_LID">Week11_QUES_3_ANS_3</varequal>
             </conditionvar>
             <setvar action="Set">0</setvar>
-            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_3">&lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mi>N&lt;/mi>&lt;mi>o&lt;/mi>&lt;mi>t&lt;/mi>&lt;mi>e&lt;/mi>&lt;mi>n&lt;/mi>&lt;mi>o&lt;/mi>&lt;mi>u&lt;/mi>&lt;mi>g&lt;/mi>&lt;mi>h&lt;/mi>&lt;mi>i&lt;/mi>&lt;mi>n&lt;/mi>&lt;mi>f&lt;/mi>&lt;mi>o&lt;/mi>&lt;mi>r&lt;/mi>&lt;mi>m&lt;/mi>&lt;mi>a&lt;/mi>&lt;mi>t&lt;/mi>&lt;mi>i&lt;/mi>&lt;mi>o&lt;/mi>&lt;mi>n&lt;/mi>&lt;/mstyle>&lt;/mrow>&lt;/math>
-
-</displayfeedback>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_3">Not enough information. </displayfeedback>
           </respcondition>
         </resprocessing>
         <itemfeedback ident="Week11_Q3">

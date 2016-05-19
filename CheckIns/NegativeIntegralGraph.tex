@@ -1,0 +1,10 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\psset{unit=1cm}
+\begin{pspicture}(0,0)(4, 4)
+\psaxes[ticks=xonly,labels=xonly]{-}(0,0)(0,0)(4,4)[$x$,0][$y$,0]       
+\psplot[algebraic,linewidth=1.5\pslinewidth,plotpoints=1000]{0}{3.2}{(x-1)^2-1}
+\end{pspicture}
+\end{document}
