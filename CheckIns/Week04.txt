@@ -1,18 +1,85 @@
 
+---Question
+A rocket travels at velocity given by \(v(t)\), and is always accelerating (speeding up).  
+Let \(v\) be measured in m/s, and time \(t\) in seconds.
+<p>
+Which of the following would be the most accurate overestimate of the distance traveled by the rocket in the first two seconds of flight?  (\(t=0\) is launch time.)
+---Type
+onechoice
+---Answers
+~\(2 v(0) \)
+~\( v(0) + v(1) \)
+~\( v(0) + v(1) + v(2) \)
+=\( v(1) + v(2) \)
+~\(  2 v(2) \)
+---Comment
+If the rocket is speeding up, then the highest velocity occurs at the <b>end</b> of each interval, so 
+<br />
+distance traveled between \(t=0\) and \(t=1 < [v(1) \text{ m/s}] \times [1 \text{ s}] = v(1)\) m
+<br />
+distance traveled between \(t=1\) and \(t=2 < [v(2) \text{ m/s}] \times [1 \text{ s}] = v(2)\) m
+<br />
+so distance traveled between \(t=0\) and \(t=2 < (v(1) + v(2))\)
+<p>
+(Note: this assumes \(v(0)\) isn't just zero; if \(v(0) = 0\), we can include it in the sum too without changing anything; that misses the point of the question though! )
+<p>
+(e) is also an over-estimate of the distance, because \(v(2)\) will be the highest velocity of all on [0, 2] seconds, but it will be less accurate than the finer-grained estimate using both \(v(1)\) and \(v(2)\).
+
+---Question
+The table below gives a car's velocity at time \(t\).  
+<br />
+<img src="Question2_VelocityTable.png" alt="Graphs" width="400px" />
+<br />
+Between the speeds shown, the car is either always speeding up or always slowing down.  
+<br />
+The car's route is a straight line with four towns on it:
+<br />
+Town 1 - 60 km from starting point
+<br />
+Town 2 - 70 km from the starting point, 
+<br />
+Town 3 - 73 km from the starting point, 
+<br />
+Town 4 - 80 km from the starting point.  
+<p>
+At the end of the hour, based on the information given, which 
+scenario below is possible?
+<br />
+<img src="Question2_AnswerTable.png" alt="Graphs" width="500px" />
+---Type
+onechoice
+---Answers
+~(a)
+~(b)
+=(c)
+~(d)
+---Comment
+Minimum distance, taking the slowest speed on each interval
+<br />
+= (60 + 72 + 72 + 65 km/h) (1/4 h) = 67.25 km
+<br />
+Max distance, taking the fastest speed on each interval
+<br />
+= (75 + 75 + 78 + 78 km/h) (1/4 h) = 76.5 km
+<br />
+Town 1 (60 km) is definitely passed; Town 4 (80 km) is definitely NOT passed.  From the measurements given, we can't say whether Town 2 or 3 was passed yet.
 
 ---Question
 
-What is the 
+If the function \(f(t)\) represents the ore production rate for a
+mine, in tons/hour, and \(t\) is measured in hours, then what does the
+integral \(\displaystyle \int_0^{48} f(t)~dt\) represent?
 
 ---Type
 onechoice
 ---Answers
-~ (a)
-= (b)
-~ (c)
-~ (d)
+~ The average rate of ore production over the 48 hours of \(t=0\ldots 48\). 
+= The net amount of ore production over the 48 hours of \(t=0\ldots 48\). 
+~ The total time used for ore production over the 48 hours of \(t=0\ldots 48\). 
 ---Comment
-
+\(f(t)\) is measured in tons/hour, so the integral
 <br />
-\( f(x) = x \)
+\(\displaystyle \int_0^{48} f(t)~dt\) represents a sum or accumulation of
+<br />
+\(f(t) \times dt\) or (tons/hour)\(\times\)(hours) = tons of ore.
 
