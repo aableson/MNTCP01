@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  17 MAY 2016 11:33
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.23)  24 MAY 2016 17:22
 entering extended mode
 **\input notes05.tex
 (notes05.tex (PreambleCommon.tex (C:\MiKTeX2.9\tex\latex\base\article.cls
@@ -317,7 +317,7 @@ Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 \Gm@dimlist=\toks25
 
 (C:\MiKTeX2.9\tex\latex\geometry\geometry.cfg))) (../WeekTitles.tex)
-No file notes05.aux.
+(notes05.aux)
 \openout1 = `notes05.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 4.
@@ -332,6 +332,7 @@ LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
 LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 4.
 LaTeX Font Info:    ... okay on input line 4.
+
 (C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count116
@@ -412,22 +413,38 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <24.88> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 18.
  [1
 
-{C:/Users/aableson/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}] (notes05
-.aux) ) 
+{C:/Users/aableson/AppData/Local/MiKTeX/2.9/pdftex/config/pdftex.map}]
+
+Package Fancyhdr Warning: \headheight is too small (12.0pt): 
+ Make it at least 14.49998pt.
+ We now make it that large for the rest of the document.
+ This may cause the page layout to be inconsistent, however.
+
+[1] [2] [3] [4]
+
+Package amsmath Warning: Foreign command \over;
+(amsmath)                \frac or \genfrac should be used instead
+(amsmath)                 on input line 79.
+
+[1] [2] [3] [1] [2] [3] [1] [1] [2] [1] [1] [2] [3] [1] [2] [3] [4] [5]
+[1] [2] [3] [4] [1] [2] [3] (notes05.aux) ) 
 Here is how much of TeX's memory you used:
- 3603 strings out of 493634
- 47035 string characters out of 3149836
- 119497 words of memory out of 3000000
- 6923 multiletter control sequences out of 15000+200000
- 8883 words of font info for 34 fonts, out of 3000000 for 9000
+ 3609 strings out of 493634
+ 47102 string characters out of 3149836
+ 120508 words of memory out of 3000000
+ 6925 multiletter control sequences out of 15000+200000
+ 9582 words of font info for 36 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 44i,8n,43p,331b,174s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX2.9/fo
-nts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb>
-Output written on notes05.pdf (1 page, 33797 bytes).
+ 44i,10n,43p,331b,243s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/MiKTeX2.9/fonts/type1/public/ams
+fonts/cm/cmbx12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:
+/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/MiKTeX2.9/fonts/type1/
+public/amsfonts/cm/cmr12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr17
+.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/font
+s/type1/public/amsfonts/cm/cmti12.pfb>
+Output written on notes05.pdf (30 pages, 118254 bytes).
 PDF statistics:
- 18 PDF objects out of 1000 (max. 8388607)
+ 126 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 

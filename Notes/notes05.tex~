@@ -4,8 +4,8 @@
 \begin{document}
 \setfont
 \pagestyle{fancy}
-\renewcommand{\Week}{4 }
-\renewcommand{\WeekTitle}{\WeekTitleFour }
+\renewcommand{\Week}{5 }
+\renewcommand{\WeekTitle}{\WeekTitleFive }
 
 \fancyhead[LE,RO]{Week \Week}  % default, usually only for first page
 \fancyfoot{}
@@ -15,16 +15,13 @@
 \vspace{5mm}
 \goals
 \begin{itemize}
-\item Use the definite integral to model and find a solution to a
-  posed area- or accumulation-related problem.
-\item Scale and add definite integrals, describe the meaning of
-  integral bounds and how to apply them.
-\item Recognize an anti-derivative of a function.
-\item Apply the theory of the Fundamental Theorem of Calculus to
-  evaluate simple integrals.
-\item Distinguish between definite and indefinite integrals and their
-  meaning.
-
+\item Recognize the family of functions that can be solved with the technique of
+integration by substitution.
+\item Solve integration problems using the technique of substitution. 
+\item Recognize the family of functions that can be solved with the technique of
+integration by parts. 
+\item Solve integration problems using the technique of integration by parts. 
+\end{itemize}
 \vspace{5mm}
 
 

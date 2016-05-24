@@ -26,6 +26,340 @@ integration by parts.
 
 
 
+\topic{Integration Method - Guess and Check}
+
+We now return to the challenge of finding a {\em formula} for an
+anti-derivative function.  We saw simple cases last week, and now we
+will extend our methods to handle more complex integrals.
+
+\section*{Anti-differentiation by Inspection:\\ The Guess-and-Check Method}
+
+
+\vsc
+
+Often, even if we do not see an anti-derivative immediately, we can
+make an educated guess and eventually arrive at the correct answer.
+\begin{flushright} [See also H-H, p. 332-333] \end{flushright}
+
+\vsc 
+
+\newpage
+\problem Based on your knowledge of derivatives, what should the
+  anti-derivative of $\cos(3x)$, $\ds \int \cos(3x) ~dx$, look like?
+
+\vfill
+
+\vfill
+
+\newpage
+
+\problem Find $\ds \int e^{3x-2} ~dx$.
+
+\vfill
+
+\newpage
+
+\problem Both of our previous examples had {\em linear} `inside'
+  functions.  Here is an integral with a {\em quadratic} `inside' function:
+$$\ds{\int x e^{-x^2} ~dx}$$
+Evaluate the integral.  \vfill \vfill
+
+Why was it important that there be a factor $x$ in front
+  of $e^{-x^2}$ in this integral?
+
+\vfill
+
+\newpage
+\topic{Integration Method - Substitution}
+\section*{Integration by Substitution}
+
+We can formalize the guess-and-check method by defining an {\em
+  intermediate variable} the represents the ``inside'' function.
+
+\problem Show that $\ds \int x^3 \sqrt{x^4 + 5} ~dx = {1 \over 6} (x^4
+  + 5)^{3/2} + C$.
+
+\vfill
+\vfill
+
+\newpage
+$$\ds \int x^3 \sqrt{x^4 + 5} ~dx = {1 \over 6} (x^4
+  + 5)^{3/2} + C$$
+
+\problem Relate this result to the {\bf chain rule}.
+
+\vfill
+
+\vsc
+
+\newpage
+
+\problem Now use the {\bf method of substitution} to evaluate $\ds
+  \int x^3 \sqrt{x^4 + 5}~dx$
+
+\vfill
+\vfill
+\vfill
+\vfill
+
+
+\newpage
+
+\topic{Substitution Integrals - Example 1}
+
+{\bf Steps in the Method Of Substitution}
+
+\begin{enumerate}[1.]
+\item Select a simple function $w(x)$ that appears in the integral.
+  \begin{itemize}
+  \item Typically, you will also see $w'$ as a {\bf factor} in the
+    integrand as well.
+  \end{itemize}
+\item Find $\ds \frac{dw}{dx}$ by differentiating.  Write it in the form
+  $\ldots dw = ~dx$
+  \item Rewrite the integral using only $w$ and $dw$ (no $x$ nor
+    $dx$).
+  \begin{itemize}
+  \item If you can now evaluate the integral, the substitution
+was effective. 
+\item If you cannot remove all the $x$'s, or the integral became
+  harder instead of easier, then either try a different substitution,
+  or a different integration method.
+  \end{itemize}
+\end{enumerate}
+
+\newpage
+
+
+\problem Find $\ds{ \int \tan(x) ~dx}$.
+
+\vsc 
+
+\vfill
+\vfill
+\vfill
+\vfill
+
+\newpage
+
+Though it is not required unless specifically requested, it can be reassuring to check the answer.
+
+\problem Verify that the anti-derivative you found is correct.
+
+\vfill
+\newpage
+
+\topic{Substitution Integrals - Example 2}
+\problem Find $\ds{\int x^3 e^{x^4 - 3} dx}$.
+
+\newpage 
+\topic{Substitution Integrals - Example 3}
+
+\problem For the integral, $$ \int{\frac{e^x - e^{-x}}{(e^x + e^{-x})^2}}
+  dx \ \ $$ both $w = e^{x} - e^{-x}$ and $w = e^{x} + e^{-x}$ are
+  seemingly reasonable substitutions.  
+
+\Question{Which substitution will change
+  the integral into the simpler form?}
+
+  \begin{enumerate}[1.]
+  \item  $ w = e^x - e^{-x}$ 
+  \item  $ w = e^x + e^{-x}$ 
+  \end{enumerate}
+
+\newpage
+
+\problem Compare both substitutions in practice.
+$$ \int{\frac{e^x - e^{-x}}{(e^x + e^{-x})^2}}~dx$$
+\begin{center}
+\begin{tabular}{l|r}
+   with $ w = e^x - e^{-x}$ ~~~~~ &~~~~~
+   with $ w = e^x + e^{-x}$  \\
+~& \\
+~& \\
+~& \\
+~& \\
+~& \\
+~& \\
+~& \\
+~& \\
+\end{tabular}
+\end{center}
+
+\newpage
+\topic{Substitution Integrals - Example 4}
+\problem Find $\ds \int \frac{\sin(x)}{1 + \cos^2(x)} dx$.
+
+\newpage
+
+\topic{Substitutions and Definite Integrals}
+
+
+\section*{Using the Method of Substitution for Definite Integrals}
+
+If we are asked to evaluate a {\bf definite} integral such as
+$$
+\int_0^{\pi/2} \frac{\sin x}{1+\cos x} dx \ \ ,
+$$
+
+where a substitution will ease the integration, we have two methods
+for handling the limits of integration ($x=0$ and $x=\pi/2$).
+\begin{enumerate}[a)]
+\item When we make our substitution, convert both the {\em variables}
+  $x$ and the {\em limits} (in $x$) to the new variable; or
+\item do the integration while keeping the limits explicitly in terms
+  of $x$, writing the final integral back in terms of the original $x$
+  variable as well, and {\em then} evaluating.
+\end{enumerate}
+
+\newpage
+
+\problem Use method a) to evaluate the integral 
+$$\int_0^{\pi/2} \frac{\sin x}{1+\cos x} dx$$
+
+\vfill
+
+\newpage
+\problem Use method b) method to evaluate 
+$$ \int_9^{64} \frac{\sqrt{1 + \sqrt{x}}}{\sqrt{x}} dx \ \ .
+$$
+
+\newpage
+
+\topic{Integration Method - By Parts}
+
+\section*{Integration by Parts}
+
+So far in studying integrals we have used 
+\begin{itemize}
+\item direct anti-differentiation, for relatively simple functions,
+  and
+\item integration by substitution, for some more complex integrals.
+\end{itemize}
+
+However, there are many integrals that can't be evaluated with these
+techniques.
+
+\problem Try to find $\ds \int x e^{4x} ~dx$.
+
+\vfill
+
+\newpage
+
+This particular integral can be evaluated with a different integration
+technique, {\bf integration by parts.}  This rule is related to the
+{\bf product rule} for derivatives.  
+
+\problem Expand
+\begin{align*}
+\frac{d}{dx} \left(u v\right) = 
+\end{align*}
+
+Integrate both sides with respect to $x$ and simplify.
+
+\vfill
+
+Express $\ds \int u \frac{dv}{dx} ~dx$ relative to the other terms.
+
+\vfill
+
+
+\newpage
+\begin{boxnote}
+  {\bf Integration by Parts} \\
+  For short, we can remember this formula as
+\begin{align*}
+\ds \int udv = uv - \int vdu
+\end{align*}
+\end{boxnote}
+
+\vspace{3mm} Integration by parts: 
+\begin{itemize}
+\item Choose a part of the integral to be $u$, and the remaining part
+  to be $dv$.
+\item {\bf Differentiate} $u$ to get $du$.
+\item {\bf Integrate} $dv$ to get $v$.
+\item Replace $\ds \int u ~dv$ with $\ds uv - \int v du$.
+\item Hope/check that the new integral is easier to evaluate.
+\end{itemize}
+
+
+\newpage
+
+\problem Use integration by parts to evaluate $\ds \int x e^{4x} ~dx$.
+
+\vfill
+\vfill
+\vfill
+
+\newpage
+\problem Verify that your anti-derivative is correct.
+
+\vfill
+
+\newpage
+\topic{Integration By Parts - Examples}
+\subsection*{Integration By Parts - Examples}
+
+\vfill
+\begin{boxnote}
+{\bf Guidelines for selecting $u$ and $dv$}
+
+\begin{itemize}
+\item Try to select $u$ and $dv$ so that either 
+\begin{itemize}
+\item $u'$ is simpler than $u$ or
+\item $\int dv$ is simpler than $dv$ 
+\end{itemize}
+\item Ensure you can actually integrate the $dv$ part by itself
+\end{itemize}
+\end{boxnote}
+
+\newpage
+\problem Find $\ds \int x  \cos x ~ dx$.
+
+\vfill
+
+
+\newpage
+\problem Now evaluate the slightly more challenging integral $$\ds \int x^2\cos x ~ dx$$
+
+\vfill
+
+\newpage
+
+\hfill $\ds \int x^2\cos x ~ dx$
+
+\newpage 
+
+\topic{Integration By Parts - Definite Integrals}
+\subsection*{Integration By Parts - Definite Integrals}
+When using integration by parts to evaluate {\em definite} integrals,
+you need to apply the limits of integration to the {\bf entire}
+anti-derivative that you find.
+
+\problem Evaluate $\ds \int_{0}^{\pi} x  \sin 4x ~ dx$
+
+\newpage 
+
+Don't forget that $dv$ does not require any other factors besides
+$dx$.  That can help when there is only a single factor in the
+integrand.
+
+\problem Find the area under the graph of $\ln x$ between $x=1$ and
+$x=2$.
+
+\newpage
+
+General integration advice:
+\begin{itemize}
+\item Look for a substitution in your integral first - they are the simplest method to use,
+and usually the most obvious.
+\item Only try integration by parts if substitution fails. 
+\item With all methods, you may need to {\bf experiment} with your
+  choice of $u, dv$, or your substitution.
+\end{itemize}
+
 
 \end{document}
 
