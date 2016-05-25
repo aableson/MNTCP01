@@ -39,7 +39,6 @@ will extend our methods to handle more complex integrals.
 
 Often, even if we do not see an anti-derivative immediately, we can
 make an educated guess and eventually arrive at the correct answer.
-\begin{flushright} [See also H-H, p. 332-333] \end{flushright}
 
 \vsc 
 
@@ -59,10 +58,10 @@ make an educated guess and eventually arrive at the correct answer.
 
 \newpage
 
-\problem Both of our previous examples had {\em linear} `inside'
+Both of our previous examples had {\em linear} `inside'
   functions.  Here is an integral with a {\em quadratic} `inside' function:
 $$\ds{\int x e^{-x^2} ~dx}$$
-Evaluate the integral.  \vfill \vfill
+\problem Evaluate the integral.  \vfill \vfill
 
 Why was it important that there be a factor $x$ in front
   of $e^{-x^2}$ in this integral?
@@ -112,11 +111,11 @@ $$\ds \int x^3 \sqrt{x^4 + 5} ~dx = {1 \over 6} (x^4
 \begin{enumerate}[1.]
 \item Select a simple function $w(x)$ that appears in the integral.
   \begin{itemize}
-  \item Typically, you will also see $w'$ as a {\bf factor} in the
-    integrand as well.
+  \item Typically, you will also see $w'$ as a {\bf factor} or {\bf
+      multiplier} in the integrand as well.
   \end{itemize}
-\item Find $\ds \frac{dw}{dx}$ by differentiating.  Write it in the form
-  $\ldots dw = ~dx$
+\item Find $\ds \frac{dw}{dx}$ by differentiating.  Re-write it in the
+  form $\ldots dw = ~dx$
   \item Rewrite the integral using only $w$ and $dw$ (no $x$ nor
     $dx$).
   \begin{itemize}
@@ -199,7 +198,7 @@ $$ \int{\frac{e^x - e^{-x}}{(e^x + e^{-x})^2}}~dx$$
 
 If we are asked to evaluate a {\bf definite} integral such as
 $$
-\int_0^{\pi/2} \frac{\sin x}{1+\cos x} dx \ \ ,
+\int_0^{\pi/2} \frac{\cos x}{1+\sin x} dx \ \ ,
 $$
 
 where a substitution will ease the integration, we have two methods
@@ -214,13 +213,15 @@ for handling the limits of integration ($x=0$ and $x=\pi/2$).
 
 \newpage
 
-\problem Use method a) to evaluate the integral 
-$$\int_0^{\pi/2} \frac{\sin x}{1+\cos x} dx$$
+\problem Use method (a) (converting both the integral and the limits
+to the new variable) to evaluate the integral
+$$\int_0^{\pi/2} \frac{\cos x}{1+\sin x} dx$$
 
 \vfill
 
 \newpage
-\problem Use method b) method to evaluate 
+\problem Use method (b) (converting back to $x$'s to evaluate at the
+end points) to evaluate
 $$ \int_9^{64} \frac{\sqrt{1 + \sqrt{x}}}{\sqrt{x}} dx \ \ .
 $$
 
@@ -301,17 +302,16 @@ Express $\ds \int u \frac{dv}{dx} ~dx$ relative to the other terms.
 \topic{Integration By Parts - Examples}
 \subsection*{Integration By Parts - Examples}
 
-\vfill
 \begin{boxnote}
 {\bf Guidelines for selecting $u$ and $dv$}
 
 \begin{itemize}
+\item Ensure you can actually integrate the $dv$ part by itself, then
 \item Try to select $u$ and $dv$ so that either 
 \begin{itemize}
 \item $u'$ is simpler than $u$ or
 \item $\int dv$ is simpler than $dv$ 
 \end{itemize}
-\item Ensure you can actually integrate the $dv$ part by itself
 \end{itemize}
 \end{boxnote}
 
