@@ -1,0 +1,2203 @@
+
+\input{SingleAssignmentSetup.tex}
+\input{../WeekTitles.tex}
+\usepackage{bbding} % for Checkmarkbold
+\begin{document}
+
+\newcommand{\ub}{\underbrace}
+
+\begin{center}
+\subsection*{MNTC P01 - Week \#5 - \WeekTitleFive}
+\end{center}
+
+
+\subsection*{Substitution Integrals}
+
+\begin{Question}
+  To practice computing integrals using substitutions, do as many of
+  the problems from this section as you feel you need. The problems
+  trend from simple to the more complex.
+  
+{\bf Note}: In the solutions to these problems, we always show the
+  substitution used.  On a test, if you can compute the
+  antiderivative in your head, you do {\em not} need to go through
+  all the steps shown here.  They are included in these solutions as
+  learning \& comprehension aid.
+\end{Question}
+
+\begin{enumerate}[1.]
+\begin{multicols}{2}
+% **************
+\item \begin{Question}$\ds \int t e^{t^2}~dt$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \mbox{Let }w & = t^2, \mbox{ so } dw=2t~dt \mbox{ or } dt = \frac{1}{2t}~dw\\
+\int t e^{t^2}~dt & = \int t e^w \left(\frac{1}{2t}~dw\right) = \int \frac{1}{2} e^w dw = \frac{1}{2} e^w + C = \frac{1}{2} e^{t^2} + C \\
+\mbox{ Check: } & \ddt{} \frac{1}{2} e^{t^2} + C = \frac{1}{2} (2t) e^{t^2} = t e^{t^2} \\
+& = \mbox{ original function in integral. \CheckmarkBold}
+  \end{align*}
+\end{Solution}
+\item \begin{Question}$\ds \int e^{3x}~dx$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \mbox{Let }w & = 3x, \mbox{ so } dw=3~dx \mbox{ or } dx = \frac{dw}{3}\\
+\int e^{3x}~dx & =  \int e^w \frac{dw}{3} = \frac{1}{3} e^w + C = \frac{1}{3} e^{3x} + C \\
+\mbox{ Check: } & \ddx{} \frac{1}{3} e^{3x} + C = \frac{1}{3} e^{3x}(3) =  e^{3x} \\
+& = \mbox{ original function in integral. \CheckmarkBold}
+\end{align*} 
+\end{Solution}
+
+{\bf NOTE: we will not show the differentiation check for
+  any later questions, as the process is always the same, and you
+  should be comfortable enough with the derivative rules to do the
+  checking independently.  If you are uncertain about any problem,
+  contact your instructor.}
+\item \begin{Question}$\ds \int e^{-x}~dx$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \mbox{Let }w & = -x, \mbox{ so } dw=-1~dx \mbox{ or } dx = (-dw) \\
+    \int e^{-x}~dx & =  \int e^w (-dw) =  e^w + C = - e^{-x} + C \\
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int 25e^{-0.2t}~dt$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \mbox{Let }w & = -0.2t, \mbox{ so } dw=-0.2~dt \\
+ \mbox{ or } dt & = \frac{dw}{-0.2} = -5 dw \\
+    \int 25e^{-0.2t}~dt & =  \int 25 e^w (-5 dw) = -125 e^w + C \\
+&= -125 e^{-0.2t} + C \\
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int t \cos(t^2)~dt$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \mbox{Let }w & =t^2, \mbox{ so } dw=2t~dt \\
+    \mbox{ or } dt & = \frac{dw}{2t} \\
+    \int t \cos(t^2)~dt & = \int  t \cos(w)~\frac{dw}{2t} = \frac{1}{2}\sin(w) + C \\
+& = \frac{1}{2} \sin(t^2) + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \sin(2x)~dx$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = 2x, & \text{ so } dw = 2 dx, \text{ or } dx = \frac{1}{2} dw    \\
+  \int \sin(2x) dx & = \frac{1}{2} \int \sin(w) dw  = - \frac{1}{2} \cos(w) + C \\ 
+& = -\frac{1}{2} \cos(2x) + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \sin(3-t)~dt$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \mbox{Let }w & =3-t, \mbox{ so } dw=-1~dt \mbox{ or } dt = -dw \\
+    \int \sin(3-t)~dt & = \int \sin(w) ~(-1) dw = -( -\cos(w)) + C \\
+& = \cos(3-t)  +C 
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int xe^{-x^2}~dx$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = -x^2, & \text{ so } dw = -2x ~dx, \text{ or } dx = \frac{-1}{2x} dw    \\
+  \int x e^{-x^2}~dx & = \int x e^w \frac{-1}{2x} ~dw = \int \frac{-1}{2} e^w ~dw = -\frac{1}{2} e^w + C \\
+& = -\frac{1}{2} e^{-x^2} + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int (r+1)^3~dr$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = (r+1), & \text{ so } dw = dr \\
+  \int (r+1)^3~dr & = \int w^3~dw = \frac{w^4}{4} + C = \frac{(r+1)^4}{4} + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int y(y^2 + 5)^8~dy$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = y^2+ 5, & \text{ so } dw = 2y ~dy, \text{ or } dy = \frac{1}{2y} dw    \\
+  \int y(y^2 + 5)^8~dy &  = \int y w^8 \frac{1}{2y}~dw = \frac{1}{2} \int w^8 ~dw = \frac{1}{2} \frac{w^9}{9} + C \\
+& = \frac{1}{18} (y^2 + 5)^9 + C 
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int t^2(t^3-3)^{10}~dt$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = t^3 -3, & \text{ so } dw = 3t^2 ~dt, \text{ or } dt = \frac{1}{3t^2} dw    \\
+  \int t^2 (t^3-3)^{10}~dt &  = \int t^2 w^{10}\frac{1}{3t^2}~dw = \frac{1}{3} \int w^{10}~dw  \\
+& = \frac{1}{3} \frac{w^{11}}{11} + C 
+ = \frac{1}{33} (t^3-3)^{11} + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int x^2(1+2x^3)^2~dx$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = 1+2x^3, & \text{ so } dw = 6x^2 ~dx, \text{ or } dx = \frac{1}{6x^2} dw    \\
+  \int x^2(1+2x^3)^2~dx & = \int x^2 w^2 \frac{1}{6x^2}~dw = \frac{1}{6} \frac{w^3}{3} + C \\
+& = \frac{1}{18} (1+2x^3)^3 + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int x(x^2 + 3)^2~dx$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = x^2+3, & \text{ so } dw = 2x ~dx, \text{ or } dx = \frac{1}{2x} dw    \\
+  \int x(x^2 + 3)^2~dx & = \int x w^2 \frac{1}{2x}~dw = \frac{1}{2} \frac{w^3}{3} + C \\
+& = \frac{1}{6} (x^2 + 3)^3 + C
+\end{align*}
+
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int x(x^2-4)^{7/2}~dx$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = x^2-4, & \text{ so } dw = 2x ~dx, \text{ or } dx = \frac{1}{2x} dw    \\
+  \int x(x^2 - 4)^{7/2}~dx & = \int x w^{7/2} \frac{1}{2x}~dw = \frac{1}{2} \frac{w^{9/2}}{9/2} + C \\
+& = \frac{1}{9} (x^2 - 4)^{9/2} + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int y^2(1+y)^2~dy$\end{Question}
+\begin{Solution}
+
+  Trick (substitution) question: substitution seems not to work well
+  here, because both factors have $y^2$ in them, so neither one is the
+  derivative of the other.  We're better off expanding the $(1+y)^2$
+  factor and then integrating each term separately:
+\begin{align*}
+  \int y^2(1+y)^2 dy  & = \int y^2(1 + 2y + y^2) dy   = \int y^2 + 2y^3 + y^4\\
+&    = \frac{1}{3}y^3 + \frac{2}{4}y^4 + \frac{1}{5}y^5 + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int (2t-7)^{73}~dt$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = 2t-7, & \text{ so } dw = 2 ~dt, \text{ or } dt = \frac{1}{2} dw    \\
+  \int (2t-7)^{73}~dt & = \int  w^{73} \frac{1}{2}~dw = \frac{1}{2} \frac{w^{74}}{74} + C \\
+& = \frac{1}{148} (2t-7)^{74} + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{1}{y+5}~dy$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = y+5, & \text{ so } dw = dy, \text{ making }  \\
+  \int \frac{dy}{y+5} dy & = \int \frac{1}{w} dw = \ln | w | + C  = 
+  \ln|y+5| + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{1}{\sqrt{4-x}}~dx$\end{Question}
+
+\begin{Solution}
+    Rewrite integral: 
+  \begin{align*}
+\int (4-x)^{-1/2}~dx &  \\
+  \text{Let }  w = 4-x, & \text{ so } dw = -1 ~dx, \text{ or } dx = -dw    \\
+  \int (4-x)^{-1/2}~dx & = \int w^{-1/2} (-1) dw = -\frac{w^{1/2}}{1/2} \\
+& = -2(4-x)^{1/2} + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int (x^2 + 3)^2~dx$\end{Question}
+\begin{Solution}
+
+Another non-substitution integral: since there is no $x$ term outside the $(x^2 +3)$, it is easier to expand the square in this case and integrate term by term.
+\begin{align*}
+  \int (x^2 + 3)^2~dx & = \int x^4 + 6x^2 + 9 ~dx = \frac{x^5}{5} + \frac{6x^3}{3} + 9x + C  \\
+& = \frac{x^5}{5} + 2x^3 + 9x + C  
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int x^2e^{x^3+1}~dx$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = x^3+1, & \text{ so } dw = 3x^2 ~dx, \text{ or } dx = \frac{1}{3x^2} dw    \\
+  \int x^2e^{x^3 + 1}~dx & = \int x^2 e^w \frac{1}{3x^2} ~dw = \frac{1}{3} e^w + C \\
+& = \frac{1}{3} e^{x^3 + 1} + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \sin \theta (\cos\theta + 5)^7~d\theta$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = \cos \theta + 5, & \text{ so } dw = - \sin \theta d \theta, \text{ making }  \\
+  \int \sin \theta (\cos \theta + 5)^7 d \theta & = -\int w^7 dw = -\frac{w^8}{8} + C  \\
+& = -\frac{1}{8} (\cos \theta + 5)^8 + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \sqrt{\cos(3t)} \sin(3t)~dt $\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = \cos(3t)& \text{ so } dw = -3\sin(3t)  ~dt, \\
+\text{ or } dt & =\frac{-1}{3\sin(3t)} dw    \\
+  \int \sqrt{\cos(3t)} \sin(3t) ~dt 
+& = \int w^{1/2} \sin(3t) \frac{-1}{3\sin(3t)}~dt \\
+& = \frac{-1}{3} \frac{w^{3/2}}{3/2} + C \\
+& = \frac{-2}{9} (\cos(3t))^{3/2} + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \sin^6 \theta \cos \theta ~d\theta$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = \sin(\theta)& \text{ so } dw = \cos\theta  ~d\theta, \\ 
+\text{ or } d\theta &= \frac{1}{\cos\theta} dw    \\
+  \int (\sin\theta)^6 \cos\theta ~d\theta & =  \int w^6 \cos\theta \frac{1}{\cos\theta} dw = \frac{w^7}{7} + C \\ 
+& = \frac{1}{7} \sin^7\theta  + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \sin^3\alpha \cos \alpha d\alpha$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = \sin(\alpha)& \text{ so } dw = \cos\alpha  ~d\alpha, \text{ or } d\alpha = \frac{1}{\cos\alpha} dw    \\
+  \int (\sin\alpha)^3 \cos\alpha ~d\alpha & =  \int w^3 \cos\alpha \frac{1}{\cos\alpha} dw = \frac{w^4}{4} + C \\
+& = \frac{1}{4} \sin^4\alpha  + C
+\end{align*}
+
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \sin^6(5\theta) \cos(5\theta)~d\theta$\end{Question}
+\begin{Solution}
+\begin{align*}
+  \text{Let }  w = \sin(5\theta)& \text{ so } dw = 5\cos(5\theta)  ~d\theta, \\
+ \text{ or } d\theta & = \frac{1}{5\cos(5\theta)} dw    \\
+  \int (\sin(5\theta))^6 \cos(5\theta)~d\theta & =  \int w^6 \cos(5\theta) \frac{1}{5\cos(5\theta)} dw \\
+& = \frac{1}{5} \frac{w^7}{7} + C = \frac{1}{35} \sin^7(5\theta)  + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \tan(2x)~dx$\end{Question}
+
+\begin{Solution}
+    Rewrite integral: 
+  \begin{align*}
+\int \frac{\sin(2x)}{\cos{2x}}~dx &  \\
+    \text{Let }  w = \cos(2x), & \text{ so } dw = -2\sin(2x) ~dx, \\
+\text{ or } dx & = \frac{-1}{2\sin(2x)} ~dw    \\
+    \int \frac{\sin(2x)}{\cos(2x)}~dx & = \int \frac{\sin(2x)}{w}
+    \frac{-1}{2 \sin(2x)} ~dw = \frac{-1}{2} \int w^{-1}~dw \\
+& = \frac{-1}{2} \ln(|w|) + C = \frac{-1}{2} \ln( |\cos(2x)|) + C
+  \end{align*}
+
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{(\ln z)^2}{z} ~dz$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \text{Let }  w = \ln(z), & \text{ so } dw = \frac{1}{z} ~dz, \text{ or } dz = z ~dw    \\
+\int \frac{(\ln z)^2}{z}~dx & = \int \frac{w^2}{z} (z ~dw) = \frac{w^3}{3} + C \\
+& = \frac{(\ln z)^3}{3} + C
+  \end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{e^t +1}{e^t+t}~dt$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \text{Let }  w = e^t+t, & \text{ so } dw = (e^t + 1) ~dt, \text{ or } dt = \frac{1}{e^t + 1} ~dw    \\
+\int \frac{e^t + 1}{e^t + t} ~dt & = \int \frac{e^t + 1 }{w} \frac{1}{e^t + 1}~dw = \int w^{-1}~dw \\ 
+& = \ln(|w|) + C = \ln(|e^t + t|) + C
+  \end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{y}{y^2 + 4}~dy$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \text{Let }  w = y^2 + 4, & \text{ so } dw = 2y ~dy, \text{ or } dy = \frac{1}{2y} ~dw    \\
+\int \frac{y}{y^2 + 4} ~dy & = \int \frac{y}{w} \frac{1}{2y}~dw = \frac{1}{2} \int w^{-1}~dw \\
+& = \frac{1}{2}\ln(|w|) + C = \frac{1}{2}\ln(|y^2 + 4|) + C
+  \end{align*}
+  Note that $y^2 + 4$ is always positive, so we could remove the
+  absolute values if we wished, as they are redundant in this case.
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{\cos(\sqrt{x})}{\sqrt{x}}~dx$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \text{Let }  w = \sqrt{x}, & \text{ so } dw =\frac{1}{2} x^{-1/2}~dx, \text{ or } dx = 2 \sqrt{x} ~dw    \\
+\int \frac{\cos(\sqrt{x})}{\sqrt{x}} ~dx & = \int \frac{\cos(w)}{\sqrt{x}} (2 \sqrt{x}~dw) = 2 \int \cos(w)~dw \\
+& = 2 \sin(w) + C = 2 \sin(\sqrt{x}) + C 
+  \end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{e^{\sqrt{y}}}{\sqrt{y}}~dy$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \text{Let }  w = \sqrt{y}, & \text{ so } dw =\frac{1}{2} y^{-1/2}~dy, \text{ or } dy = 2 \sqrt{y} ~dw    \\
+\int \frac{e^{\sqrt{y}}}{\sqrt{y}} ~dy & = \int \frac{e^w}{\sqrt{y}} (2 \sqrt{y}~dw) = 2 \int e^w~dw \\
+&= 2 e^w + C = 2 e^{\sqrt{y}} + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{1+e^x}{\sqrt{x+e^x}}~dx$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \text{Let }  w = x + e^x, & \text{ so } dw =(1 + e^x) ~dx, \text{ or } dx = \frac{1}{1 + e^x} ~dw    \\
+\int \frac{1 + e^x}{\sqrt{x+e^x}} ~dx & = \int \frac{1+e^x}{\sqrt{w}} \left(\frac{1}{1+e^x} ~dw\right) = \int w^{-1/2} ~dw \\
+& = \frac{w^{1/2}}{1/2}+C = 2 \sqrt{x + e^x} + C
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{e^x}{2+e^x}~dx$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \text{Let }  w = 2 + e^x, & \text{ so } dw =e^x ~dx, \text{ or } dx = \frac{1}{e^x} ~dw    \\
+\int \frac{e^x}{2+e^x} ~dx & = \int \frac{e^x}{w} \left(\frac{1}{e^x} ~dw\right) = \int w^{-1} ~dw \\
+& = \ln(|w|)+C   = \ln(|2 + e^x|)+C 
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{x+1}{x^2+2x+19}~dx$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \text{Let }  w = x^2 + 2x + 19, & \text{ so } dw =(2x + 2) ~dx, \\
+\text{ or } dx & = \frac{1}{2(x+1)} ~dw   
+\end{align*}
+\begin{align*}
+\int \frac{x+1}{x^2 + 2x + 19} ~dx & = \int \frac{x+1}{w} \left(\frac{1}{2(x+1)} ~dw\right) \\
+& = \frac{1}{2}\int w^{-1} ~dw  = \frac{1}{2} \ln(|w|)+C \\
+& = \frac{1}{2}\ln(|x^2 + 2x + 19|)+C 
+\end{align*}
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{t}{1+3t^2}~dt$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \text{Let }  w = 1 + 3t^2, & \text{ so } dw =6t ~dt, \text{ or } dt = \frac{1}{6t} ~dw    \\
+\int \frac{t}{1+3t^2} ~dt & = \int \frac{t}{w} \left(\frac{1}{6t} ~dw\right) =  \frac{1}{6} \int w^{-1} ~dw \\
+& = \frac{1}{6} \ln(|w|)+C = \frac{1}{6} \ln(|1 + 3t^2|)+C 
+\end{align*}
+In this case we can remove the absolute values because $1 + 3t^2$
+will always be positive, so the absolute values are redundant.
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{e^x-e^{-x}}{e^x + e^{-x}}~dx$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \text{Let }  w = e^x + e^{-x}, & \text{ so } dw =(e^x - e^{-x}) ~dx, \\
+\text{ or } dx & = \frac{1}{e^x - e^{-x}} ~dw    \\
+\int \frac{e^x - e^{-x}}{e^x+e^{-x}} ~dx & = \int \frac{e^x-e^{-x}}{w} \left(\frac{1}{e^x-e^{-x}} ~dw\right) \\
+& = \int w^{-1} ~dw = \ln(|w|)+C \\
+& = \ln(|e^x+e^{-x}|)+C 
+\end{align*}
+In this case we can remove the absolute values because $e^x + e^{-x}$
+will always be positive, so the absolute values are redundant.
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{(t+1)^2}{t^2}~dt$ \end{Question}
+\begin{Solution}
+  This question is probably more easily solved by expanding than by using substitution.
+  \begin{align*}
+    \int\frac{(t+1)^2}{t^2}~dt&= \int \frac{t^2 +2t + 1}{t^2}~dt
+= \int 1 + \frac{2}{t} + \frac{1}{t^2} ~dt 
+\\
+& = t + 2\ln(|t|) -t^{-1} + C \\
+& = t + 2\ln(|t|) -\frac{1}{t} + C
+  \end{align*}
+
+\end{Solution}
+%***************
+\item \begin{Question}$\ds \int \frac{x \cos(x^2)}{\sqrt{\sin(x^2)}}~dx$\end{Question}
+\begin{Solution}
+  \begin{align*}
+    \mbox{Let }w & =\sin(x^2), \mbox{ so } dw=2x \cos(x^2)~dx \mbox{ or } dx \\
+& = \frac{dw}{2x \cos(x^2)} \\
+\end{align*}
+\begin{align*}
+    \int \frac{x \cos(x^2)}{\sqrt{\sin(x^w)}}~dx & = \int  x \cos(x^2) (w^{-1/2} \frac{1}{2x \cos(x^2)}dw \\
+& = \frac{1}{2} \int w^{-1/2}~dw = \frac{1}{2} \frac{w^{1/2}}{1/2} + C \\
+& = \sqrt{\sin(x^2)} + C
+\end{align*}
+\end{Solution}
+
+
+
+%*****************
+\item
+  \begin{Question}
+$\ds \int_0^\pi \cos(x + \pi) ~dx$    
+  \end{Question}
+
+  \begin{Solution}
+\begin{align*}    
+\ds \int_0^\pi \cos(x + \pi) ~dx & = \sin(x + \pi)\Big|_0^\pi = \sin(2 \pi) - \sin(\pi) \\
+& = 0 - 0 = 0
+\end{align*}    
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+   $\ds \int_0^{1/2} \cos(\pi x)~dx$ 
+  \end{Question}
+  \begin{align*}
+   \ds \int_0^{1/2} \cos(\pi x)~dx & = \frac{1}{\pi} \sin(\pi x) \Big|_0^{1/2}  \\
+& = \frac{1}{\pi}\left[ \sin(\pi/2) - \sin(0)\right] = \frac{1}{\pi}[1-0] = \frac{1}{\pi}
+  \end{align*}
+  \begin{Solution}
+    
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+   $\ds \int_0^{\pi/2} e^{-\cos(\theta)} \sin(\theta)~d\theta $
+  \end{Question}
+
+  \begin{Solution}
+In this solution, we will use the substitution just to find the antiderivative, but
+then we will switch back to the original integral variable $\theta$ to evaluate the limits.
+    \begin{align*}
+    \mbox{Let }w & =-\cos(\theta), \mbox{ so } dw= \sin(\theta)~d\theta \mbox{ or } d\theta 
+ = \frac{dw}{\sin(\theta)} 
+\end{align*}
+\begin{align*}
+  \int_0^{\pi/2} e^{-\cos(\theta)} \sin(\theta)~d\theta 
+  & = \int_{\theta = 0 }^{\theta = \pi/2} e^{w}\sin(\theta) \left( \frac{dw}{\sin(\theta)}\right)  \\
+   & = \int_{\theta = 0 }^{\theta = \pi/2} e^{w} ~dw 
+   = e^{w} \Big|_{\theta = 0 }^{\theta = \pi/2}  \\
+  & = e^{-\cos(\theta)} \Big|_{\theta = 0 }^{\theta = \pi/2}  \\
+& = e^0 - e^{-1} = 1 - \frac{1}{e}
+\end{align*}
+    
+  \end{Solution}
+
+%*****************
+\item \label{q:xex}
+  \begin{Question}
+   $\ds \int_1^2 2xe^{x^2}~dx$ 
+    
+  \end{Question}
+
+  \begin{Solution}
+    In this solution, we will convert the limits of integration to the substitution variable. 
+    \begin{align*}
+    \mbox{Let }w & =x^2, \mbox{ so } dw= 2x~dx \mbox{ or } dx = (1/2x) dw \\
+\mbox{ then also } x& =1 \rightarrow w = 1^2 = 1,  \\
+\mbox{and } x& =2 \rightarrow w = 2^2 = 4. 
+\end{align*}
+    \begin{align*}
+\int_{x=1}^{x=2} 2xe^{x^2}~dx
+& = \int_{w=1}^{w=4} 2xe^{w} \left( \frac{1}{2x} ~dw \right) \\
+& = \int_{w=1}^{w=4} e^{w} ~dw 
+ = e^{w} \Big|_{w=1}^{w=4} \\
+& = e^{4} - e^{1} 
+    \end{align*}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+   $\ds \int _1^8 \frac{e^{\sqrt[3]{x}}}{\sqrt[3]{x^2}}~dx$
+    
+  \end{Question}
+
+  \begin{Solution}
+    In this solution, we will convert the limits of integration to the substitution variable. 
+    \begin{align*}
+    \mbox{Let }w & =x^{1/3}, \mbox{ so } dw= \frac{1}{3}x^{-2/3}~dx \mbox{ or } dx = 3 x^{2/3} dw \\
+\mbox{ then also } x& =1 \rightarrow w = (1)^{1/3} = 1,  \\
+\mbox{and } x& =8 \rightarrow w = 8^{1/3} = 2. 
+\end{align*}
+\begin{align*}
+  \ds \int _{x=1}^{x=8} \frac{e^{\sqrt[3]{x}}}{\sqrt[3]{x^2}}~dx 
+& = \int_{w=1}^{w=2} \frac{e^{w}}{x^{2/3}}~\left(  3 x^{2/3} ~dw\right)  \\
+& = \int_{w=1}^{w=2} 3 e^{w}~dw 
+= 3 e^{w} \Big|_{w=1}^{w=2} 
+= 3 e^{2} - 3 e^{1}
+\end{align*}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+   $\ds \int_{-1}^{e-2} \frac{1}{t+2}~dt$
+  \end{Question}
+
+  \begin{Solution}
+    \begin{align*}
+    \mbox{Let }w & =t+2, \mbox{ so } dw= dt  \\
+\mbox{ then also } t& =-1 \rightarrow w = (-1) + 2 = 1 \\
+\mbox{and } t& =e-2 \rightarrow w = (e-2) + 2 = e 
+\end{align*}
+\begin{align*}
+   \int_{t=-1}^{t=e-2} \frac{1}{t+2}~dt
+   & = \int_{w=1}^{w=e} \frac{1}{w}~dw 
+= \ln(|w|) \Big|_{w=1}^{w=e} \\
+& = \ln(e) - \ln(1) = 1 - 0 = 1  
+\end{align*}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+   $\ds \int_1^4 \frac{\cos{\sqrt{x}}}{\sqrt{x}}~dx$ 
+    
+  \end{Question}
+
+  \begin{Solution}
+    \begin{align*}
+    \mbox{Let }w & =x^{1/2} \mbox{ so } dw= \frac{1}{2} x^{-1/2}~dx \mbox{ or } dx = 2 x^{1/2} ~dw  \\
+\mbox{ then also } x& =1 \rightarrow w = (1)^{1/2} = 1 \\
+\mbox{and } x& =4 \rightarrow w = (4)^{1/2} = 2 
+    \end{align*}
+    \begin{align*}
+    \int_{x=1}^{x=4} \frac{\cos{\sqrt{x}}}{\sqrt{x}}~dx
+& =     \int_{w=1}^{w=2} \frac{\cos(w)}{x^{1/2} } (2 x^{1/2} ~dw)  \\
+& =     \int_{w=1}^{w=2} 2\cos(w) ~dw 
+= 2 \sin(w) \Big|_{w=1}^{w=2}  \\
+& = 2 \sin(2) - 2 \sin(1)
+    \end{align*}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+   $\ds \int_0^2 \frac{x}{(1+x^2)^2}~dx$
+    
+  \end{Question}
+  \begin{Solution}
+    \begin{align*}
+    \mbox{Let }w & =1 + x^2 \mbox{ so } dw= 2x ~dx \mbox{ or } dx = \frac{1}{2x} ~dw  \\
+\mbox{ then also } x& =0 \rightarrow w = 1 + 0^2 = 1 \\ 
+\mbox{and } x& =2 \rightarrow w = 1 + 2^2 = 5 
+    \end{align*}
+    \begin{align*}
+      \int_{x=0}^{x=2} \frac{x}{(1+x^2)^2}~dx
+& = \int_{w=1}^{w=5} \frac{x}{w^2} \left(\frac{1}{2x} ~dw \right)   \\
+& =  \frac{1}{2} \int_{w=1}^{w=5} \frac{1}{w^2}  ~dw 
+= \frac{1}{2} \left(\frac{-1}{w}\right) \Big|_{w=1}^{w=5}   \\
+& = \frac{1}{2} \left[ \frac{-1}{5} - \frac{-1}{1} \right] 
+= \frac{1}{2} \frac{4}{5} = \frac{2}{5} 
+    \end{align*}
+  \end{Solution}
+%*********************
+\item 
+\begin{Question}
+  If appropriate, evaluate the following integrals by substitution.
+  If substitution is not appropriate, say so, and do not evaluate.
+
+\begin{enumerate}[(a)]
+\item $\ds \int x \sin(x^2)~dx$
+\item $\ds \int x^2 \sin(x) ~dx$
+\item $\ds \int \frac{x^2}{1+x^2} ~dx$
+\item $\ds \int \frac{x}{(1+x^2)^2} ~dx$
+\item $\ds \int x^3 e^{x^2} ~dx$
+\item $\ds \int \frac{\sin(x)}{2 + \cos(x)}~dx$
+\end{enumerate}
+
+\end{Question}
+
+  \begin{Solution}
+    \begin{enumerate}[(a)]
+    \item This integral can be evaluated using integration by
+      substitution. We use $w = x^2$, $dw = 2x~dx$.
+      \begin{align*}
+        \int x \sin(x^2)~ dx 
+        & = \frac{1}{ 2} \int \sin(w)~dw   \\
+        & = - \frac{1}{ 2} \cos(w) + C 
+        = \frac{-1}{ 2} \cos(x^2) + C
+      \end{align*}
+    \item This integral cannot be evaluated using a simple integration by substitution.
+    \item This integral cannot be evaluated using a simple integration by substitution.
+    \item This integral can be evaluated using integration by substitution. We use $w = 1 + x^2$, $dw = 2x~dx$.
+      \begin{align*}
+        \int \frac{x}{ (1 + x^2)^2} dx  
+        & = \frac{1}{2} \int\frac{ 1}{ w^2}~ dw  
+         = \frac{1}{2} \left(\frac{-1}{ w }\right) + C  \\
+        & = \frac{-1}{2(1 + x^2)} + C.
+      \end{align*}
+    \item This integral cannot be evaluated using a simple integration by substitution.
+    \item This integral can be evaluated using integration by substitution. We use $w = 2 + \cos x, dw = -\sin x~dx.$
+      \begin{align*}
+\int \frac{\sin x}{2 + \cos x }~dx  
+& = - \int \frac{1}{ w}~ dw  
+ = -\ln |w| + C  \\
+& = -\ln |2 + \cos x| + C:   
+      \end{align*}
+    \end{enumerate}
+  \end{Solution}
+
+
+%*****************
+\item \label{q:area_start} 
+  \begin{Question}
+    Find the exact area under the graph of $f(x) = xe^{x^2}$ between
+    $x=0$ and $x=2$.
+  \end{Question}
+
+  \begin{Solution}
+    Since $f(x)$ is always positive, the area under the graph is equal
+    to the integral of $f(x)$ on that interval.  Thus we need to
+    evaluate the definite integral
+    \begin{align*}
+\int^2_0 xe^{x^2}~dx.
+\end{align*}
+This is done in Question \ref{q:xex}, using the substitution $w = x^2$, the result being
+    \begin{align*}
+\int^2_0 xe^{x^2} ~dx 
+= \frac{1}{2} (e^4 - 1).
+\end{align*}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+    Find the exact area under the graph of $f(x) = 1/(x+1)$ between
+    $x=0$ and $x=2$.
+  \end{Question}
+
+  \begin{Solution}
+   Since $f(x) = 1/(x + 1)$ is positive on the interval $x = 0$ to $x = 2$, the
+area under the graph and the integral are equal to one another.
+\begin{align*}
+\int^2_0 \frac{1}{ x + 1}~ dx 
+& = \ln(x + 1) \Big|^2_0 
+= \ln 3 - \ln 1 = \ln 3.
+\end{align*}
+
+The area is $\ln 3 \approx 1.0986$. 
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+ Find $\ds \int 4x( x^2 + 1)~dx$ using two methods: 
+ \begin{enumerate}[(a)]
+\item Do the multiplication first, and then antidifferentiate. 
+\item Use the substitution $w = x^2 + 1$. 
+\item Explain how the expressions from parts ( a) and ( b) are different. Are they both correct?   
+ \end{enumerate}
+  \end{Question}
+
+  \begin{Solution}
+    \begin{enumerate}[(a)]
+    \item $\ds \int 4x(x^2 + 1)~dx = \int (4x^3 + 4x)~dx = x^4 + 2x^2 + C.$
+\item If $w = x^2 + 1$ then $dw = 2x~dx$:
+  \begin{align*}
+\int 4x(x^2 + 1)~dx = \int 2w ~dw = w^2 + C = (x^2 + 1)^2 + C.
+  \end{align*}
+\item The expressions from parts (a) and (b) look different, but they
+  are both correct. Note that the answer from (b) can be expanded
+  as $$(x^2 + 1)^2 + C = x^4 + 2x^2 +\underbrace{1+C}_{\mbox{ new const.}}. $$In other words, the
+  expressions from parts (a) and (b) differ only by a constant, so
+  they are both correct antiderivatives.
+    \end{enumerate}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+    \begin{enumerate}[(a)]
+\item Find $\ds \int \sin\theta \cos \theta ~d\theta$
+\item You probably solved part (a) by making the substitution $w = \sin\theta$ or $w = \cos\theta$. (If not, go back and do it that way.) Now find $\ds \int \sin \theta \cos\theta ~d\theta$ by making the other substitution. 
+\item There is yet another way of finding this integral which involves
+  the trigonometric identities: 
+\begin{align*}
+\sin(2\theta) &= 2\sin\theta \cos \theta \\
+\cos(2\theta) &= \cos^2 \theta - \sin^2 \theta.
+\end{align*} 
+Find $\ds \int \sin \theta \cos \theta d\theta$ using one of these
+identities and then the substitution $w = 2\theta$.
+\item You should now have three different expressions for the
+  indefinite integral $\ds \int \sin \theta \cos\theta d\theta$. Are they really different?
+  Are they all correct? Explain.
+    \end{enumerate}
+  \end{Question}
+
+  \begin{Solution}
+    \begin{enumerate}[(a)]
+    \item We first try the substitution $w = \sin \theta$, so $dw =
+      \cos \theta ~d\theta$. Then
+    \begin{align*}
+\int \sin \theta \cos \theta ~d\theta =
+\int w ~dw = \frac{w^2}{ 2} + C = \frac{\sin^2 \theta}{ 2} + C.
+\end{align*}
+\item If we instead try the substitution $w = \cos \theta$, $dw = -\sin \theta ~d\theta$, we get
+\begin{align*}
+\int \sin \theta \cos \theta ~d\theta 
+= - \int w ~dw 
+= - \frac{w^2}{ 2} + C 
+= - \frac{\cos^2 \theta}{ 2} + C.
+\end{align*}
+\item Once we note that $\sin(2\theta) = 2 \sin \theta \cos \theta$ we can also say
+\begin{align*}
+\int \sin \theta \cos \theta ~d\theta 
+= \frac{1}{ 2} \int \sin (2\theta) ~d\theta
+\end{align*}
+Substituting $w = 2\theta$,  $dw = 2 ~d\theta$, the above equals
+\begin{align*}
+\frac{1}{ 4} \int \sin w ~dw 
+= - \frac{\cos w}{ 4} + C 
+= - \frac{\cos 2\theta} 4 + C.
+\end{align*}
+\item All these answers are correct. Although they have different
+  forms, they differ from each other only in terms of a constant, and
+  thus they are all acceptable antiderivatives.
+
+For example, 
+\begin{align*}
+1-\cos^2 \theta & = \sin^2 \theta  \\
+\mbox{ so } \underbrace{\frac{\sin^2 \theta}{ 2 }}_{\mbox{Answer (a)}}
+&  = -\frac{\cos^2 \theta + 1 }{2}
+& = \underbrace{-\frac{\cos^2 \theta }{2}}_{\mbox{Answer (b)}} - \frac{1}{2}
+\end{align*}
+Thus the first two expressions differ only by a constant.
+
+Similarly, $\cos(2\theta) = \cos^2 \theta - \sin^2 \theta = 2 \cos^2 \theta - 1$, so 
+\begin{align*}
+\underbrace{-\frac{\cos (2\theta)}{ 4}}_{\mbox{Answer (c)}}
+= \underbrace{\frac{-\cos^2 \theta}{ 2}}_{\mbox{Answer (b)}} +\frac{ 1}{4}
+\end{align*}
+and thus the second and third expressions differ only by a
+constant. Of course, if the first two expressions and the last two
+expressions differ only in the constant C, then the first and last
+only differ in the constant as well, so they are all equally valid
+antiderivatives.
+    \end{enumerate}
+  \end{Solution}
+\end{multicols}
+
+\hrulefill
+\subsection*{Substitution Integrals - Applications}
+
+\begin{multicols}{2}
+%*****************
+\item
+  \begin{Question}
+    Let $f(t)$ be the rate of flow, in cubic meters per hour, of a
+    flooding river at time $t$ in hours. Give an integral for the total
+    flow of the river:
+    \begin{enumerate}
+    \item Over the 3-day period, $0 \le t \le 72$ (since $t$ is
+      measured in hours).
+    \item In terms of time $T$ in {\bf days} over the same 3-day
+      period.
+    \end{enumerate}
+  \end{Question}
+
+  \begin{Solution}
+    \begin{enumerate}[(a)]
+    \item A time period of $\D t$ hours with flow rate of $f(t)$ cubic
+      meters per hour has a flow of $f(t) \D t$ cubic meters.  Summing
+      the flows, we get total flow $\approx \sum f(t) \D t$, so 
+      \begin{align*}
+\mbox{Total flow } = \int^{72}_0 f(t) ~dt \mbox{ cubic meters} 
+      \end{align*}
+    \item Since 1 day is 24 hours, $t = 24T$. The constant 24 has
+      units (hours/day), so 24$T$ has units (hours/day) $\times$ day =
+      hours.  Applying the substitution $t = 24T$ to the integral in
+      part (a), we get
+      \begin{align*}
+\mbox{Total flow }= \int^3_0 24 f(24T) ~dT \mbox{ cubic meters.}
+      \end{align*}
+    \end{enumerate}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+    Oil is leaking out of a ruptured tanker at the rate of $r( t) =
+    50e^{- 0.02t}$ thousand liters per minute.
+    \begin{enumerate}[(a)]
+    \item At what rate, in liters per minute, is oil leaking out at $t
+      = 0$? At $t = 60$? 
+    \item How many liters leak out during the first hour?
+    \end{enumerate}
+    
+  \end{Question}
+
+  \begin{Solution}
+    \begin{enumerate}[(a)]
+    \item At time $t = 0$, the rate of oil leakage = $r(0)$ = 50
+      thousand liters/minute.  \\
+      At $t = 60$, rate = $r(60)$ = 15.06 thousand liters/minute.
+
+\item To find the amount of oil leaked during the first hour, we integrate the rate from $t = 0$ to $t = 60$:
+  \begin{align*}
+\mbox{Oil leaked } &=
+\int^{60}_0 50e^{-0.02t} dt 
+= \left( \frac{- 50}{ 0.02} e^{-0.02t} \right) \Big|^{60}_{0} \\
+&= -2500e^{-1.2} + 2500e^0 \\
+& \approx 1747 \mbox{ thousand liters}.
+  \end{align*}
+    \end{enumerate}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+    If we assume that wind resistance is proportional to velocity,
+    then the downward velocity, $v$, of a body of mass $m$ falling
+    vertically is given by $$v = \frac{mg}{ k} (1 - e^{- kt/ m})$$
+    where $g$ is the acceleration due to gravity and $k$ is a
+    constant. Find the height of the body, $h$, above the surface of
+    the earth as a function of time. Assume the body starts at height
+    $h_0$.
+  \end{Question}
+
+  \begin{Solution}
+Since $\ds v = dh/dt$, it follows that $h(t) =
+\int
+v(t)~dt$ and $h(0) = h_0$. Since
+\begin{align*}
+v(t) &= \frac{mg}{k} \left( 1 - e^{- \frac{k}{m} t} \right) \\
+&= \frac{mg}{k} - \frac{mg}{k} e^{-\frac{k}{m} t}
+\end{align*}
+we have
+\begin{align*}
+h(t) & = \int v(t)~dt \\
+& = \frac{mg}{k} \int dt - \frac{mg}{k} \int e^{-k/m} t~dt.
+\end{align*}
+The first integral is simply $\ds \frac{mg}{k} t + C$. 
+
+To evaluate the second integral, make the substitution $\ds w = -\frac{ k}{ m}t$. Then
+$\ds dw = - \frac{k}{m}~dt,$
+so 
+\begin{align*}
+\int e^{-kt/m}~dt 
+&= \int e^w \left(\frac{-m}{k} ~dw\right) \\
+&= - \frac{m}{k}  e^w + C  \\
+&= - \frac{m}{k}  e^{-kt/m }+ C.
+\end{align*}
+
+Thus
+\begin{align*}
+h(t) 
+&= \int v~dt  \\
+&= \frac{mg}{k} t - \frac{mg}{k} \left( - \frac{m}{k} e^{-kt/m} \right) + C \\
+&= \frac{mg}{k} t + \frac{m^2g} {k^2} e^{-kt/m} + C.
+\end{align*}
+ Since $h(0) = h_0$,
+ \begin{align*}
+h_0 & = \frac{mg}{k} \cdot 0 + \frac{m^2g}{ k^2} e^0 + C;  \\
+C & = h_0 - \frac{m^2g}{ k^2}. \\
+\end{align*}
+ Thus
+\begin{align*}
+h(t) &= \frac{mg}{k} t + \frac{m^2g}{k^2} e^{-kt/m}  - \frac{m^2g}{k^2} + h_0 \\
+h(t) &= \frac{mg}{k} t - \frac{m^2g}{k^2} \left( 1 - e^{-kt/m}  \right) + h_0.
+ \end{align*}
+This formula gives the height of the object above the surface of the earth as it falls.
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+    The rate at which water is flowing into a tank is $r(t)$
+    gallons/minute, with $t$ in minutes.
+    \begin{enumerate}[(a)]
+    \item Write an expression approximating the amount of water
+      entering the tank during the interval from time $t$ to time $t+
+      \D t$, where $\D t$ is small.
+    \item Write a Riemann sum approximating the total amount of water
+      entering the tank between $t = 0$ and $t = 5$. Then write an
+      exact expression for this amount.
+    \item By how much has the amount of water in the tank changed
+      between $t = 0$ and $t = 5$ if $r( t) = 20e^{0.02t}$?
+    \item If $r( t)$ is as in part ( c), and if the tank contains 3000
+      gallons initially, find a formula for $Q( t)$, the amount of
+      water in the tank at time $t$.
+    \end{enumerate}
+  \end{Question}
+
+  \begin{Solution}
+    \begin{enumerate}[(a)]
+    \item  Amount of water entering tank in a short period of time = Rate$\times$Time = $r(t) \D t$.
+    \item Summing the contribution from each of the small intervals $\D t$:
+\begin{align*}
+&       \mbox{Amount of water entering the tank } \\
+   \approx & \sum_{i} r(t_i) \D t_i 
+\end{align*}where $\D t = 5/n$.
+Taking a limit as $\D t \to 0$, we get the integral form instead of the sum:
+\begin{align*}
+&\mbox{ Exact amount of water entering the tank} \\
+& = \int^5_0 r(t) ~dt.
+\end{align*}
+\item If $Q(t)$ is the amount of water in the tank at time $t$, then
+  $Q'(t) = r(t)$. We want to calculate net change in volume between
+  $t=0$ and $t=5$, or $Q(5) - Q(0)$. By the Fundamental Theorem,
+  \begin{align*}
+&  \mbox{ Amount which has entered tank} \\
+& = Q(5) - Q(0) \\
+&  = \int^5_0 r(t)~dt  \\
+& = \int^5_0 20e^{0.02t}~dt  \\
+&= \frac{20 }{0.02} e^{0.02t} \Big|^5_0 \\
+& = 1000(e^{(0.02)(5)} - 1) \approx 105.17 \mbox{ gallons}.
+  \end{align*}
+\item By the Fundamental Theorem again,
+  \begin{align*}
+& \mbox{ Amount which has entered tank} \\
+& = Q(t) - Q(0)  \\
+& = \int^t_0 r(t)~dt  \\
+Q(t) - 3000 & = \int^t_0 20e^{0.02t}~dt  \\
+\mbox{ so } Q(t) & = 3000 + \int^t_0 20e^{0.02u}~du \\
+\end{align*}
+Note: $t$ is already being used, so we put $u$ inside the integral; since
+this is a definite integral, the variable inside the integral will disappear when
+we sub in the limits. 
+\begin{align*}
+Q(t) & = 3000 + \frac{20}{ 0.02} e^{0.02t} \Big|^t_0 \\
+& = 3000 + 1000(e^{0.02t} - e^0) \\
+& = 1000e^{0.02t} + 2000. \\
+  \end{align*}
+  This is the quantity of water in the tank at time $t$.  Note that we
+  can do a basic sanity check on the answer by verifying that $Q(0) =
+  3000$ (given), which is true for the formula we arrived at:
+$$Q(0) = 1000e^{0.02\cdot 0} + 2000 = 3000$$
+    \end{enumerate}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+    After a spill of radioactive iodine, measurements at $t=0$ showed
+    the ambient radiation levels at the site of the spill to be four
+    times the maximum acceptable limit. The level of radiation from an
+    iodine source decreases according to the formula $$R(t) = R_0
+    e^{-0.004t}$$ where $R$ is the radiation level (in millirems/
+    hour) at time $t$ in hours and $R_0$ is the initial radiation
+    level (at $t = $0).
+    \begin{enumerate}[(a)]
+  \item How long will it take for the site to reach an acceptable
+    level of radiation?
+  \item Engineers look up the safe limit of radiation and find it to
+    be 0.6 millirems/hour.  How much total radiation (in millirems)
+    will have been emitted by the time found in part (a)?
+    \end{enumerate}
+  \end{Question}
+
+  \begin{Solution}
+\begin{enumerate}[(a)]
+\item 
+    If the level first becomes acceptable at time $t_1$, then $R_0 = 4R(t_1)$, and
+    \begin{align*}
+\frac{1}{ 4} R_0 & = R_0e^{-0.004 t_1} \\
+\frac{1}{4} & = e^{-.004t_1}
+    \end{align*}
+Taking natural logs on both sides yields
+\begin{align*}
+\ln\left( \frac{1}{ 4}\right) &= -0.004t_1 \\
+t_1 & = \frac{\ln\left( \frac{1}{ 4}\right)}{-0.004} \\ 
+t_1 & \approx 346.574 \mbox{ hours.}
+\end{align*}
+\item Since the initial radiation was four times the acceptable limit of 0.6 millirems/hour, we have $R_0 = 4(0.6) = 2.4$.
+The rate at which radiation is emitted is $R(t) = R_0 e^{-.004t}$, so
+
+Total radiation emitted = $\ds \int^{346.574}_0 2.4e^{-0.004t}~dt$.
+
+Finding by guess-and-check or substitution that an antiderivative of
+$e^{-0.004t}$ is $\ds \frac{e^{-0.004t}}{-0.004}$,
+\begin{align*}
+& \int^{346.574}_0 2.4e^{-0.004t}~dt \\
+& = 2.4 \frac{e^{-0.004t}}{-0.004} \Bigr|_0^{346.574}
+\end{align*}
+\begin{align*}
+& = 2.4 \left[  \frac{e^{-0.004 (346.574)}}{-0.004} - \frac{e^{0}}{-0.004}\right] \\
+& = 450.00 \\
+\end{align*}
+We find that 450 millirems were emitted during this time.
+\end{enumerate}
+  \end{Solution}
+% ***********
+\item  
+\begin{Question}David is learning about catalysts in his Chemistry course.  He has read the definition:
+
+%\vspace*{.25cm}
+\begin{quote}
+Catalyst: A substance that helps a reaction to go faster without being used up in the reaction.
+\end{quote}
+%\vspace*{.25cm}
+
+In today's Chemistry lab exercise, he has to add a catalyst to a
+chemical mixture that produces carbon dioxide.  When there is no
+catalyst, the carbon dioxide is produced at a rate of $8.37 \times
+10^{-9}$ moles per second.  When $C$ moles of the catalyst are
+present, the carbon dioxide is produced at a rate of $(6.15 \times
+10^{-8})C + 8.37 \times 10^{-9}$ moles per second.
+
+The reaction begins at exactly 10:00 a.m.  One minute later, at 10:01 sharp, David starts to add the catalyst at a constant rate of $0.5$ moles per second.
+
+How much carbon dioxide is produced between 10:00 (sharp) and 10:05? 
+\end{Question}
+\begin{Solution}
+    
+In the first minute of the reaction no catalyst is present
+  and the amount of carbon dioxide produced is
+
+  \begin{align*}
+    (8.37\times 10^{-9}\mbox{mol}/s)(60s)=5.02\times 10^{-7}\mbox{mol}.
+  \end{align*}
+
+  In the next four minutes, catalyst is being added. After $t$ seconds
+  of adding catalyst of $0.5\mbox{mol}/s$, there is $0.5t\mbox{mol}$
+  of catalyst present. Thus, at time $t$ carbon dioxide is being
+  produced at a rate of
+
+  \begin{align*}
+&    (6.15\times10^{-8})(0.5t)+(8.37\times 10^{-9}\mbox{mol}/s) \\ & = 
+    (3.075\times10^{-8})t+(8.37\times 10^{-9}\mbox{mol}/s).
+  \end{align*}
+
+  During the four minutes when catalyst is being added, the amount of
+  carbon dioxide produced is:
+
+  \begin{align*}
+&      \int_{0}^{240}(3.076\times10^{-8})t+(8.37\times 10^{-9})dt \\ 
+& = \left.(1.5375\times10^{-8})t^{2}+(8.37\times 10^{-9})t\right. \Big |_{0}^{240} \\
+  & =8.88\times10^{-4}\mbox{mol}
+  \end{align*}
+
+  The total amount of $CO_{2}$ produced in the first five minutes of
+  the reaction is therefore
+
+  \begin{align*}
+    5.02\times 10^{-7}+8.88\times10^{-4}=8.88\times10^{-4}\mbox{mol}.
+  \end{align*}
+\end{Solution}
+
+\end{multicols}
+
+\hrulefill
+
+\subsection*{Integration by Parts}
+
+\begin{multicols}{2}
+
+
+%*****************
+\item
+  \begin{Question}
+    For each of the following integrals, indicate whether integration
+    by substitution or integration by parts is more appropriate.  Do
+    not evaluate the integrals.
+
+    \begin{enumerate}[(a)]
+    \item $\ds \int x \sin(x)~dx$
+    \item $\ds \int \frac{x^2}{1+x^3}~dx$
+    \item $\ds \int x e^{x^2}~dx$
+    \item $\ds \int x^2 \cos(x^3)~dx$
+    \item $\ds \int \frac{1}{\sqrt{3x+1}}~dx$
+    \item $\ds \int x^2 \sin x~dx$
+    \item $\ds \int \ln x~dx$
+    \end{enumerate}
+  \end{Question}
+
+  \begin{Solution}
+    \begin{enumerate}[(a)]
+    \item This integral can be evaluated using integration by parts with $u = x$, $dv = \sin x~dx$.
+\item We evaluate this integral using the substitution $w = 1 + x^3$.
+\item We evaluate this integral using the substitution $w = x^2$.
+\item We evaluate this integral using the substitution $w = x^3$.
+\item We evaluate this integral using the substitution $w = 3x + 1$.
+\item This integral can be evaluated using integration by parts with $u = x^2$, $dv = \sin x~dx$.
+\item This integral can be evaluated using integration by parts with $u = \ln x$, $dv = dx$.
+    \end{enumerate}
+  \end{Solution}
+
+
+\begin{Question}
+  To practice computing integrals by parts, do as many of
+  the problems from this section as you feel you need. The problems
+  trend from simple to the more complex. 
+
+For Questions \#\ref{q:parts1_start} to \#\ref{q:parts1_end}, evaluate the integral.
+\end{Question}
+%*****************
+\item  \label{q:parts1_start}
+  \begin{Question}
+   $\ds \int t \sin t~dt$  
+  \end{Question}
+  \begin{Solution}
+    \begin{align*}
+\mbox{ We choose }       u & = t & \mbox{ and }dv & = \sin t ~dt \\
+\mbox{ so } \frac{du}{dt} & = 1 & \mbox{ and } v & = \int \sin t ~dt \\
+\mbox{ or } du & = 1 ~dt& v & = -\cos(t) 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int\ub{ t}_u \ub{\sin t~dt}_{dv} & = \ub{t}_u \ub{(-\cos t)}_v 
+- \int \ub{(-\cos t)}_v \ub{dt}_{du} \\
+& = -t \cos t + \int \cos t~dt \\
+& = -t \cos t + \sin t  + C
+\end{align*}
+As always, we can check our integral is correct by differentiating:
+\begin{align*}
+  \ddt{} (-t \cos t + \sin t + C) 
+& = -\cos t -t (-\sin t) + \cos t \\
+& = t \sin t \\ 
+& = \mbox{ original integrand.~~\CheckmarkBold}
+\end{align*}
+  \end{Solution}
+%*****************
+\item
+  \begin{Question}
+   $\ds \int t e^{5t}~dt$
+  \end{Question}
+
+  \begin{Solution}
+    \begin{align*}
+\mbox{ We choose }       u & = t &\mbox{ and } dv & = e^{5t} ~dt \\
+\mbox{ so } \frac{du}{dt} & = 1 & \mbox{ and } v & = \int e^{5t}~dt \\
+\mbox{ or } du & = 1 ~dt& v & = e^{5t}/5 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int\ub{ t}_u \ub{e^{5t}~dt}_{dv} & = \ub{t}_u \ub{(e^{5t}/5)}_v 
+- \int \ub{(e^{5t}/5)}_v \ub{dt}_{du} \\
+& = \frac{t e^{5t}}{5} - \frac{1}{5}\int e^{5t}~dt \\
+& = \frac{t e^{5t}}{5} - \frac{1}{5}\left(e^{5t}/5\right)  + C \\
+& = \frac{t e^{5t}}{5} - \frac{1}{25} e^{5t}+ C 
+\end{align*}
+As always, we can check our integral is correct by differentiating:
+\begin{align*}
+  \ddt{} \left( \frac{t e^{5t}}{5} - \frac{e^{5t}}{25} + C\right)
+& = \frac{1}{5} ( e^{5t} + t(5e^{5t})) - \frac{5e^{5t}}{25} \\
+& = t e^{5t} + \frac{e^{5t}}{5}- \frac{e^{5t}}{5} \\
+& = t e^{5t}  \\
+& = \mbox{ original integrand.~~\CheckmarkBold}
+\end{align*}
+  \end{Solution}
+
+\begin{Solution}
+  From now on, for brevity, we won't show quite as many steps in the
+  solution, nor will we check the answer by differentiating.  However,
+  you should always remember that you {\bf can} check your
+  antiderivatives/integrals by differentiation.
+\end{Solution}
+%*****************
+\item
+  \begin{Question}
+   $\ds \int p e^{-0.1p}~dp$
+    
+  \end{Question}
+
+\begin{Solution}
+    \begin{align*}
+\mbox{ We choose }       u & = p &\mbox{ and } dv & = e^{-0.1p} ~dp \\
+\mbox{ so } du & = dp& \mbox{ and } v & = e^{-0.1p}/(-0.1) 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int\ub{ p}_u \ub{e^{-0.1p}~dp}_{dv} & = \ub{p}_u \ub{e^{-0.1p}/(-0.1)}_v 
+- \int \ub{e^{-0.1p}/(-0.1)}_v \ub{dp}_{du} \\
+& = \frac{p e^{-0.1p}}{-0.1} + 10 \int e^{-0.1p}~dp \\
+& = -10 p e^{-0.1p} + 10\left(e^{-0.1p}/(-0.1)\right)  + C \\
+& = -10 p e^{-0.1p} - 100 e^{-0.1p}+ C 
+\end{align*}
+
+    
+  \end{Solution}
+%*****************
+\item
+  \begin{Question}
+   $\ds \int (z+1)e^{2z}~dz$
+  \end{Question}
+
+  \begin{Solution}
+    \begin{align*}
+\mbox{ We choose }       u & = (z+1)&\mbox{ and } dv & = e^{2z} ~dz \\
+\mbox{ so } du & = dz& \mbox{ and } v & = e^{2z}/2 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int (z+1) e^{2z}~dz & = (z+1) e^{2z}/2
+- \int e^{2z}/2 dz \\
+& = \frac{(z+1) e^{2z}}{2} - \frac{1}{2} \int e^{2z}~dz \\
+& = \frac{(z+1)e^{2z}}{2} - \frac{1}{2} \left(e^{2z}/2\right)  + C \\
+& = \frac{(z+1) e^{2z}}{2} - \frac{1}{4} e^{2z}+ C 
+\end{align*}
+There is no need for further simplifications.
+    
+  \end{Solution}
+%*****************
+%*****************
+\item \label{q:lnx}
+  \begin{Question}
+   $\ds \int \ln x~dx$
+  \end{Question}
+
+  \begin{Solution}
+    In this problem, we recall that the only simple calculus formula
+    related to $\ln x$ is that its {\bf derivative} is known:
+    $\frac{d}{dx} \ln(x) = 1/x$.  This means that we have to select $u = \ln x$ so that
+it will be differentiated.
+    \begin{align*}
+\mbox{ We choose }       u & = \ln x&\mbox{ and } dv & = dx \\
+\mbox{ so } du & = \frac{1}{x} ~dx& \mbox{ and } v & = x 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int \ln x~dx & = x (\ln x) 
+- \int x \frac{1}{x}~ dx \\
+& = x \ln x - \int 1 ~dx \\
+& = x \ln x - x + C  
+\end{align*}
+    
+  \end{Solution}
+%*****************
+\item \label{q:xlnx}
+  \begin{Question}
+   $\ds \int y \ln y~dy$
+  \end{Question}
+
+  \begin{Solution}
+    In this problem, we recall that the only simple calculus formula
+    related to $\ln y$ is that its {\bf derivative} is known:
+    $\frac{d}{dy} \ln(y) = 1/y$.  While it might be tempting to keep
+    with our earlier pattern of choosing $u = y$ and $dv = \ln y ~dy$,
+    that won't work because we won't be able to integrate $dv$. As a
+    result,
+    \begin{align*}
+\mbox{ we choose }       u & = \ln y&\mbox{ and } dv & = y ~dy \\
+\mbox{ so } du & = \frac{1}{y} ~dy& \mbox{ and } v & = y^2/2 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int y \ln y~dy & = (\ln y) (y^2/2) 
+- \int (y^2/2) \frac{1}{y}~ dy \\
+& = \frac{y^2 \ln y}{2} - \frac{1}{2} \int y ~dy \\
+& = \frac{y^2 \ln y}{2} - \frac{1}{2} (y^2/2)  + C \\
+& = \frac{y^2 \ln y}{2} - \frac{y^2}{4}  + C 
+\end{align*}
+    
+  \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int x^3 \ln x~dx$
+  \end{Question}
+
+  \begin{Solution}
+    
+    \begin{align*}
+\mbox{ We choose }       u & = \ln x&\mbox{ and } dv & = x^3 ~dx \\
+\mbox{ so } du & = \frac{1}{x} ~ dx& \mbox{ and } v & = x^4/4 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int x^3 \ln x~dx & = (\ln x) x^4/4 
+- \int (x^4/4) \left(\frac{1}{x} ~dx\right) \\
+& = \frac{x^4 \ln x}{4} - \frac{1}{4} \int x^3~dx \\
+& = \frac{x^4 \ln x}{4} - \frac{1}{4} (x^4/4) + C \\
+& = \frac{x^4 \ln x}{4} - \frac{x^4}{16}  + C
+\end{align*}
+  \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int q^5 \ln(5q)~dq$
+  \end{Question}
+
+  \begin{Solution}
+    \begin{align*}
+\mbox{ We choose }       u & = \ln(5q)&\mbox{ and } dv & = q^5 ~dq \\
+\mbox{ so } du & = \frac{1}{5q} (5)~dq& \mbox{ and } v & = q^6/6 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int q^5 \ln(5q)~dq & = (\ln(5q)) (q^6/6) 
+- \int(q^6/6) \left(\frac{1}{q}~ dq\right) \\
+& = \frac{q^6 \ln(5q)}{6} - \frac{1}{6} \int q^5~dq \\
+& = \frac{q^6 \ln(5q)}{6} - \frac{1}{6} (q^6/6) + C\\
+& = \frac{q^6 \ln(5q)}{6} - \frac{1}{36} q^6 + C
+\end{align*}
+    
+  \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int t^2 \sin t~dt$ 
+  \end{Question}
+
+  \begin{Solution}
+    \begin{align*}
+\mbox{ We choose }       u & = t^2&\mbox{ and } dv & = \sin t ~dt \\
+\mbox{ so } du & = 2 t~dt& \mbox{ and } v & = -\cos t
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int t^2 \sin t~dt & = -t^2 \cos t 
+- \int (-\cos t)~ (2 t~ dt) \\
+& = - t^2 \cos t + 2 \int t \cos t~dt \\
+\end{align*}
+While we have traded our original integral for a slightly simpler one,
+it is still not simple enough to evaluate by finding an obvious
+antiderivative.  In fact, it is of the form of one of our earlier
+examples of integration by parts, so here we must apply integration by
+parts {\em again} to finally evaluate the original integral.
+
+We focus on just the new integral part, $\ds \int t \cos t~dt$:
+    \begin{align*}
+\mbox{ We choose }       u & = t&\mbox{ and } dv & = \cos t ~dt \\
+\mbox{ so } du & = ~dt& \mbox{ and } v & = \sin t
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int t \cos t~dt & = t \sin t 
+- \int (\sin t)~ dt \\
+& =  t \sin t - \int \sin t~dt \\
+& =  t \sin t - (-\cos t) + C \\
+& = t \sin t + \cos t + C
+\end{align*}
+Subbing this result back into the original integral, 
+\begin{align*}
+  \int t^2 \sin t~dt 
+& =\ub{ - t^2 \cos t + 2 \ub{\int t \cos t~dt}_{\mbox{Second by parts step}}}_{\mbox{First by parts step}} \\
+& = - t^2 \cos t + 2 \left( t \sin t + \cos t\right) + C
+\end{align*}
+No further simplification is necessary for a pure `evaluate the integral' question.
+    
+  \end{Solution}
+%*****************
+\item
+  \begin{Question}
+   $\ds \int x^2 \cos(3x)~dx$
+  \end{Question}
+
+  \begin{Solution}
+    \begin{align*}
+\mbox{ We choose }       u & = x^2&\mbox{ and } dv & = \cos(3x) ~dx \\
+\mbox{ so } du & = 2 x~dx& \mbox{ and } v & = \sin(3x)/3 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int x^2 \cos(3x)~dx & = x^2 \sin(3 x)/3
+- \int (\sin(3 x)/3)~ (2 x~ dx) \\
+& = \frac{x^2 \sin(3x)}{3} - \frac{2}{3} \int x \sin(3 x)~dx \\
+\end{align*}
+While we have traded our original integral for a slightly simpler one,
+it is still not simple enough to evaluate by finding an obvious
+antiderivative.  In fact, it is of the form of one of our earlier
+examples of integration by parts, so here we must apply integration by
+parts {\em again} to finally evaluate the original integral.
+
+We focus on just the new integral part, $\ds \int x \sin(3x)~dx$:
+    \begin{align*}
+\mbox{ We choose }       u & = x&\mbox{ and } dv & = \sin(3 x) ~dx \\
+\mbox{ so } du & = ~dx& \mbox{ and } v & = -\cos(3 x)/3
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int x \sin(3x)~dx & = -x \cos(3x )/3
+- \int (-\cos(3 x)/3)~ dx \\
+& =  -\frac{x \cos(3x)}{3} + \frac{1}{3}\int \cos(3 x)~dx \\
+& =  -\frac{x \cos(3x)}{3} + \frac{1}{3} (\sin(3 x)/3) + C \\
+& =  -\frac{x \cos(3x)}{3} + \frac{1}{9} \sin(3 x) + C 
+\end{align*}
+Subbing this result back into the original integral, 
+\begin{align*}
+&   \int x^2 \cos(3 x)~dx  \\
+ =&\ub{ \frac{x^2 \sin (3x)}{3} - \frac{2}{3} \ub{\int x \sin(3x) ~dx}_{\mbox{Second by parts step}}}_{\mbox{First by parts step}} \\
+ =& \frac{ x^2 \sin(3x)}{3}  -\frac{2}{3} \left( -\frac{x \cos(3x)}{3} + \frac{\sin(3x)}{9} + C \right) \\
+ =& \frac{ x^2 \sin(3x)}{3}  +\frac{2}{9} x \cos(3x) - \frac{2\sin(3x)}{27} + C_2  
+\end{align*}
+where $C_2 = -(2/3) C$ is a new integration constant.
+    
+  \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int (\ln t)^2 ~dt$
+  \end{Question}
+
+  \begin{Solution}
+We only know how to differentiate $(\ln t)^2$, so we have to choose it as $u$.
+    \begin{align*}
+\mbox{ We choose }       u & = (\ln t)^2&\mbox{ and } dv & =  ~dt \\
+\mbox{ so } du & = \frac{2 \ln t}{t}~ dt& \mbox{ and } v & = t 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int (\ln t)^2 ~dt & = (\ln t)^2 t
+- \int (t) \left( \frac{2 \ln t}{t}\right)~dt \\
+& = t (\ln t)^2  - 2 \int \ln t~dt
+\end{align*}
+We are left with a simpler integral, but not an easy one (unless you
+look at the examples from the course notes!)
+
+We focus on $\ds I_2 = \int \ln t~dt$, and apply integration by parts once more.
+    \begin{align*}
+\mbox{ We choose }       u & = \ln t&\mbox{ and } dv & =  ~dt \\
+\mbox{ so } du & = \frac{1}{t}~ dt& \mbox{ and } v & = t 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int \ln t ~dt & = (\ln t) t
+- \int (t) \left( \frac{1 }{t}\right)~dt \\
+& = t (\ln t)  - \int 1 ~dt \\ 
+& = t \ln t - t + C
+\end{align*}
+Thus, going back to our original integral, 
+\begin{align*}
+  \int (\ln t)^2 ~dt & = t (\ln t)^2  - 2 \ub{\int \ln t~dt}_{I_2} \\
+& = t (\ln t)^2  - 2 (t \ln t - t + C) 
+\end{align*}
+
+
+    
+  \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int t^2 e^{5t}~dt$
+  \end{Question}
+
+  \begin{Solution}
+    \begin{align*}
+\mbox{ We choose }       u & = t^2&\mbox{ and } dv & = e^{5t} ~dt \\
+\mbox{ so } du & = 2t ~dt& \mbox{ and } v & = e^{5t}/5 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int t^2 e^{5t}~dt & = t^2 e^{5t}/5
+- \int (e^{5t}/5) (2t~dt) \\
+& = \frac{t^2 e^{5t}}{5} - \frac{2}{5} \ub{\int t e^{5t}~dt}_{I_2} 
+\end{align*}
+Applying integration by parts again to the integral marked $I_2$ will lead to
+\begin{align*}
+  I_2 = \frac{t e^{5t}}{5} - \frac{e^{5t}}{25} + C
+\end{align*}
+so the overall integral will be
+\begin{align*}
+  \int t^2 e^{5t}~dt 
+& = \frac{t^2 e^{5t}}{5} - \frac{2}{5} \ub{\int t e^{5t}~dt}_{I_2} \\
+& = \frac{t^2e^{5t}}{5} - \frac{2}{5} \left(\frac{t e^{5t}}{5} - \frac{e^{5t}}{25} + C\right) \\
+& = \frac{t^2 e^{5t}}{5} - \frac{2 t e^{5t}}{25} + 2 \frac{e^{5t}}{125} + C_2
+\end{align*}
+where $C_2$ is a multiple of the original $C$.
+    
+  \end{Solution}
+%*****************
+\item
+  \begin{Question}
+   $\ds \int y \sqrt{y+3}~dy$
+  \end{Question}
+
+  \begin{Solution}
+    We choose $u = y$ and $dv = (y + 3)^{1/2}~dx$,\\
+ so $du = dx$ and
+    $\ds v = \frac{2}{3} (y + 3)^{3/2}$:
+    \begin{align*}
+\int y \sqrt{ y + 3}~ dy & = \frac{2}{ 3} y(y + 3)^{3/2} -
+\int \frac{2}{3} (y + 3)^{3/2} ~dy \\
+& = \frac{2}{3} y(y + 3)^{3/2} - \frac{2}{3}\frac{ (y + 3)^{5/2}}{5/2} + C \\
+& = \frac{2}{3} y(y + 3)^{3/2} - \frac{4}{15} (y + 3)^{5/2} + C.
+    \end{align*}
+  \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int (t+2)\sqrt{2+3t}~dt$
+  \end{Question}
+
+  \begin{Solution}
+    Let $u = t + 2$ and $dv = \sqrt{2 + 3t}$,\\
+ so $du = dt$ and $v =
+    \frac{2}{ 9} (2 + 3t)^{3/2}$.
+
+Then
+\begin{align*}
+\int (t + 2)\sqrt{1 + 3t}~ dt & =
+\frac{2}{9} (t + 2)(2 + 3t)^{3/2} -
+\frac{2}{9} \int
+(2 + 3t)^{3/2} ~dt \\
+& = \frac{2}{9} (t + 2)(2 + 3t)^{3/2}  \\
+& - \frac{4}{ 135} (2 + 3t)^{5/2} + C.
+\end{align*}
+  \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int (p+1)\sin(p+1)~dp$
+  \end{Question}
+
+  \begin{Solution}
+    Let $u = p + 1$ and $dv = \sin(p + 1)$, \\
+so $du = dx$ and $v = -\cos(p+ 1)$.
+    \begin{align*}
+& \int (p + 1) \sin(p + 1) ~dp \\
+ = &-(p + 1) \cos(p + 1) +
+\int \cos(p + 1) ~dp \\
+ =&  -(p + 1) \cos(p + 1) + \sin(p+ 1) + C
+    \end{align*}
+  \end{Solution}
+%*****************
+%*****************
+\item \label{q:zexpz}
+  \begin{Question}
+   $\ds \int \frac{z}{e^z}~dz$
+  \end{Question}
+
+  \begin{Solution}
+Rewriting the integral, 
+   $$\ds \int \frac{z}{e^z}~dz = \ds \int z e^{-z}~dz $$
+Let $u = z$, $dv = e^{-z}~dx$. \\
+Thus $du = dz$ and $v = -e^{-z}$. Integration by parts gives:
+\begin{align*}
+\int ze^{-z} ~dz  & = -ze^{-z} - \int (-e^{-z}) ~dz \\
+& = -ze^{-z} + \int e^{-z} ~dz \\
+& = -ze^{-z} - e^{-z} + C 
+\end{align*}
+ \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int \frac{\ln x}{x^2}~dx$
+  \end{Question}
+
+  \begin{Solution}
+    Let $u = \ln x$, $dv = \frac{1}{x^2}~dx$. \\
+Then $du = \frac{1}{x}~dx$ and $v = -\frac{1}{x}$. 
+
+ Integrating by parts, we get:
+ \begin{align*}
+\int \frac{\ln x}{x^2} ~dx 
+& = -\frac{1}{x} \ln x - \int \left(-\frac{1}{x}\right) \frac{1}{x}~dx \\ 
+& = -\frac{1}{x} \ln x + \int \frac{1}{x^2}~dx  \\
+& = -\frac{1}{x} \ln x -  \frac{1}{x} + C  \\
+ \end{align*}
+  \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int \frac{y}{\sqrt{5-y}}~dy$
+  \end{Question}
+
+  \begin{Solution}
+    Let $u = y$ and $dv = \frac{1}{ \sqrt{5-y}}$, \\
+so $du = dy$ and $v = -2(5 - y)^{1/2}$
+\begin{align*}
+ \int y \sqrt{5 - y} ~dy 
+& = -2y(5 - y)^{1/2} - \int (-2)(5 - y)^{1/2} dy \\
+& = -2y(5 - y)^{1/2} + 2\int (5 - y)^{1/2} dy \\
+& = -2y(5 - y)^{1/2} + 2\frac{2}{3} (5 - y)^{3/2}(-1) + C \\
+& = -2y(5 - y)^{1/2} - \frac{4}{3} (5 - y)^{3/2}+ C \\
+\end{align*}
+  \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int \frac{t+7}{\sqrt{5-t}}~dt$
+  \end{Question}
+
+  \begin{Solution}
+Since we have a fraction in the numerator, we can split the integral into a sum, and then
+evaluate each term separately.
+   $$\ds \int \frac{t+7}{\sqrt{5-t}}~dt = \underbrace{\int \frac{t}{\sqrt{5-t}}~dt}_{I_1} + \underbrace{\int \frac{7}{\sqrt{5-t}}~dt}_{I_2}  $$
+$I_1$ can be evaluated using integration by parts. \\
+Let $u = t$ and $dv = \frac{1}{\sqrt{5-t}}~dt$, \\
+so $du = dx$ and $v = -2(5-t)^{1/2}$.
+\begin{align*}
+\int \frac{t}{\sqrt{5 - t}} ~dt  \\
+&= -2t(5 - t)^{1/2} + 2 \int (5 - t)^{1/2} ~dt  \\
+&= -2t(5 - t)^{1/2} - \frac{4}{3}(5 - t)^{3/2} + C.
+\end{align*}
+$I_2$ can be integrated directly:
+\begin{align*}
+  \int \frac{7}{\sqrt{5-t}}~dt 
+& = 7 (2) (5-t)^{1/2}(-1) + C_1 \\ 
+& = -14 (5-t)^{1/2} + C_1
+\end{align*}
+Adding the two integrals back together, we obtain
+\begin{align*}
+ \int \frac{t+7}{\sqrt{5-t}}~dt 
+& = \ub{-2t(5 - t)^{1/2} - \frac{4}{3}(5 - t)^{3/2} + C}_{I_1} \\
+& + \ub{-14 (5-t)^{1/2} + C_1}_{I_2}
+\end{align*}
+  \end{Solution}
+%*****************
+\item
+  \begin{Question}
+   $\ds \int x (\ln x)^2~dx$
+  \end{Question}
+
+  \begin{Solution}
+Select $u = (\ln x)^2$ and $dv = x~dx$, \\
+so $\ds du = 2 \ln x \left(\frac{1}{x}\right) ~dx$ and $v = x^2/2$. \\
+Using the integration by parts formula, 
+\begin{align*}
+  \int x (\ln x)^2~dx 
+& = (\ln x)^2\left(\frac{x^2}{2} \right)
+- \int \left(\frac{x^2}{2}\right) \left(\frac{2 \ln x}{x}\right)~dx  \\
+& = \frac{1}{2} x^2 (\ln x)^2 - \ub{\int x \ln x~dx}_{I_2}
+\end{align*}
+This second integral, $I_2$, can be evaluated with a second
+application of integration by parts. This
+was done earlier in Question \#\ref{q:xlnx} (using $y$ instead of $x$ though):  \\
+\begin{align*}
+ \ub{\int x \ln x~dx}_{I_2}
+& = \frac{x^2 \ln x}{2} - \frac{x^2}{4}  + C  \\
+\end{align*}
+Going back to the original integral
+\begin{align*}
+ & \int x (\ln x)^2~dx \\
+& = \frac{1}{2} x^2 (\ln x)^2 - 
+\ub{\left(\frac{x^2 \ln x}{2} - \frac{x^2}{4}\right)}_{I_2} + C \\
+& =\frac{1}{2} x^2 (\ln x)^2 - \frac{1}{2} x^2 \ln x + \frac{x^2}{4}  + C
+\end{align*}
+  \end{Solution}
+%*****************
+%*****************
+\item \label{q:arcsinx}
+  \begin{Question}
+   $\ds \int \arcsin(w)~dw$
+  \end{Question}
+
+  \begin{Solution}
+   We don't know the integral of $\arcsin$, but we do know its derivative. Therefore we pick  \\
+$u = \arcsin(w)$ and $dv = dw$, \\
+so $\ds du = \frac{1}{\sqrt{1 - w^2}} ~dw$ and $v = w$. \\
+Using the integration by parts formula,
+
+\begin{align*}
+\int \arcsin(w)~dw & = w~\arcsin(w) - \ub{\int \frac{w}{\sqrt{1 - w^2}}~dw}_{I_2}
+\end{align*}
+The new integral $I_2$ can be evaluate using a substitution. \\
+Let $z = 1 - w^2$, so $\frac{dz}{dw} = -2w$ or $\ds \frac{-1}{2w} ~dz = dw$:
+\begin{align*}
+\ub{\int \frac{w}{\sqrt{1 - w^2}}~dw}_{I_2} & = \int \frac{w}{\sqrt{z}} \left(\frac{-1}{2w}~dz\right) \\
+& = \frac{-1}{2} \frac{1}{\sqrt{z}} ~dz \\
+& =  \frac{-1}{2} (2z^{1/2}) +C \\
+& = -\sqrt{1 - w^2} + C  
+  \end{align*}
+Going back to the original integral,
+\begin{align*}
+\int \arcsin(w)~dw & = w~\arcsin(w) - \ub{\int \frac{w}{\sqrt{1 - w^2}}~dw}_{I_2} \\
+& =w~\arcsin(w) - \left(-\sqrt{1 - w^2} + C\right)   \\
+& =w~\arcsin(w) + \sqrt{1 - w^2} + C_2
+\end{align*}
+  \end{Solution}
+%*****************
+%*****************
+\item \label{q:arctan}
+  \begin{Question}
+   $\ds \int \arctan(7x) ~dx$
+  \end{Question}
+
+  \begin{Solution}
+   We don't know the integral of $\arctan$, but we do know its derivative. Therefore we pick  \\
+$u = \arctan(7x)$ and $dv = dx$, \\
+so $\ds du = \frac{7}{1 + (7x)^2} ~dx$ and $v = x$. \\
+Using the integration by parts formula,
+\begin{align*}
+\int \arctan(7x)~dx & = x~\arctan(7x) - \ub{\int \frac{7x}{1 - 49x^2}~dx}_{I_2}
+\end{align*}
+The new integral $I_2$ can be evaluate using a substitution. \\
+Let $w = 1 + 49x^2$, so $\frac{dw}{dx} = 98 x$ or $\ds \frac{1}{98x} ~dw = dx$:
+\begin{align*}
+\ub{\int \frac{7x}{1 + 49x^2}~dx}_{I_2} & = \int \frac{7x}{w} \left(\frac{1}{98x}~dw\right) \\
+& = \frac{1}{14} \frac{1}{w}~dw \\
+& = \frac{1}{14} \ln|w| + C \\
+& = \frac{1}{14} \ln|1 + 49x^2| + C
+  \end{align*}
+Going back to the original integral,
+\begin{align*}
+\int \arctan(x)~dx & = x~\arctan(x) - \ub{\int \frac{7x}{1 - 49x^2}~dx}_{I_2} \\
+& =x~\arctan(x) - \frac{1}{14} \ln|1 + 49x^2| + C_2
+\end{align*}
+    
+  \end{Solution}
+%*****************
+%*****************
+\item
+  \begin{Question}
+   $\ds \int x \arctan(x^2)~dx$
+  \end{Question}
+
+  \begin{Solution}
+This question starts off best with a substitution, due to the $x^2$ inside the $\arctan$, and the $x$ outside: \\
+$  \mbox{ Let } w = x^2 \mbox{, so} \frac{1}{2x} ~dw = dx $ \\
+\begin{align*}
+\int x \arctan(x^2)~dx & = \int x \arctan(w) \left(\frac{1}{2x}~dw\right) \\
+& = \frac{1}{2} \ub{\int \arctan(w)~dw   }_{I_2}
+\end{align*}
+Evaluating $I_2$, we use by parts, following the same approach as Question \#\ref{q:arctan}, but without the `7' factor, 
+\begin{align*}
+\ub{\int \arctan(w)~dw   }_{I_2} & =w~\arctan(w) - \frac{1}{2} \ln|1 + w^2| + C
+\end{align*}
+Going back to the original integral, and using $w = x^2$, 
+\begin{align*}
+& \int x \arctan(x^2)~dx \\
+& = \frac{1}{2} \ub{\int \arctan(w)~dw   }_{I_2} \\
+& = \frac{1}{2} \left(w~\arctan(w) - \frac{1}{2} \ln|1 + w^2| + C\right) \\
+& = \frac{1}{2} \left(x^2~\arctan(x^2) - \frac{1}{2} \ln|1 + (x^2)^2| + C\right)\\
+& = \frac{1}{2} x^2~\arctan(x^2) - \frac{1}{4} \ln|1 + x^4| + C_2
+\end{align*}
+  \end{Solution}
+%*****************
+%*****************
+\item\label{q:parts1_end}
+  \begin{Question}
+   $\ds \int x^3 e^{x^2}~dx$
+  \end{Question}
+
+  \begin{Solution}
+    In this problem, we note that we can't integrate $e^{x^2}$ by
+    itself (no closed-form anti-derivative).  However, if we package
+    it with one of the $x$'s from the $x^3$, we'll get $x e^{x^2}$,
+    and that {\em can} be integrated, using substitution ($w = x^2$).
+
+    Let $u = x^2$ and $dv = xe^{x^2}$, \\
+so $du = 2x ~dx$ and $v = \frac{1}{2} e^{x^2}$.  Using that, 
+\begin{align*}
+\int x^3e^{x^2}~dx = \frac{1}{2} x^2e^{x^2} - \ub{\int xe^{x^2}~dx}_{I_2} &
+= \frac{1}{2} x^2e^{x^2} - \frac{1}{2} e^{x^2} + C
+\end{align*}
+where $I_2$ is evaluated using the same substitution $w = x^2$.
+  \end{Solution}
+%*****************
+%*****************
+%\item 
+%  \begin{Question}
+%   $\ds \int x^3 \cos(x^3)~dx$
+%  \end{Question}
+%
+%  \begin{Solution}
+%    
+%  \end{Solution}
+%*****************
+\item
+  \begin{Question}
+$\ds \int_1^5 \ln t~dt$    
+  \end{Question}
+
+  \begin{Solution}
+We integrate by parts, as done in Question \#\ref{q:lnx}:
+    \begin{align*}
+    \int_1^5 \ln t~dt 
+& = \ub{t \ln t - t }_{\mbox{ from \#\ref{q:lnx}}} \Big|_1^5 \\
+& = \left(5 \ln 5 - 5\right)   - \left(1 \ln 1 - 1\right) \\
+& = 5 \ln 5 - 4.
+    \end{align*}
+
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+$\ds \int_3^5 x \cos x~dx$
+  \end{Question}
+
+  \begin{Solution}
+   Integrating by parts with $u = x$ and $dv = \cos x ~dx$ gives 
+   \begin{align*}
+\int_3^5 x \cos x~dx & = x \sin(x) + \cos(x) \Big|_3^5 \\
+& = 5 \sin(5) + cos(5) - (3 \sin(3) + \cos(3)) \\
+& \approx -3.944
+   \end{align*}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+$\ds \int_0^{10} ze^{-z}~dz$
+  \end{Question}
+
+  \begin{Solution}
+   The integral is the same as in Question \#\ref{q:zexpz}. We use
+by parts with $u = z$ and $dv = e^{-z}~dz$, giving
+\begin{align*}
+  \int_0^{10} ze^{-z}~dz & = \ub{-ze^{-z} - e^{-z}}_{\mbox{from \#\ref{q:zexpz}}} \Big|_0^{10} \\
+& = -10 e^{-10} - e^{-10} - (0 - e^0) \\
+& = -11 e^{-10} + 1  \approx 0.9995 \\
+\end{align*}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+$\ds \int_1^3 t\ln(t)~dt$
+  \end{Question}
+
+  \begin{Solution}
+    The integral is the same as in Question \#\ref{q:xlnx}.  We use by
+    parts, with $u = \ln(t)$ and $dv = t ~dt$.
+    \begin{align*}
+      \int_1^3 t\ln(t)~dt & = \ub{ \frac{t^2 \ln t}{2} 
+- \frac{t^2}{4}}_{\mbox{from \#\ref{q:xlnx}}} \Big|_1^3 \\
+& = \left(\frac{9 \ln 3}{2} - \frac{9}{4}\right)
+- \left(\frac{1 \ln 1}{2} - \frac{1}{4}\right) \\
+& = \frac{9 \ln 3}{2} - 2 \approx 2.944\\
+    \end{align*}
+    
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+$\ds \int_0^1\arctan(y)~dy$
+  \end{Question}
+
+  \begin{Solution}
+    We follow the work from Question \#\ref{q:arctan}, but without the `7' factor, using 
+$u = \arctan(y)$ and $dv = dy$.
+\begin{align*}
+  \int_0^1\arctan(y)~dy  
+& =y~\arctan(y) - \frac{1}{2} \ln|1 + y^2| \Big|_0^1  \\
+& = 
+\left(1\cdot \arctan(1) - \frac{1}{2} \ln(2)\right)
+- \left(0\cdot \arctan(0) - \frac{1}{2} \ln(1)\right) \\
+& = \frac{\pi}{4} -  \frac{1}{2} \ln(2) \approx 0.439.
+\end{align*}
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+$\ds \int_0^5\ln(1+t)~dt$
+  \end{Question}
+
+  \begin{Solution}
+    We use the solution to Question \#\ref{q:lnx}, or applying by
+    parts with $u = \ln(1+t)$ and $dv = ~dt$.
+    \begin{align*}
+      \int_0^5\ln(1+t)~dt 
+      & = \ub{(1+t) \ln (1+t) - (1+t) }_{\mbox{from \#\ref{q:lnx}, with } x = 1+t} \Big|_0^5 \\
+& =
+ \left(6 \cdot \ln 6 - 6\right) 
+ -\left(1 \cdot \ln 1 - 1\right)  \\
+& = 6 \ln 6 - 5 \approx 5.751
+    \end{align*}
+
+    
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+$\ds \int_0^1\arcsin z ~dz$
+  \end{Question}
+
+  \begin{Solution}
+Using the solution from Question \#\ref{q:arcsinx}, or $u = \arcsin z$ and $dv = dz$, 
+\begin{align*}
+  \int_0^1\arcsin z ~dz 
+& =z~\arcsin(z) + \sqrt{1 - z^2} \Big|_0^1  \\
+& = 
+\left( \arcsin(1)  + \sqrt{0}\right) 
+- \left( 0 \cdot \arcsin(0)  + \sqrt{1}\right)  \\
+& = \frac{\pi }{2} - 1 \approx 0.571
+\end{align*}
+    
+  \end{Solution}
+
+% *****************
+\item
+  \begin{Question}
+$\ds \int_0^1 x \arcsin(x^2)~dx$
+  \end{Question}
+
+  \begin{Solution}
+We first simplify the integral with the substitution $w = x^2$, which leads
+to the new limits \\
+ $x = 0 \to w = 0^2 = 0$ and \\
+ $x = 1 \to w = 1^2 = 1$.
+\begin{align*}
+  \int_{x=0}^{x=1} x \arcsin(x^2)~dx & =
+\ub{ \frac{1}{2} \int_{w=0}^{w=1} \arcsin(w)~dw  }_{\mbox{after substitution}}  \\
+\end{align*}
+At this point, we have returned to the integral in Question
+\#\ref{q:arcsinx}, which can be evaluated using by parts, with $u =
+\arcsin(w)$ and $dv = dw$.
+\begin{align*}
+&  \int_{x=0}^{x=1} x \arcsin(x^2)~dx \\
+& = \frac{1}{2} \int_{w=0}^{w=1} \arcsin(w)~dw  \\
+& = \frac{1}{2} \ub{\left(w~\arcsin(w) + \sqrt{1 - w^2}\right)}_{\mbox{by parts}} \Big|_0^1  \\ 
+& = \frac{1}{2} \left[
+\left( \arcsin(1)  + \sqrt{0}\right) 
+- \left( 0 \cdot \arcsin(0)  + \sqrt{1}\right) 
+\right]  \\
+& = \frac{\pi}{4} - \frac{1}{2} \approx 0.285
+\end{align*}
+  \end{Solution}
+
+% *****************
+\item
+  \begin{Question}
+Find the area under the curve $y = t e^{-t}$ on the interval $0 \le t \le 2$.
+  \end{Question}
+
+  \begin{Solution}
+The function $t e^{-t}$ is always positive on the interval $0 \le t \le 2$ so
+the area under the curve is equal to the integral
+$$\int_0^2 t e^{-t}~dt$$
+   Proceeding in the same way as Question \#\ref{q:zexpz}, using $u = t$ and $dv = e^{-t}~dt$,
+   \begin{align*}
+   \int_0^2 t e^{-t}~dt 
+& = \ub{-te^{-t} - e^{-t} }_{\mbox{from \#\ref{q:zexpz}}} \Big|_0^2\\ 
+& = 
+\left(-2e^{-2} - e^{-2}\right) 
+- \left(0e^{0} - e^{0}\right)  \\
+& = -3 e^{-2} + 1 
+   \end{align*}
+  \end{Solution}
+
+% *****************
+\item
+  \begin{Question}
+Find the area under the curve $f(z) = \arctan z$ on the interval $[0, 2]$.
+  \end{Question}
+
+  \begin{Solution}
+    On the interval $t \in [0, 2]$, the function $\arctan(z)$ is
+    always positive, so the area equals the integral $\ds \int_0^2 \arctan(z)~dz$.
+
+    To evaluate the integral, we follow the work from Question
+    \#\ref{q:arctan}, but without the `7' factor, using $u =
+    \arctan(z)$ and $dv = dz$.
+\begin{align*}
+  \int_0^2 \arctan(z)~dz & = z~\arctan(z) - \frac{1}{2} \ln|1 + z^2|  \Big|_0^2\\
+& = 
+\left(2 \arctan(2) - \frac{1}{2} \ln 5\right)
+- \left(0 \arctan(0) - \frac{1}{2} \ln 1\right) \\
+& = 2 \arctan(2) - \frac{\ln 5}{2} 
+\end{align*}
+  \end{Solution}
+
+% *****************
+%\item
+%  \begin{Question}
+%    Find the area under the curve $f(y) = \arcsin y$ for $0 \le y \le 1$. 
+%  \end{Question}
+%
+%  \begin{Solution}
+%    
+%  \end{Solution}
+
+
+% *****************
+\item
+  \begin{Question}
+    Use integration by parts twice to find $\ds \int  e^x \sin(x)~dx$.
+  \end{Question}
+
+  \begin{Solution}
+There are several ways to evaluate this integral; we'll show just one here. \\
+Let $u = \sin(x)$ and $dv = e^x ~dx$, \\
+so $du = \cos(x)~dx$ and $v = e^x$. 
+\begin{align*}
+  \ub{\int  e^x \sin(x)~dx}_{\mbox{ our goal}, ~I} & =
+\sin(x) e^x - \ub{\int \cos(x) e^x~dx}_{I_2} \\
+\end{align*}
+To evaluate $I_2$, we select the trig function again as $u$ and the exponential as $dv$:
+Let $u = \cos(x)$ and $dv = e^x ~dx$, \\
+so $du = -\sin(x)~dx$ and $v = e^x$. 
+\begin{align*}
+&   \ub{\int  e^x \sin(x)~dx}_{\mbox{ our goal}, ~I}  \\
+& = \sin(x) e^x - \ub{\int \cos(x) e^x~dx}_{I_2} \\
+& = \sin(x) e^x - \left( \cos(x) e^x - \int (-\sin(x)) e^x~dx\right) \\
+& = \sin(x) e^x - \left( \cos(x) e^x - \int (-\sin(x)) e^x~dx\right) \\
+\end{align*}
+Tidying, we obtain
+\begin{align*}
+  \ub{\int  e^x \sin(x)~dx}_{~I}  
+& = \sin(x) e^x - \cos(x) e^x - \ub{\int \sin(x) e^x~dx }_I
+\end{align*}
+Grouping the integrals $I$, which are what we are looking for,
+\begin{align*}
+  2 \int e^x \sin(x)~dx & = 
+ \sin(x) e^x - \cos(x) e^x  \\
+\mbox{ or } 
+  \int e^x \sin(x)~dx & = 
+ \frac{1}{2} \left(\sin(x) e^x - \cos(x) e^x \right) \\
+\end{align*}
+
+  \end{Solution}
+% *****************
+\item
+  \begin{Question}
+Use integration by parts twice to find $\ds \int  e^y \cos(y)~dy$.
+  \end{Question}
+
+  \begin{Solution}
+    This question is done in the same manner as the previous one.  For
+    variety, and to show it works as well, we will select the
+    exponential function as $u$ and the trig functions as $dv$. (Both
+    choices work, so long as you are consistent in both integration by
+    parts steps.)
+    
+Let $u = e^y$ and $dv = \cos(y) ~dy$, \\
+so $du = e^y~dy$ and $v = \sin(y) $. 
+\begin{align*}
+  \ub{\int  e^y \cos(y)~dy}_{\mbox{ our goal}, ~I} & =
+\sin(y) e^y - \ub{\int \sin(y) e^y~dy}_{I_2} \\
+\end{align*}
+To evaluate $I_2$, we select the exponential function again as $u$ and the trig as $dv$: \\
+Let $u = e^y$ and $dv = \sin(y) ~dy$, \\
+so $du = e^y~dy$ and $v = -\cos(y)$. 
+\begin{align*}
+&   \ub{\int  e^y \cos(y)~dy}_{\mbox{ our goal}, ~I}  \\
+& = \sin(y) e^y - \ub{\int \sin(y) e^y~dy}_{I_2} \\
+& = \sin(y) e^y - \left( (-\cos(y)) e^y - \int (-\cos(y)) e^y~dy\right) \\
+& = \sin(y) e^y + \cos(y) e^y - \int \cos(y) e^y~dy
+\end{align*}
+Tidying, we obtain
+\begin{align*}
+  \ub{\int  e^y \cos(y)~dy}_{~I}  
+& = \sin(y) e^y + \cos(y) e^y - \ub{\int \cos(y) e^y~dy }_I
+\end{align*}
+Grouping the integrals $I$, which are what we are looking for,
+\begin{align*}
+  2 \int e^y \cos(y)~dy & = 
+ \sin(y) e^y + \cos(y) e^y  \\
+\mbox{ or } 
+  \int e^y \cos(y)~dy & = 
+ \frac{1}{2} \left(\sin(y) e^y + \cos(y) e^y \right) \\
+\end{align*}
+  \end{Solution}
+
+% *****************
+%\item
+%  \begin{Question}
+%Use integration by parts twice to find $\ds \int  \sin^2x~dx$.
+%  \end{Question}
+%
+%  \begin{Solution}
+%    
+%  \end{Solution}
+
+% *****************
+\item
+  \begin{Question}
+    Use integration by parts to show that $$\int x^n \cos(ax)~dx =
+    \frac{1}{a} x^n \sin(ax) - \frac{n}{a} \int x^{n-1} \sin(ax) ~dx$$
+  \end{Question}
+
+  \begin{Solution}
+We are simply asked to change one integral into another, which can be done here 
+directly with integration by parts. \\
+Let $u = x^n$ and $dv = \cos(ax)~dx$, \\
+so $du = n x^{n-1} ~dx$ and $\ds v = \frac{1}{a} \sin(ax)$  \\
+Applying the by parts formula,
+\begin{align*}
+&   x^n \cos(ax)~dx \\
+& =
+x^n \left(\frac{1}{a} \sin(ax)\right) 
+- \int \frac{1}{a} \sin(ax) \cdot n \cdot x^{n-1} ~dx \\
+& = x^n \left(\frac{1}{a} \sin(ax)\right) 
+-\frac{n}{a} \int x^{n-1} \sin(ax) ~dx
+\end{align*}
+which is the desired formula.
+  \end{Solution}
+    
+
+% *****************
+\item
+  \begin{Question}
+
+    The concentration, $C$, in ng/ml, of a drug in the blood as a
+    function of the time, $t$, in hours since the drug was administered
+    is given by $$C = 15te^{ - 0.2t}.$$ The area under the concentration
+    curve is a measure of the overall effect of the drug on the body,
+    called the {\em bioavailability}. Find the bioavailability of the drug
+    between $t = 0$ and $t = 3$.
+  \end{Question}
+
+  \begin{Solution}
+    We have
+$$Bioavailability = \int^3_0 15te^{-0.2t}~dt.$$
+We first use integration by parts to evaluate the indefinite integral of this function. \\
+Let $u = 15t$ and $dv = e^{-0.2t}~dt$,\\
+so $du = 15~dt$ and $v = -5e^{-0.2t}$. Then,
+\begin{align*}
+ \int 15te^{-0.2t}~dt & = (15t)(-5e^{-0.2t}) - \int (-5e^{-0.2t})(15~dt) \\
+& = -75te^{-0.2t} + 75 \int e^{-0.2t}~dt \\
+& = -75te^{-0.2t}- 375e^{-0.2t} + C.
+\end{align*}
+  
+\begin{align*}
+\mbox{Thus, } \int^3_0 15te^{-0.2t}~dt & = (-75te^{-0.2t} - 375e^{-0.2t}) \Big|^3_0 \\
+& = -329.29 + 375 = 45.71. \\
+\end{align*}
+The bioavailability of the drug over this time interval is 45.71 (ng/ml)-hours
+  \end{Solution}
+
+%*****************
+\item
+  \begin{Question}
+    During a surge in the demand for electricity, the rate, $r$, at
+    which energy is used can be approximated by $$r = te^{ -at}$$  where $t$
+    is the time in hours and $a$ is a positive constant. 
+    \begin{enumerate}[(a)]
+    \item Find the total energy, $E$, used in the first $T$ hours. Give
+      your answer as a function of $a$.
+    \item What happens to $E$ as $T \to \infty$?
+    \end{enumerate}
+  \end{Question}
+
+  \begin{Solution}
+   We know that $\ddt{E} = r$, so the total energy $E$ used in the first $T$ hours is given by 
+$$E = \int^T_0 te^{-at} dt.$$ 
+We use integration by parts. \\
+Let $u = t$, $dv = e^{-at}~dt$. \\
+Then $du  = dt$, and $v = (-1/a) e^{-at}$.
+\begin{align*}
+E & = \int^T_0 te^{-at} dt  \\
+& = - (t/a) e^{-at} \Big|^T_0 - \int^T_0 -(1/a) e^{-at} ~dt \\
+& = - (1/a) Te^{-aT} + (1/a) \int^T_0 e^{-at} dt \\
+& = - (1/a) Te^{-aT} + (1/a^2) (1 - e^{-aT} ).
+\end{align*}
+  
+(b)
+ \begin{align*}
+ \lim_{T \to \infty}  E & = -(1/a) \lim_{T\to\infty}  \left( \frac{T }{e^{aT}} \right) + (1/a^2) \left( 1 - \lim_{T \to\infty} \frac{1}{ e^{aT}} \right) 
+ \end{align*}
+ Since $a > 0$, the second limit on the right hand side in the above
+ expression is 0. In the first limit, although both the numerator and
+ the denominator go to infinity, the denominator $e^{aT}$ goes to
+ infinity more quickly than $T$ does (can verify with l'Hopital's
+ rule). So in the end the denominator $e^{aT}$ is much greater than
+ the numerator $T$. Hence
+$ \ds \lim_{T\to \infty} \frac{T}{ e^{aT}} = 0$. 
+
+Thus $\lim_{T\to\infty} E = \frac{1}{a^2}$.  
+
+In words this means that the total amount of energy in the surge,
+accounting for over all time $(T \to \infty)$ is $\ds \frac{1}{a^2}$
+Joules.
+ \end{Solution}
+%*****************
+
+% \item
+%   \begin{Question}
+%     In describing the behavior of an electron, we use wave functions
+%     $\Psi_1$, $\Psi_2$, $\Psi_3$, $\ldots$\footnote{The symbol $\Psi$ is the capital greek letter ``Psi'', pronoused the same way as `sigh'.  It is the most common symbol for probability functions and wave functions in chemistry and physics.} of the form $$\Psi_n( x) =
+%     C_n \sin( n\pi x) \mbox{~~~ for }n = 1, 2, 3, \ldots$$ where $x$
+%     is the distance from a fixed point and $C_n$ is a positive
+%     constant.
+% \begin{enumerate}[(a)]
+% \item  Find $C_1$ so that $\Psi_1$ satisfies 
+% $$\int^1_0 ( \Psi_1( x))^2~dx = 1.$$ This is called {\em normalizing} the wave function $\Psi_1$. 
+% \item  For any integer $n$, find $C_n$ so that $Psi_n$ is normalized.
+% \end{enumerate}
+%   \end{Question}
+
+%   \begin{Solution}
+    
+%   \end{Solution}
+\end{multicols}
+
+\hrulefill
+
+\end{enumerate}
+\end{document}
+
