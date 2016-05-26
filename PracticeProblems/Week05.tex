@@ -674,7 +674,7 @@ The area is $\ln 3 \approx 1.0986$.
  \begin{enumerate}[(a)]
 \item Do the multiplication first, and then antidifferentiate. 
 \item Use the substitution $w = x^2 + 1$. 
-\item Explain how the expressions from parts ( a) and ( b) are different. Are they both correct?   
+\item Explain how the expressions from parts (a) and (b) are different. Are they both correct?   
  \end{enumerate}
   \end{Question}
 
@@ -1519,6 +1519,11 @@ Then
 & = \frac{2}{9} (t + 2)(2 + 3t)^{3/2}  \\
 & - \frac{4}{ 135} (2 + 3t)^{5/2} + C.
 \end{align*}
+Note that you could also expand the product into
+$\ds \int t \sqrt{2 + 3t}~dt + \int 2 \sqrt{2+3t}~dt$, and then use
+integration by parts only on the first term.  Both appproaches require
+similar amounts of work, so you can follow whichever approach you
+like.
   \end{Solution}
 %*****************
 %*****************
@@ -1968,7 +1973,8 @@ Find the area under the curve $f(z) = \arctan z$ on the interval $[0, 2]$.
   \int_0^2 \arctan(z)~dz & = z~\arctan(z) - \frac{1}{2} \ln|1 + z^2|  \Big|_0^2\\
 & = 
 \left(2 \arctan(2) - \frac{1}{2} \ln 5\right)
-- \left(0 \arctan(0) - \frac{1}{2} \ln 1\right) \\
+- \\
+&\left(0 \arctan(0) - \frac{1}{2} \ln 1\right) \\
 & = 2 \arctan(2) - \frac{\ln 5}{2} 
 \end{align*}
   \end{Solution}
@@ -1985,85 +1991,85 @@ Find the area under the curve $f(z) = \arctan z$ on the interval $[0, 2]$.
 
 
 % *****************
-\item
-  \begin{Question}
-    Use integration by parts twice to find $\ds \int  e^x \sin(x)~dx$.
-  \end{Question}
+% \item
+%   \begin{Question}
+%     Use integration by parts twice to find $\ds \int  e^x \sin(x)~dx$.
+%   \end{Question}
 
-  \begin{Solution}
-There are several ways to evaluate this integral; we'll show just one here. \\
-Let $u = \sin(x)$ and $dv = e^x ~dx$, \\
-so $du = \cos(x)~dx$ and $v = e^x$. 
-\begin{align*}
-  \ub{\int  e^x \sin(x)~dx}_{\mbox{ our goal}, ~I} & =
-\sin(x) e^x - \ub{\int \cos(x) e^x~dx}_{I_2} \\
-\end{align*}
-To evaluate $I_2$, we select the trig function again as $u$ and the exponential as $dv$:
-Let $u = \cos(x)$ and $dv = e^x ~dx$, \\
-so $du = -\sin(x)~dx$ and $v = e^x$. 
-\begin{align*}
-&   \ub{\int  e^x \sin(x)~dx}_{\mbox{ our goal}, ~I}  \\
-& = \sin(x) e^x - \ub{\int \cos(x) e^x~dx}_{I_2} \\
-& = \sin(x) e^x - \left( \cos(x) e^x - \int (-\sin(x)) e^x~dx\right) \\
-& = \sin(x) e^x - \left( \cos(x) e^x - \int (-\sin(x)) e^x~dx\right) \\
-\end{align*}
-Tidying, we obtain
-\begin{align*}
-  \ub{\int  e^x \sin(x)~dx}_{~I}  
-& = \sin(x) e^x - \cos(x) e^x - \ub{\int \sin(x) e^x~dx }_I
-\end{align*}
-Grouping the integrals $I$, which are what we are looking for,
-\begin{align*}
-  2 \int e^x \sin(x)~dx & = 
- \sin(x) e^x - \cos(x) e^x  \\
-\mbox{ or } 
-  \int e^x \sin(x)~dx & = 
- \frac{1}{2} \left(\sin(x) e^x - \cos(x) e^x \right) \\
-\end{align*}
+%   \begin{Solution}
+% There are several ways to evaluate this integral; we'll show just one here. \\
+% Let $u = \sin(x)$ and $dv = e^x ~dx$, \\
+% so $du = \cos(x)~dx$ and $v = e^x$. 
+% \begin{align*}
+%   \ub{\int  e^x \sin(x)~dx}_{\mbox{ our goal}, ~I} & =
+% \sin(x) e^x - \ub{\int \cos(x) e^x~dx}_{I_2} \\
+% \end{align*}
+% To evaluate $I_2$, we select the trig function again as $u$ and the exponential as $dv$:
+% Let $u = \cos(x)$ and $dv = e^x ~dx$, \\
+% so $du = -\sin(x)~dx$ and $v = e^x$. 
+% \begin{align*}
+% &   \ub{\int  e^x \sin(x)~dx}_{\mbox{ our goal}, ~I}  \\
+% & = \sin(x) e^x - \ub{\int \cos(x) e^x~dx}_{I_2} \\
+% & = \sin(x) e^x - \left( \cos(x) e^x - \int (-\sin(x)) e^x~dx\right) \\
+% & = \sin(x) e^x - \left( \cos(x) e^x - \int (-\sin(x)) e^x~dx\right) \\
+% \end{align*}
+% Tidying, we obtain
+% \begin{align*}
+%   \ub{\int  e^x \sin(x)~dx}_{~I}  
+% & = \sin(x) e^x - \cos(x) e^x - \ub{\int \sin(x) e^x~dx }_I
+% \end{align*}
+% Grouping the integrals $I$, which are what we are looking for,
+% \begin{align*}
+%   2 \int e^x \sin(x)~dx & = 
+%  \sin(x) e^x - \cos(x) e^x  \\
+% \mbox{ or } 
+%   \int e^x \sin(x)~dx & = 
+%  \frac{1}{2} \left(\sin(x) e^x - \cos(x) e^x \right) \\
+% \end{align*}
 
-  \end{Solution}
-% *****************
-\item
-  \begin{Question}
-Use integration by parts twice to find $\ds \int  e^y \cos(y)~dy$.
-  \end{Question}
+%   \end{Solution}
+% % *****************
+% \item
+%   \begin{Question}
+% Use integration by parts twice to find $\ds \int  e^y \cos(y)~dy$.
+%   \end{Question}
 
-  \begin{Solution}
-    This question is done in the same manner as the previous one.  For
-    variety, and to show it works as well, we will select the
-    exponential function as $u$ and the trig functions as $dv$. (Both
-    choices work, so long as you are consistent in both integration by
-    parts steps.)
+%   \begin{Solution}
+%     This question is done in the same manner as the previous one.  For
+%     variety, and to show it works as well, we will select the
+%     exponential function as $u$ and the trig functions as $dv$. (Both
+%     choices work, so long as you are consistent in both integration by
+%     parts steps.)
     
-Let $u = e^y$ and $dv = \cos(y) ~dy$, \\
-so $du = e^y~dy$ and $v = \sin(y) $. 
-\begin{align*}
-  \ub{\int  e^y \cos(y)~dy}_{\mbox{ our goal}, ~I} & =
-\sin(y) e^y - \ub{\int \sin(y) e^y~dy}_{I_2} \\
-\end{align*}
-To evaluate $I_2$, we select the exponential function again as $u$ and the trig as $dv$: \\
-Let $u = e^y$ and $dv = \sin(y) ~dy$, \\
-so $du = e^y~dy$ and $v = -\cos(y)$. 
-\begin{align*}
-&   \ub{\int  e^y \cos(y)~dy}_{\mbox{ our goal}, ~I}  \\
-& = \sin(y) e^y - \ub{\int \sin(y) e^y~dy}_{I_2} \\
-& = \sin(y) e^y - \left( (-\cos(y)) e^y - \int (-\cos(y)) e^y~dy\right) \\
-& = \sin(y) e^y + \cos(y) e^y - \int \cos(y) e^y~dy
-\end{align*}
-Tidying, we obtain
-\begin{align*}
-  \ub{\int  e^y \cos(y)~dy}_{~I}  
-& = \sin(y) e^y + \cos(y) e^y - \ub{\int \cos(y) e^y~dy }_I
-\end{align*}
-Grouping the integrals $I$, which are what we are looking for,
-\begin{align*}
-  2 \int e^y \cos(y)~dy & = 
- \sin(y) e^y + \cos(y) e^y  \\
-\mbox{ or } 
-  \int e^y \cos(y)~dy & = 
- \frac{1}{2} \left(\sin(y) e^y + \cos(y) e^y \right) \\
-\end{align*}
-  \end{Solution}
+% Let $u = e^y$ and $dv = \cos(y) ~dy$, \\
+% so $du = e^y~dy$ and $v = \sin(y) $. 
+% \begin{align*}
+%   \ub{\int  e^y \cos(y)~dy}_{\mbox{ our goal}, ~I} & =
+% \sin(y) e^y - \ub{\int \sin(y) e^y~dy}_{I_2} \\
+% \end{align*}
+% To evaluate $I_2$, we select the exponential function again as $u$ and the trig as $dv$: \\
+% Let $u = e^y$ and $dv = \sin(y) ~dy$, \\
+% so $du = e^y~dy$ and $v = -\cos(y)$. 
+% \begin{align*}
+% &   \ub{\int  e^y \cos(y)~dy}_{\mbox{ our goal}, ~I}  \\
+% & = \sin(y) e^y - \ub{\int \sin(y) e^y~dy}_{I_2} \\
+% & = \sin(y) e^y - \left( (-\cos(y)) e^y - \int (-\cos(y)) e^y~dy\right) \\
+% & = \sin(y) e^y + \cos(y) e^y - \int \cos(y) e^y~dy
+% \end{align*}
+% Tidying, we obtain
+% \begin{align*}
+%   \ub{\int  e^y \cos(y)~dy}_{~I}  
+% & = \sin(y) e^y + \cos(y) e^y - \ub{\int \cos(y) e^y~dy }_I
+% \end{align*}
+% Grouping the integrals $I$, which are what we are looking for,
+% \begin{align*}
+%   2 \int e^y \cos(y)~dy & = 
+%  \sin(y) e^y + \cos(y) e^y  \\
+% \mbox{ or } 
+%   \int e^y \cos(y)~dy & = 
+%  \frac{1}{2} \left(\sin(y) e^y + \cos(y) e^y \right) \\
+% \end{align*}
+%   \end{Solution}
 
 % *****************
 %\item
@@ -2083,11 +2089,14 @@ Grouping the integrals $I$, which are what we are looking for,
   \end{Question}
 
   \begin{Solution}
-We are simply asked to change one integral into another, which can be done here 
-directly with integration by parts. \\
-Let $u = x^n$ and $dv = \cos(ax)~dx$, \\
-so $du = n x^{n-1} ~dx$ and $\ds v = \frac{1}{a} \sin(ax)$  \\
-Applying the by parts formula,
+    We are simply asked to change one integral into another, which can
+    be done here directly with integration by parts.  The main
+    challenge is dealing with the parameters $a$ and $n$ instead of
+    explicit constants.
+
+    Let $u = x^n$ and $dv = \cos(ax)~dx$, \\
+    so $du = n x^{n-1} ~dx$ and $\ds v = \frac{1}{a} \sin(ax)$  \\
+    Applying the by parts formula,
 \begin{align*}
 &   x^n \cos(ax)~dx \\
 & =
@@ -2114,7 +2123,7 @@ which is the desired formula.
 
   \begin{Solution}
     We have
-$$Bioavailability = \int^3_0 15te^{-0.2t}~dt.$$
+$$\mbox{Bioavailability }= \int^3_0 15te^{-0.2t}~dt.$$
 We first use integration by parts to evaluate the indefinite integral of this function. \\
 Let $u = 15t$ and $dv = e^{-0.2t}~dt$,\\
 so $du = 15~dt$ and $v = -5e^{-0.2t}$. Then,
@@ -2169,7 +2178,7 @@ E & = \int^T_0 te^{-at} dt  \\
  the numerator $T$. Hence
 $ \ds \lim_{T\to \infty} \frac{T}{ e^{aT}} = 0$. 
 
-Thus $\lim_{T\to\infty} E = \frac{1}{a^2}$.  
+Thus $\ds \lim_{T\to\infty} E = \frac{1}{a^2}$.  
 
 In words this means that the total amount of energy in the surge,
 accounting for over all time $(T \to \infty)$ is $\ds \frac{1}{a^2}$
