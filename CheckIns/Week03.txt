@@ -56,7 +56,7 @@ The formula for a quadratic Taylor polynomial is
 <br />
 \( P_2(x)  = g(a)  + g'(a) (x-a) + \frac{g''(a)}{2} (x-a)^2 \)
 <br />
-Given the formulas for \(g(x)\) and its derivatives, the coefficient we need are:
+Given the formulas for \(g(x)\) and its derivatives, the coefficients we need are:
 <br />
 \( g(2) = e^6 \),  
 <br />
