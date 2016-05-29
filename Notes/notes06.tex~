@@ -15,12 +15,11 @@
 \vspace{5mm}
 \goals
 \begin{itemize}
-\item Recognize the family of functions that can be solved with the technique of
-integration by substitution.
-\item Solve integration problems using the technique of substitution. 
-\item Recognize the family of functions that can be solved with the technique of
-integration by parts. 
-\item Solve integration problems using the technique of integration by parts. 
+\item Use MATLAB to solve a variety of integration problems. 
+\item Use integration to find the average value of a function.
+\item Use MATLAB to find the average value of a function. 
+\item Use MATLAB to find the average value of a sequence of data. 
+\end{itemize}
 \vspace{5mm}
 
 
