@@ -1,0 +1,2 @@
+% mine energy consumption
+

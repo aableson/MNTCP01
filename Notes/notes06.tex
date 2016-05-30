@@ -18,7 +18,7 @@
 \item Use MATLAB to solve a variety of integration problems. 
 \item Use integration to find the average value of a function.
 \item Use MATLAB to find the average value of a function. 
-\item Use MATLAB to find the average value of a sequence of data. 
+\item Applications of Integration.
 \end{itemize}
 \vspace{5mm}
 
@@ -39,7 +39,7 @@ If we fix the temperature at the base, we can ask the question \\
 {\bf ``How quickly is heat radiated out of fin?''}
 
 \newpage
-\vsc
+
 \problem What factors affect the rate of heat transfer out of the
   fin?
 
@@ -52,9 +52,10 @@ If we fix the temperature at the base, we can ask the question \\
 
 \newpage
 
-The rate of heat flow from a metal fin to the environment is
-proportional to the temperature difference between the fin, $T$, and
-the environment, $T_\infty$. 
+Newton's Law of Heating and Cooling tells us that the rate of heat
+flow from a metal fin to the environment is proportional to the
+temperature difference between the fin, $T$, and the environment,
+$T_\infty$.
 \begin{center}
 \includegraphics[width=3.5in]{graphics/notes_06_LongPin3D}
 \end{center}
@@ -94,12 +95,13 @@ Give an expression for the total amount of heat lost over
 As soon as you see any sum of the form $\sum \ldots \Delta x$, you
 should be thinking ``integral''!
 
-For our fin example, net heat flow to environment is
+\problem For our fin example, net heat flow to environment is given
+by:
 %\begin{align*}
 %\int_S h (T(x) - T_{\infty} )~dA 
 %\end{align*}
 \vfill
-If, for simplicity, we assume $T_{\infty} = 0$, our target integral becomes
+If, for simplicity, we assume $T_{\infty} = 0$, our target integral becomes:
 %\begin{align*}
 %\mbox{Heat rate} = \int_S h ~T(x)~dA 
 %\end{align*}
@@ -113,9 +115,13 @@ distribution along the fin.  Without getting into all the gory
 details, tables or other methods will lead to the following formula
 for the temperature along the fin:
 
-$$T(x) = \frac{T_b \left(\cosh(m(L-x)) + \frac{h}{mk}\right)\left(\sinh(m(L-x))\right)}{\cosh(mL) + \frac{h}{mk} \sinh(mL)}$$
+$$T(x) = \frac{T_b \left(\cosh(m(L-x)) + \frac{h}{mk}\right)\left(\sinh(m(L-x))\right)}{\cosh(mL) + \frac{h}{mk} \sinh(mL)}, m = \sqrt{\frac{hP}{k A_c}}$$
 
 \problem What are these new $\cosh(x)$ and $\sinh(x)$ functions?
+\vfill
+
+What does the $m$ parameter capture in the physics of the scenario?
+\vfill
 
 
 
@@ -180,12 +186,14 @@ For this problem, given the earlier temperature we found, $T(x)$, we
 $$ \large
 Q =
 \frac{1}{2}\frac{T_b~P~h~(m~k~exp(2~m~L)-m~k+h~exp(2~m~L)+h-2~h~exp(m~L))}{m(\cosh(m~L)~m~k+h~\sinh(m~L))~exp(-m~L)}
-$$ \\[1ex]
- 
+$$ 
 
 Evaluated with appropriate constants for the material, base temp,
 etc. we would obtain the final value $$Q = 2.363 \mbox{ J/s}$$
 
+\begin{center}
+\includegraphics[width=3.5in]{graphics/notes_06_LongPin3D}
+\end{center}
 \newpage
 
 \subsection*{Comments on Anti-Derivatives}
@@ -237,17 +245,17 @@ $$
 
 \newpage
 
-Graphically, $\displaystyle \int_0^L \underbrace{h~P~T(x)}_{f(x)}~dx$
+Graphically, $\displaystyle Q = \int_0^L \underbrace{h~P~T(x)}_{f(x)}~dx$
 is the area shown below:
 \begin{center}
 \includegraphics[height=5cm]{graphics/notes_06_f_graph_with_area}
 \end{center}
-Numerical integration is performed by  
+Numerical integration is performed by:
 \begin{itemize}
-\item separating the desired interval into {\em panels}
+\item separating the desired interval into {\em panels}, and then
 \item on each {\em panel}, evaluating the integrand, $f(x)$ one or
   more times and those values are combined in some way to {\em estimate}
-  the area of the panel
+  the area of the panel.
 \end{itemize}
 
 \newpage
@@ -256,8 +264,8 @@ Numerical integration is performed by
 The simplest quadrature rule is one we have already seen: the LEFT($n$) sum.
 \begin{itemize}
 \item Divide the interval into $n$ panels, width $\Delta x = (b-a) / n$
-\item Evaluate function at the left end point,
-  $f(x_{i-1})$ on each panel. 
+\item Evaluate the function at the left end point, $f(x_{i-1})$, on
+  each panel.
 \item Compute the area of rectangles, $\ds \sum_{i=1}^N f(x_{i-1}) \cdot \Delta x$ or
 \end{itemize}
 \begin{center}
@@ -276,26 +284,26 @@ can compute the area. The {\bf more panels} we use, the {\bf more
 \includegraphics[height=6cm]{graphics/notes_06_f_lhr_500_intervals}
 \end{center}
 By using enough panels, we can reduce the error to any level we like,
-but then it takes longer to compute.
+but with the trade-off that it takes longer to compute.
 
 \newpage
 
-\problem Download the file \texttt{Week06CoolingFin.m}, and extend it so it
-  plots the graph of the temperature along the fin.
+\problem Download the file
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/Notes/MATLAB/week06CoolingFin.m}{week06CoolingFin.m},
+and extend it so it plots the graph of the temperature along the fin.
 
-\vsc
-
-\problem Using MATLAB, estimate the integral $\ds Q = \int_0^L h P ~T(x) ~dx$ with
-the left-hand rule,
+Using MATLAB, estimate the integral $\ds Q = \int_0^L h P ~T(x) ~dx$
+with the left-hand rule,
 $$ Q \approx \sum_{i=1}^n h P ~T(x_{i-1})~ \Delta x$$
 
 \vsc
 
 \newpage
 
-\problem Add a print statement that shows the number of intervals
-  used, and the resulting error.  Experiment by doubling the number of
-  intervals and seeing the resultant reduction in error.
+\problem Add a statement that displays the number of intervals used,
+$n$, and the resulting error in the LEFT($n$) integral estimate. \\
+Experiment by doubling the number of intervals and seeing the
+resultant reduction in error.
 
 \vsc
 
@@ -326,8 +334,9 @@ MATLAB help.
 
 \newpage
 
-\problem Starting with the \texttt{Week06CoolingFin.m}, use
-\texttt{quad} or \texttt{integral} to evaluate the rate of heat
+\problem Starting with
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/Notes/MATLAB/week06CoolingFin.m}{week06CoolingFin.m},
+use \texttt{quad} or \texttt{integral} to evaluate the rate of heat
 transfer from the cooling fin.  Compare it with the exact integral
 value,
 
@@ -335,8 +344,9 @@ $$
 Q = \int_0^{L} h ~P ~T(x) ~dx = 2.36269950112023 \mbox{ J/s}
 $$
 
-Look for options that could be used to increase the accuracy of the
-numerical integral estimate.
+
+Experiment with additional options that could be used to increase the
+accuracy of the numerical integral estimate.
 
 
 \newpage
@@ -446,13 +456,14 @@ $$\int_{-2}^{2} e^{-x^2}~dx.$$
 
 \vfill
 
-Use MATLAB to generate a graph of $f(x) = x^2$, compute the average
-value using the built-in integration tools, and then add a line at the
-average value.  Use the same $x \in [-2, 2]$ interval.
+\newpage 
+\problem Use MATLAB to generate a graph of $f(x) = x^2$, compute the
+average value using the built-in integration tools, and then add a
+line at the average value.  Use the same $x \in [-2, 2]$ interval.
 
 \newpage
 
-\topic{Average Value - Examples}
+\topic{Average Value - Temperature Example}
 
 \begin{boxnote}
   {\bf Average Value of a Function on $[a, b]$} \\
@@ -465,26 +476,190 @@ A = \frac{1}{b-a} \int_a^b f(x)~dx
 
 \newpage
 
-\problem The temperature in a house is given by $H(t) = 18 + 4
-  \sin(\pi t/12)$, where $t$ is in hours and $H$ is degrees C.  
-Sketch the graph of $H(t)$ from $t=0$ to $t=12$, then find
-  the average temperature between $t=0$ and $t=12$. 
+The temperature in a house is given by $$H(t) = 18 + 4
+  \sin(\pi t/12),$$ where $t$ is in hours and $H$ is degrees C.  
+
+  \problem Sketch the graph of $H(t)$ from $t=0$ to $t=12$, then find
+  the average temperature between $t=0$ and $t=12$.
 
 \hfill \includegraphics[width=4in]{graphics/empty_graph_wide_12}
 
 \vfill
 \vfill
 
+\newpage 
+\problem Repeat your analysis for the temperature function
+$$H(t) = 18 + 4 \sin(\pi t/12)$$ in MATLAB.  
+
+Include a graph of $H(t)$ over $t = 0\ldots 12$ and a line showing the
+average value.
+
 \newpage
 
-\problem You are told that the average value of $f(x)$ over the
-  interval $x \in [0, 3]$ is 5.  What is the value of $\ds \int_0^3
-  f(x)~dx$?
+\topic{Average Value from Data}
+\subsection*{Average Value from Data}
+
+One of the major consumers of electricity in a mining operation is
+running the crushers.  Being able to track the efficiency and power
+demand of these machines is therefore an important component of
+managing mine operations.
+
+Sensors can record the power draw (in MW) over time, and record them
+to a spreadsheet.
+
+\problem Download the file
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/Notes/MATLAB/week06CrusherData.csv}{week06CrusherData.csv}
+and either open it in Excel, or double-click on it in the MATLAB File
+Viewer.  \vfill
+
+The data in this file contains data for one 24 hour period, in 2 columns:
+\begin{itemize}
+\item Time (in hours after midnight), and
+\item Power (in MW) for the crusher. 
+\end{itemize}
+
+\newpage
+
+MATLAB can import Comma Separated Variable (CSV) files easily, though
+it does require some new-to-us tools for manipulating matrices.
+
+\problem Explain what each line in this MATLAB script does, and what each variable
+will contain.
+\begin{verbatim}
+M = csvread('week06CrusherData.csv')
+
+
+t = M(:, 1);
+
+
+P = M(:, 2);
+
+
+plot(t, P);
+\end{verbatim}
+
+\newpage
+
+\problem How would the total power consumption over the day be
+represented mathematically, if $t$ is in hours and $P(t)$ represented
+the power being used at hour $t$?
+
+\vfill
+
+Can we compute this value using the Fundamental Theorem of Calculus?
+
+\vfill
+
+\newpage
+
+\problem Write out the Riemann sum approximation to the integral.
 
 \vfill
 \vfill
 
+Use MATLAB to estimate the total power consumed during the 24 recorded
+hours.
 \newpage
+
+\problem Use our earlier formula for average values to estimate the
+{\bf average} power consumption rate over 24 hours.
+
+\vfill
+
+Given the data format in MATLAB, find the average power consumption
+rate in a different (more traditional) way.
+
+\vfill
+
+Plot both the power consumption over time, and the average power usage
+graphically.  \vspace{1in}
+
+\newpage
+
+\topic{Integration and Averages from Data - Acceleration}
+\subsection*{Integration and Averages from Data - Acceleration}
+
+Accelerometers are now relatively inexpensive sensors that can be
+incorporated in machinery and can be used to infer changes in velocity
+and changes in position.
+
+In testing a new collection accelerometer sensors, you attach them to
+a cart and record the acceleration over a 6 minute test interval,
+running the cart at several different motor powers as the cart moves
+from a minehead to a dropoff area.  The cart starts at rest, and is
+stopped (zero velocity) before the end of the recording.
+
+The acceleration data is recorded in the file 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/Notes/MATLAB/week06CartAcceleration.csv}{week06CartAcceleration.csv}
+
+\newpage
+
+\problem In MATLAB, load the data from
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/Notes/MATLAB/week06CartAcceleration.csv}{week06CartAcceleration.csv}
+and plot the acceleration against time graph.  \\
+Time is recorded in seconds, and acceleration in m/s$^2$. \\
+Add a black line at $a = 0$ so you can see forwards vs backwards
+accelerations more easily.
+
+\vspace{1in} 
+
+Describe in words what the motion of the cart would have looked like,
+based just on the acceleration records.
+
+\vfill
+
+\newpage
+
+\problem Write an integral that represents the total change in
+velocity for the cart over the six minutes.
+
+\vfill
+
+Can we compute this value using the Fundamental Theorem of Calculus?
+
+\vfill
+
+\newpage
+
+\problem Write out the Riemann sum approximation to the integral that
+computes the change in velocity.
+
+\vfill
+
+Use MATLAB to estimate the total change in velocity during the
+recording hours.
+
+\vspace{1in}
+
+Comment on the accuracy of the sensors.
+\vfill
+\vfill
+
+\newpage
+
+\problem Use our earlier formula for average values to estimate the
+{\bf average} acceleration over the recording time.
+
+\vspace{1in}
+
+Based on the scenario that was given, should this value be zero as
+like the net change in velocity?  Why or why not?
+
+\vfill
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
