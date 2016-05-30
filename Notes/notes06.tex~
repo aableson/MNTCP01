@@ -52,8 +52,24 @@ If we fix the temperature at the base, we can ask the question \\
 
 \newpage
 
-\problem Take a small slice of length $\Delta x$ of the fin: how much
-  heat is lost through that slice?
+The rate of heat flow from a metal fin to the environment will
+proportional to the temperature difference between the fin, $T$, and
+the environment, $T_\infty$. \\
+
+\problem What issue is raised when trying to use this rule to compute
+the rate of heat flow out of the fin we are considering?
+ 
+
+\newpage
+\topic{Numerical Integration - Motivation}
+\subsection*{Numerical Integration - Motivation}
+
+\problem Take a small slice of length $\Delta x$ of the fin.  What
+advantage is there to looking at a small slice, rather than the whole
+fin at once?
+\vfill
+
+How much heat is lost through that slice?
 \begin{center}
 \includegraphics[width=3.5in]{graphics/notes_06_LongPin3D}
 \end{center}
@@ -73,7 +89,7 @@ Give an expression for the total amount of heat lost over
 \subsection*{Integration}
 
 As soon as you see any sum of the form $\sum \ldots \Delta x$, you
-should be thinking ``Integral''!
+should be thinking ``integral''!
 
 For our fin example, net heat flow to environment is
 %\begin{align*}
@@ -119,6 +135,7 @@ length of the fin to see if it makes sense.
 \newpage
 
 
+\topic{Computing Total Heat Loss}
 \subsection*{Computing Total Heat Loss}
 Now, we have addressed one challenge in our problem: we know the
 steady-state temperature along the fin.  Next, we want to compute
@@ -139,7 +156,8 @@ Q =
 $$
  
 
-%Evaluated with appropriate constants for the material, base temp, etc. we would obtain the final value  $$Q = 2.362699501 \mbox{ J/s}$$
+Evaluated with appropriate constants for the material, base temp,
+etc. we would obtain the final value $$Q = 2.363 \mbox{ J/s}$$
 
 \newpage
 
@@ -290,43 +308,23 @@ integral estimates as {\em accurate} as possible for the {\em least
 \topic*{Built-In Integration in MATLAB }
 \subsection*{Built-In Integration in MATLAB }
 
-\Exercise{Look up the function \texttt{quad} or \texttt{integral} in MATLAB help.}
+\problem Look up the function \texttt{quad} or \texttt{integral} in MATLAB help.
 
 \vsc
 
-\Exercise{Use \texttt{quad} on our sawtooth function and print the error.}
+\problem Use \texttt{quad} on our sawtooth function and print the error.
 
 \vsc
 
-\Exercise{Experiment with the options for \texttt{quad} to reduce the
-  error further.}
+\problem Experiment with the options for \texttt{quad} to reduce the
+  error further.
 
 \vsc
 
-\ExampleCont{Comment on the error you ask for and the error you get.}
+\problem Comment on the error you ask for and the error you get.
 
 \vfill
 
-
-\newpage
-
-\subsection*{Costs of Adaptive Integration}
-
-\ExampleCont{What programming approach would be best suited to
-  calculating adaptive integral estimates?}
-
-\vfill
-
-\ExampleCont{How much more difficult would programming an adaptive
-  method be, compared to the fixed-interval Newton-Cotes methods like
-  LHR and Simpson's rule?}
-
-\vfill
-
-\ExampleCont{What are some other run-time costs of using adaptive
-  methods, compared to fixed-interval methods?}
-
-\vfill
 
 \newpage
 
