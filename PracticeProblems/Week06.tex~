@@ -1,0 +1,18 @@
+
+\input{SingleAssignmentSetup.tex}
+\input{../WeekTitles.tex}
+\usepackage{bbding} % for Checkmarkbold
+\begin{document}
+
+\newcommand{\ub}{\underbrace}
+
+\begin{center}
+\subsection*{MNTC P01 - Week \#5 - \WeekTitleFive}
+\end{center}
+
+
+\hrulefill
+
+\end{enumerate}
+\end{document}
+
