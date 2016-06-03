@@ -1,0 +1,7 @@
+ **** f =    @(x)x^3-5
+Integral from 0.0 to 5.0
+Exact value of integral = 131.25
+LHR estimate = 128.14063
+Trap estimate = 131.26563
+Simp estimate = 131.25
+

@@ -1,0 +1,8 @@
+
+ **** f =    @(x)4*log10(x)
+
+Integral from 1.0 to 10.0
+Exact value of integral = 24.365399
+LHR estimate = 24.184344
+Trap estimate = 24.364344
+Simp estimate = 24.365397
