@@ -1,7 +1,8 @@
 
 
 ---Question
-When considering the calculation of the rate of heat transfer out of a cooling fin,
+When considering the calculation of the rate of heat transfer out of a cooling fin, like
+the one seen in this week's videos,
 why is an integral needed for the calculation?
 
 ---Type
@@ -18,10 +19,12 @@ Assuming a fin is made out of one material, the conduction <it>coefficient</it>
 is the constant, so the process of conduction doesn't change.
 <br />
 Most fins have a constant cross-section and constant surface area <it>per unit of length</it>
-so we can't say there is 'less' surface area towards the tip. 
+so we can't say there is less surface area towards the tip: the statement doesn't really have any meaning. 
 <br />
-You could make a better case for changing temperature of the fluid,
-but typically we assume a single constant temperature for the fluid,
+
+You could make a better case for the temperature of the fluid being
+different at different points, but (as we did in the videos) we
+typically assume a single constant temperature for the fluid,
 \(T_{\infty}\), which is appropriate if the fluid (e.g. air, oil,
 water) around the fin is being mixed or it is flowing over the fin.
 
@@ -34,10 +37,9 @@ what basic process is it using to evaluate the integral?
 ---Type
 onechoice
 ---Answers
-~ The anti-derivative of \(f(x)\)is computed to find \(F(x)\), and then integral limits are then subbed in to \(F(x)\).
+~ The anti-derivative of \(f(x)\)is computed to find \(F(x)\), and then integral limits are then subbed in to compute \(F(b) - F(a)\).
 ~ The area under the curve is computed through a graph of \(f(x)\), and the resulting area is the integral value.
-= The fuction \(f(x)\) is evaluated at many points between \(x=a\) and \(x=b\), then the integral
-is estimated using formulas like \(\sum f(x_i) ~\Delta x\)
+= The fuction \(f(x)\) is evaluated at many points \(x_i\), then the integral is estimated using formulas similar to \(\sum f(x_i) ~\Delta x\)
 ---Comment
 
 <br /> When computing integrals by hand or exactly, an anti-derivative
@@ -57,7 +59,7 @@ You are travelling with velocity \(v(t)\) over the time interval \([a, b]\).
 <br />
 Your position over that time is given by \(s(t)\).
 <br />
-Which of the following represent your average velocity over the time interval \([a, b]\)?
+Which of the following represent your <b>average velocity</b> over the time interval \([a, b]\)?
 ---Type
 onechoic
 ---Answers
@@ -68,4 +70,4 @@ onechoic
 ---Comment
 <br />
 Given the velocity function, you can find the average velocity using the averaging of a function formula: <br />
-integral of the velocity, which gives total distance travelled here, divided by the size of the time interval.
+integral of the velocity, which gives total distance travelled here, divided by the size or length of the time interval, \((b-a)\).

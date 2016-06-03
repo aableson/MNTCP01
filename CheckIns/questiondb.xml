@@ -40,7 +40,7 @@
         <presentation>
           <flow>
             <material>
-              <mattext texttype="text/html"> When considering the calculation of the rate of heat transfer out of a cooling fin, why is an integral needed for the calculation? </mattext>
+              <mattext texttype="text/html"> When considering the calculation of the rate of heat transfer out of a cooling fin, like the one seen in this week's videos, why is an integral needed for the calculation? </mattext>
             </material>
             <response_extension>
               <d2l_2p0:display_style>2</d2l_2p0:display_style>
@@ -121,7 +121,7 @@
         </resprocessing>
         <itemfeedback ident="Week06_Q1">
           <material>
-            <mattext texttype="text/html">&lt;br /> Assuming a fin is made out of one material, the conduction &lt;it>coefficient&lt;/it> is the constant, so the process of conduction doesn't change. &lt;br /> Most fins have a constant cross-section and constant surface area &lt;it>per unit of length&lt;/it> so we can't say there is 'less' surface area towards the tip.  &lt;br /> You could make a better case for changing temperature of the fluid, but typically we assume a single constant temperature for the fluid, &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;msub>&lt;mi>T&lt;/mi>&lt;mo>&amp;infin;&lt;/mo>&lt;/msub>&lt;/mrow>&lt;/math>, which is appropriate if the fluid (e.g. air, oil, water) around the fin is being mixed or it is flowing over the fin.</mattext>
+            <mattext texttype="text/html">&lt;br /> Assuming a fin is made out of one material, the conduction &lt;it>coefficient&lt;/it> is the constant, so the process of conduction doesn't change. &lt;br /> Most fins have a constant cross-section and constant surface area &lt;it>per unit of length&lt;/it> so we can't say there is less surface area towards the tip: the statement doesn't really have any meaning.  &lt;br /> You could make a better case for the temperature of the fluid being different at different points, but (as we did in the videos) we typically assume a single constant temperature for the fluid, &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;msub>&lt;mi>T&lt;/mi>&lt;mo>&amp;infin;&lt;/mo>&lt;/msub>&lt;/mrow>&lt;/math>, which is appropriate if the fluid (e.g. air, oil, water) around the fin is being mixed or it is flowing over the fin.</mattext>
           </material>
         </itemfeedback>
       </item>
@@ -173,7 +173,7 @@
                   <response_label ident="Week06_QUES_2_ANS_1">
                     <flow_mat>
                       <material>
-                        <mattext texttype="text/html">The anti-derivative of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>is computed to find &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>F&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>, and then integral limits are then subbed in to &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>F&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>.
+                        <mattext texttype="text/html">The anti-derivative of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>is computed to find &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>F&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>, and then integral limits are then subbed in to compute &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>F&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>b&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>-&lt;/mo>&lt;mi>F&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>a&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>.
 
 </mattext>
                       </material>
@@ -195,18 +195,7 @@
                   <response_label ident="Week06_QUES_2_ANS_3">
                     <flow_mat>
                       <material>
-                        <mattext texttype="text/html">The fuction &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> is evaluated at many points between &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>=&lt;/mo>&lt;mi>a&lt;/mi>&lt;/mrow>&lt;/math> and &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>=&lt;/mo>&lt;mi>b&lt;/mi>&lt;/mrow>&lt;/math>, then the integral
-
-</mattext>
-                      </material>
-                    </flow_mat>
-                  </response_label>
-                </flow_label>
-                <flow_label class="Block">
-                  <response_label ident="Week06_QUES_2_ANS_4">
-                    <flow_mat>
-                      <material>
-                        <mattext texttype="text/html">is estimated using formulas like &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mo>&amp;sum;&lt;/mo>&lt;/mstyle>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msub>&lt;mi>x&lt;/mi>&lt;mi>i&lt;/mi>&lt;/msub>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mi>&amp;nbsp;&lt;/mi>&lt;mi>&amp;Delta;&lt;/mi>&lt;mi>x&lt;/mi>&lt;/mrow>&lt;/math>
+                        <mattext texttype="text/html">The fuction &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> is evaluated at many points &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;msub>&lt;mi>x&lt;/mi>&lt;mi>i&lt;/mi>&lt;/msub>&lt;/mrow>&lt;/math>, then the integral is estimated using formulas similar to &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mo>&amp;sum;&lt;/mo>&lt;/mstyle>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msub>&lt;mi>x&lt;/mi>&lt;mi>i&lt;/mi>&lt;/msub>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mi>&amp;nbsp;&lt;/mi>&lt;mi>&amp;Delta;&lt;/mi>&lt;mi>x&lt;/mi>&lt;/mrow>&lt;/math>
 
 </mattext>
                       </material>
@@ -223,7 +212,7 @@
               <varequal respident="Week06_Q2_LID">Week06_QUES_2_ANS_1</varequal>
             </conditionvar>
             <setvar action="Set">0</setvar>
-            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_1">The anti-derivative of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>is computed to find &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>F&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>, and then integral limits are then subbed in to &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>F&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>.
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_1">The anti-derivative of &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>is computed to find &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>F&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>, and then integral limits are then subbed in to compute &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>F&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>b&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mo>-&lt;/mo>&lt;mi>F&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>a&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>.
 
 </displayfeedback>
           </respcondition>
@@ -241,16 +230,7 @@
               <varequal respident="Week06_Q2_LID">Week06_QUES_2_ANS_3</varequal>
             </conditionvar>
             <setvar action="Set">100</setvar>
-            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_3">The fuction &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> is evaluated at many points between &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>=&lt;/mo>&lt;mi>a&lt;/mi>&lt;/mrow>&lt;/math> and &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>x&lt;/mi>&lt;mo>=&lt;/mo>&lt;mi>b&lt;/mi>&lt;/mrow>&lt;/math>, then the integral
-
-</displayfeedback>
-          </respcondition>
-          <respcondition title="Response Condition 4">
-            <conditionvar>
-              <varequal respident="Week06_Q2_LID">Week06_QUES_2_ANS_4</varequal>
-            </conditionvar>
-            <setvar action="Set">0</setvar>
-            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_4">is estimated using formulas like &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mo>&amp;sum;&lt;/mo>&lt;/mstyle>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msub>&lt;mi>x&lt;/mi>&lt;mi>i&lt;/mi>&lt;/msub>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mi>&amp;nbsp;&lt;/mi>&lt;mi>&amp;Delta;&lt;/mi>&lt;mi>x&lt;/mi>&lt;/mrow>&lt;/math>
+            <displayfeedback feedbacktype="Response" linkrefid="QUES_ANSWER_3">The fuction &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>x&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> is evaluated at many points &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;msub>&lt;mi>x&lt;/mi>&lt;mi>i&lt;/mi>&lt;/msub>&lt;/mrow>&lt;/math>, then the integral is estimated using formulas similar to &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mstyle displaystyle="true">&lt;mo>&amp;sum;&lt;/mo>&lt;/mstyle>&lt;mi>f&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;msub>&lt;mi>x&lt;/mi>&lt;mi>i&lt;/mi>&lt;/msub>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;mi>&amp;nbsp;&lt;/mi>&lt;mi>&amp;Delta;&lt;/mi>&lt;mi>x&lt;/mi>&lt;/mrow>&lt;/math>
 
 </displayfeedback>
           </respcondition>
@@ -294,7 +274,7 @@
         <presentation>
           <flow>
             <material>
-              <mattext texttype="text/html">You are travelling with velocity &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>v&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>t&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> over the time interval &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mo form="prefix">[&lt;/mo>&lt;mi>a&lt;/mi>&lt;mo>,&lt;/mo>&lt;mi>b&lt;/mi>&lt;mo form="postfix">]&lt;/mo>&lt;/mrow>&lt;/math>. &lt;br /> Your position over that time is given by &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>s&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>t&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>. &lt;br /> Which of the following represent your average velocity over the time interval &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mo form="prefix">[&lt;/mo>&lt;mi>a&lt;/mi>&lt;mo>,&lt;/mo>&lt;mi>b&lt;/mi>&lt;mo form="postfix">]&lt;/mo>&lt;/mrow>&lt;/math>?
+              <mattext texttype="text/html">You are travelling with velocity &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>v&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>t&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math> over the time interval &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mo form="prefix">[&lt;/mo>&lt;mi>a&lt;/mi>&lt;mo>,&lt;/mo>&lt;mi>b&lt;/mi>&lt;mo form="postfix">]&lt;/mo>&lt;/mrow>&lt;/math>. &lt;br /> Your position over that time is given by &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mi>s&lt;/mi>&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>t&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/mrow>&lt;/math>. &lt;br /> Which of the following represent your &lt;b>average velocity&lt;/b> over the time interval &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mo form="prefix">[&lt;/mo>&lt;mi>a&lt;/mi>&lt;mo>,&lt;/mo>&lt;mi>b&lt;/mi>&lt;mo form="postfix">]&lt;/mo>&lt;/mrow>&lt;/math>?
 
 </mattext>
             </material>
@@ -393,7 +373,7 @@
         </resprocessing>
         <itemfeedback ident="Week06_Q3">
           <material>
-            <mattext texttype="text/html"> &lt;br /> Given the velocity function, you can find the average velocity using the averaging of a function formula: &lt;br /> integral of the velocity, which gives total distance travelled here, divided by the size of the time interval. </mattext>
+            <mattext texttype="text/html">&lt;br /> Given the velocity function, you can find the average velocity using the averaging of a function formula: &lt;br /> integral of the velocity, which gives total distance travelled here, divided by the size or length of the time interval, &lt;math xmlns="http://www.w3.org/1998/Math/MathML">&lt;mrow>&lt;mo form="prefix">(&lt;/mo>&lt;mi>b&lt;/mi>&lt;mo>-&lt;/mo>&lt;mi>a&lt;/mi>&lt;mo form="postfix">)&lt;/mo>&lt;/mrow>&lt;/math>.</mattext>
           </material>
         </itemfeedback>
       </item>

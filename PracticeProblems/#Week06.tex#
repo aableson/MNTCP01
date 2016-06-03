@@ -1,0 +1,56 @@
+
+\input{SingleAssignmentSetup.tex}
+\input{../WeekTitles.tex}
+\usepackage{bbding} % for Checkmarkbold
+\begin{document}
+
+\newcommand{\ub}{\underbrace}
+
+\begin{center}
+\subsection*{MNTC P01 - Week \#5 - \WeekTitleFive}
+\end{center}
+
+
+ \begin{align*}
+ \lim_{T \to \infty}  E & = -(1/a) \lim_{T\to\infty}  \left( \frac{T }{e^{aT}} \right) + (1/a^2) \left( 1 - \lim_{T \to\infty} \frac{1}{ e^{aT}} \right) 
+ \end{align*}
+ Since $a > 0$, the second limit on the right hand side in the above
+ expression is 0. In the first limit, although both the numerator and
+ the denominator go to infinity, the denominator $e^{aT}$ goes to
+ infinity more quickly than $T$ does (can verify with l'Hopital's
+ rule). So in the end the denominator $e^{aT}$ is much greater than
+ the numerator $T$. Hence
+$ \ds \lim_{T\to \infty} \frac{T}{ e^{aT}} = 0$. 
+
+Thus $\ds \lim_{T\to\infty} E = \frac{1}{a^2}$.  
+
+In words this means that the total amount of energy in the surge,
+accounting for over all time $(T \to \infty)$ is $\ds \frac{1}{a^2}$
+Joules.
+ \end{Solution}
+%*****************
+
+% \item
+%   \begin{Question}
+%     In describing the behavior of an electron, we use wave functions
+%     $\Psi_1$, $\Psi_2$, $\Psi_3$, $\ldots$\footnote{The symbol $\Psi$ is the capital greek letter ``Psi'', pronoused the same way as `sigh'.  It is the most common symbol for probability functions and wave functions in chemistry and physics.} of the form $$\Psi_n( x) =
+%     C_n \sin( n\pi x) \mbox{~~~ for }n = 1, 2, 3, \ldots$$ where $x$
+%     is the distance from a fixed point and $C_n$ is a positive
+%     constant.
+% \begin{enumerate}[(a)]
+% \item  Find $C_1$ so that $\Psi_1$ satisfies 
+% $$\int^1_0 ( \Psi_1( x))^2~dx = 1.$$ This is called {\em normalizing} the wave function $\Psi_1$. 
+% \item  For any integer $n$, find $C_n$ so that $Psi_n$ is normalized.
+% \end{enumerate}
+%   \end{Question}
+
+%   \begin{Solution}
+    
+%   \end{Solution}
+\end{multicols}
+
+\hrulefill
+
+\end{enumerate}
+\end{document}
+
