@@ -1,2 +1,2 @@
-<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><mfrac linethickness="1"><mi>x</mi><mrow><mi>ln</mi><mo form="prefix">(</mo><mi>x</mi><mo form="postfix">)</mo></mrow></mfrac><mi>&nbsp;</mi><mi>d</mi><mi>x</mi></mstyle></mrow></math>
+<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><mfrac linethickness="1"><mn>1</mn><mrow><mi>b</mi><mo>-</mo><mi>a</mi></mrow></mfrac><mstyle displaystyle="true"><munderover><mo>&int;</mo><mi>a</mi><mi>b</mi></munderover></mstyle><mi>v</mi><mrow><mo form="prefix">(</mo><mi>t</mi><mo form="postfix">)</mo></mrow><mspace width="0.278em" /><mi>d</mi><mi>t</mi></mstyle></mrow></math>
 

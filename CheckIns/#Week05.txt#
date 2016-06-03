@@ -1,0 +1,46 @@
+---Question
+Which of the integrals below could be transformed into the simplest new integral by using a substitution?	        
+---Type
+onechoice
+---Answers
+~\( \displaystyle \int x\sin (x)~dx \)
+~\( \displaystyle \int \frac{x}{\ln x}~dx \)
+~\( \displaystyle \int \sqrt{x} e^{\sqrt{x}}~dx \)
+=\( \displaystyle \int x^2(x^3 + 3)^6~dx  \)
+---Comment
+<br />
+(d) - selecting \(w = x^3+3\), dividing by its derivative \((3x^2)\) will cancel the leading \(x^2\).  The new integral will look like \(\displaystyle	\int w^6~dw\) with some constants, which is pretty simple.
+
+
+---Question
+For which of the following integrals is integration by parts appropriate?
+---Type
+multichoice
+---Answers
+~\(\displaystyle \int x \sin x^2 ~dx \)
+=\(\displaystyle \int x^2 \sin x ~dx \)
+~\(\displaystyle \int \sin x^2 ~dx \)
+---Comment
+(a) can be integrated with a substitution \(w = x^2\).
+<br />
+(c) has no simple anti-derivative at all, with any method.
+
+
+---Question
+For which of the following integrals is integration by parts with 
+<br />
+\(u = x\) and 
+<br />
+\(dv = \) (the rest of the integrand) 
+<br />
+a reasonable/effective choice?
+---Type
+multichoice
+---Answers
+~\(\displaystyle x (\ln x)^2~dx \)
+~\(\displaystyle x e^{x^3}~dx \)
+=\(\displaystyle x \sin(x)~dx \)
+~\(\displaystyle \frac{x}{\ln(x)}~dx \)
+---Comment
+Check the value of \(dv\), and ask whether you are able to integrate it by itself.   If the answer is "no", then that choice of \(dv\) won't help much when using integration by parts.
+06

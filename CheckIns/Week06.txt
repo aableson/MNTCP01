@@ -1,0 +1,71 @@
+
+
+---Question
+When considering the calculation of the rate of heat transfer out of a cooling fin,
+why is an integral needed for the calculation?
+
+---Type
+onechoice
+---Answers
+= Heat flow depends on the temperature of the fin, and the temperature along the fin is not constant.
+~ Heat flow depends on the material of the fin, and the conduction along the fin is not constant.
+~ Heat flow depends on the surface area of the fin, and the surface area diminishes as you approach the end of the fin.
+~ Heat flow depends on the fluid around the fin, and the temperature of the fluid is not constant. 
+---Comment
+
+<br />
+Assuming a fin is made out of one material, the conduction <it>coefficient</it>
+is the constant, so the process of conduction doesn't change.
+<br />
+Most fins have a constant cross-section and constant surface area <it>per unit of length</it>
+so we can't say there is 'less' surface area towards the tip. 
+<br />
+You could make a better case for changing temperature of the fluid,
+but typically we assume a single constant temperature for the fluid,
+\(T_{\infty}\), which is appropriate if the fluid (e.g. air, oil,
+water) around the fin is being mixed or it is flowing over the fin.
+
+
+---Question
+If you used the <tt>integral</tt> function in MATLAB to
+evaluate the integral \(\int_a^b f(x)~dx\), <br />
+what basic process is it using to evaluate the integral?
+
+---Type
+onechoice
+---Answers
+~ The anti-derivative of \(f(x)\)is computed to find \(F(x)\), and then integral limits are then subbed in to \(F(x)\).
+~ The area under the curve is computed through a graph of \(f(x)\), and the resulting area is the integral value.
+= The fuction \(f(x)\) is evaluated at many points between \(x=a\) and \(x=b\), then the integral
+is estimated using formulas like \(\sum f(x_i) ~\Delta x\)
+---Comment
+
+<br /> When computing integrals by hand or exactly, an anti-derivative
+is computed, and the integral limits are then subbed in.  That is not
+a numerical approach though, and MATLAB can't be used to compute
+anti-derivative functions.
+
+<br /> Numerical calculations are not usually tied directly to graphs,
+though graphs can help us understand the idea underlying the
+calculation or formula being used.
+
+
+
+
+---Question
+You are travelling with velocity \(v(t)\) over the time interval \([a, b]\).
+<br />
+Your position over that time is given by \(s(t)\).
+<br />
+Which of the following represent your average velocity over the time interval \([a, b]\)?
+---Type
+onechoic
+---Answers
+~\( \displaystyle \frac{{b-a}}{{s(b) - s(a)}}\)
+~\( \displaystyle \frac{1}{{b - a}}\int_a^b s (t)\;dt\)
+~\( \displaystyle \frac{{v(b) - v(a)}}{{b - a}}\)
+=\( \displaystyle \frac{1}{{b - a}}\int_a^b v (t)\;dt \)
+---Comment
+<br />
+Given the velocity function, you can find the average velocity using the averaging of a function formula: <br />
+integral of the velocity, which gives total distance travelled here, divided by the size of the time interval.

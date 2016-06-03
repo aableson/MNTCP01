@@ -1,0 +1,15 @@
+
+
+---Question
+When considering the calculation of the rate of heat transfer out of a cooling fin,
+why is an integral needed for the calculation?
+
+---Type
+onechoice
+---Answers
+~ Heat flow depends on the temperature, and the temperature along the fin changes.
+---Comment
+
+<br />
+\( f(x) = x \)
+
