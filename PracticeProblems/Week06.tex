@@ -12,126 +12,91 @@
 
 \subsection*{Numerical Integration}
 
-{\em As part of this assignment, you should be able to reproduce the
+\begin{Question} As part of this assignment, you should be able to reproduce the
   LHR rule calculations in MATLAB using a loop. You should know how to
-  adapt it to handle either data from a file, or a formula, as the case requires.}
+  adapt it to handle either data from a file, or a function defined by
+  a formula, as the case requires.}
+\end{Question}
 
-\begin{enumerate}
-\item {\bf Theory} Consider the problem of estimating the general form
+\begin{enumerate}[1.]
+% ******************************
+\item \begin{Question}
+{\bf Theory} Consider the problem of estimating the general form
   of the integral $$\int_a^b f(x)~dx$$
-\begin{enumerate}
-\item Assume $f(x)$ is a smooth and continuous function.  For our
-  the Left-Hand sum, LEFT($n$), by what factor do we reduce the error if we use 10
-  times the number of intervals?
+\begin{enumerate}[(a)]
+\item Assume $f(x)$ is a smooth and continuous function.  For our the
+  Left-Hand sum, LEFT($n$), by what factor do we reduce the error if
+  we use 10 times the number of intervals?
 
-\item Confirm your earlier answers by finding the change in the error
-  for LEFT($n$) using $N=20$ and $N=200$ on the following integrals.
-  Find the error with both $N$ values, and then compute the ratio of
-  the errors.
+\item Evaluate the integral $\ds \int_0^6 \cos(x)~dx$ exactly, using
+  anti-derivatives and the Fundamental Theorem of Calculus.
 
-\begin{itemize} 
-  \item $\displaystyle \int_0^6 \cos(x)~dx$ - exact value is $(\sin(6) - \sin(0)) = \sin(6)$
-\begin{center}
-\end{center}
-
-\begin{center}
-\end{center}
-\end{itemize} 
-
+\item Confirm your answers to part (a) by finding the change in the
+  error for LEFT($n$) for the same integral, $\ds \int_0^6 \cos(x)~dx$
+  using $n=20$, $n=200$, and $n = 2000$.  Find the error with each $n$
+  value, and then compute the ratio of the errors.
 \end{enumerate}
+\end{Question}
 
 \begin{Solution}
-\begin{enumerate}
+\begin{enumerate}[(a)]
 \item If $f(x)$ is a smooth function, if we use 10 times the
-  intervals, the error for
-\begin{itemize}
-\item LHR's estimate will drop by a factor of $\frac{1}{10}$,
-\item Trapezoidal rule's estimate will drop by a factor of
-  $\frac{1}{10^2} = \frac{1}{100}$, and
-\item Simpson's rule's estimate will drop by a factor of $\frac{1}{10^4} = \frac{1}{10,000}$,
-\end{itemize}
-\item Any function with a discontinuity or even a discontinuous
-  derivative is at risk of having poorer-than-expected convergence.
-  See the sawtooth example.
+  intervals, the error for LHR's estimate will drop by a factor of $\frac{1}{10}$
+\item We can evaluate the integral based on our earlier study of
+  derivatives. The only thing to be careful of is that the input
+  values will be in radians (not degrees).
+  \begin{align*}
+    \int_0^6 \cos(x)~dx = \sin(x) \Big|_0^6 = \sin(6) - \sin(0) = -0.279415498
+  \end{align*}
 
-\item  Here are the errors and ratios for both examples.
-\begin{itemize} 
+\item  Here are the errors and ratios.
   \item $\displaystyle \int_0^6 \cos(x)~dx$
 \begin{tabular}{ cccc }
-& $N=20$ error & $N=200$ error & Ratio \\
+& $n=20$ error & $N=200$ error & Ratio \\
 LHR &  0.0080732234 & 0.00061840218& 0.0766  $\approx \frac{1}{10}$\\
-TRAP & 0.0020987664 & 2.0956477e-005& 0.00999  $\approx \frac{1}{100}$\\
-SIMP & -1.2709701e-005 &  -1.2575047e-009 & 9.89e-005 $\approx \frac{1}{10,000}$ \\
 \end{tabular}
-
-  \item $\displaystyle \int_0^6 $\verb#mod(x, pi)#$~dx$ 
-\begin{tabular}{ cccc }
-& $N=20$ error & $N=200$ error & Ratio \\
-LHR & -0.40234864N & -0.063587542& 0.158 $\approx \frac{1}{10}$\\
-TRAP &  0.026412458N & -0.020711432& 0.784 $\not\approx \frac{1}{100}$\\
-SIMP & -0.13066717N & -0.036419395& 0.279 $\not\approx \frac{1}{10,000}$\\
-\end{tabular}
-\end{itemize} 
 \end{enumerate}
 \end{Solution}
-\end{enumerate}
 
-
-
-\item Write code that will find the LHR, Trapezoidal Rule, and
-  Simpson's Rule integral estimate of the following integrals: {\bf
-    Assignment Note: } On a test, you may be asked to implement any of
-  the three fixed-interval techniques we saw in class (LHR, TRAP and
-  SIMP).
-\begin{enumerate} 
+% ******************************
+\item \begin{Question}
+Write code that will find the LEFT($n$)integral estimate of the
+  following integrals: 
+\begin{enumerate}[(a)]
 \item $\displaystyle \int_0^5 x^3 - 5~dx$  (exact value: $\displaystyle \frac{5^4}{4} - 25$)
 \item $\displaystyle \int_1^{10} 4 \log_{10}(x)~dx$ (exact value: 
 $\displaystyle \frac{(-36+40 \ln(2)+40 \ln(5))}{\ln(2)+\ln(5)}$
 \item $\displaystyle \int_{-2}^2 \frac{1}{\sqrt{2 \pi}} e^{\frac{-x^2}{2}}~dx$ (exact value not known; approximately  0.95450)
 \end{enumerate} 
-
-For all integral estimates, use $N = 100$ intervals.
+For all integral estimates, use $n = 100$ intervals.
+  \end{Question}
 
 \begin{Solution}
-Using the `lhr.m', `trap.m', and `simp.m' built in class, you should 
-obtain the following results.
-\begin{enumerate} 
-\item $\displaystyle \int_0^5 x^3 - 5~dx$
-\lstinputlisting[showstringspaces=false]{MATLAB/q_BasicIntegration_a.txt}
-
-
-\item $\displaystyle \int_1^{10} 4 \log_{10}(x)~dx$ 
-\lstinputlisting[showstringspaces=false]{MATLAB/q_BasicIntegration_b.txt}
-
-
-\item $\displaystyle \int_{-2}^2 \frac{1}{\sqrt{2 \pi}} e^{\frac{-x^2}{ 2}}~dx$
-\lstinputlisting[showstringspaces=false]{MATLAB/q_BasicIntegration_c.txt}
-
-In this case, our approximation generated using Simpson's rule is
-likely more accurate than the ``exact value'' listed, as the ``exact
-value'' was given to only 5 significant digits.
-
-\end{enumerate} 
 \end{Solution}
 
 
-\item Use the \verb#quad# function to estimate the following
+% ******************************
+\item 
+  \begin{Question}
+Use the \verb#integral# function to estimate the following
   integrals, and print the estimates with 8 digits after the decimal.
   Use the default accuracy for the \verb#quad# function.
-\begin{enumerate}
+\begin{enumerate}[(a)]
 \item $\displaystyle \int_0^5 x^3 - 5~dx$  (exact value: $\displaystyle \frac{5^4}{4} - 25$)
 \item $\displaystyle \int_1^{10} 4 \log_{10}(x)~dx$ (exact value: 
 $\displaystyle \frac{(-36+40 \ln(2)+40 \ln(5))}{\ln(2)+\ln(5)}$
 \item $\displaystyle \int_{-2}^2 \frac{1}{\sqrt{2 \pi}} e^{\frac{-x^2}{2}}~dx$ (exact value not known; approximately  0.95450)
 \end{enumerate}
+  \end{Question}
 
 \begin{Solution} 
 Code that does this would be e.g.
 \begin{verbatim}
-f = @(x) x.^3 - 5; % note: quad will pass in _vectors_ of x values
+f = @(x) x.^3 - 5; % note: our function has to work with _vectors_ of x values
 % so we need to use '.^' instead of just '^' for the exponent/power
-I = quad(f, 0, 5);
-fprintf('quad estimate: %.8f\n', I);
+I = integral(f, 0, 5);
+format long;   % have MATLAB print out more digits
+I
 \end{verbatim}
 The results are
 \begin{enumerate}
@@ -146,88 +111,33 @@ Note that all these values are within $10^{-7}$ of the exact values
 (except the last, which we only know to $10^{-5}$).
 \end{Solution}
 
-\item The widths (in meters) of a kidney-shaped swimming pool were
-  measured at 2-meter intervals as indicated on the figure.  Estimate
-  the area of the pool.  The integration technique you choose should
-  be the one that provides the most accurate answer, out of the
-  techniques covered in class.
-
-  \begin{center}
-    \includegraphics[width=2in]{GolfHole}
-  \end{center}
-
-~~~
-
+% ******************************
+\item 
+  \begin{Question}
+    The width (in feet) of the golf course fairway was measured at
+    100-foot intervals as indicated on the figure.  Estimate the square
+    footage of of the fairway.  
+    
+    \begin{center}
+      \includegraphics[width=2in]{graphics/Week06_IntegrationApplications/GolfHole}
+    \end{center}
+  \end{Question}
+  
+  
 \begin{Solution}
   {\bf NOTE: } In this problem, because we are only given data and not
-  a function, we can only use LHR, Trapezoidal or Simpson's rules. We
-  cannot use ``quad'', the adaptive integrator, because it would try
-  to evaluate the function (width of the pool) in between the measured
-  data points, and we don't have that information.
-
-  Since Simpson's rule generally gives the most accurate integral
-  estimate, compared with the LHR and Trapezoidal rule, we should use
-  it here.
-
-  A simple vector-based version of Simpson's rule is shown below,
-  applied to these pool dimensions.
-
-
-\lstinputlisting[showstringspaces=false]{MATLAB/W06Golf.m}
-
-This script produces the estimate
-
-``Surface area of pool is approximately 84.267 m$^2$''
-
-This is reasonable, as the median width is 5.6 m, and the total length
-of the pool is 16 m, giving approximately 89.6 m$^2$ if it were
-rectangular.  This is safely in the same ballpark as the more accurate
-result above.  Without more information, though, we can't improve our
-integral estimate.
-
+  a function, the only technique we have that would work is LEFT($n$).
+  We {\bf can't} use the Fundamental Theorem or the \verb@integral@
+  function because both of those require a formula for the function
+  that we don't have.
 \end{Solution}
 
 
-
-
-\item A steel scribing tip is designed to have a circular
-  cross-section. The shape can be generated by rotating the function
-  $\displaystyle y = \frac{0.0007}{10 x + 0.1}$ around the $x$ axis, starting at
-  $x=0$ and ending at $x=0.02$ (all dimensions in meters).  Compute
-  the volume of steel required to make the scribing tip.  Use an
-  appropriate integration technique and parameters, and report your
-  answer to five significant digits.  Be prepared to defend your
-  choice of technique.
-
-  You will need to review the volume of rotation to answer this
-  question.
-
-\begin{Solution}
-
-  Volumes of revolution can be computed by taking slices through the
-  shape.  Each slice has a volume $(\Delta x) \cdot \pi y^2$.  Adding
-  up the slices using an integral gives the total volume.
-
-  For this shape, the volume will be given by the integral
-  
-  $$\int_0^{0.02} \pi \left(\frac{0.0007}{10 x + 0.1}\right)^2 ~dx$$
-
-  The analytic value of this integral is approximately $1.0262536
-  \times 10^{-6}$.
-
-  The script ``q\_3Dshape.m'' computes this integral. In the solution,
-  the I used ``quad'', the adaptive integrator.  The rationale for
-  this was, knowing that the integral had a value of approximately
-  $10^{-6}$, I could set the absolute tolerance to $10^{-12}$, to give
-  6 figures of accuracy.  Note that the ``quad'' error is only an
-  estimate of the true error; however, it is usually correct within an
-  order of magnitude (e.g. setting the tolerance to $10^{-12}$ usually
-  ensures that the exact error is no worse that $10^{-11}$.
-
-\end{Solution}
-
-
-\item When a pendulum oscillates, with maximum deviation angle
+% ******************************
+\item 
+  \begin{Question}
+    
+When a pendulum oscillates, with maximum deviation angle
   $\theta_0$, the period of the pendulum is given by
 
 \begin{align*}
@@ -248,10 +158,7 @@ Compute and compare the period of a pendulum with
 Describe how significant the effect of maximum swing angle $\theta_0$
 is on the period of a pendulum, compared to the effect of the pendulum
 length.
-
-%For fun, you can compare the period computed in this way with the
-%graph of the simulated pendulum motion using differential equations
-%last week.  They (should and do) agree quite closely!
+  \end{Question}
 
 \begin{Solution} 
  Full solution is available in \verb#q_pendulumPeriod.m#.
@@ -324,15 +231,6 @@ length.
 % arc length
 % \hrulefill
 
-%*******************************
-\item
-\begin{Question}
-    
-\end{Question}
-
-\begin{Solution}
-    
-\end{Solution}
 
 \end{enumerate}
 \end{document}
