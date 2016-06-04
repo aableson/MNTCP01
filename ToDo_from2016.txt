@@ -1,0 +1,4 @@
+
+Week 6 practice problems need some beefing up, specifically with:
+- more application problems, and
+- questions that involve loading a dataset.
