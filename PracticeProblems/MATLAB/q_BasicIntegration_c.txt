@@ -1,7 +1,0 @@
- **** f =    @(x)1/sqrt(2*pi)*exp(-x.^2/2)
-
-Integral from -2.0 to 2.0
-Exact value of integral = 0.9545
-LHR estimate = 0.95447094
-Trap estimate = 0.95447094
-Simp estimate = 0.95449973

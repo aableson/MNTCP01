@@ -15,7 +15,7 @@
 \begin{Question} As part of this assignment, you should be able to reproduce the
   LHR rule calculations in MATLAB using a loop. You should know how to
   adapt it to handle either data from a file, or a function defined by
-  a formula, as the case requires.}
+  a formula, as the case requires.
 \end{Question}
 
 \begin{enumerate}[1.]
@@ -34,7 +34,7 @@
 \item Confirm your answers to part (a) by finding the change in the
   error for LEFT($n$) for the same integral, $\ds \int_0^6 \cos(x)~dx$
   using $n=20$, $n=200$, and $n = 2000$.  Find the error with each $n$
-  value, and then compute the ratio of the errors.
+  value, and then compute the ratio of the errors each time you use 10$\times$ as many intervals.
 \end{enumerate}
 \end{Question}
 
@@ -49,66 +49,154 @@
     \int_0^6 \cos(x)~dx = \sin(x) \Big|_0^6 = \sin(6) - \sin(0) = -0.279415498
   \end{align*}
 
-\item  Here are the errors and ratios.
-  \item $\displaystyle \int_0^6 \cos(x)~dx$
-\begin{tabular}{ cccc }
-& $n=20$ error & $N=200$ error & Ratio \\
-LHR &  0.0080732234 & 0.00061840218& 0.0766  $\approx \frac{1}{10}$\\
-\end{tabular}
+\item  The linked script below computes LEFT($n$) for $n=20, 200$ and 2000.  It also computes
+the error for each of those integral estimates. 
+
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W06CosineIntegral.m}{W06CosineIntegral.m}
+
+Here are the results from the script (with the values for \verb@I@
+being the integrals, and \verb@Err@ being the error in the estimates.
+
+\lstinputlisting[showstringspaces=false]{MATLAB/W06CosineIntegral_results.txt}
+
 \end{enumerate}
+
+We can see that as we increase the number of intervals by a factor of
+10, the error in the LEFT($n$) estimate is scaled by a factor of
+(approximately) $\ds \frac{1}{10}$.
+
+\begin{itemize}
+\item When going to $n=200$ from $n=20$, the error ratio is $\ds \frac{6.184021769584658e-04}{0.008073223414391} \approx 0.07 \approx 0.1$ or $\ds \frac{1}{10}$.
+\item When going to $n=2000$ from $n=200$, the error ratio is $\ds \frac{5.995413167569907e-05}{6.184021769584658e-04}
+ \approx 0.097\approx 0.1$ or $\ds \frac{1}{10}$.
+\end{itemize}
+
+
 \end{Solution}
 
 % ******************************
 \item \begin{Question}
-Write code that will find the LEFT($n$)integral estimate of the
-  following integrals: 
+For each of the following integrals, 
+\begin{itemize}
+\item Evaluate the integral exactly, 
+\item use MATLAB to compute the LEFT(1000) integral estimate, and
+\item comment on the agreement between the results.
+\end{itemize}
 \begin{enumerate}[(a)]
-\item $\displaystyle \int_0^5 x^3 - 5~dx$  (exact value: $\displaystyle \frac{5^4}{4} - 25$)
-\item $\displaystyle \int_1^{10} 4 \log_{10}(x)~dx$ (exact value: 
-$\displaystyle \frac{(-36+40 \ln(2)+40 \ln(5))}{\ln(2)+\ln(5)}$
-\item $\displaystyle \int_{-2}^2 \frac{1}{\sqrt{2 \pi}} e^{\frac{-x^2}{2}}~dx$ (exact value not known; approximately  0.95450)
+\item $\displaystyle \int_0^5 x^3 - 5~dx$  
+\item $\displaystyle \int_1^{10} \log_{10}(x)~dx$ 
+\item $\displaystyle \int_{-1}^{1} x^2 e^{x^3}~dx$ 
 \end{enumerate} 
-For all integral estimates, use $n = 100$ intervals.
   \end{Question}
 
 \begin{Solution}
+ \begin{enumerate}[(a)]
+\item Exact value: $\displaystyle \int_0^5 x^3 - 5~dx = \frac{x^4}{4} - 5x \Big|_0^5 = 
+\left(\frac{5^4}{4} - 5(5)\right) - (0-0) = 131.25$ \\
+LEFT(1000) estimate (see link below to the script that computed this):  130.9377
+
+The agreement is pretty good, with the LEFT(1000) within 1\% of the exact value.
+
+\item $\displaystyle \int_1^{10} \log_{10}(x)~dx $.\\ This requires
+  integration by parts, and remembering the derivative rule for
+  non-base-$e$ logarithms:
+  $\ds \frac{d}{dx} \log_{10}(x) = \frac{1}{x \ln(10)}$ Computing the
+  integral (without the $x=1$ and $x=10$ for now to keep the notation
+  simpler):
+    \begin{align*}
+\mbox{ We choose }       u & = \log_{10} x&\mbox{ and } dv & = dx \\
+\mbox{ so } du & = \frac{1}{x \ln(10)} ~dx& \mbox{ and } v & = x 
+    \end{align*}
+Using the integration by parts formula, 
+\begin{align*}
+  \int \log_{10} x~dx & = x (\log_{10} x) 
+- \int x \frac{1}{x \ln(10)}~ dx \\
+& = x \log_{10} x - \int \frac{1}{\ln(10)} ~dx \\
+& = x \log_{10} x - \frac{x}{\ln(10)} + C  
+\end{align*}
+This gives the definite integral value of 
+\begin{align*}
+\int_1^{10} \log_{10}(x)~dx  & = \left(x \log_{10} x - \frac{x}{\ln(10)} \right) \Big|_1^{10} \\
+& = \left(10 \log_{10}(10) - \frac{10}{\ln(10)}\right) 
+- \left(1 \log_{10}(1) - \frac{1}{\ln(10)}\right)  \\
+&  = 10 - \frac{10}{\ln(10)} + \frac{1}{\ln(10)} \\
+& \approx 6.0914
+\end{align*}
+LEFT(1000) estimate (see link below to the script that computed this):  6.0868
+
+The agreement is better for this function, with the LEFT(1000) within 0.1\% of the exact value.
+
+\item $\displaystyle \int_{-1}^{1} x^2 e^{x^3}~dx$ 
+
+This integral can be evaluated exactly using a substitution.
+
+  \begin{align*}
+    \mbox{Let }w & = x^3, \mbox{ so } dw=3x^2~dx \mbox{ or } dx = \frac{1}{3x^2}~dw\\
+    \int x^2 e^{x^3}~dx & = \int x^2 e^w \left(\frac{1}{3x^2}~dw\right) = \int \frac{1}{3} e^w dw = \frac{1}{3} e^w + C = \frac{1}{3} e^{x^3} + C \\
+\end{align*}
+This gives the definite integral value of
+\begin{align*}
+\int_{-1}^{1} x^2 e^{x^3}~dx  & = \frac{1}{3} e^{x^3} \Big|_{-1}^1 \\ 
+& = \frac{1}{3}\left( e^1 - e^{-1}\right) \\
+& \approx 0.7834 
+\end{align*}
+LEFT(1000) estimate (see link below to the script that computed this):  0.7811
+
+The agreement is good for this function, with the LEFT(1000) within 1\% of the exact value.
+\end{enumerate} 
+Link to the MATLAB code: \\
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W06LeftExamples.m}{W06LeftExamples.m}
 \end{Solution}
 
 
 % ******************************
 \item 
   \begin{Question}
-Use the \verb#integral# function to estimate the following
-  integrals, and print the estimates with 8 digits after the decimal.
-  Use the default accuracy for the \verb#quad# function.
+    Use the \verb#integral# function to estimate the following
+    integrals, and print the estimates with at least 8 digits after
+    the decimal.  Use the default accuracy for the \verb#integral#
+    function.  Note that the exact values for these integrals were
+    computed in the previous question, so we can compare the
+    \verb@integral@ estimate to the exact values.
 \begin{enumerate}[(a)]
 \item $\displaystyle \int_0^5 x^3 - 5~dx$  (exact value: $\displaystyle \frac{5^4}{4} - 25$)
 \item $\displaystyle \int_1^{10} 4 \log_{10}(x)~dx$ (exact value: 
 $\displaystyle \frac{(-36+40 \ln(2)+40 \ln(5))}{\ln(2)+\ln(5)}$
-\item $\displaystyle \int_{-2}^2 \frac{1}{\sqrt{2 \pi}} e^{\frac{-x^2}{2}}~dx$ (exact value not known; approximately  0.95450)
+\item $\displaystyle \int_{-1}^{1} x^2 e^{x^3}~dx$ 
 \end{enumerate}
   \end{Question}
 
 \begin{Solution} 
 Code that does this would be e.g.
 \begin{verbatim}
-f = @(x) x.^3 - 5; % note: our function has to work with _vectors_ of x values
-% so we need to use '.^' instead of just '^' for the exponent/power
-I = integral(f, 0, 5);
-format long;   % have MATLAB print out more digits
-I
+clc
+format long
+f = @(x) x.^3 - 5;
+a = 0;
+b = 5;
+I = integral(f, a, b);
+exact_value = (5^4/4 - 5*5);
+[exact_value, I]  % display both the exact value and the integral estimate
 \end{verbatim}
+A link to the full MATLAB script for all the examples is included below.
+
 The results are
 \begin{enumerate}
 \item function: \verb#f = @(x) x.^3 - 5;# \\
 estimated integral: 131.25000000
-\item function: \verb#f = @(x) 4*log10(x);# \\
-estimated integral: 24.36539860
-\item function: \verb#f = @(x) (1/sqrt(2*pi)) * exp(-x.^2/2);# \\
-estimate integral: 0.95449979
+\item function: \verb#f = @(x) log10(x);# \\
+estimated integral: 6.091349662870734
+\item function: \verb#f = @(x) x.^2 .* exp(x.^3);#\\
+estimate integral: 0.783467462429201
 \end{enumerate}
-Note that all these values are within $10^{-7}$ of the exact values
-(except the last, which we only know to $10^{-5}$).
+Note that all these values are the same as the exact values for all or
+almost all the digits shown (12 digits of accuracy).  This is a lot
+better performance than using the LEFT($n$) approach, and is actually
+easier to code because the \verb@integral@ function is built into
+MATLAB.
+
+Link to the MATLAB code: \\
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W06IntegralExamples.m}{W06IntegralExamples.m}
 \end{Solution}
 
 % ******************************
@@ -119,7 +207,7 @@ Note that all these values are within $10^{-7}$ of the exact values
     footage of of the fairway.  
     
     \begin{center}
-      \includegraphics[width=2in]{graphics/Week06_IntegrationApplications/GolfHole}
+      \includegraphics[width=0.5\linewidth]{graphics/Week06_IntegrationApplications/GolfHole}
     \end{center}
   \end{Question}
   
@@ -130,6 +218,26 @@ Note that all these values are within $10^{-7}$ of the exact values
   We {\bf can't} use the Fundamental Theorem or the \verb@integral@
   function because both of those require a formula for the function
   that we don't have.
+
+The key steps are:
+\begin{enumerate}[1.]
+\item Create a vector of the widths, {\em including} the zero widths
+  at the start and end of the fairway.
+\item Note that  $\Delta x$ = 100 feet for each left-to-right distance.
+\item Note that there are 10 intervals (11 widths), so we will be performing a LEFT(10) calculation.
+\item Approximate the area on each left-to-right interval as
+  $\mbox{width at the left} \times \Delta x$ (this is the LEFT rule on
+  each interval).
+\item Use a loop to accumulate the total area estimated.
+\end{enumerate}
+
+Link to the MATLAB code: \\
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W06Golf.m}{W06Golf.m}
+
+The final estimated area is 88,000 square feet.  We don't have a
+formula for the widths, so this is simply our best estimate of the
+area.
+
 \end{Solution}
 
 
