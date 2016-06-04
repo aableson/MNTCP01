@@ -199,12 +199,158 @@ Link to the MATLAB code: \\
 \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W06IntegralExamples.m}{W06IntegralExamples.m}
 \end{Solution}
 
+
+% ******************************
+\item 
+  \begin{Question}
+    
+When a pendulum oscillates, with maximum deviation angle
+  $\theta_0$, the period of the pendulum is given by
+
+\begin{align*}
+  T = 4 \sqrt{L/g} \int_0^{\pi/2} \frac{dx}{\sqrt{1 - k^2 \sin^2 x}}
+\end{align*}
+
+where $k = \sin\left(\frac{1}{2} \theta_0\right)$ and $g$ is the
+acceleration due to gravity, $9.8 $ m/s.
+
+Compute and compare the period of a pendulum with 
+\begin{itemize}
+\item $L = 2$, $\theta_0 = 40^o$, 
+\item $L =2$, $\theta_0 = 20^o$.
+\item $L = 2.5$, $\theta_0 = 40^o$, 
+\item $L =2.5$, $\theta_0 = 20^o$.
+\end{itemize}
+
+Describe how significant the effect of maximum swing angle $\theta_0$
+is on the period of a pendulum, compared to the effect of the pendulum
+length.
+  \end{Question}
+
+\begin{Solution} 
+ Full solution is available in:
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W06PendulumPeriod.m}{W06PendulumPeriod.m}
+
+  The periods computed are show below.  \verb@integral@ was used for the
+  integration.
+
+L = 2.0 m, theta0 = 40.0 deg, period = 2.9274 s. \\
+L = 2.0 m, theta0 = 20.0 deg, period = 2.8602 s. \\
+L = 2.5 m, theta0 = 40.0 deg, period = 3.2729 s. \\
+L = 2.5 m, theta0 = 20.0 deg, period = 3.1978 s. \\
+
+From these results, it is clear that the angle has a minimal effect on
+the period of the oscillations, compared with the effect of the
+length.  This insensitivity of the period to the oscillation angle
+explains why pendulum clocks and metronomes do not need a specific
+swing angle to be fairly accurate, but {\em do} need a specific
+length.
+\end{Solution} 
+
+
+%*******************************
+\item
+\begin{Question}
+  When underground mining operations are in progress, one concern the
+  monitoring or predicting the subsidence of the rock between the mine
+  and the surface, as ``the differential settlement and horizontal
+  strain developed during subsidence tend to be critical in terms of
+  structural damage''\footnote{SME Mining Engineering Handbook, 3rd
+    edition, page 632.}
+
+  If the rock is considered isomorphic in character, then complete
+  subsidence $s$ at a point on the surface is given by an integral of the form
+$$ s = \int_0^R  p(r)~dr$$
+where $R$ is the effective radius of influence, and $p(r)$ is an
+empirically derived ``influence function''.
+
+Consider the influence function
+$\ds p(r) = \frac{1}{R^2} e^{-\pi r^2/R^2}$
+and use an appropriate technique to evaluate the integral  
+$$ s = \int_0^R  p(r)~dr$$ with $R = 100$.
+
+\end{Question}
+
+\begin{Solution}
+The resulting integral is 
+    $\ds \int_0^{100} \frac{1}{100^2} e^{-\pi r^2/(100^2)}~dr$.  
+
+    Since $r$ is the variable, we have an integral of the form
+    essentialy $\int e^{-x^2}~dx$, which {\bf cannot} be evaluated by
+    hand.  Thus we will use a numerical method in MATLAB.  
+
+    Of the two methods we have in MATLAB, LEFT($n$) and the
+    \verb@integral@ function, the \verb@integral@ function is both
+    easier to use and more accurate.
+
+    The actual script required to just evaluate this integral is
+    remarkably short.
+
+\lstinputlisting[showstringspaces=false]{MATLAB/W06Subsidence.m}
+
+and the output gives an integral value of \verb@I = 0.0049@.
+\end{Solution}
+
+
+%*******************************
+\item
+\begin{Question}
+  The $x$ coordinate of the center of mass of a object can be computed using the formula
+$$\bar{x} = \frac{\int_a^b x \cdot f(x)~dx}{\int_a^b f(x)~dx}$$
+where $f(x)$ is the height (or mass) at the point $x$.
+
+For the following functions, use MATLAB, with the \verb@integral@ function and other tools, to 
+\begin{itemize}
+\item plot the graph of $f(x)$, 
+\item compute the $x$ center of mass of the object, and
+\item draw the center of mass as a vertical line on the same graph.
+\end{itemize}
+\begin{enumerate}
+\item  $f(x) = x^3$ on $x=[1, 4]$.
+\item  $f(x) = x e^{-x}$ on $x=[0, 10]$.
+\end{enumerate}
+
+\end{Question}
+
+\begin{Solution}
+  In this problem, the challenge in coding the MATLAB script is to
+  remember that when using the \verb@integral@ function, you need to
+  specify separate (MATLAB) function for each integral. In the
+  listings below, we did this using the syntax
+\begin{verbatim}
+f = @(x) x.^3;
+% Note: we also need a _new_ function for the integral in the numerator
+fn = @(x) x .* f(x);
+xcenter = integral(fn, 1, 4) / integral(f, 1, 4)
+\end{verbatim}
+   
+Full solutions: \\ 
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W06CenterOfMass.m}{W06CenterOfMass.m}
+
+
+\begin{enumerate}[(a)]
+\item The $x$ center of mass for $f(x) = x^3$ on [1, 4] is
+  $\bar{x} = 3.2094$, or closer to the right end of the interval,
+  because the function has higher values there.
+\item The $x$ center of mass for $f(x) = x e^{-x}$ on [0, 10] is
+  $\bar{x} = 1.9955$, or closer to the left end of the interval,
+  because the function has a peak there before declining to lower
+  values as $x$ approaches 10.
+\end{enumerate}
+\begin{center}
+\includegraphics[width=0.4\linewidth]{graphics/Week06_IntegrationApplications/W06CenterOfMass1}
+\includegraphics[width=0.4\linewidth]{graphics/Week06_IntegrationApplications/W06CenterOfMass2}
+\end{center}
+
+\end{Solution}
+
 % ******************************
 \item 
   \begin{Question}
     The width (in feet) of the golf course fairway was measured at
-    100-foot intervals as indicated on the figure.  Estimate the square
-    footage of of the fairway.  
+    100-foot intervals as indicated on the figure.  Estimate the
+    square footage of of the fairway, using any appropriate means
+    taught in the course.
     
     \begin{center}
       \includegraphics[width=0.5\linewidth]{graphics/Week06_IntegrationApplications/GolfHole}
@@ -241,103 +387,171 @@ area.
 \end{Solution}
 
 
-% ******************************
-\item 
+\hrulefill
+
+\subsection*{Average Value}
+
+\begin{multicols}{2}
+%*****************
+\item
   \begin{Question}
-    
-When a pendulum oscillates, with maximum deviation angle
-  $\theta_0$, the period of the pendulum is given by
+    \begin{enumerate}[(a)]
+    \item Using the graph shown below, find $\ds \int^6_1 f(x)~dx$. 
 
-\begin{align*}
-  T = 4 \sqrt{L/g} \int_0^{\pi/2} \frac{dx}{\sqrt{1 - k^2 \sin^2 x}}
-\end{align*}
-
-where $k = \sin\left(\frac{1}{2} \theta_0\right)$ and $g$ is the
-acceleration due to gravity, $9.8 $ m/s.
-
-Compute and compare the period of a pendulum with 
-\begin{itemize}
-\item $L = 2$, $\theta_0 = 40^o$, 
-\item $L =2$, $\theta_0 = 20^o$.
-\item $L = 2.5$, $\theta_0 = 40^o$, 
-\item $L =2.5$, $\theta_0 = 20^o$.
-\end{itemize}
-
-Describe how significant the effect of maximum swing angle $\theta_0$
-is on the period of a pendulum, compared to the effect of the pendulum
-length.
+\includegraphics[width=0.9\linewidth]{graphics/Week06_AverageValue/average_1}
+    \item What is the average value of $f$ on [1, 6]?
+    \end{enumerate}
   \end{Question}
 
-\begin{Solution} 
- Full solution is available in \verb#q_pendulumPeriod.m#.
+  \begin{Solution}
+    The integral represents the area below the graph of $f(x)$ but above the $x$-axis.
+    \begin{enumerate}[(a)]
+    \item Since each square has area 1, by counting squares and half-squares we find
+      \begin{align*}
+\int^6_1 f(x) ~dx = 8.5.
+      \end{align*}
+(b) The average value is  \begin{align*}
+\frac{1}{6 - 1} \int^6_1 f(x) ~dx 
+& = \frac{8.5}{ 5 } = 1.7
+\end{align*}
+    \end{enumerate}
+  \end{Solution}
 
-  The periods computed are show below.  ``quad'' was used for the
-  integration.
-
-L = 2.0 m, theta0 = 40.0 deg, period = 2.9274 s. \\
-L = 2.0 m, theta0 = 20.0 deg, period = 2.8602 s. \\
-L = 2.5 m, theta0 = 40.0 deg, period = 3.2729 s. \\
-L = 2.5 m, theta0 = 20.0 deg, period = 3.1978 s. \\
-
-From these results, it is clear that the angle has a minimal effect on
-the period of the oscillations, compared with the effect of the
-length.  This insensitivity of the period to the oscillation angle
-explains why pendulum clocks and metronomes do not need a specific
-swing angle to be fairly accurate, but {\em do} need a specific
-length.
-\end{Solution} 
-
-
-%*******************************
+%*****************
 \item
-\begin{Question}
-    
-\end{Question}
+  \begin{Question}
+    \begin{enumerate}[(a)]
+    \item Using the graph below, estimate $\ds \int^3_{-3} f(x) ~dx$. 
+    \item  Which of the following average values of $f(x)$ is larger?  \\
+      (i) Between $x = -3$ and $x = 3$, or   \\
+      (ii) Between $x = 0$ and $x = 3$?
+    \end{enumerate}
+\includegraphics[width=0.7\linewidth]{graphics/Week06_AverageValue/average_2}
+  \end{Question}
 
-\begin{Solution}
-    
-\end{Solution}
-% Chapter Contents
+  \begin{Solution}
+    \begin{enumerate}[(a)]
+    \item The integral is the area above the $x$-axis minus the area
+      below the $x$-axis. Thus, we can see that
+      $\ds \int^3_{-3}f(x)~dx$ is about $-6 + 2 = -4$, based on \\
+      the negative of the area from $t = -3$ to $t = 1$ plus the area
+      from $t = 1$ to $t = 3$.  \\Note that your estimate may differ
+      from this, depending on how you counted squares under the curved
+      shape.
+    \item Since the integral in part (a) is negative, the average
+      value of $f(x)$ between $x = -3$ and $x = 3$ is negative. From
+      the graph, however, it appears that the integral of $f(x)$ from
+      $x = 0$ to $x = 3$ is positive overall, meaning that the average
+      value will also be positive. Hence (ii) is the larger quantity.
+    \end{enumerate}
+  \end{Solution}
+%*****************
+\item
+  \begin{Question}
+    \begin{enumerate}[(a)]
+    \item Using the graphs of $f(x)$ and $g(x)$ shown below, find the
+      average value on $0 \le x \le 2$ of \\
+      (i) $f(x)$ \hfill (ii) $g(x)$ \hfill (iii) $f( x) \cdot g(x)$ \\ \noindent
+\includegraphics[width=0.5\linewidth]{graphics/Week06_AverageValue/average_product_graphs1}
+\includegraphics[width=0.5\linewidth]{graphics/Week06_AverageValue/average_product_graphs2}
 
-% 1. Applications of the Indefinite Integral shows how to find displacement (from velocity) and velocity (from acceleration) using the indefinite integral. There are also some electronics applications in this section.
+    \item Is the statement that \begin{center}``Average($f$) $\cdot$ Average($g$) = Average($f \cdot g$)'' \end{center}true or not?  Explain your answer.
+    \end{enumerate}
+  \end{Question}
 
-% In primary school, we learned how to find areas of shapes with straight sides (e.g. area of a triangle or rectangle). But how do you find areas when the sides are curved? We'll find out how in:
+  \begin{Solution}
+ (i) Since the triangular region under the graph of $f(x)$ has area $\ds \frac{1}{2}$, we have
+ \begin{align*}
+\mbox{Average}(f) &= \frac{1}{ 2 - 0} \int^2_0 f(x) ~dx 
+& = \frac{1}{2} \cdot \frac{1}{2}
+& = \frac{1}{4}
+ \end{align*}
+(ii) Similarly,
+ \begin{align*}
+\mbox{Average}(g) &= \frac{1}{2 - 0} \int^2_0 g(x) ~dx 
+& = \frac{1}{2} \cdot \frac{1}{2}
+& = \frac{1}{4}
+ \end{align*}
 
-%     2. Area Under a Curve and
-%     3. Area Between 2 Curves
+ (iii) Since $f(x)$ is nonzero only for $0 \le x < 1$ and $g(x)$ is
+ nonzero only for $1 < x \le 2$, the product $f(x)g(x)$ = 0 for all
+ $x$. (To confirm this, try picking any $x$ value between 0 and 2, and
+ subbing it into the expression $f(x) \cdot g(x)$.  
 
-% wine barrel
+ Thus
+\begin{align*}
+\mbox{Average}(f \cdot g) & = \frac{1}{2 - 0} \int^2_0 f(x)g(x) ~dx 
+& = \frac{1}{2} \int^2_0 0 ~dx = 0.
+\end{align*}
+(b) Since the average values of $f(x)$ and $g(x)$ are nonzero, their
+product is nonzero. Thus the left side of the statement, Avg($f$)$\cdot$Avg($g$), is
+nonzero. However, the average of the product $f(x)g(x)$ is zero. Thus,
+the right side of the statement is zero, so the statement is not true.
+  \end{Solution}
+%*****************
+\item
+  \begin{Question}
+    \begin{enumerate}[(a)]
+    \item Without computing any integrals, explain why the average
+      value of $f(x) = \sin x$ on $[0, \pi]$ must be between 0.5 and 1.
+    \item Compute the exact average of $\sin x$ on $[0, \pi]$.
+    \item Use MATLAB to plot the graph of $\sin(x)$ on $[0, \pi]$, and
+      draw the average value on the graph as well.
+    \end{enumerate}
+  \end{Question}
 
-% 4. Volume of Solid of Revolution explains how to use integration to find the volume of an object with curved sides, e.g. wine barrels.
+  \begin{Solution}
+    \begin{enumerate}[(a)]
+    \item Since $f(x) = \sin x$ over $[0, \pi]$ is between 0 and 1,
+      the average of $f(x)$ must itself be between 0 and
+      1. Furthermore, since the graph of $f(x)$ is concave down on
+      this interval, the average value must be greater than the
+      average height of the triangle shown in the figure below, namely
+      $y = 0.5$.
 
-% 5. Centroid of an Area means the centre of mass. We see how to use integration to find the centroid of an area with curved sides.
+\includegraphics[width=0.7\linewidth]{graphics/Week06_AverageValue/sin_average_solution}
 
-% 6. Moments of Inertia explains how to find the resistance of a rotating body. We use integration when the shape has curved sides.
+\item Average =$\ds \frac{1 }{\pi-0}\int^\pi_0 \sin x ~dx \approx 0.64$.
 
-% 7. Work by a Variable Force shows how to find the work done on an object when the force is not constant. This section includes Hooke's Law for springs.
-% Survival Tips
+\item \lstinputlisting[showstringspaces=false]{MATLAB/W06SineAverage.m}
 
-% Before you start this section, it's a good idea to revise:
+\includegraphics[width=0.9\linewidth]{graphics/Week06_AverageValue/W06SineAverage}
+    \end{enumerate}
+  \end{Solution}
+%*****************
+\item
+  \begin{Question}
+    \begin{enumerate}[(a)]
+    \item What is the average value of $f(x) = \sqrt{ 1 - x^2}$ over
+      the interval $0 \le x \le 1$?  (Hint: we don't have the
+      integration tools to evaluate the integral of $f(x)$ from first
+      principles, but can use MATLAB to evaluate it.)  
+    \item Use MATLAB to plot the graph of $f(x)$ on $[0, 1]$, and draw
+      the average value on the graph as well.
+    \item How can you tell whether this average value is more or less
+      than 0.5 without doing any calculations?
+    \end{enumerate}
+  \end{Question}
 
-%     Graph of the Quadratic Function
-%     Graphs of Exponential and Log Functions
-%     Plane Analytic Geometry
-%     Curve Sketching
+  \begin{Solution}
+    \begin{enumerate}[(a)]
+    \item Solution is computed in the script below, with the average value being 0.7854.
 
-% (This chapter is easier if you can draw curves confidently.)
+\item Graphing is also included in the script below. 
 
-% You may also wish to see the Introduction to Calculus.
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W06RootAverage.m}{W06RootAverage.m}
 
-% 8. Electric Charges have a force between them that varies depending on the amount of charge and the distance between the charges. We use integration to calculate the work done when charges are separated.
+\includegraphics[width=0.7\linewidth]{graphics/Week06_AverageValue/W06RootAverage}
 
-% 9. Average Value of a curve can be calculated using integration.
+\item The area between the graph of $y = 1-x$ and the $x$-axis is
+  0.5. Because the graph of $y = \sqrt{1 - x^2}$ is concave down, it
+  lies above the straight line $y = 1 - x$, so its average value is
+  above 0.5. See the figure below.
 
-% Head Injury Criterion is an application of average value and used in road safety research.
-
-% 10. Force by Liquid Pressure varies depending on the shape of the object and its depth. We use integration to find the force. 
-
-% arc length
-% \hrulefill
+\includegraphics[width=0.7\linewidth]{graphics/Week06_AverageValue/circle_average_solution}
+    \end{enumerate}
+  \end{Solution}
+\end{multicols}
 
 
 \end{enumerate}

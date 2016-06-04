@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  4 JUN 2016 12:22
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  4 JUN 2016 13:55
 entering extended mode
 **\input Week06.tex
 (Week06.tex (SingleAssignmentSetup.tex (C:\MiKTeX2.9\tex\latex\base\article.cls
@@ -1121,50 +1121,173 @@ LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
 Non-PDF special ignored!
 Non-PDF special ignored!
 Non-PDF special ignored!{C:/Users/aableson/AppData/Local/MiKTeX/2.9/pdftex/conf
-ig/pdftex.map}] [2]
-<graphics/Week06_IntegrationApplications/GolfHole.png, id=55, 343.2825pt x 136.
+ig/pdftex.map}] [2] [3]
+Underfull \hbox (badness 10000) in paragraph at lines 237--241
+
+ []
+
+(MATLAB/W06Subsidence.m [4])
+<graphics/Week06_IntegrationApplications/W06CenterOfMass1.png, id=79, 578.16pt 
+x 433.62pt>
+File: graphics/Week06_IntegrationApplications/W06CenterOfMass1.png Graphic file
+ (type png)
+ <use graphics/Week06_IntegrationApplications/W06CenterOfMass1.png>
+Package pdftex.def Info: graphics/Week06_IntegrationApplications/W06CenterOfMas
+s1.png used on input line 341.
+(pdftex.def)             Requested size: 211.69563pt x 158.76953pt.
+
+<graphics/Week06_IntegrationApplications/W06CenterOfMass2.png, id=80, 578.16pt 
+x 433.62pt>
+File: graphics/Week06_IntegrationApplications/W06CenterOfMass2.png Graphic file
+ (type png)
+ <use graphics/Week06_IntegrationApplications/W06CenterOfMass2.png>
+Package pdftex.def Info: graphics/Week06_IntegrationApplications/W06CenterOfMas
+s2.png used on input line 342.
+(pdftex.def)             Requested size: 211.69563pt x 158.76953pt.
+
+<graphics/Week06_IntegrationApplications/GolfHole.png, id=81, 343.2825pt x 136.
 25906pt>
 File: graphics/Week06_IntegrationApplications/GolfHole.png Graphic file (type p
 ng)
  <use graphics/Week06_IntegrationApplications/GolfHole.png>
 Package pdftex.def Info: graphics/Week06_IntegrationApplications/GolfHole.png u
-sed on input line 210.
+sed on input line 356.
 (pdftex.def)             Requested size: 248.85974pt x 98.778pt.
- [3]
-Underfull \hbox (badness 10000) in paragraph at lines 277--281
-
+ [5 <./graphics/Week06_IntegrationApplications/W06CenterOfMass1.png (PNG copy)>
+ <./graphics/Week06_IntegrationApplications/W06CenterOfMass2.png (PNG copy)>]
+Underfull \hbox (badness 7186) in paragraph at lines 399--400
+[]\OT1/cmr/m/n/10 Using the graph shown be-low, find
  []
 
-[4 <./graphics/Week06_IntegrationApplications/GolfHole.png>]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 344.
- [5]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 344.
+<graphics/Week06_AverageValue/average_1.pdf, id=98, 209.78275pt x 130.4875pt>
+File: graphics/Week06_AverageValue/average_1.pdf Graphic file (type pdf)
+
+<use graphics/Week06_AverageValue/average_1.pdf>
+Package pdftex.def Info: graphics/Week06_AverageValue/average_1.pdf used on inp
+ut line 401.
+(pdftex.def)             Requested size: 169.39398pt x 105.36375pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 424--425
+[]\OT1/cmr/m/n/10 Using the graph be-low, es-ti-mate
+ []
+
+
+<graphics/Week06_AverageValue/average_2.png, id=99, 145.54375pt x 129.48375pt>
+File: graphics/Week06_AverageValue/average_2.png Graphic file (type png)
+
+<use graphics/Week06_AverageValue/average_2.png>
+Package pdftex.def Info: graphics/Week06_AverageValue/average_2.png used on inp
+ut line 429.
+(pdftex.def)             Requested size: 144.1956pt x 128.29399pt.
+ [6 <./graphics/Week06_IntegrationApplications/GolfHole.png> <./graphics/Week06
+_AverageValue/average_1.pdf> <./graphics/Week06_AverageValue/average_2.png>]
+<graphics/Week06_AverageValue/average_product_graphs1.pdf, id=132, 118.4425pt x
+ 82.3075pt>
+File: graphics/Week06_AverageValue/average_product_graphs1.pdf Graphic file (ty
+pe pdf)
+ <use graphics/Week06_AverageValue/average_product_graphs1.pdf>
+Package pdftex.def Info: graphics/Week06_AverageValue/average_product_graphs1.p
+df used on input line 455.
+(pdftex.def)             Requested size: 94.1084pt x 65.39897pt.
+
+<graphics/Week06_AverageValue/average_product_graphs2.pdf, id=133, 118.4425pt x
+ 82.3075pt>
+File: graphics/Week06_AverageValue/average_product_graphs2.pdf Graphic file (ty
+pe pdf)
+ <use graphics/Week06_AverageValue/average_product_graphs2.pdf>
+Package pdftex.def Info: graphics/Week06_AverageValue/average_product_graphs2.p
+df used on input line 456.
+(pdftex.def)             Requested size: 94.1084pt x 65.39897pt.
+
+Overfull \hbox (2.2222pt too wide) in paragraph at lines 452--457
+[] [] 
+ []
+
+
+Overfull \hbox (18.13846pt too wide) in paragraph at lines 485--485
+[] 
+ []
+
+
+<graphics/Week06_AverageValue/sin_average_solution.png, id=134, 295.1025pt x 11
+9.44624pt>
+File: graphics/Week06_AverageValue/sin_average_solution.png Graphic file (type 
+png)
+ <use graphics/Week06_AverageValue/sin_average_solution.png>
+Package pdftex.def Info: graphics/Week06_AverageValue/sin_average_solution.png 
+used on input line 512.
+(pdftex.def)             Requested size: 153.82048pt x 62.26184pt.
+
+(MATLAB/W06SineAverage.m
+Overfull \hbox (200.25975pt too wide) in paragraph at lines 1--2
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+
+Overfull \hbox (176.2595pt too wide) in paragraph at lines 7--8
+[][][][][][][][][][][][][][][][][][][][][][][][][][][][][] 
+ []
+
+)
+<graphics/Week06_AverageValue/W06SineAverage.png, id=135, 578.16pt x 433.62pt>
+File: graphics/Week06_AverageValue/W06SineAverage.png Graphic file (type png)
+
+<use graphics/Week06_AverageValue/W06SineAverage.png>
+Package pdftex.def Info: graphics/Week06_AverageValue/W06SineAverage.png used o
+n input line 518.
+(pdftex.def)             Requested size: 197.76872pt x 148.32207pt.
+ [7 <./graphics/Week06_AverageValue/average_product_graphs1.pdf> <./graphics/We
+ek06_AverageValue/average_product_graphs2.pdf> <./graphics/Week06_AverageValue/
+sin_average_solution.png> <./graphics/Week06_AverageValue/W06SineAverage.png (P
+NG copy)>]
+<graphics/Week06_AverageValue/W06RootAverage.png, id=193, 578.16pt x 433.62pt>
+File: graphics/Week06_AverageValue/W06RootAverage.png Graphic file (type png)
+
+<use graphics/Week06_AverageValue/W06RootAverage.png>
+Package pdftex.def Info: graphics/Week06_AverageValue/W06RootAverage.png used o
+n input line 544.
+(pdftex.def)             Requested size: 153.82048pt x 115.36528pt.
+
+<graphics/Week06_AverageValue/circle_average_solution.png, id=194, 185.69376pt 
+x 127.47626pt>
+File: graphics/Week06_AverageValue/circle_average_solution.png Graphic file (ty
+pe png)
+ <use graphics/Week06_AverageValue/circle_average_solution.png>
+Package pdftex.def Info: graphics/Week06_AverageValue/circle_average_solution.p
+ng used on input line 551.
+(pdftex.def)             Requested size: 153.82048pt x 105.59712pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 558.
+
+[8 <./graphics/Week06_AverageValue/W06RootAverage.png (PNG copy)> <./graphics/W
+eek06_AverageValue/circle_average_solution.png>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 558.
  (Week06.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 344.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 344.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 558.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 558.
 Package rerunfilecheck Info: File `Week06.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 26014 strings out of 493634
- 457468 string characters out of 3149836
- 625242 words of memory out of 3000000
- 28944 multiletter control sequences out of 15000+200000
- 6766 words of font info for 27 fonts, out of 3000000 for 9000
+ 26159 strings out of 493634
+ 460897 string characters out of 3149836
+ 633242 words of memory out of 3000000
+ 29012 multiletter control sequences out of 15000+200000
+ 10564 words of font info for 41 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 46i,12n,72p,10457b,1663s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 46i,12n,72p,10457b,1774s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/MiKTeX2.9/fonts/t
 ype1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm
 /cmex10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/MiKTeX2
 .9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MiKTeX2.9/fonts/type1/public/am
 sfonts/cm/cmr10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/M
 iKTeX2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/MiKTeX2.9/fonts/type1/publ
-ic/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb><C:/MiKTeX2.9/fonts/t
-ype1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Week06.pdf (5 pages, 230032 bytes).
+ic/amsfonts/cm/cmr8.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb
+><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/MiKTeX2.9/fonts/typ
+e1/public/amsfonts/cm/cmti10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/c
+mti7.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
+Output written on Week06.pdf (8 pages, 384988 bytes).
 PDF statistics:
- 137 PDF objects out of 1000 (max. 8388607)
- 50 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 272 PDF objects out of 1000 (max. 8388607)
+ 101 named destinations out of 1000 (max. 500000)
+ 56 words of extra memory for PDF output out of 10000 (max. 10000000)
 

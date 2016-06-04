@@ -1,0 +1,11 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\psset{unit=2cm}
+\begin{pspicture}(0,0)(3,2)
+\psline[linecolor=black,linewidth=1.5pt](0,0)(1,0)(2,1)
+\psaxes[linecolor=black,linewidth=0.4pt]{-}(0,0)(0,0)(2.2,1.2)[$x$,0][$g(x)$,90]
+\psgrid[subgriddiv=0,griddots=10,gridlabels=0pt](0,0)(2,1)
+\end{pspicture}
+\end{document}
