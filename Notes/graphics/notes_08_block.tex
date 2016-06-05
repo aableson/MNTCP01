@@ -1,0 +1,19 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\begin{document}
+\psset{unit=1cm}
+\begin{pspicture}(-.5,-.5)(6.5,2.5)
+\pnode(0.5,1){A} 
+\pspolygon[fillstyle=solid, fillcolor=lightgray](0,1.5)(0,.35)(0.5,0.35)(0.5,1.5)
+\rput(4,1){\rnode{B}{\psframebox{\rule{1cm}{1cm}}}}
+\psline[linewidth=1.8pt]{<->}(1.5,2)(4.5,2)
+\psline(0,.35)(6,.35) 
+\psset{coilarm=.01,coilwidth=.5}\nccoil{A}{B}
+\psline(3.0,.2)(3.0,.5) % tick mark
+\rput(3.0,-.1){0}
+\psline[linestyle=dashed](3.0,.2)(3.0,1.8) % tick mark
+\psline(4.0,.2)(4.0,.5)  % tick mark
+\rput(4.0,-.1){$x$}
+\end{pspicture}
+\end{document}

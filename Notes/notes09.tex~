@@ -1,0 +1,28 @@
+\input{PreambleCommon}
+\input{../WeekTitles}
+
+\begin{document}
+\setfont
+\pagestyle{fancy}
+\renewcommand{\Week}{9 }
+\renewcommand{\WeekTitle}{\WeekTitleNine }
+
+\fancyhead[LE,RO]{Week \Week}  % default, usually only for first page
+\fancyfoot{}
+\sectionbox{Week \#\Week: \WeekTitle}
+
+
+\vspace{5mm}
+\goals
+\begin{itemize}
+\item Take problems that can be modeled by differential equations,
+  both first and second order, and give solutions both by hand and
+  MATLAB (CLO5, CLO8)
+\item Examine case studies of differential equations applied to
+  engineering problems and reproduce those solutions
+\end{itemize}
+\vspace{5mm}
+
+
+\end{document}
+

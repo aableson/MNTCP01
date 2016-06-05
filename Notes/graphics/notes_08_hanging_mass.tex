@@ -1,0 +1,26 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\usepackage{pst-stru}
+\usepackage{pst-circ}
+\begin{document}
+\psset{unit=1.5cm}
+\newcommand*\pswall[3]{ % ll ur lr 
+\psframe[linecolor=white,fillstyle=hlines,hatchcolor=black](#1)(#2) % (ll)(ur) 
+\psline[linecolor=black](#1)(#3)}
+\begin{pspicture}(-1.5,-7.5)(6.5,2.5)
+\pnodes(0.5,-1){AT}(0.5,-4){AB}(2,-1){BT}(2,-4){BB}   % top and bottom points of the spring/dashpot
+\pswall{-1,-1}{4,-0.5}{4,-1} 
+\pspolygon[fillstyle=solid,
+fillcolor=lightgray](0,-4)(3,-4)(3,-5)(0,-5)
+%\psline{<->}(2,-2)(2,-8)  % motion arrow
+%\psline{<->}(2,-2)(2,-8)  % motion arrow
+%\psline(1,-1.35)(1,-6) 
+\resistor[dipolestyle=zigzag,linewidth=0.5pt,labeloffset=-18pt](AT)(AB){$k$}
+\dashpot[linewidth=0.5pt,labeloffset=32pt](2,-1)(2,-4){$c$}
+%\rput(3,-5){$y$}
+%\pcline[offset=12pt]{|-|}(3,-1)(3,-4.5)
+%\lput*{0}{$y$}  % label put
+\rput[c](1.5,-4.5){ $m$ }
+\end{pspicture}
+\end{document}

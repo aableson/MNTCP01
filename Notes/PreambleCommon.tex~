@@ -32,6 +32,8 @@
 \usepackage{multicol}
 \usepackage{fancyhdr}
 \usepackage{epstopdf}
+\usepackage{hyperref}
+\usepackage{listings}
 
 % *** Table of contents and Sectioning *** 
 \setcounter{secnumdepth}{0}

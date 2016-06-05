@@ -1,0 +1,47 @@
+---Question
+A vector has:
+---Type
+onechoice
+---Answers
+~\( A magnitude, direction, and an angle. \)
+~\( A magnitude. \)
+~\( A direction. \)
+=\( A magnitude and a direction.\)
+---Comment
+Check the notes!
+
+---Question
+
+What is the magnitude of \begin{bmatrix} -1\\2\\3 \end{bmatrix}? Is it equal to the magnitude of \begin{bmatrix} 1\\-2\\-3 \end{bmatrix}?
+---Type
+onechoice
+---Answers
+~\( Yes. The magnitudes are both 6. \)
+~\( No. The magnitudes are \sqrt{12} and -\sqrt{-12}. \)
+=\( Yes. The magnitudes are both \sqrt{14}. \)
+~\( Yes. The magnitudes are both \sqrt{12}. \)
+---Comment
+
+---Question
+Are the two vectors \overrightarrow{u} =  \begin{bmatrix} -1\\2 \end{bmatrix} and \overrightarrow{v} = \begin{bmatrix} 2\\-1 \end{bmatrix} orthogonal?
+---Type
+onechoice
+---Answers
+=\( Yes, the dot product is zero. \)
+~\( Yes, the dot product is not zero.  \)
+~\( No, the dot product is zero. \)
+~\( No, the dot product is not zero. \)
+---Comment
+
+
+---Question
+Are the two vectors \overrightarrow{u} =  \begin{bmatrix} -4\\3\\5 \end{bmatrix} and \overrightarrow{v} = \begin{bmatrix} 3\\-4 \end{bmatrix} orthogonal? (Hint: Think about how to write a 2 dimensional vector as a three dimensional vector!)
+---Type
+onechoice
+---Answers
+=\( Yes, the dot product is zero. \)
+~\( Yes, the dot product is not zero.  \)
+~\( No, the dot product is zero. \)
+~\( Impossible to tell, 2-dimensional vectors can't be compared to three dimensional vectors. \)
+---Comment
+

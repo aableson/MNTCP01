@@ -1,0 +1,4 @@
+\begin{pspicture}[](0,-5)(16, 5)
+\psaxes[labels=none]{-}(0,0)(-0.5,-4.5)(16.5,4.5)[$t$,0][$y$, 90]        %creates axes
+\psgrid[subgriddiv=1, gridcolor=black,griddots=5,gridwidth=1.5pt,gridlabels=0pt](0,0)(0,-4)(16,4)
+\end{pspicture}

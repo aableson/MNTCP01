@@ -1,0 +1,29 @@
+\input{PreambleCommon}
+\input{../WeekTitles}
+
+\begin{document}
+\setfont
+\pagestyle{fancy}
+\renewcommand{\Week}{8 }
+\renewcommand{\WeekTitle}{\WeekTitleEight }
+
+\fancyhead[LE,RO]{Week \Week}  % default, usually only for first page
+\fancyfoot{}
+\sectionbox{Week \#\Week: \WeekTitle}
+
+
+\vspace{5mm}
+\goals
+\begin{itemize}
+\item Express real world situations in terms of second order linear
+  differential equations.
+\item Describe the difference between homogeneous and nonhomogeneous
+  second order linear differential equations.
+\item Use MATLAB to solve linear and nonlinear second order
+  differential equations, both homogeneous and nonhomogeneous.
+\end{itemize}
+\vspace{5mm}
+
+
+\end{document}
+

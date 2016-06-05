@@ -1,0 +1,98 @@
+\input{PreambleCommon}
+\input{../WeekTitles}
+
+\begin{document}
+\setfont
+\pagestyle{fancy}
+\renewcommand{\Week}{9 }
+\renewcommand{\WeekTitle}{\WeekTitleNine }
+
+\fancyhead[LE,RO]{Week \Week}  % default, usually only for first page
+\fancyfoot{}
+\sectionbox{Week \#\Week: \WeekTitle}
+
+
+\vspace{5mm}
+\goals
+\begin{itemize}
+\item Take problems that can be modeled by differential equations,
+  both first and second order, and give solutions both by hand and
+  MATLAB (CLO5, CLO8)
+\item Examine case studies of differential equations applied to
+  engineering problems and reproduce those solutions
+\end{itemize}
+\vspace{5mm}
+
+\topic{Deformation of a Loaded Beam}
+\section*{Deformation of a Loaded Beam} 
+~\\[1ex]
+
+\begin{minipage}{3.2in}
+\includegraphics[width=3in]{graphics/notes_09_GrandCanyonWalkway} \\
+\includegraphics[width=3in]{graphics/notes_09_GrandCanyon_SkywalkFromOutsideLedge}
+\end{minipage}
+\begin{minipage}{4in}
+\includegraphics[width=7in]{graphics/notes_09_BeamExamples_CarlosFelippa} \\
+\end{minipage}
+
+\newpage
+
+The physics of how beams deform isn't central to this course, and
+engineering students in particular will take a course on structures
+that goes into deeper detail.  For our purposes, it is enough to be
+able to use the resulting differential equations.
+
+$$EI y^{(4)} = p(x)$$
+where  \\
+$y(x)$ is the deflection (distance away from a straight line),  \\
+$p(x)$ is the loading in N/m at point $x$ along the beam, \\
+$E$ is a value related to the material of the beam, and  \\
+$I$ is a value derived from the cross-sectional size and shape of the
+beam.
+
+\newpage
+\problem
+  Find the form of $y_c$ for the beam deflection DE, assuming $E$ and
+  $I$ are constant.
+$$EI y^{(4)} = p(x)$$
+
+ \newpage
+
+
+\topic{Cantilevered Beam Under Uniform Load} 
+\subsection*{Cantilevered Beam Under Uniform Load} 
+
+ Under a uniform loading (constant force per unit length), a {\em
+   cantilevered beam} which is $L = 2$ m long, made out of a pine ``2 by 4'' satisfies \\
+ $p(x) = 100$ N/m, (or roughly 10 kg applied to each meter) \\
+ $I = 2.23 \times 10^{-6}$ m$^4$,\hspace{0.5in} $E = 9.1 \times
+ 10^{9}$ N/m$^2$,
+ 
+\includegraphics[width=3in]{graphics/notes_09_CantileveredBeam_Diagram}
+
+and the {\em boundary} conditions 
+$y(0) = 0$, $y'(0) = 0$, $y''(2) = 0$, and $y'''(2) = 0$.
+
+\problem
+  Find the amount of deflection of the beam at the tip under this
+  load.
+
+\newpage
+\hfill $EI y^{(4)} = 100$
+ 
+~\hfill
+$y(0) = 0$, $y'(0) = 0$, 
+
+~\hfill $y''(2) = 0$, and $y'''(2) = 0$.
+
+\newpage
+\problem
+  If the maximum allowable deflection in such a beam is only 0.2 cm
+  (say in a building code), what would the maximum uniform load be?
+\end{document}
+%Confirmation of deflection:
+%  http://www.efunda.com/formulae/solid_mechanics/beams/casestudy_display.cfm?case=cantilever_uniformload
+
+
+\end{document}
+
