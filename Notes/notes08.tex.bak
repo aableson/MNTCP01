@@ -34,7 +34,7 @@
 \problem Search for ``ordinary differential equations'' in MATLAB help.  \vsc
 \vsc
 
-\problem What form of differential equation does MATLAB assume we have?
+What form of differential equation does MATLAB assume we have?
 
 \vsc
 \vsc
@@ -42,8 +42,8 @@
 
 \newpage
 
-Note that differential equation solvers are a big component of MATLAB.
-If using MATLAB after this course, you may have to do some reading to
+Note that MATLAB has many different differential equation solvers. If
+using MATLAB after this course, you may have to do some reading to
 identify the properties of the equation you have, and what the most
 appropriate solving tool is.
 
@@ -82,12 +82,15 @@ $T_{\mbox{ext}}$.
 
 \problem Translate this law into a mathematical statement.
 
-\newpage
+\vfill Solution interpretation: a {\bf solution} to a differential
+equation is the same as a {\bf prediction}.  \vspace{1.5in}
+
+\newpage 
+
+{\bf In MATLAB}
 
 $$\frac{dy}{dt} = -k (y - T_{\mbox{ext}})$$
 
-Solution Interpretation: a {\bf solution} to a differential equation
-is the same as a {\bf prediction}.
 
 \begin{verbatim}
 % Define temp DE in the form dy/dt = f(t, y)
@@ -191,11 +194,19 @@ not-so-obviously related real-world problems.
 \end{itemize}
 
 \newpage
+\begin{center}
+\includegraphics[width=0.35\linewidth]{graphics/notes_08_block}
+\end{center}
 Let us work with our intuition about this system before beginning the mathematics.
 
 \problem If the spring is very stiff, is $k$ large or small?  \vfill
 
-\newpage {\bf Definition:}: {\em Period} is the length of time to
+\newpage 
+\begin{center}
+\includegraphics[width=0.35\linewidth]{graphics/notes_08_block}
+\end{center}
+
+{\bf Definition:}: {\em Period} is the length of time to
 complete one full cycle/oscillation.  \vspace{0.2in}
 
 \problem If we increase the stiffness of the spring, do you expect the
@@ -209,6 +220,9 @@ the \emph{period} of the oscillations to increase or decrease? Why?
 \vfill
 
 \newpage
+\begin{center}
+\includegraphics[width=0.35\linewidth]{graphics/notes_08_block}
+\end{center}
 
 \problem If we know $k$ and $m$, and assume that damping is
 negligible, should we be able to determine the exact period of the
@@ -222,6 +236,9 @@ From the work so far, can we easily find the formula for the period?
 \vfill
 
 \newpage
+\begin{center}
+\includegraphics[width=0.35\linewidth]{graphics/notes_08_block}
+\end{center}
 
 The spring system is an excellent introduction to higher-order differential equations because 
 \begin{itemize}
@@ -284,7 +301,7 @@ Is our solution an exact or a numerical solution?
 We now consider an extension to the spring/mass system.
 
 Consider a mass $m$ hanging on the end of a vertical spring; the
-spring has a natural length corresponding to $x=0$.  
+spring has a naturally stretched length corresponding to $x=0$.
 
 We have now added a damper, which exerts a force proportional to the
 velocity of the oscillating mass.
@@ -297,7 +314,7 @@ velocity of the oscillating mass.
 \problem Using Newton's second law, build a differential equation that
 governs the system.
 
-\includegraphics[width=0.4\linewidth]{graphics/notes_08_hanging_mass}
+\includegraphics[width=0.35\linewidth]{graphics/notes_08_hanging_mass}
 
 
 % \begin{itemize}
@@ -324,7 +341,8 @@ spring constant $k = 2 \; \text{N} \cdot \text{m}^{-1}$, with a
 damping coefficient of $c = 0.5$ N/(m/s).  Assume the mass is
 displaced $0.4 \; \text{m}$ from equilibrium and released.
 
-\problem What differential equation dictates the motion of the mass?
+\problem Write the differential equation dictates the motion of the
+mass.
 
 \vspace{1in}
 
@@ -350,7 +368,8 @@ into a larger {\bf first-order system} of differential equations.
 \vspace{0.3in}
 Notation: In this section, 
 \begin{itemize} 
-\item vectors with be written vector hats, e.g. $\vec{w}, \vec{y}$,
+\item vectors with be written with vector hats, e.g.
+  $\vec{w}, \vec{y}$,
 \item elements of a vector will be noted with subscripts, e.g. $w_1$,
   $y_2$, and
 \item other scalars will be in lower-case, e.g. $c$, $\lambda$.
@@ -382,8 +401,8 @@ Equations'', referring to ``Higher Order ODEs''.
 
 \newpage
 $$ m  x'' = -c x' -kx $$
-\problem Define the derivative of $\vec{w}$ in terms of $\vec{w}$
-itself, making use of the DE as necessary.
+\problem Define the derivative, $\ds \frac{d \vec{w}}{dt}$, in terms
+of $\vec{w}$ itself, making use of the DE as necessary.
 
 \vfill
 \vfill
@@ -406,26 +425,35 @@ proceed: a MATLAB function file.
 \begin{itemize}
 \item has as its first line the form \\
 \verb#function ret = f(....)# 
-\item \verb#ref# is the {\bf return variable} and must be defined before the end of the function;
+\item \verb#ret# is the name of the {\bf return variable} and must be
+  defined before the end of the function;
 \item \verb#f# should be the same as the filename, with the \verb#.m# extension;
 \item the \verb#....# can be any list of input variables.
 \end{itemize}
 
 \newpage
 \problem Define a new {\bf MATLAB function \texttt{.m} file} called
-\verb#hypotenuse# that takes in two lengths \verb#a# and \verb#b#, and
-returns the length of the hypotenuse for a right-angle triangle with
-side lengths $a$ and $b$.
+\verb#hypotenuse# that takes in two lengths, \verb#a# and \verb#b#,
+and returns the length of the hypotenuse for a right-angle triangle
+with side lengths $a$ and $b$.
 
 \newpage
 \problem Define a new {\bf MATLAB function \texttt{.m} file} called
 \verb#springDE# which computes the derivative of
 $\ds \frac{d \vec{w}}{dt}$.
 
+\begin{minipage}[t]{0.4\linewidth}
+\vspace{0pt}
+$$ m x'' = -c x' -kx $$
+\end{minipage}
+\begin{minipage}[t]{0.6\linewidth}
+\vspace{0pt}
 \begin{align*}
   \frac{dw_1}{dt} & = w_2 \\
-  \frac{dw_2}{dt} & = -k w_1 - c w_2
+  \frac{dw_2}{dt} & = -c w_2 - k w_1
 \end{align*}
+\end{minipage}
+
 
 
 \newpage 
@@ -461,13 +489,14 @@ $$ m x'' = -c x' -kx $$
 \begin{minipage}[t]{0.6\linewidth}
 \vspace{0pt}
 \begin{center}
-\includegraphics[width=0.4\linewidth]{graphics/notes_08_hanging_mass}
+\includegraphics[width=0.5\linewidth]{graphics/notes_08_hanging_mass}
 \end{center}
 \end{minipage}
 
 \newpage
 
-A famous result in physics is that when the damping coefficient:
+A famous result in physics captures important differences in behaviour
+depending on the relationship between $c$, $k$ and $m$.
 \begin{itemize}
 \item $c$ is 0, the system will be {\bf undamped};
 \item $c$ is {\bf less} than $\sqrt{4km}$, the system will be {\bf under-damped};
@@ -517,7 +546,7 @@ Over-Damped
 We now add another component to our spring system model: \\{\bf
   external forces}.
 
- \includegraphics[width=0.3\linewidth]{graphics/notes_08_hanging_mass}
+ \includegraphics[width=0.25\linewidth]{graphics/notes_08_hanging_mass}
 
  \problem Write out the DE for the position of the mass, given the
  addition now of an external force, given by
@@ -530,9 +559,9 @@ before?
 
 \newpage
 
-\problem  Write a pair of MATLAB scripts and functions that will let you simulate
-the motion of the mass given an external force of the form  
- $F_{\mbox{ext}} = A \sin(Bt)$.  
+\problem Write a MATLAB scripts and a function that will let you
+simulate the motion of the mass given an external force of the form
+$F_{\mbox{ext}} = A \sin(Bt)$.
 
 $$m x'' = -kx -c x' + A \sin(Bt)$$
 
@@ -563,7 +592,7 @@ the damping coefficient $c$ on the behaviour of the mass.
 
 Now we turn off the damping (by setting $c=0$) to zero, and
 start to apply the external force. \\
-We set $F_{\mbox{ext}} = 10 \sin(1.0 t)$.   \\
+\problem Set $F_{\mbox{ext}} = 10 \sin(1.0 t)$ and display a graph of the resulting oscillations.   \\
 
 \vfill
 
@@ -574,7 +603,8 @@ above 5.  Does the motion of the mass over time make sense?
 
 \newpage
 
-\topic{Simulations - Resonance and Near-Resonance}
+\topic{Simulations - Resonance, Near-Resonance and Practical
+  Resonance}
 
 {\bf Resonance}
 
@@ -589,6 +619,8 @@ the mass, given by $\omega = \sqrt{\frac{k}{m}}$.
 Describe the graph of the solution.
 
 \vfill
+
+\newpage
 
 Give the physical reasons for the graph seen in the
 simulation.\\
@@ -620,11 +652,10 @@ Note again that there is {\em no damping} with this response.
 
 \newpage
 
-\topic{Demonstration - Practical Resonance}
-
 {\bf Adding in Friction - Practical Resonsance}
 
 Set $F_{\mbox{ext}} = 1 \sin(5t)$ again, but set damping $c$ to 0.1.
+
 \problem Compare this solution to the one without damping.
 
 \vfill
@@ -638,32 +669,32 @@ How is this more realistic than the undamped case?
 
 \vfill
 
-How do the mathematical forms of the pure-resonance (undamped) and
-practical resonance (some damping) compare?
-
-\vfill
-
 \newpage
 
 \topic{Transient and Steady-State Solutions}
 \subsection*{Transient and Steady-State Solutions}
 
-More generally, when there is damping in the spring/mass system and
-an oscillatory external force, we can break the solution into two
-parts: {\em transient} and {\em steady state}.
+More generally, when there is damping in the spring/mass system and an
+oscillatory external force, we can break the solution into two parts:
+{\em transient} and {\em steady state}.
 
-We set $F_{\mbox{ext}} = 1 \sin(t)$, and $c = 1$ for damping, which is fairly
-high for an oscillating system.  Describe the resulting behaviour.
-
-\vfill
-
-Specifically, what are the two natural frequencies in the solution?
+\problem Set $F_{\mbox{ext}} = 1 \sin(t)$, and $c = 1$ for damping,
+which is fairly high for an oscillating system.  Describe the
+resulting behaviour.
 
 \vfill
 
-Which frequency is present in the {\bf long run}?
+Describe specifically the {\bf long run} behaviour.
 
 \vfill
+
+\newpage
+
+\problem Describe an analagous physical scenario where you might have
+observed transient oscillations transitioning into steady state
+oscillations.
+
+
 
 \newpage
 
@@ -673,8 +704,8 @@ because
 \item the system displays all the interesting mathematical solution
   forms as we vary just a few parameters, 
 \item we hope that the simplicity of the system, and its resemblance
-  to familiar systems like swings or bouncing a basket ball, help to
-  you associate the mathematics with the real-world behaviour.
+  to familiar systems like swings or car shock absorbers, help to you
+  associate the mathematics with the real-world behaviour.
 \item the DE for the spring/mass system is either identical or similar
   to those for a surprising number of other real-world scenarios.
 \end{itemize}
