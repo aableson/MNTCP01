@@ -1,10 +1,12 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  6 JUN 2016 14:04
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (MiKTeX 2.9) (preloaded format=pdflatex 2015.6.18)  6 JUN 2016 17:23
 entering extended mode
 **\input notes08.tex
-(notes08.tex (PreambleCommon.tex (C:\MiKTeX2.9\tex\latex\base\article.cls
-Document Class: article 2014/09/29 v1.4h Standard LaTeX document class
-(C:\MiKTeX2.9\tex\latex\base\size12.clo
-File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
+(c:\Users\aableson\Documents\MNTCP01\Notes\notes08.tex
+(c:\Users\aableson\Documents\MNTCP01\Notes\PreambleCommon.tex
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\article.cls"
+Document Class: article 2007/10/19 v1.4h Standard LaTeX document class
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\size12.clo"
+File: size12.clo 2007/10/19 v1.4h Standard LaTeX file (size option)
 )
 \c@part=\count79
 \c@section=\count80
@@ -18,7 +20,7 @@ File: size12.clo 2014/09/29 v1.4h Standard LaTeX file (size option)
 \belowcaptionskip=\skip42
 \bibindent=\dimen102
 )
-(C:\MiKTeX2.9\tex\latex\base\alltt.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\alltt.sty"
 Package: alltt 1997/06/16 v2.0g defines alltt environment
 )
 (C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\tocloft\tocloft.sty
@@ -58,31 +60,31 @@ Package tocloft Info: The document has section divisions on input line 44.
 \cfttabindent=\skip72
 \cfttabnumwidth=\skip73
 )
-(C:\MiKTeX2.9\tex\latex\graphics\graphicx.sty
-Package: graphicx 2014/10/28 v1.0g Enhanced LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
+Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
-(C:\MiKTeX2.9\tex\latex\graphics\keyval.sty
-Package: keyval 2014/10/28 v1.15 key=value parser (DPC)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
+Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
 \KV@toks@=\toks14
 )
-(C:\MiKTeX2.9\tex\latex\graphics\graphics.sty
-Package: graphics 2014/10/28 v1.0p Standard LaTeX Graphics (DPC,SPQR)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
+Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
 
-(C:\MiKTeX2.9\tex\latex\graphics\trig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\trig.sty"
 Package: trig 1999/03/16 v1.09 sin cos tan (DPC)
 )
-(C:\MiKTeX2.9\tex\latex\00miktex\graphics.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\graphics.cfg"
 File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
-Package graphics Info: Driver file: pdftex.def on input line 94.
+Package graphics Info: Driver file: pdftex.def on input line 91.
 
-(C:\MiKTeX2.9\tex\latex\pdftex-def\pdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\pdftex-def\pdftex.def"
 File: pdftex.def 2011/05/27 v0.06d Graphics/color for pdfTeX
 
-(C:\MiKTeX2.9\tex\generic\oberdiek\infwarerr.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\infwarerr.sty"
 Package: infwarerr 2010/04/08 v1.3 Providing info/warning/error messages (HO)
 )
-(C:\MiKTeX2.9\tex\generic\oberdiek\ltxcmds.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ltxcmds.sty"
 Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 )
 \Gread@gobject=\count89
@@ -90,13 +92,13 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@height=\dimen103
 \Gin@req@width=\dimen104
 )
-(C:\MiKTeX2.9\tex\latex\graphics\lscape.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\lscape.sty"
 Package: lscape 2000/10/22 v3.01 Landscape Pages (DPC)
 )
-(C:\MiKTeX2.9\tex\latex\amsfonts\amssymb.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amssymb.sty"
 Package: amssymb 2013/01/14 v3.01 AMS font symbols
 
-(C:\MiKTeX2.9\tex\latex\amsfonts\amsfonts.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\amsfonts.sty"
 Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 \@emptytoks=\toks15
 \symAMSa=\mathgroup4
@@ -104,7 +106,7 @@ Package: amsfonts 2013/01/14 v3.01 Basic AMSFonts support
 LaTeX Font Info:    Overwriting math alphabet `\mathfrak' in version `bold'
 (Font)                  U/euf/m/n --> U/euf/b/n on input line 106.
 ))
-(C:\MiKTeX2.9\tex\latex\float\float.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\float\float.sty"
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count90
 \float@exts=\toks16
@@ -112,24 +114,24 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \@float@everytoks=\toks17
 \@floatcapt=\box27
 )
-(C:\MiKTeX2.9\tex\latex\amsmath\amsmath.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsmath.sty"
 Package: amsmath 2013/01/14 v2.14 AMS math features
 \@mathmargin=\skip74
 
 For additional information on amsmath, use the `?' option.
-(C:\MiKTeX2.9\tex\latex\amsmath\amstext.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amstext.sty"
 Package: amstext 2000/06/29 v2.01
 
-(C:\MiKTeX2.9\tex\latex\amsmath\amsgen.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsgen.sty"
 File: amsgen.sty 1999/11/30 v2.0
 \@emptytoks=\toks18
 \ex@=\dimen105
 ))
-(C:\MiKTeX2.9\tex\latex\amsmath\amsbsy.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsbsy.sty"
 Package: amsbsy 1999/11/29 v1.2d
 \pmbraise@=\dimen106
 )
-(C:\MiKTeX2.9\tex\latex\amsmath\amsopn.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsmath\amsopn.sty"
 Package: amsopn 1999/12/14 v2.01 operator names
 )
 \inf@bad=\count91
@@ -173,17 +175,17 @@ LaTeX Info: Redefining \] on input line 2666.
 (C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\was\gensymb.sty
 Package: gensymb 2003/07/02 v1.0 (WaS)
 )
-(C:\MiKTeX2.9\tex\latex\graphics\epsfig.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\epsfig.sty"
 Package: epsfig 1999/02/16 v1.7a (e)psfig emulation (SPQR)
 \epsfxsize=\dimen114
 \epsfysize=\dimen115
 )
-(C:\MiKTeX2.9\tex\latex\tools\enumerate.sty
-Package: enumerate 2015/07/23 v3.00 enumerate extensions (DPC)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\enumerate.sty"
+Package: enumerate 1999/03/05 v3.00 enumerate extensions (DPC)
 \@enLab=\toks23
 )
-(C:\MiKTeX2.9\tex\latex\tools\multicol.sty
-Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\tools\multicol.sty"
+Package: multicol 2011/06/27 v1.7a multicolumn formatting (FMi)
 \c@tracingmulticols=\count103
 \mult@box=\box30
 \multicol@leftmargin=\dimen116
@@ -200,7 +202,6 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \multicolbaselineskip=\skip78
 \partial@page=\box31
 \last@line=\box32
-\maxbalancingoverflow=\dimen121
 \mult@rightbox=\box33
 \mult@grightbox=\box34
 \mult@gfirstbox=\box35
@@ -224,12 +225,12 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \@tempa=\box53
 \c@columnbadness=\count109
 \c@finalcolumnbadness=\count110
-\last@try=\dimen122
-\multicolovershoot=\dimen123
-\multicolundershoot=\dimen124
+\last@try=\dimen121
+\multicolovershoot=\dimen122
+\multicolundershoot=\dimen123
 \mult@nat@firstbox=\box54
 \colbreak@box=\box55
-\mc@col@check@num=\count111
+\multicol@sort@counter=\count111
 )
 (C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\fancyhdr\fancyhdr.sty
 \fancy@headwidth=\skip79
@@ -242,28 +243,28 @@ Package: multicol 2015/08/19 v1.8n multicolumn formatting (FMi)
 \f@ncyO@olf=\skip86
 \f@ncyO@orf=\skip87
 )
-(C:\MiKTeX2.9\tex\latex\oberdiek\epstopdf.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf.sty"
 Package: epstopdf 2010/02/09 v2.5 Conversion with epstopdf on the fly (HO)
 
-(C:\MiKTeX2.9\tex\latex\oberdiek\epstopdf-base.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\epstopdf-base.sty"
 Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
 
-(C:\MiKTeX2.9\tex\latex\oberdiek\grfext.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\grfext.sty"
 Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
 
-(C:\MiKTeX2.9\tex\generic\oberdiek\kvdefinekeys.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvdefinekeys.sty"
 Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
 ))
-(C:\MiKTeX2.9\tex\latex\oberdiek\kvoptions.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
 
-(C:\MiKTeX2.9\tex\generic\oberdiek\kvsetkeys.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\kvsetkeys.sty"
 Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
 
-(C:\MiKTeX2.9\tex\generic\oberdiek\etexcmds.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\etexcmds.sty"
 Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
 
-(C:\MiKTeX2.9\tex\generic\oberdiek\ifluatex.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifluatex.sty"
 Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
 Package ifluatex Info: LuaTeX not detected.
 )
@@ -272,11 +273,11 @@ Package etexcmds Info: Could not find \expanded.
 (etexcmds)             that some package has redefined \expanded.
 (etexcmds)             In the latter case, load this package earlier.
 )))
-(C:\MiKTeX2.9\tex\generic\oberdiek\pdftexcmds.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\pdftexcmds.sty"
 Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO
 )
 
-(C:\MiKTeX2.9\tex\generic\oberdiek\ifpdf.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\ifpdf.sty"
 Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
 Package ifpdf Info: pdfTeX in PDF mode is detected.
 )
@@ -290,14 +291,14 @@ Package grfext Info: Graphics extension search list:
 G,.JBIG2,.JB2,.eps]
 (grfext)             \AppendGraphicsExtensions on input line 452.
 ))
-(C:\MiKTeX2.9\tex\latex\hyperref\hyperref.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2012/11/06 v6.83m Hypertext links for LaTeX
 
-(C:\MiKTeX2.9\tex\generic\oberdiek\hobsub-hyperref.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-hyperref.sty"
 Package: hobsub-hyperref 2012/04/25 v1.12 Bundle oberdiek, subset hyperref (HO)
 
 
-(C:\MiKTeX2.9\tex\generic\oberdiek\hobsub-generic.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\hobsub-generic.sty"
 Package: hobsub-generic 2012/04/25 v1.12 Bundle oberdiek, subset generic (HO)
 Package: hobsub 2012/04/25 v1.12 Construct package bundles (HO)
 Package hobsub Info: Skipping package `infwarerr' (already loaded).
@@ -327,22 +328,22 @@ Package: atbegshi 2011/10/05 v1.16 At begin shipout hook (HO)
 Package: refcount 2011/10/16 v3.4 Data extraction from label references (HO)
 Package: hycolor 2011/01/30 v1.7 Color options for hyperref/bookmark (HO)
 )
-(C:\MiKTeX2.9\tex\generic\ifxetex\ifxetex.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\ifxetex\ifxetex.sty"
 Package: ifxetex 2010/09/12 v0.6 Provides ifxetex conditional
 )
-(C:\MiKTeX2.9\tex\latex\oberdiek\auxhook.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\auxhook.sty"
 Package: auxhook 2011/03/04 v1.3 Hooks for auxiliary files (HO)
 )
-\@linkdim=\dimen125
+\@linkdim=\dimen124
 \Hy@linkcounter=\count112
 \Hy@pagecounter=\count113
 
-(C:\MiKTeX2.9\tex\latex\hyperref\pd1enc.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2012/11/06 v6.83m Hyperref: PDFDocEncoding definition (HO)
 )
 \Hy@SavedSpaceFactor=\count114
 
-(C:\MiKTeX2.9\tex\latex\00miktex\hyperref.cfg
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
 )
 Package hyperref Info: Hyper figures OFF on input line 4443.
@@ -359,10 +360,10 @@ Package hyperref Info: Bookmarks ON on input line 4688.
 Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 5041.
-\XeTeXLinkMargin=\dimen126
+\XeTeXLinkMargin=\dimen125
 \Fld@menulength=\count116
-\Field@Width=\dimen127
-\Fld@charsize=\dimen128
+\Field@Width=\dimen126
+\Fld@charsize=\dimen127
 Package hyperref Info: Hyper figures OFF on input line 6295.
 Package hyperref Info: Link nesting OFF on input line 6300.
 Package hyperref Info: Hyper index ON on input line 6303.
@@ -379,12 +380,12 @@ LaTeX Info: Redefining \pageref on input line 6369.
 
 Package hyperref Message: Driver (autodetected): hpdftex.
 
-(C:\MiKTeX2.9\tex\latex\hyperref\hpdftex.def
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2012/11/06 v6.83m Hyperref driver for pdfTeX
 \Fld@listcount=\count120
 \c@bookmark@seq@number=\count121
 
-(C:\MiKTeX2.9\tex\latex\oberdiek\rerunfilecheck.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
@@ -396,14 +397,14 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 \lst@gtempboxa=\box56
 \lst@token=\toks24
 \lst@length=\count123
-\lst@currlwidth=\dimen129
+\lst@currlwidth=\dimen128
 \lst@column=\count124
 \lst@pos=\count125
-\lst@lostspace=\dimen130
-\lst@width=\dimen131
+\lst@lostspace=\dimen129
+\lst@width=\dimen130
 \lst@newlines=\count126
 \lst@lineno=\count127
-\lst@maxwidth=\dimen132
+\lst@maxwidth=\dimen131
 
 (C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\listings\lstmisc.sty
 File: lstmisc.sty 2015/06/04 1.6 (Carsten Heinz)
@@ -417,25 +418,24 @@ File: listings.cfg 2015/06/04 1.6 listings configuration
 Package: listings 2015/06/04 1.6 (Carsten Heinz)
 \@float@every@noteinbox=\toks25
 \c@noteinbox=\count130
-(C:\MiKTeX2.9\tex\latex\geometry\geometry.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.sty"
 Package: geometry 2010/09/12 v5.6 Page Geometry
 \Gm@cnth=\count131
 \Gm@cntv=\count132
 \c@Gm@tempcnt=\count133
-\Gm@bindingoffset=\dimen133
-\Gm@wd@mp=\dimen134
-\Gm@odd@mp=\dimen135
-\Gm@even@mp=\dimen136
-\Gm@layoutwidth=\dimen137
-\Gm@layoutheight=\dimen138
-\Gm@layouthoffset=\dimen139
-\Gm@layoutvoffset=\dimen140
+\Gm@bindingoffset=\dimen132
+\Gm@wd@mp=\dimen133
+\Gm@odd@mp=\dimen134
+\Gm@even@mp=\dimen135
+\Gm@layoutwidth=\dimen136
+\Gm@layoutheight=\dimen137
+\Gm@layouthoffset=\dimen138
+\Gm@layoutvoffset=\dimen139
 \Gm@dimlist=\toks26
 
-(C:\MiKTeX2.9\tex\latex\geometry\geometry.cfg))) (../WeekTitles.tex)
-(notes08.aux)
-\openout1 = `notes08.aux'.
-
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\geometry\geometry.cfg")))
+(c:\Users\aableson\Documents\MNTCP01\WeekTitles.tex)
+(c:\Users\aableson\Documents\MNTCP01\Notes\notes08.aux)
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
 LaTeX Font Info:    ... okay on input line 7.
 LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 7.
@@ -454,13 +454,13 @@ LaTeX Font Info:    ... okay on input line 7.
 (C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\context\base\supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count134
-\scratchdimen=\dimen141
+\scratchdimen=\dimen140
 \scratchbox=\box58
 \nofMPsegments=\count135
 \nofMParguments=\count136
 \everyMPshowfont=\toks27
 \MPscratchCnt=\count137
-\MPscratchDim=\dimen142
+\MPscratchDim=\dimen141
 \MPnumerator=\count138
 \makeMPintoPDFobject=\count139
 \everyMPtoPDFconversion=\toks28
@@ -478,10 +478,10 @@ Package gensymb Warning: Not defining \micro.
 
 \AtBeginShipoutBox=\box59
 Package hyperref Info: Link coloring OFF on input line 7.
-(C:\MiKTeX2.9\tex\latex\hyperref\nameref.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2012/10/27 v2.43 Cross-referencing by name of section
 
-(C:\MiKTeX2.9\tex\generic\oberdiek\gettitlestring.sty
+("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
 \c@section@level=\count140
@@ -489,11 +489,7 @@ Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 LaTeX Info: Redefining \ref on input line 7.
 LaTeX Info: Redefining \pageref on input line 7.
 LaTeX Info: Redefining \nameref on input line 7.
- (notes08.out)
-(notes08.out)
 \@outlinefile=\write3
-\openout3 = `notes08.out'.
-
 \c@lstlisting=\count141
 
 *geometry* driver: auto-detecting
@@ -531,12 +527,12 @@ LaTeX Info: Redefining \nameref on input line 7.
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
 LaTeX Font Info:    Try loading font information for U+msa on input line 15.
-(C:\MiKTeX2.9\tex\latex\amsfonts\umsa.fd
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsa.fd"
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
 LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 
-(C:\MiKTeX2.9\tex\latex\amsfonts\umsb.fd
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 Overfull \hbox (19.22742pt too wide) in paragraph at lines 15--16
@@ -544,8 +540,8 @@ Overfull \hbox (19.22742pt too wide) in paragraph at lines 15--16
  []
 
 LaTeX Font Info:    Try loading font information for OMS+cmr on input line 20.
-(C:\MiKTeX2.9\tex\latex\base\omscmr.fd
-File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <24.88> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 20.
@@ -596,10 +592,10 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.158 \newpage
-               [1 <./graphics/notes_08_block.pdf>]
+               [1 <c:/Users/aableson/Documents/MNTCP01/Notes/graphics/notes_08_
+block.pdf>]
 File: graphics/notes_08_block.pdf Graphic file (type pdf)
-
-<use graphics/notes_08_block.pdf>
+ <use graphics/notes_08_block.pdf>
 Package pdftex.def Info: graphics/notes_08_block.pdf used on input line 160.
 (pdftex.def)             Requested size: 271.73088pt x 105.85968pt.
 
@@ -633,11 +629,13 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.174 \newpage
-               [2 <./graphics/notes_08_SpringSystemCar.png> <./graphics/notes_0
-8_Sound-Attenuation.png> <./graphics/notes_08_Tuned_Mass_Damper_atop_Taipei_101
-_-_27_March_2008.png>]
+               [2 <c:/Users/aableson/Documents/MNTCP01/Notes/graphics/notes_08_
+SpringSystemCar.png> <c:/Users/aableson/Documents/MNTCP01/Notes/graphics/notes_
+08_Sound-Attenuation.png> <c:/Users/aableson/Documents/MNTCP01/Notes/graphics/n
+otes_08_Tuned_Mass_Damper_atop_Taipei_101_-_27_March_2008.png>]
 File: graphics/notes_08_block.pdf Graphic file (type pdf)
- <use graphics/notes_08_block.pdf>
+
+<use graphics/notes_08_block.pdf>
 Package pdftex.def Info: graphics/notes_08_block.pdf used on input line 180.
 (pdftex.def)             Requested size: 339.66878pt x 132.32767pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
@@ -729,10 +727,10 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.312 \newpage
-               [1 <./graphics/notes_08_hanging_mass.pdf>]
+               [1 <c:/Users/aableson/Documents/MNTCP01/Notes/graphics/notes_08_
+hanging_mass.pdf>]
 File: graphics/notes_08_hanging_mass.pdf Graphic file (type pdf)
-
-<use graphics/notes_08_hanging_mass.pdf>
+ <use graphics/notes_08_hanging_mass.pdf>
 Package pdftex.def Info: graphics/notes_08_hanging_mass.pdf used on input line 
 317.
 (pdftex.def)             Requested size: 237.7723pt x 211.07637pt.
@@ -833,7 +831,7 @@ name{page.2}) has been already used, duplicate ignored
                    \relax 
 l.512 \newpage
                [2]
-<graphics/notes_08_spring_mass_axes.pdf, id=164, 250.9365pt x 140.525pt>
+<graphics/notes_08_spring_mass_axes.pdf, id=165, 250.9365pt x 140.525pt>
 File: graphics/notes_08_spring_mass_axes.pdf Graphic file (type pdf)
 
 <use graphics/notes_08_spring_mass_axes.pdf>
@@ -863,10 +861,10 @@ been already used, duplicate ignored
 <to be read again> 
                    \relax 
 l.542 \newpage
-               [3 <./graphics/notes_08_spring_mass_axes.pdf>]
+               [3 <c:/Users/aableson/Documents/MNTCP01/Notes/graphics/notes_08_
+spring_mass_axes.pdf>]
 File: graphics/notes_08_hanging_mass.pdf Graphic file (type pdf)
-
-<use graphics/notes_08_hanging_mass.pdf>
+ <use graphics/notes_08_hanging_mass.pdf>
 Package pdftex.def Info: graphics/notes_08_hanging_mass.pdf used on input line 
 549.
 (pdftex.def)             Requested size: 169.83438pt x 150.7663pt.
@@ -959,28 +957,37 @@ been already used, duplicate ignored
 l.762 \end{document}
                      [3]
 Package atveryend Info: Empty hook `AfterLastShipout' on input line 762.
- (notes08.aux)
+ (c:\Users\aableson\Documents\MNTCP01\Notes\notes08.aux)
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 762.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 762.
-Package rerunfilecheck Info: File `notes08.out' has not changed.
-(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+
+
+Package rerunfilecheck Warning: File `notes08.out' has changed.
+(rerunfilecheck)                Rerun to get outlines right
+(rerunfilecheck)                or use package `bookmark'.
+
+Package rerunfilecheck Info: Checksums for `notes08.out':
+(rerunfilecheck)             Before: <no file>
+(rerunfilecheck)             After:  D41D8CD98F00B204E9800998ECF8427E;0.
 Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 762.
  ) 
 Here is how much of TeX's memory you used:
- 8347 strings out of 493634
- 119543 string characters out of 3149836
- 215989 words of memory out of 3000000
- 11584 multiletter control sequences out of 15000+200000
+ 8327 strings out of 493921
+ 121963 string characters out of 3144867
+ 210969 words of memory out of 3000000
+ 11475 multiletter control sequences out of 15000+200000
  9751 words of font info for 37 fonts, out of 3000000 for 9000
- 1025 hyphenation exceptions out of 8191
- 44i,10n,43p,352b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX2.9/fonts/t
-ype1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm
-/cmmi12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX2.
-9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX2.9/fonts/type1/public/ams
-fonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:
-/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on notes08.pdf (48 pages, 2809399 bytes).
+ 841 hyphenation exceptions out of 8191
+ 44i,11n,43p,352b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb>
+<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C
+:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/
+Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/Pro
+gram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
+Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on notes08.pdf (48 pages, 2810588 bytes).
 PDF statistics:
  261 PDF objects out of 1000 (max. 8388607)
  23 named destinations out of 1000 (max. 500000)
