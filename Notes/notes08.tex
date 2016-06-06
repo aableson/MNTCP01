@@ -31,10 +31,8 @@
 \topic{Generating Numerical Solutions with MATLAB}
 \subsection*{Generating Numerical Solutions with MATLAB}
 
-\problem Search for ``first order ODEs'' or ``initial value problem''
-  in MATLAB help.
-\vsc 
-\vsc 
+\problem Search for ``ordinary differential equations'' in MATLAB help.  \vsc
+\vsc
 
 \problem What form of differential equation does MATLAB assume we have?
 
@@ -44,9 +42,10 @@
 
 \newpage
 
-Note that differential equation solvers are a big component of MATLAB:
-you may have to do some reading to sort out the kind of equation you
-have, and what the appropriate solving tool is.
+Note that differential equation solvers are a big component of MATLAB.
+If using MATLAB after this course, you may have to do some reading to
+identify the properties of the equation you have, and what the most
+appropriate solving tool is.
 
 \problem Which of the solvers is recommended as a ``first try''
 solver?
@@ -66,6 +65,11 @@ The first solver to reach for in MATLAB is \verb#ode45#.  To run it, we need
 \item the initial condition ($y(t_0))$
 \vfill
 \end{itemize}
+
+\problem What will \verb#ode45# compute for us, given that
+information?
+\vfill
+\vfill
 
 \newpage
 
@@ -173,9 +177,12 @@ not-so-obviously related real-world problems.
 \includegraphics[width=0.5\linewidth]{graphics/notes_08_block}
 \end{center}
 
-In this system, how would you describe $x$ in words?
+\problem In this system, how would you describe $x$ in words?
 
 \newpage
+\begin{center}
+\includegraphics[width=0.35\linewidth]{graphics/notes_08_block}
+\end{center}
 \problem Draw a free-body diagram for the mass.  Indicate the magnitude of the forces, assuming 
 \begin{itemize}
 \item the mass of the block is $m$ kg, and
@@ -188,9 +195,8 @@ Let us work with our intuition about this system before beginning the mathematic
 
 \problem If the spring is very stiff, is $k$ large or small?  \vfill
 
-\newpage
-{\bf Period}: the length of time to complete one full cycle/oscillation.
-\vspace{0.2in}
+\newpage {\bf Definition:}: {\em Period} is the length of time to
+complete one full cycle/oscillation.  \vspace{0.2in}
 
 \problem If we increase the stiffness of the spring, do you expect the
 {\em period} of the oscillations to increase or decrease?  Why?
@@ -204,7 +210,7 @@ the \emph{period} of the oscillations to increase or decrease? Why?
 
 \newpage
 
-\problem If we know $k$ and $m$, and assume that friction is
+\problem If we know $k$ and $m$, and assume that damping is
 negligible, should we be able to determine the exact period of the
 oscillations?  \vfill
 
@@ -229,6 +235,9 @@ We clearly need some new tools!
 \newpage
 \topic{Spring System as a DE}
 \subsection*{Spring System as a DE}
+\begin{center}
+\includegraphics[width=0.35\linewidth]{graphics/notes_08_block}
+\end{center}
 
 \problem Use Newton's second law, $F = ma$, to construct an equation
 involving the position $x(t)$.  \vfill
@@ -236,14 +245,15 @@ involving the position $x(t)$.  \vfill
 What order of differential equation does $F=ma$ produce for this
 spring/mass system?
 
-\vfill
+\vspace{1.3in}
 
 \newpage
 
 To simplify matters temporarily, let us assume that both
   $k = 1 $ N/m and $m = 1$ kg. 
 
-  \problem Rewrite the previous differential equation.  \vfill
+  \problem Rewrite the previous differential equation using those
+  constants.  \vspace{1.5in}
 
   This differential equation invites us to find a function $x(t)$
   whose second derivative is its own negative.  What function(s) would
@@ -256,8 +266,14 @@ equation for the spring/mass system, how does this family of solutions
 map back to the spring system?
 
 \begin{center}
-\includegraphics[width=0.5\linewidth]{graphics/notes_08_block}
+\includegraphics[width=0.4\linewidth]{graphics/notes_08_block}
 \end{center}
+
+\vfill
+
+Is our solution an exact or a numerical solution?
+\vspace{1.3in}
+
 
 \newpage
 
@@ -265,7 +281,7 @@ map back to the spring system?
 \topic{Mechanical Vibrations - Spring-mass system}
 \section*{Mechanical Vibrations - Spring-mass system}
 
-We now consider an extension to the spring/mass system seen earlier
+We now consider an extension to the spring/mass system.
 
 Consider a mass $m$ hanging on the end of a vertical spring; the
 spring has a natural length corresponding to $x=0$.  
@@ -273,12 +289,13 @@ spring has a natural length corresponding to $x=0$.
 We have now added a damper, which exerts a force proportional to the
 velocity of the oscillating mass.
 
-\problem Using Newton's second law, build a differential equation that
-governs the system.
 
 \includegraphics[width=0.4\linewidth]{graphics/notes_08_hanging_mass}
 
 \newpage
+
+\problem Using Newton's second law, build a differential equation that
+governs the system.
 
 \includegraphics[width=0.4\linewidth]{graphics/notes_08_hanging_mass}
 
@@ -302,11 +319,24 @@ governs the system.
 
 
 \newpage
-\problem Consider a mass of $0.5 \; \text{kg}$ with spring constant
-$k = 2 \; \text{N} \cdot \text{m}^{-1}$ in an undamped unforced
-system.  Assume the mass is displaced $0.4 \; \text{m}$ from
-equilibrium and released.  Describe the long-term behaviour of the
-system.
+\problem Consider a system with a mass of $0.5 \; \text{kg}$ with
+spring constant $k = 2 \; \text{N} \cdot \text{m}^{-1}$, with a
+damping coefficient of $c = 0.5$ N/(m/s).  Assume the mass is
+displaced $0.4 \; \text{m}$ from equilibrium and released.
+
+\problem What differential equation dictates the motion of the mass?
+
+\vspace{1in}
+
+Can we find an easy solution to this differential equation as we did with the undamped
+case?
+\vfill
+
+
+Can MATLAB be used to build a numerical solution for the differential
+in its current form?
+
+\vfill
 
 \newpage
 
@@ -320,20 +350,38 @@ into a larger {\bf first-order system} of differential equations.
 \vspace{0.3in}
 Notation: In this section, 
 \begin{itemize} 
-\item vectors with be written vector hats, e.g. $\vec{x}$,
+\item vectors with be written vector hats, e.g. $\vec{w}, \vec{y}$,
 \item elements of a vector will be noted with subscripts, e.g. $w_1$,
   $y_2$, and
 \item other scalars will be in lower-case, e.g. $c$, $\lambda$.
 \end{itemize}
 
-$$ x'' = -c x' -kx $$
+\newpage
+
+\begin{minipage}[t]{0.4\linewidth}
+\vspace{0pt}
+Damped Spring DE:
+
+$$ m x'' = -c x' -kx $$
+\end{minipage}
+\begin{minipage}[t]{0.6\linewidth}
+\vspace{0pt}
+\begin{center}
+\includegraphics[width=0.5\linewidth]{graphics/notes_08_hanging_mass}
+\end{center}
+\end{minipage}
+
 \problem For the spring/mass DE, define a new vector of 2 variables,
 $\vec{w}$, that will allow the conversion of the second-order system
 to a first-order system.
 
+\vfill
+
+Also see the MATLAB help menu entry on ``Ordinary Differential
+Equations'', referring to ``Higher Order ODEs''.
 
 \newpage
-$$ x'' = -c x' -kx $$
+$$ m  x'' = -c x' -kx $$
 \problem Define the derivative of $\vec{w}$ in terms of $\vec{w}$
 itself, making use of the DE as necessary.
 
@@ -346,7 +394,8 @@ the {\em position} of the mass.
 
 \newpage
 
-{\bf MATLAB Function Files}
+\topic{MATLAB Function Files}
+\subsection*{MATLAB Function Files}
 
 Our differential equation is now sufficiently complicated that writing
 it out in one line is difficult.  We will need another MATLAB tool to
@@ -383,22 +432,42 @@ $\ds \frac{d \vec{w}}{dt}$.
 \problem Write a MATLAB script that graphs the solution
 (i.e. predicted motion) for the system described earlier:
 
-A mass of $0.5 \; \text{kg}$ with spring constant
-$k = 2 \; \text{N} \cdot \text{m}^{-1}$ in an undamped unforced
-system.  Assume the mass is displaced $0.4 \; \text{m}$ from
-equilibrium and released.
+A system with a mass of $0.5 \; \text{kg}$ with spring constant
+$k = 2 \; \text{N} \cdot \text{m}^{-1}$, with a damping coefficient of
+$c = 0.5$ N/(m/s).  Assume the mass is displaced $0.4 \; \text{m}$
+from equilibrium and released.
+
+Include the graphical output from MATLAB on the next page.
+
+\newpage
+\hfill
+\includegraphics[width=0.3\linewidth]{graphics/notes_08_hanging_mass}
 
 
 \newpage
 \topic{Unforced Spring/Mass System - Patterns of Behaviour}
 \subsection*{Unforced Spring/Mass System - Patterns of Behaviour}
 
-Using MATLAB, we can now easily study the impact of different levels
-of damping on the behaviour of a spring/mass system.
+Using MATLAB, we can now easily study the impact of different masses,
+spring constants, or damping strength on the behaviour of a
+spring/mass system.
 
-\includegraphics[width=0.2\linewidth]{graphics/notes_08_hanging_mass}
+\begin{minipage}[t]{0.4\linewidth}
+\vspace{0pt}
+Damped Spring DE:
 
-A famous result in physics is that when the damping coefficient
+$$ m x'' = -c x' -kx $$
+\end{minipage}
+\begin{minipage}[t]{0.6\linewidth}
+\vspace{0pt}
+\begin{center}
+\includegraphics[width=0.4\linewidth]{graphics/notes_08_hanging_mass}
+\end{center}
+\end{minipage}
+
+\newpage
+
+A famous result in physics is that when the damping coefficient:
 \begin{itemize}
 \item $c$ is 0, the system will be {\bf undamped};
 \item $c$ is {\bf less} than $\sqrt{4km}$, the system will be {\bf under-damped};
@@ -442,109 +511,49 @@ Over-Damped
   \end{minipage}
 
 \newpage
-\topic{Nonhomogeneous Linear Differential Equations - Theory}
-\section*{Nonhomogeneous Linear Differential Equations}
+\topic{Spring/Mass with Periodic External Forces }
+\subsection*{Spring/Mass with Periodic External Forces }
 
-The general form 
-{\bf homogeneous}: \\[2ex]
-$$ y^{(n)} + a_{n-1} y^{(n-1)} + a_{n-2} y^{(n-2)} + \ldots + a_1 y' + a_0 y = 0$$ \\[2ex]
+We now add another component to our spring system model: \\{\bf
+  external forces}.
 
+ \includegraphics[width=0.3\linewidth]{graphics/notes_08_hanging_mass}
 
-This week, we explore how to deal with equations with more interesting
-right-hand sides.
+ \problem Write out the DE for the position of the mass, given the
+ addition now of an external force, given by
+ $F_{\mbox{ext}} = A \sin(Bt)$.  \vfill
 
-% \newpage
-% \begin{proposition}
-%   If $y_1(x)$ and $y_2(x)$ are solutions of the \emph{nonhomogeneous} equation
-%   \[
-%   y'' + p(x) y' + q(x) y = f(x) \, ,
-%   \] 
-%   then $y_1(x) - y_2(x)$ is a solution to the
-%   homogeneous equation $$y'' + p(x) y' + q(x) y = 0$$
-% \end{proposition}
-
-% Prove this. 
-
-% \begin{proof}
-%   Linearity yields
-%   \begin{align*}
-%     \Bigl( \tfrac{d^2}{dx^2} + p(x) \tfrac{d}{dx} + q(x) \Bigr) \bigl( y_1 -
-%     y_2 \bigr) &= \Bigl( \tfrac{d^2}{dx^2} + p(x) \tfrac{d}{dx} + q(x) \Bigr)
-%     \bigl( y_1 \bigr) - \Bigl( \tfrac{d^2}{dx^2} + p(x) \tfrac{d}{dx} + q(x)
-%     \Bigr) \bigl( y_2 \bigr) \\
-%     &= f(x) - f(x) = 0 \, \qedhere
-%   \end{align*}
-% \end{proof}
+What are analagous systems to this that you might have encountered
+before?
 
 \vfill
 
 \newpage
 
-  The general solution of a nonhomogeneous $n$-th order linear differential
-  equation has the form $$y = \underbrace{c_1 y_1 + \dotsb + c_n y_n}_{y_c} + y_{NH},$$
- where 
-\begin{itemize}
-\item $y_1, \dotsc, y_n$ span the solution space to the corresponding \\{\bf homogeneous} equation, 
-\item $c_1, \dotsc, c_n$ are arbitrary constants,
-\item $y_c$, the collection of $y_1, \ldots y_n$ and $c_1, \ldots
-  c_N$, is called the \\``complementary solution'' to the {\bf homogeneous} equation, and
-\item $y_{NH}$ is a specific solution to the {\bf non}homogeneous equation.
-\end{itemize}
+\problem  Write a pair of MATLAB scripts and functions that will let you simulate
+the motion of the mass given an external force of the form  
+ $F_{\mbox{ext}} = A \sin(Bt)$.  
+
+$$m x'' = -kx -c x' + A \sin(Bt)$$
+
+\vfill
+
+Once you have the MATLAB code written, we can explore the solutions
+of/predictions for the spring/mass system for different scenarios, by
+changing parameters in our MATLAB script.
 
 \newpage
 
-\subsection*{Basic Strategy for Nonhomogeneous Linear Equations}
-\begin{enumerate}
-\item Find a basis for the solution space of the {\bf corresponding homogeneous
-  equation}.  Call those solutions $y_1, \ldots, y_n$. \\[2ex]
-\item Find a {\bf single} solution, $y_{NH}$,  to the {\bf nonhomogeneous} equation. \\[2ex]
-\item The general solution to the nonhomogeneous DE will be $$y = y_{NH} + \underbrace{\left(c_1 y_1 + \ldots c_n y_n\right)}_{y_c}$$
-\end{enumerate}
+\topic{Simulations of the Forced Spring/Mass System}
+\subsection*{Simulations of the Forced Spring/Mass System}
 
-\newpage
-\topic{Periodic External Forces - Applications}
-\subsection*{Periodic External Forces - Applications}
-We will next explore some of the ramifications of the nonhomogeneous solution form
-$$y = \underbrace{c_1 y_1 + \dotsb + c_n y_n}_{y_c} + y_{NH}$$
-in several application areas.
-
-\newpage
-{\bf Spring/Mass System}
-
- \includegraphics[width=0.4\linewidth]{graphics/notes_08_hanging_mass}
-
- \problem Write out the DE for the position of the mass, given
- $F_{\mbox{ext}} = A \sin(Bt)$.
-
-\newpage
-
-\topic{Demonstration - Forced Oscillations}
-
-We will explore the solutions of/predictions for the spring/mass
-system (and RLC circuits!) through changing parameters in a
-simulation.  We will consider both
-\begin{itemize}
-\item graphs of the solutions, and 
-\item mathematical forms of the solutions.
-\end{itemize}
-
-Your job during the demonstrations is to track:
-\begin{itemize}
-\item the amount of friction,
-\item the {\em natural} frequency (in $y_c$), and
-\item the {\em stimulating} frequency (in $Fe$ and $y_{NH}$)
-\end{itemize}
-
-\newpage
+For the following systems, use $m = 1$ kg and $k = 25$ N/m, unless
+otherwise specified.
 
 {\bf Unforced Motion}
 
-Setting $F_{\mbox{ext}} = 0$, review the effect of
-  increasing the friction coefficient $c$ on the $y_c$ solution.
-
-\vfill
-
-What is the $y_{NH}$ solution for all these simulations, and why?
+\problem Setting $F_{\mbox{ext}} = 0$, review the effect of increasing
+the damping coefficient $c$ on the behaviour of the mass.
 
 \vfill
 
@@ -552,10 +561,9 @@ What is the $y_{NH}$ solution for all these simulations, and why?
 
 {\bf Forced, but Undamped Motion}
 
-Now we turn off the friction (by setting $c=0$) to zero, and
+Now we turn off the damping (by setting $c=0$) to zero, and
 start to apply the external force. \\
 We set $F_{\mbox{ext}} = 10 \sin(1.0 t)$.   \\
-What is the form of $y_c$, and what is the form of $y_{NH}$?
 
 \vfill
 
@@ -566,12 +574,15 @@ above 5.  Does the motion of the mass over time make sense?
 
 \newpage
 
-\topic{Demonstration - Resonance and Near-Resonance}
+\topic{Simulations - Resonance and Near-Resonance}
 
 {\bf Resonance}
 
-Set $\Fe = 1 \sin(5t)$.  What is special about the
-  frequency 5 rad/s?
+In unforced, undamped systems, there is a {\bf natural frequency} for
+the mass, given by $\omega = \sqrt{\frac{k}{m}}$.
+
+\problem Set $\Fe = 1 \sin(5t)$.  What is special about the frequency
+5 rad/s?
 
 \vfill
 
@@ -579,14 +590,14 @@ Describe the graph of the solution.
 
 \vfill
 
-Give the mathematical reasons for the graph of the
-  simulation.\\
+Give the physical reasons for the graph seen in the
+simulation.\\
 
 \vfill
 
 The condition of having the external force at {\em exactly} the same
 frequency as the natural vibrations is called {\bf resonance.}  Note:
-for true resonance, there must be {\em no friction.}
+for true resonance, there must be {\em no damping.}
 
 \newpage
 
@@ -595,18 +606,17 @@ for true resonance, there must be {\em no friction.}
 Admitedly, resonance is a unique event requiring {\bf perfect}
 matching of the stimulating force with the natural frequency.
 
-Explore frequencies in $\Fe$ {\em close to} 5.  Describe
-  the resulting solutions, both for their amplitude and any other
-  response.
+\problem Explore frequencies in $\Fe$ {\em close to} 5.  Describe the
+resulting solutions, both for their amplitude and any other response.
 
 \vfill
 
-Give the mathematical reasons for the shape of the graph
-  for near-resonance response.
+Give a physical reason for the shape of the graph for near-resonance
+response.
 
 \vfill
 
-Note again that there is {\em no friction} with this response.
+Note again that there is {\em no damping} with this response.
 
 \newpage
 
@@ -614,13 +624,12 @@ Note again that there is {\em no friction} with this response.
 
 {\bf Adding in Friction - Practical Resonsance}
 
-Set $F_{\mbox{ext}} = 1 \sin(5t)$ again, but set friction $c$ to 0.1 Compare this
-solution to the one without friction, both graphically and
-mathematically.
+Set $F_{\mbox{ext}} = 1 \sin(5t)$ again, but set damping $c$ to 0.1.
+\problem Compare this solution to the one without damping.
 
 \vfill
 
-Gradually increase the amount of friction.  Describe how the solution
+Gradually increase the amount of damping.  Describe how the solution
 changes.
 
 \vfill
@@ -639,11 +648,11 @@ practical resonance (some damping) compare?
 \topic{Transient and Steady-State Solutions}
 \subsection*{Transient and Steady-State Solutions}
 
-More generally, when there is friction in the spring/mass system and
+More generally, when there is damping in the spring/mass system and
 an oscillatory external force, we can break the solution into two
 parts: {\em transient} and {\em steady state}.
 
-We set $F_{\mbox{ext}} = 1 \sin(t)$, and $c = 1$ for friction, which is fairly
+We set $F_{\mbox{ext}} = 1 \sin(t)$, and $c = 1$ for damping, which is fairly
 high for an oscillating system.  Describe the resulting behaviour.
 
 \vfill
@@ -658,18 +667,6 @@ Which frequency is present in the {\bf long run}?
 
 \newpage
 
-In a damped physical system with forced oscillations, is $y_{NH}$ {\bf
-  transient} or {\bf steady-state}, and why?
-
-\vfill
-
-In a damped physical system, is $y_c$ {\bf transient} or {\bf
-  steady-state}, and why?
-
-\vfill
-
-\newpage
-
 Reminder: we study the simple damped spring/mass system in such depth
 because
 \begin{itemize}
@@ -679,87 +676,10 @@ because
   to familiar systems like swings or bouncing a basket ball, help to
   you associate the mathematics with the real-world behaviour.
 \item the DE for the spring/mass system is either identical or similar
-  to those for a number of other real-world scenarios, like electronic
-  circuits.
+  to those for a surprising number of other real-world scenarios.
 \end{itemize}
 
 
-% \newpage
-%      Resonance can be good or bad depending on the circumstances.
-%        \begin{itemize}
-%        \item pushing someone on a swing
-%        \item the timekeeping mechanisms of modern clocks and watches,
-%          e.g. the balance wheel in a mechanical watch and the quartz
-%          crystal in a quartz watch
-%        \item acoustic resonances of musical instruments
-%        \item failure of the original Tacoma Narrows Bridge 
-%        \end{itemize}
-
-% \end{proof}
-
-\newpage
-
-Unfortunately, that can all be a lot of work.  Sometimes, we just want
-the prediction of $y$, position, velocity, etc. over time.
-\begin{itemize}
-\item In {\em principle}, the pair (DE + initial condition) is enough
-  to define prediction for all time.
-\item The difficulties in finding analytic solutions come from the
-  necessary integration/solution step.
-\item MATLAB can generate an {\em approximate numerical solution} {\bf
-    without} need to integrate!
-\end{itemize}
-
-\vfill
-
-
-\newpage
-
-\subsection*{Example - Pendulum }
-\vfill
-\begin{align*}
-  \mbox{Newton's Second Law: }   m  L^2 \theta'' & = T_g + T_f  \\
-  & = - m L g \sin(\theta) - (\mu L^2 m) \theta' \\
-  \mbox{Solving for $\theta''$: }\theta'' & = - \frac{g}{L} \sin(\theta) - \mu 
-  \theta'
-\end{align*}
-
-\problem Turn this single second-order DE into a pair of first-order
-DEs.
-
-\newpage
-
-
-\problem Download the representation of this system of DEs,
-  \texttt{pendulumDE.m}.  Compare it to our DE system,
-\begin{align*}
-\frac{d y_1}{dt} & = y_2 \\
-\frac{d y_2}{dt} & = -\frac{g}{L}\sin(y_1)  - \mu y_2
-\end{align*}
-\vsc
-
-\problem Download and run the script \texttt{W8\_2.m}.
-
-\vsc
-
-\problem What were the initial conditions of the pendulum?
-
-\vfill
-
-\problem Based on that information, what do the two curves on the graph
-  represent?
-
-\vfill
-
-\newpage
-
-\problem Change the script so the pendulum also has an initial velocity.
-
-\vsc
-
-\problem If we keep the initial angle at $-\frac{\pi}{2}$ (pendulum
-  out horizontally), experiment and find the initial velocity that
-  will push the pendulum ``over the top''.
 
 \newpage
 
@@ -768,13 +688,14 @@ DEs.
 
 While working with DEs in MATLAB, we haven't had to distinguish
 between types of equations: so long as they can be re-written in the
-form $\ds \frac{dy}{dt} = f(t, y)$, MATLAB can produce a numerical
-solution or prediction.
+form $\ds \frac{dy}{dt} = f(t, y)$, or the vector form
+$\ds \frac{d\vec{w}}{dt} = f(t, \vec{w})$, MATLAB can produce a
+numerical solution or prediction. \\[1ex]
 
 However, when looking at references or mathematical derivations, where
 DEs are solved exactly using by-hand methods, the method used is
 usually chosen based on the form of the DE, so being able to
-categorize equations is a relevant skill.
+categorize equations is a helpful skill.
 
 \newpage
 
@@ -791,19 +712,20 @@ differential equations, and given an example of each.
  
 
 \newpage 
-Classify the following DEs based on the terms {\em homogeneous} and
-{\em linear} \vfill
+Classify the following DEs based on the terms {\em order}, {\em
+  homogeneous} and {\em linear}.
+
+\vfill
 
 $x^2 y'' + x y' + y = 10$ \vfill
 
  $ 100 y'' +  y = 4x^3$
  \vfill
 
- $ (y'')^2 + y = 4 e^{x}$
+ $ (y'')^3 + y = 4 e^{x}$
  \vfill
 
- $ 4 y'' - 10 y' + y = 0 $
- \vfill
+ $ 4 y^{(4)} - 10 y' + y = 0 $ \vfill
 
 
 \end{document}
