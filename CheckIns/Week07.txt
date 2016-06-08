@@ -1,0 +1,37 @@
+---Question
+Complete the following sentence.  "A differential equation is..."
+---Type
+onechoice
+---Answers
+~\( An equation that uses differences to evaluate derivatives. \)
+~\( An equation that has derivatives in it dealing with many factors. \)
+~\( An equation that uses differentials to approximate an area. \)
+=\( An equation relating an unknown function and one or more of its derivatives. \)
+---Comment
+Check the notes!
+
+---Question
+
+Consider the equation dy/dt = ky. What function satisfies this equation?
+---Type
+onechoice
+---Answers
+~\( y = e^t \)
+~\( y = ke^{kt} \)
+=\( y = Ae^{kt} \)
+~\( y = Ae^{t} \)
+---Comment
+
+---Question
+Given dy/dt - 1/y + 2 = 0, y(1) = 1, describe the long term behaviour of this differential equation.
+<br />
+(You'll need to run ode45 in MATLAB to answer this question.)
+---Type
+onechoice
+---Answers
+=\( This function rapidly descends to 0.5 and stays there. \)
+~\( This function rapidly ascends to 0.5 and stays there.  \)
+~\(This function rapidly descends to 0.5 and then oscillates between -1 and 1. \)
+~\(This function rapidly descends to 1 and stays there. \)
+---Comment
+

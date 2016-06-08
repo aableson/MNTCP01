@@ -1,6 +1,6 @@
 
 \input{PreambleCommon}
-\input{../WeekTitles}
+\input{WeekTitles}
 \begin{document}
 
 \newpage
