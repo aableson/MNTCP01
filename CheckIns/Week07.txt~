@@ -1,5 +1,5 @@
 ---Question
-A differential equation is
+Complete the following sentence.  "A differential equation is..."
 ---Type
 onechoice
 ---Answers
@@ -24,6 +24,8 @@ onechoice
 
 ---Question
 Given dy/dt - 1/y + 2 = 0, y(1) = 1, describe the long term behaviour of this differential equation.
+<br />
+(You'll need to run ode45 in MATLAB to answer this question.)
 ---Type
 onechoice
 ---Answers

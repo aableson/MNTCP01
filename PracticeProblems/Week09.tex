@@ -1,0 +1,143 @@
+
+\input{SingleAssignmentSetup.tex}
+\input{../WeekTitles.tex}
+\usepackage{bbding} % for Checkmarkbold
+\begin{document}
+
+\newcommand{\ub}{\underbrace}
+
+\begin{center}
+\subsection*{MNTC P01 - Week \#9 - \WeekTitleNine}
+\end{center}
+
+\begin{enumerate}
+\item A 150 litre tank initially contains 60 litres of water with 0.5
+  kgs of salt dissolved in it.  Water enters the tank at a rate of 0.9
+  litres/hr and the water entering the tank has a salt concentration
+  of $\frac{1}{5}(1 + \cos (t))$ kgs/litre. If a well mixed solution
+  leaves the tank at a rate of 0.6 litres/hr, how much salt is in the
+  tank when it overflows?
+
+% ******************** Fish Population ********************************
+
+\item Differential equations are not just well-suited for physics
+  applications: they are are also widely used in biology, particularly
+  in population models.
+
+  Consider the fish population model below, based on a standard
+  limited-resource population growth, minus a function of harvesting.
+
+$$\frac{dP}{dt} =\underbrace{ [(10 -P)\cdot P]}_{\mbox{natural population growth rate}} -\underbrace{h(t)}_{\mbox{harvesting rate}}$$
+where 
+\begin{itemize}
+\item $P$  = population of fish (in thousands), and 
+\item $\frac{dP}{dt}$  = rate of population change, in thousands per 
+year
+\item $h(t)$ is the harvesting rate (in thousands of fish per 
+year)
+\end{itemize}
+
+We want to study the impact of two harvesting models:
+\begin{itemize}
+\item $h_1 = k_1$; constant harvesting
+\item $h_2(t) = k_2 (\sin(\pi t) + 1)$; seasonal model where the
+  harvesting has a yearly cycle.
+\end{itemize}
+\begin{enumerate}
+
+\item Generate a prediction of the population over time, starting at
+  initial populations of $P(0) = 15$ for each model.  Use $k_1 = k_2 =
+  5$. Produce a graph showing the predicted population over time on
+  the same graph, over a long enough time interval to show the
+  long-term behaviour of both solutions.
+
+\vspace{0.2in}
+
+One question that arises in such harvesting models is which fishing
+strategy permits a higher average harvesting rate can be maintained:
+seasonal harvesting, or constant harvesting?  To decide this, we note
+that the average harvest rate for $h_1$ is $k_1$, and for $h_2$ is
+$k_2$, so whichever value of $k_1$ and $k_2$ is larger indicates the
+strategy with the greater average harvesting rate.
+
+We will define the {\em maximum sustainable harvest rate} for both
+models as the {\em highest harvest rate for which the population is
+  not driven to zero.}
+
+\item Find and report the maximum sustainable harvest level $k_1$ for
+  the constant harvesting model (to the nearest integer).  (Use trial
+  and error if necessary, though more insightful DE-related ways are
+  possible.)  Indicate how you found the cut-off level. 
+
+  {\em NOTE: during this process, your model will predict a population
+    of zero, which will then lead to large negative populations.  This
+    clearly makes no sense, so limit your plots with the command
+    \verb#ylim([0, P0])#.  This same problem will also trigger
+    warnings in ode45 about error tolerances; you can safely ignore
+    those warnings.}
+
+\item Generate a plot showing the population over time, using the same
+  initial value used earlier, but using both the $k_1$ value just
+  above, and just below the extinction level. (One line should remain
+  positive, while the other should crash to zero at some point on the
+  graph.)
+
+\item Use trial and error (theory isn't much help here) to find the
+  maximum sustainable harvest level $k_2$ for the cyclic harvesting
+  model (to the nearest integer).  Include a plot showing the
+  population over time with this harvesting level.
+
+\item Based on your experiments, can constant harvesting or cyclic
+  harvesting sustain a greater average harvest in the long run?
+  Explain your reasoning.
+\end{enumerate}
+
+\begin{solutions}
+\begin{solution}
+\begin{enumerate}
+\item The file \verb#q_fishHarvesting.m# shows the answer to this part of
+  the question.  It can be modified to answer the later parts.
+
+\item Note that trial and error is just fine for this problem.  If the
+  next paragraph doesn't make sense to you, feel free to skip it.  The
+  important thing is to be able to do the simulations, and to generate
+  the appropriate graphs.
+
+  To get an analytic answer for the maximum sustainable harvest rate,
+  we look more closely at the differential equation. We're worried
+  about the population of the fish always decreasing, which would mean
+  a derivative $\frac{dP}{dt}$ always being negative.  That would
+  happen if the quadratic part was always smaller than $h_1 = k_1$.
+  Looking at the quadratic $(10-P)P$, it will be largest at $P= 5$
+  (halfway between the roots of $P=0$ and $P=10$, and will produce a
+  maximum growth rate then of $(10 - 5)5 = 25$.  If we set $k_1 = 25$,
+  we should just be on the threshold of sustainability.  Any value
+  larger than that, and the population rate of change will always be
+  negative, leading to population collapse.
+
+  Plotting the solution for the constant harvest model at $k_1 = 25$
+  and $k_1 = 26$ supports this hypothesis.
+\begin{center}
+\includegraphics[width=3in]{q_FishHarvestingConstant}
+\end{center}
+
+\item In the seasonal harvest scenario, using theory to find the
+  maximum sustainable value of $k_2$ isn't straightforward.  Instead,
+  we simply experiment with values of $k_2$, and find that between
+  $k_2 = 16$ and $k_2 = 17$, we see our seasonal pattern stop
+  repeating and start reaching extinction:
+
+\begin{center}
+\includegraphics[width=3in]{q_FishHarvestingSeasonal}
+\end{center}
+
+\item Based on these experiments, it seems that seasonal harvesting
+  leads to extinction at lower average harvesting levels, because a
+  lower average rate of harvest (16 thousand fish per year) leads to
+  extinction, compared to the constant harvest case (where 25 thousand
+  fish per year can be harvested).
+
+\end{enumerate}
+
+\end{document}
+
