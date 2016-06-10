@@ -10,6 +10,61 @@
 \subsection*{MNTC P01 - Week \#9 - \WeekTitleNine}
 \end{center}
 
+% % ******************** PENDULUM ********************************
+
+% \item In class, we saw the differential equation for the angular
+%   motion of a pendulum.  Here it is again, with no friction.
+% \begin{align*}
+%   \mbox{Newton's Second Law: }   m  L^2 \theta'' & = T_g \\
+%   & = - m L g \sin(\theta)  \\
+%   \mbox{Solving for $\theta''$: }\theta'' & = - \frac{g}{L} \sin(\theta) 
+% \end{align*}
+
+% Without simulating the actual motion of the pendulum, we can compute
+% the period, $T$, using the formula below:
+% \begin{align*}
+%   T = 4 \sqrt{L/g} \int_0^{\pi/2} \frac{dx}{\sqrt{1 - k^2 \sin^2 x}}
+% \end{align*}
+% where $k = \sin\left(\frac{1}{2} \theta_0\right)$ and $g$ is the
+% acceleration due to gravity, $9.8 $ m/s.  
+
+
+% For each set of values for $L$ and $\theta_0$,
+% \begin{enumerate}[(a)]
+% \item Use \verb#quad# to find the period of the pendulum oscillations,
+%   and
+% \item confirm the period by using \verb#ode45# to simulate the motion
+%   pendulum for exactly that length of time, and plot a graph of the
+%   angular {\bf velocity} against time.  The velocity should just reach
+%   zero at the end of one cycle.
+% \end{enumerate}
+
+% \begin{enumerate}[(i)]
+% \item $L = 2$ m, $\theta_0 = 40^o$, 
+% \item $L =2.5$ m, $\theta_0 = 20^o$.
+% \item $L =5.0$ m, $\theta_0 = 90^o$.
+% \end{enumerate}
+
+% \begin{solutions}
+
+%   All of the problems are shown solved in \verb#q_pendulum.m#.
+
+%   \begin{enumerate}[(i)]
+%   \item $L = 2$ m, $\theta_0 = 40^o$:  {\bf T = 2.9274}
+%   \item $L =2.5$ m, $\theta_0 = 20^o$: {\bf T = 3.1978}
+%   \item $L =5.0$ m, $\theta_0 = 90^o$: {\bf T = 5.2974}
+%   \end{enumerate}
+
+% Plots: \\
+% \includegraphics[width=2in]{q_pendulum_1} 
+% \includegraphics[width=2in]{q_pendulum_2} 
+% \includegraphics[width=2in]{q_pendulum_3} 
+
+% \end{solutions}
+
+
+
+
 \begin{enumerate}
 \item A 150 litre tank initially contains 60 litres of water with 0.5
   kgs of salt dissolved in it.  Water enters the tank at a rate of 0.9

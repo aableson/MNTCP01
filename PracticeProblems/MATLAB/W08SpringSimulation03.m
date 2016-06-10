@@ -1,13 +1,17 @@
 % W08 spring simulation 1
-close all
+close all;
 m = 0.5; % kg
 k = 10;  % N/m
+
+% External force is Fext = a sin(bt)
+a = 5;
+b = 4;
 
 % Initial conditions are x(0) = 0.2, and x'(0) = 0
 % In w's, this is w0 = [0.2, 0];
 w0 = [0.2, 0];
-DE = @(t, y) springDE1(t, y, m, k);  % This step is required so we have a function _only_ t and y as inputs
-tspan = [0, 5];  % end time was chosen by trial and error, to get around 4 cycles visible
+DE = @(t, y) springDE2(t, y, m, k, a, b);  % This step is required so we have a function _only_ t and y as inputs
+tspan = [0, 30];  % end time was chosen by trial and error, to get around 4 cycles visible
 
 % Run the simulation
 [t, w] = ode45(DE, tspan, w0);
