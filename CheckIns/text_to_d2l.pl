@@ -21,7 +21,7 @@ sub ConvertTextToMathML{
 
 # Look for questions to convert
 #@question_files = <Week??.txt>;
-@question_files = qw(Week07.txt); # temp for testing
+@question_files = qw(Week08.txt); # temp for testing
 $root_image_url = "http://www.mast.queensu.ca/~apsc171/MNTCP01/CheckIns";
 
 foreach $question_file (@question_files) {

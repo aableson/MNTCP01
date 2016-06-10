@@ -1,0 +1,77 @@
+---Question
+
+In deriving the differential equation model for the temperature of an object,
+<br />
+\(\displaystyle \frac{dy}{dt} = -k (y - T_{\mbox{ext}})\)
+<br />
+why did we put a negative sign in front of the \(k\) coefficient?
+
+---Type
+onechoice
+---Answers
+~ (a) - If an object is cooling the temperature will be decreasing, so \(\frac{dy}{dt}\) must be negative. 
+~ (b) - If an object is colder than the environment, \( (y-  T_{\mbox{ext}})\) will be negative, but the object will heat up so we need \(\frac{dy}{dt}\) to be positive. 
+~ (c) - If an object is hotter than the environment, \( (y-  T_{\mbox{ext}})\) will be positive, but the object will cool down so we need \(\frac{dy}{dt}\) to be negative.
+= (d) - Both (b) and (c) are true. 
+---Comment
+Newton's law of heating and cooling must be in exactly the same form
+to cover both the heating and cooling cases.  (Think of both a cup of
+hot water on the counter, or a cup of cold water: the physics has to
+be the same for both cases.)
+
+
+
+---Question
+
+To generate a solution for (or simulate the behaviour of) a second order
+DE in MATLAB, e.g., <br />
+\( 3 x'' + 7 x' -4 x = \cos(t)\),
+<br />
+what standard substitution would be used to create a new system of first-order DEs?
+
+---Type
+onechoice
+---Answers
+~ We let \(x_1 = t, x_2 = 1\).
+~ We let \(x_1 = \cos(t), x_2 = \sin(t) \).
+= We let \(w_1 = x, w_2 = x' \).
+~ We let \(w_1 = x, w_2 = 1 \).
+---Comment
+\(x\) is already defined in the differential equation, so we can't re-define it.
+<br />
+The standard substitution has to be about the <b>dependent
+variable</b> and its derivative.
+
+
+---Question
+
+For the differential equation
+<br />
+\( 3 x'' + 7 x' -4 x = \cos(t)\),
+<br />
+using the substitutions \(w_1 = x\) and \(w_2 = x' \), what would be
+the new equivalent system of first-order DEs?
+
+---Type
+onechoice
+---Answers
+~ \(\displaystyle \frac{dw_1}{dt} = w_2, ~~~~~ \frac{dw_2}{dt} = \frac{1}{3} (7x' -4x + \cos(t)) \)
+= \(\displaystyle \frac{dw_1}{dt} = w_2, ~~~~~ \frac{dw_2}{dt} = \frac{1}{3} (\cos(t) -7w_2 + 4w_1)\)
+~ \(\displaystyle w_1 = w_2, ~~~~~ w_2 =  \frac{1}{3} (7x' -4x + \cos(t)) \)
+~ \(\displaystyle w_1 = w_2, ~~~~~ w_2 = \frac{1}{3} (\cos(t) -7w_2 + 4w_1)\)
+---Comment
+
+For the new equations to be a system of differential equations, there
+must be derivatives involved.
+
+<br />
+
+The key steps in deriving the new equations are:
+<ul>
+<li> \(\frac{dw_1}{dt} = \frac{dx}{dt} = x' = w_2\), and
+<li> \(\frac{dw_2}{dt} = \frac{dx'}{dt} = x''\), which we can solve for in the original differential equation, \( 3 x'' + 7 x' -4 x = \cos(t)\).
+</ul>
+
+
+
+

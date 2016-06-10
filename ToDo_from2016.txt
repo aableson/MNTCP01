@@ -2,3 +2,13 @@
 Week 6 practice problems need some beefing up, specifically with:
 - more application problems, and
 - questions that involve loading a dataset.
+
+Week 8 - Webwork
+I had a folder called 
+MNTC/MATLAB_09_TemperatureAndSpringModels/
+q_001.pg is a good problem on temperature models, but I also started
+q_002.pg on the spring model.  I didn't get it finished though because I was trying
+to get the exact solution built into Webwork and that was a royal pain. It really should be there as either an optional 4th question, or a 5th question (to force students to get the systems of DEs work in MATLAB).
+
+
+

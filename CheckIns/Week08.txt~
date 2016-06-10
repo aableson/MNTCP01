@@ -1,0 +1,19 @@
+
+
+---Question
+
+To generate a solution (or simulate the behaviour) of a second order DE in MATLAB,
+what standard substitution is used?
+
+---Type
+onechoice
+---Answers
+~ (a)
+= (b)
+~ (c)
+~ (d)
+---Comment
+
+<br />
+\( f(x) = x \)
+
