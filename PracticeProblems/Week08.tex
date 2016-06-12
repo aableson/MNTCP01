@@ -9,6 +9,7 @@
 
 \newcommand{\Fext}{  F_{\mbox{ext}} }
 \newcommand{\Fspring}{  F_{\mbox{spring}} }
+\newcommand{\Fdamping}{  F_{\mbox{damp}} }
 
 \begin{enumerate}
 
@@ -122,10 +123,11 @@ has the MATLAB code that generated the graph above.
 
   \includegraphics[width=3in]{graphics/Week08_Spring/W08GarageTemp_2}
 
-\item Zooming in on the peaks of the graph, the temperature now
-  fluctuates between approximately 11.3 and 8.8 degrees Celsius, for a
-  range of 2.5 degrees.  This {\em is} roughly half the magnitude of
-  the fluctuations we saw earlier.
+\item Zooming in on the peaks of the {\bf red line} graph (new
+  insulation model), the temperature now fluctuates between
+  approximately 11.3 and 8.8 degrees Celsius, for a range of 2.5
+  degrees.  This {\em is} roughly half the magnitude of the
+  fluctuations we saw earlier.
 
 \end{enumerate}
 \end{Solution}
@@ -135,7 +137,7 @@ has the MATLAB code that generated the graph above.
 
 \subsection*{Modelling Spring Systems}
 % ******************************
-\item  \label{SpringNoDamping}
+\item  \label{SpringNoDampingNoFext}
   \begin{Question}
     \begin{minipage}[t]{0.6\linewidth}
 \vspace{0pt}
@@ -162,12 +164,39 @@ where $k$ is the spring constant.
 
 \item Write a MATLAB function file called \verb#springDE1.m# starting
   with the first line \\
-\verb#function dw_dt = springDE1(t, w, m, k)# \\
+  \verb#function dw_dt = springDE1(t, w, m, k)# \\
   that implements the system of differential equations from part (a).
+\item Write a MATLAB script that simulates the motion of the mass
+  using $m = 0.5$ kg and $k = 10$ N/m.  Choose the time interval for
+  the simulation so that 4-5 cycles of oscillation are shown.
 \end{enumerate}
 \end{Question}
 
 \begin{Solution}
+ \begin{enumerate}
+ \item  The first-order system would be:
+ \begin{align*}
+ \frac{d}{dt} w_1 & = x' = w_2 \\
+ \frac{d}{dt} w_2 & = x'' = \frac{1}{m} \left(-kx \right) = \frac{1}{m} \left(-k w_1  \right)
+ \end{align*}
+
+\item The function file  
+  \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/springDE1.m}{springDE1.m} 
+  implements the differential equation system, with the $\Fext $ term
+  left out.
+
+\item The main script
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W08SpringSimulation01.m}{W08SpringSimulation01.m} 
+has the code that will run this simulation.
+
+In the resulting plot, we see a very nice example of simple harmonic
+motion.
+
+\begin{center}
+\includegraphics[width=3in]{graphics/Week08_Spring/W08SpringSimulation01}
+\end{center}
+
+\end{enumerate}
 \end{Solution}
 
 
@@ -179,7 +208,8 @@ where $k$ is the spring constant.
 \vspace{0pt}
 Consider the single spring/mass system shown to the right, with no damper.
 
-The $\Fext$ shown is an external applied force.
+This is the same as in Question \ref{SpringNoDampingNoFext}, except
+with the addition of the $\Fext$ shown as an external applied force.
 
 Newton's second law gives us the relationship:
 \begin{align*}
@@ -200,38 +230,19 @@ where $k$ is the spring constant.
 \item By hand, write this second order DE as a system of 1st order
   DEs, using the new variables $w_1 = x$ and $w_2 = x'$
 
-\item Write a MATLAB function file called \verb#springDE1.m# starting
-  with the first line \\
-\verb#function dw_dt = springDE1(t, w, m, k)# \\
-  that implements the system of differential equations from part (a).
-
-  For this function, {\bf only include the spring force}, leaving the
-  $F_{\mbox{ext}}$ = 0 or absent.
-
-\item Create a new MATLAB script.  In the script, set $m =0.5$ kg, $k =
-  10$ N/m. Use \verb#ode45# to simulate the motion of the spring,
-  given an initial displacement of $x(0) = 0.2$ m, and initial
-  velocity of zero: $x'(0) = 0$.  Generate a plot with
-\begin{itemize}
-\item position against time (do {\em not} show the velocity), and
-\item choosing the time interval used for the \verb#ode45# simulation
-  to show the first 4 to 5 cycles only.
-\end{itemize}
 
 \item We will now incorporate an external force of the form
   $F_{\mbox{ext}} = a \sin(b t)$. Write a MATLAB function file called
   \verb#springDE2.m# starting with the first line \\
   \verb#function dw_dt = springDE2(t, w, m, k, a, b)# \\
-that implements
-  the system of differential equations from part (a), now with the
-  external force included.
+  that implements the system of differential equations from part (a).
 
-\item Create a new MATLAB script.  In the script, again set $m =0.5$
-  kg, $k = 10$ N/m, and use $a = 5$ and $b = 1$ in $F_{\mbox{ext}} = a
-  \sin(bt)$.  Use \verb#ode45# to simulate the motion of the spring
-  for 30 seconds (\verb#tspan = [0, 30]#), given an initial
-  displacement of $x(0) = 0.2$ m, and initial velocity of zero: $x'(0)
-  = 0$. \label{forced}
+\item Create a new MATLAB script.  In the script, set $m =0.5$ kg,
+  $k = 10$ N/m, and use $a = 5$ and $b = 1$ in
+  $F_{\mbox{ext}} = a \sin(bt)$.  Use \verb#ode45# to simulate the
+  motion of the spring for 30 seconds (\verb#tspan = [0, 30]#), given
+  an initial displacement of $x(0) = 0.2$ m, and initial velocity of
+  zero: $x'(0) = 0$. \label{forced}
 
 \item Explain why the motion looks so disorganized.
 
@@ -250,22 +261,6 @@ that implements
  \frac{d}{dt} w_1 & = x' = w_2 \\
  \frac{d}{dt} w_2 & = x'' = \frac{1}{m} \left(-kx + \Fext\right) = \frac{1}{m} \left(-k w_1  + \Fext \right)
  \end{align*}
-
-\item The function file  
-  \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/springDE1.m}{springDE1.m} 
-  implements the differential equation system, with the $\Fext $ term
-  left out.
-
-\item The main script
-\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W08SpringSimulation01.m}{W08SpringSimulation01.m} 
-has the code that will run this simulation.
-
-In the resulting plot, we see a very nice example of simple harmonic
-motion.
-
-\begin{center}
-\includegraphics[width=3in]{graphics/Week08_Spring/W08SpringSimulation01}
-\end{center}
 
 \item The file  
   \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/springDE2.m}{springDE2.m} 
@@ -288,8 +283,8 @@ oscillations.
   that we are pushing and pulling on it with through $\Fext$.
 
   Recall: the natural frequency of a spring/mass system is given by
-  $\omega = \sqrt{k/m}$, which for this scenario gives $\omega =
-  \sqrt{10/0.5} \approx 4.47$ rad/s.
+  $\omega = \sqrt{k/m}$, which for this scenario gives $\omega = \sqrt{ \frac{25}{4}}$ 
+
 
 \item 
 The file 
@@ -315,8 +310,9 @@ In the plot, we see
 \item 
   \begin{Question}
     \begin{minipage}[t]{0.6\linewidth}
-      \vspace{0pt}
-      We return to the same single spring/mass system from Question \ref{SpringNoDampingWithFext}, shown to the right, with no damper.
+      \vspace{0pt} We return to the same single spring/mass system
+      from Question \ref{SpringNoDampingWithFext}, shown to the right,
+      with no damper.
       
 The $\Fext$ shown is an external applied force.
     \end{minipage}
@@ -337,13 +333,58 @@ produce {\bf resonance} in the system.
   selected external force, using an initial condition where the mass
   starts at its equilibrium and at rest.
 \item The system will break if the oscillations become too large,
-  specifically if $x(t)$ exceeds 0.4 m.  Does the system break, and if
-  so, how long does it take for the system to break?
+  specifically if $x(t)$ exceeds 2 m (in the positive or negative
+  directions).  Does the system break, and if so, how long does it
+  take for the system to break?
 \end{enumerate}
 \end{Question}
 
 \begin{Solution}
-  
+  \begin{enumerate}[(a)]
+  \item The natural frequency of a spring/mass system is given by
+    $\omega = \sqrt{\frac{k}{m}} = \sqrt{\frac{2}{5}} \approx 0.6325$
+    rad/s.
+  \item If we want to produce resonance in the oscillations, our
+    applied force's frequency must be exactly at the same frequency as
+    the natural frequency. That way, the natural oscillations and the
+    applied force are perfectly synchronized, leading to a build-up of
+    the energy in the system.  
+
+    This means we should select $\Fext = sin( 0.6325 t)$.
+
+  \item For this problem, we can recycle the differential equation
+    code in
+    \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/springDE2.m}{springDE2.m}
+    from Question \ref{SpringNoDampingWithFext}, because the forces
+    (spring and $\Fext$) are in the same form as in that problem.
+
+    In our new main script,
+    \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W08Resonance1.m}{W08Resonance1.m}
+    we will set up all the constants needed for the simulation:
+    \begin{itemize}
+    \item $m = 5$, $k = 2$, 
+    \item $a = 1$ and $b= 0.6325$ to define
+      $\Fext = a \sin(bt) = 1 \cdot \sin(0.6325 t)$.
+    \end{itemize}
+
+    Below is a graph of the simulated motion of the mass over 30
+    seconds:
+\begin{center}
+\includegraphics[width=0.4\linewidth]{graphics/Week08_Spring/W08SpringResonance1}
+\end{center}
+
+\item From the graph, we see that the amplitude of the oscillations
+  are growing with every cycle, as expected when we induce resonance.  This means that the system {\em will } break at some point. 
+
+  The specific limit we were given was that breakage will occur if
+  $x(t)$ exceeds 2 m. Zooming in, we can see that the system will
+  reach $x(t) \approx 2$ m around $t = 14$ seconds.
+
+\begin{center}
+\includegraphics[width=0.4\linewidth]{graphics/Week08_Spring/W08Resonance1_BreakPoint}
+\end{center}
+
+  \end{enumerate}
 \end{Solution}
 
 
@@ -351,38 +392,87 @@ produce {\bf resonance} in the system.
 \item 
   \begin{Question}
     \begin{minipage}[t]{0.6\linewidth}
-      \vspace{0pt}
-Damped spring
+      \vspace{0pt} Consider the damped system shown at right.
 
-Give the differential equation.
+      The damping force exerted by the dashpot/damper is proportional
+      to the velocity of the mass.
+
+Newton's second law gives us the relationship:
+\begin{align*}
+ma & = \sum F = \Fspring + \Fdamping \\
+m x'' & = -k x  - c x' 
+\end{align*}
+where $k$ is the spring constant in N/m, and $c$ is the damping
+coefficient in N/(m/s).
+
     \end{minipage}
     \begin{minipage}[t]{0.3\linewidth}
 \vspace{0pt}
 \begin{center}
-\includegraphics[width=1.0in]{graphics/Week08_Spring/SpringNoDampingWithFext}
+\includegraphics[width=0.9\linewidth]{graphics/Week08_Spring/W08DampedSpringNoFext}
 \end{center}
     \end{minipage}
 
-\begin{enumerate}
+\begin{enumerate}[(a)]
+\item By hand, write this second order DE as a system of 1st order
+  DEs, using the new variables $w_1 = x$ and $w_2 = x'$
+
 \item We define a system with a mass of $m = 10$ kg, spring constant
-  $k = 2$ N/m, and a damping coefficient of $c = 0.2$ N/(m/s).  It the
+  $k = 2$ N/m, and a damping coefficient of $c = 0.4$ N/(m/s).  If the
   system is displaced by 0.5 m and then let go with zero initial
-  velocity, how long (in both seconds and cycles) does it take for the
-  oscillations to reach approximately 10\% of their original
-  amplitude?
+  velocity, use MATLAB to find out how long (in both seconds and
+  cycles) it takes for the oscillations to reach approximately 10\% of
+  their original amplitude.  Note: you will need to write both a
+  MATLAB function for the differential equation, and a main script to
+  run the simulation.
 \item What damping coefficient would be needed for the oscillations to
   be reduced to 10\% of their original amplitude within 3 cycles?  You
   will need to estimate your answer based on guessing and checking
-  against the graph.
-\item Double the mass to 20 kg.  What damping coefficient would be
-  needed now for the oscillations to be reduced to 10\% of their
-  original amplitude within 3 cycles?  You will need to estimate your
-  answer based on guessing and checking against the graph.
+  against the graph.  Hint: add horizontal lines to the solution plot
+  at $x = 0.05$ and $x = -0.05$ to see easily whether the oscillations
+  are reduced to that level.
 \end{enumerate}
 \end{Question}
 
 \begin{Solution}
-  
+  \begin{enumerate}[(a)]
+ \item  The first-order system would be:
+ \begin{align*}
+ \frac{d}{dt} w_1 & = x' = w_2 \\
+ \frac{d}{dt} w_2 & = x'' = \frac{1}{m} \left(-kx -c x'\right) = \frac{1}{m} \left(-k w_1  - c w_2\right)
+ \end{align*}
+
+\item To simulate the motion of the spring/mass system, we need a
+  function file with the differential equation, which we called
+  \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/springDEDamped.m}{springDEDamped.m},
+  and a main script, which we called
+  \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W08DampedSpringSystem.m}{W08DampedSpringSystem.m}.
+
+  Here is the graph of the resulting motion, showing a nice
+  oscillatory pattern, but the amplitude diminishing over time due to
+  the damping.
+
+\begin{center}
+\includegraphics[width=3in]{graphics/Week08_Spring/W08DampedSpring1A}
+\end{center}
+
+Achieving a 10\% reduction in the amplitude would take about 24
+seconds, or between 8 and 9 cycles.
+
+\begin{center}
+\includegraphics[width=3in]{graphics/Week08_Spring/W08DampedSpring1B}
+\end{center}
+
+\item Using $c = 1.1$ N/(m/s) gives the required damping, putting the amplitude
+of the oscillations below 10\% of their original magnitude after 3 cycles.
+
+\begin{center}
+\includegraphics[width=3in]{graphics/Week08_Spring/W08DampedSpring1C}
+\end{center}
+
+ 
+
+  \end{enumerate}
 \end{Solution}
 
 

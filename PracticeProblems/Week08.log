@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  11 JUN 2016 21:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  12 JUN 2016 11:00
 entering extended mode
 **\input Week08.tex
 (Week08.tex (SingleAssignmentSetup.tex (C:\MiKTeX2.9\tex\latex\base\article.cls
@@ -1093,11 +1093,11 @@ LaTeX Info: Redefining \nameref on input line 4.
 \openout5 = `Week08.out'.
 
 \c@lstlisting=\count293
-LaTeX Font Info:    Try loading font information for U+msa on input line 23.
+LaTeX Font Info:    Try loading font information for U+msa on input line 24.
  (C:\MiKTeX2.9\tex\latex\amsfonts\umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Try loading font information for U+msb on input line 23.
+LaTeX Font Info:    Try loading font information for U+msb on input line 24.
 
 (C:\MiKTeX2.9\tex\latex\amsfonts\umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
@@ -1107,7 +1107,7 @@ File: graphics/Week08_DESolutions/W08DE01_a.png Graphic file (type png)
 
 <use graphics/Week08_DESolutions/W08DE01_a.png>
 Package pdftex.def Info: graphics/Week08_DESolutions/W08DE01_a.png used on inpu
-t line 35.
+t line 36.
 (pdftex.def)             Requested size: 155.10905pt x 116.3313pt.
 
 <graphics/Week08_DESolutions/W08DE01_b.png, id=5, 578.16pt x 433.62pt>
@@ -1115,7 +1115,7 @@ File: graphics/Week08_DESolutions/W08DE01_b.png Graphic file (type png)
 
 <use graphics/Week08_DESolutions/W08DE01_b.png>
 Package pdftex.def Info: graphics/Week08_DESolutions/W08DE01_b.png used on inpu
-t line 36.
+t line 37.
 (pdftex.def)             Requested size: 155.10905pt x 116.3313pt.
 
 <graphics/Week08_DESolutions/W08DE01_c.png, id=6, 578.16pt x 433.62pt>
@@ -1123,7 +1123,7 @@ File: graphics/Week08_DESolutions/W08DE01_c.png Graphic file (type png)
 
 <use graphics/Week08_DESolutions/W08DE01_c.png>
 Package pdftex.def Info: graphics/Week08_DESolutions/W08DE01_c.png used on inpu
-t line 37.
+t line 38.
 (pdftex.def)             Requested size: 155.10905pt x 116.3313pt.
 
 <graphics/Week08_Spring/W08GarageTemp_1.png, id=7, 578.16pt x 433.62pt>
@@ -1139,7 +1139,7 @@ s/W08DE01_c.png (PNG copy)>]
 File: graphics/Week08_Spring/W08GarageTemp_1.png Graphic file (type png)
  <use graphics/Week08_Spring/W08GarageTemp_1.png>
 Package pdftex.def Info: graphics/Week08_Spring/W08GarageTemp_1.png used on inp
-ut line 101.
+ut line 102.
 (pdftex.def)             Requested size: 216.81pt x 162.6071pt.
 
 <graphics/Week08_Spring/W08GarageTemp_2.png, id=35, 578.16pt x 433.62pt>
@@ -1147,7 +1147,7 @@ File: graphics/Week08_Spring/W08GarageTemp_2.png Graphic file (type png)
 
 <use graphics/Week08_Spring/W08GarageTemp_2.png>
 Package pdftex.def Info: graphics/Week08_Spring/W08GarageTemp_2.png used on inp
-ut line 123.
+ut line 124.
 (pdftex.def)             Requested size: 216.81pt x 162.6071pt.
 
 <graphics/Week08_Spring/SpringNoDamping.pdf, id=36, 89.65596pt x 129.48375pt>
@@ -1155,94 +1155,138 @@ File: graphics/Week08_Spring/SpringNoDamping.pdf Graphic file (type pdf)
 
 <use graphics/Week08_Spring/SpringNoDamping.pdf>
 Package pdftex.def Info: graphics/Week08_Spring/SpringNoDamping.pdf used on inp
-ut line 154.
+ut line 156.
 (pdftex.def)             Requested size: 72.26999pt x 104.38138pt.
  [2 <./graphics/Week08_Spring/W08GarageTemp_1.png (PNG copy)> <./graphics/Week0
 8_Spring/W08GarageTemp_2.png (PNG copy)>]
-<graphics/Week08_Spring/SpringNoDampingWithFext.pdf, id=49, 89.65596pt x 139.52
+<graphics/Week08_Spring/W08SpringSimulation01.png, id=52, 578.16pt x 433.62pt>
+File: graphics/Week08_Spring/W08SpringSimulation01.png Graphic file (type png)
+
+<use graphics/Week08_Spring/W08SpringSimulation01.png>
+Package pdftex.def Info: graphics/Week08_Spring/W08SpringSimulation01.png used 
+on input line 196.
+(pdftex.def)             Requested size: 216.81pt x 162.6071pt.
+
+<graphics/Week08_Spring/SpringNoDampingWithFext.pdf, id=54, 89.65596pt x 139.52
 126pt>
 File: graphics/Week08_Spring/SpringNoDampingWithFext.pdf Graphic file (type pdf
 )
  <use graphics/Week08_Spring/SpringNoDampingWithFext.pdf>
 Package pdftex.def Info: graphics/Week08_Spring/SpringNoDampingWithFext.pdf use
-d on input line 194.
+d on input line 224.
 (pdftex.def)             Requested size: 72.26999pt x 112.47296pt.
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 216.
+ [3 <./graphics/Week08_Spring/SpringNoDamping.pdf> <./graphics/Week08_Spring/W0
+8SpringSimulation01.png (PNG copy)>]
+<graphics/Week08_Spring/W08SpringSimulation02.png, id=80, 578.16pt x 433.62pt>
+File: graphics/Week08_Spring/W08SpringSimulation02.png Graphic file (type png)
+
+<use graphics/Week08_Spring/W08SpringSimulation02.png>
+Package pdftex.def Info: graphics/Week08_Spring/W08SpringSimulation02.png used 
+on input line 277.
+(pdftex.def)             Requested size: 216.81pt x 162.6071pt.
+
+<graphics/Week08_Spring/W08SpringSimulation03.png, id=82, 578.16pt x 433.62pt>
+File: graphics/Week08_Spring/W08SpringSimulation03.png Graphic file (type png)
+
+<use graphics/Week08_Spring/W08SpringSimulation03.png>
+Package pdftex.def Info: graphics/Week08_Spring/W08SpringSimulation03.png used 
+on input line 296.
+(pdftex.def)             Requested size: 216.81pt x 162.6071pt.
+ [4 <./graphics/Week08_Spring/SpringNoDampingWithFext.pdf> <./graphics/Week08_S
+pring/W08SpringSimulation02.png (PNG copy)>]
+File: graphics/Week08_Spring/SpringNoDampingWithFext.pdf Graphic file (type pdf
+)
+ <use graphics/Week08_Spring/SpringNoDampingWithFext.pdf>
+Package pdftex.def Info: graphics/Week08_Spring/SpringNoDampingWithFext.pdf use
+d on input line 322.
+(pdftex.def)             Requested size: 72.26999pt x 112.47296pt.
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 365.
 
 
 (C:\MiKTeX2.9\tex\latex\base\omscmr.fd
 File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 216.
- [3 <./graphics/Week08_Spring/SpringNoDamping.pdf> <./graphics/Week08_Spring/Sp
-ringNoDampingWithFext.pdf>]
-<graphics/Week08_Spring/W08SpringSimulation01.png, id=92, 578.16pt x 433.62pt>
-File: graphics/Week08_Spring/W08SpringSimulation01.png Graphic file (type png)
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 365.
 
-<use graphics/Week08_Spring/W08SpringSimulation01.png>
-Package pdftex.def Info: graphics/Week08_Spring/W08SpringSimulation01.png used 
-on input line 267.
-(pdftex.def)             Requested size: 216.81pt x 162.6071pt.
+<graphics/Week08_Spring/W08SpringResonance1.png, id=113, 578.16pt x 433.62pt>
+File: graphics/Week08_Spring/W08SpringResonance1.png Graphic file (type png)
 
-<graphics/Week08_Spring/W08SpringSimulation02.png, id=95, 578.16pt x 433.62pt>
-File: graphics/Week08_Spring/W08SpringSimulation02.png Graphic file (type png)
-
-<use graphics/Week08_Spring/W08SpringSimulation02.png>
-Package pdftex.def Info: graphics/Week08_Spring/W08SpringSimulation02.png used 
-on input line 282.
-(pdftex.def)             Requested size: 216.81pt x 162.6071pt.
-
-<graphics/Week08_Spring/W08SpringSimulation03.png, id=97, 578.16pt x 433.62pt>
-File: graphics/Week08_Spring/W08SpringSimulation03.png Graphic file (type png)
-
-<use graphics/Week08_Spring/W08SpringSimulation03.png>
-Package pdftex.def Info: graphics/Week08_Spring/W08SpringSimulation03.png used 
-on input line 301.
-(pdftex.def)             Requested size: 216.81pt x 162.6071pt.
- [4 <./graphics/Week08_Spring/W08SpringSimulation01.png (PNG copy)> <./graphics
-/Week08_Spring/W08SpringSimulation02.png (PNG copy)>]
-File: graphics/Week08_Spring/SpringNoDampingWithFext.pdf Graphic file (type pdf
-)
-
-<use graphics/Week08_Spring/SpringNoDampingWithFext.pdf>
-Package pdftex.def Info: graphics/Week08_Spring/SpringNoDampingWithFext.pdf use
-d on input line 326.
-(pdftex.def)             Requested size: 72.26999pt x 112.47296pt.
-File: graphics/Week08_Spring/SpringNoDampingWithFext.pdf Graphic file (type pdf
-)
-
-<use graphics/Week08_Spring/SpringNoDampingWithFext.pdf>
-Package pdftex.def Info: graphics/Week08_Spring/SpringNoDampingWithFext.pdf use
-d on input line 362.
-(pdftex.def)             Requested size: 72.26999pt x 112.47296pt.
+<use graphics/Week08_Spring/W08SpringResonance1.png>
+Package pdftex.def Info: graphics/Week08_Spring/W08SpringResonance1.png used on
+ input line 373.
+(pdftex.def)             Requested size: 199.6958pt x 149.77109pt.
  [5 <./graphics/Week08_Spring/W08SpringSimulation03.png (PNG copy)>]
-Underfull \hbox (badness 10000) in paragraph at lines 460--463
+<graphics/Week08_Spring/W08Resonance1_BreakPoint.png, id=127, 375.65344pt x 295
+.85532pt>
+File: graphics/Week08_Spring/W08Resonance1_BreakPoint.png Graphic file (type pn
+g)
+ <use graphics/Week08_Spring/W08Resonance1_BreakPoint.png>
+Package pdftex.def Info: graphics/Week08_Spring/W08Resonance1_BreakPoint.png us
+ed on input line 384.
+(pdftex.def)             Requested size: 199.6958pt x 157.27657pt.
+
+<graphics/Week08_Spring/W08DampedSpringNoFext.pdf, id=129, 145.86595pt x 129.48
+375pt>
+File: graphics/Week08_Spring/W08DampedSpringNoFext.pdf Graphic file (type pdf)
+ <use graphics/Week08_Spring/W08DampedSpringNoFext.pdf>
+Package pdftex.def Info: graphics/Week08_Spring/W08DampedSpringNoFext.pdf used 
+on input line 412.
+(pdftex.def)             Requested size: 131.08469pt x 116.36633pt.
+ [6 <./graphics/Week08_Spring/W08SpringResonance1.png (PNG copy)> <./graphics/W
+eek08_Spring/W08Resonance1_BreakPoint.png> <./graphics/Week08_Spring/W08DampedS
+pringNoFext.pdf>]
+<graphics/Week08_Spring/W08DampedSpring1A.png, id=152, 578.16pt x 433.62pt>
+File: graphics/Week08_Spring/W08DampedSpring1A.png Graphic file (type png)
+
+<use graphics/Week08_Spring/W08DampedSpring1A.png>
+Package pdftex.def Info: graphics/Week08_Spring/W08DampedSpring1A.png used on i
+nput line 456.
+(pdftex.def)             Requested size: 216.81pt x 162.6071pt.
+
+<graphics/Week08_Spring/W08DampedSpring1B.png, id=153, 423.08063pt x 380.92313p
+t>
+File: graphics/Week08_Spring/W08DampedSpring1B.png Graphic file (type png)
+ <use graphics/Week08_Spring/W08DampedSpring1B.png>
+Package pdftex.def Info: graphics/Week08_Spring/W08DampedSpring1B.png used on i
+nput line 463.
+(pdftex.def)             Requested size: 216.81pt x 195.20401pt.
+
+<graphics/Week08_Spring/W08DampedSpring1C.png, id=154, 578.16pt x 433.62pt>
+File: graphics/Week08_Spring/W08DampedSpring1C.png Graphic file (type png)
+
+<use graphics/Week08_Spring/W08DampedSpring1C.png>
+Package pdftex.def Info: graphics/Week08_Spring/W08DampedSpring1C.png used on i
+nput line 470.
+(pdftex.def)             Requested size: 216.81pt x 162.6071pt.
+ [7 <./graphics/Week08_Spring/W08DampedSpring1A.png (PNG copy)> <./graphics/Wee
+k08_Spring/W08DampedSpring1B.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 550--553
 
  []
 
-[6]
-Overfull \hbox (10.86716pt too wide) in paragraph at lines 483--487
+[8 <./graphics/Week08_Spring/W08DampedSpring1C.png (PNG copy)>]
+Overfull \hbox (10.86716pt too wide) in paragraph at lines 573--577
 []\OT1/cmr/m/n/10 The am-pli-tude of the sum $\OML/cmm/m/it/10 A []\OT1/cmr/m/n
 /10 (\OML/cmm/m/it/10 bt\OT1/cmr/m/n/10 ) + \OML/cmm/m/it/10 B []\OT1/cmr/m/n/1
 0 (\OML/cmm/m/it/10 bt\OT1/cmr/m/n/10 )$ is given by $\OML/cmm/m/it/10 C \OT1/c
 mr/m/n/10 = []$, so the am-pli-tude here is $[] \OMS/cmsy/m/n/10 $
  []
 
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 495.
-[7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 495.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 585.
+[9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 585.
  (Week08.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 495.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 495.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 585.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 585.
 Package rerunfilecheck Info: File `Week08.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
  ) 
 Here is how much of TeX's memory you used:
- 25369 strings out of 493634
- 450984 string characters out of 3149836
- 621242 words of memory out of 3000000
- 28287 multiletter control sequences out of 15000+200000
+ 25409 strings out of 493634
+ 452420 string characters out of 3149836
+ 622242 words of memory out of 3000000
+ 28312 multiletter control sequences out of 15000+200000
  6766 words of font info for 27 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  46i,12n,72p,10457b,701s stack positions out of 5000i,500n,10000p,200000b,50000s
@@ -1254,9 +1298,9 @@ sfonts/cm/cmr10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/M
 iKTeX2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/pu
 blic/amsfonts/cm/cmsy7.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmti10.
 pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmtt10.pfb>
-Output written on Week08.pdf (7 pages, 457860 bytes).
+Output written on Week08.pdf (9 pages, 551490 bytes).
 PDF statistics:
- 186 PDF objects out of 1000 (max. 8388607)
- 59 named destinations out of 1000 (max. 500000)
- 51 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 228 PDF objects out of 1000 (max. 8388607)
+ 68 named destinations out of 1000 (max. 500000)
+ 81 words of extra memory for PDF output out of 10000 (max. 10000000)
 
