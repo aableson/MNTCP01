@@ -38,17 +38,148 @@ Here are the graphs of the solutions.
 
 \end{Solution} 
 
+% ******************** Newton's Cooling  ********************************
+\item 
+\begin{Question}
+Newton's law of heating and cooling states that an object with
+  temperature $T$ in an environment at temperature $T_{ext}$ will heat
+  up or cool down according to the differential equation
+
+ $$\frac{dT}{dt} = -k (T - T_{ext})$$
+
+ Consider a garage used as a workshop.  Its insulation and surface
+ area give $k$ a value of 0.1, if time $t$ is measured in hours and
+ the temperatures, $T$ and $T_{ext}$, are in degrees Celsius.
+
+The temperature outside changes during the day, as described by
+the formula 
+$$T_{ext} =  10 + 7 \cos\left(\frac{\pi}{12} t\right)$$
+
+We now imagine that the power goes out, with the garage at 23$^o$ C at
+$t=0$.
+
+\begin{enumerate}
+\item Use ode45 and the DE to generate a numerical prediction of the
+  garage's temperature $T$ over time.  Graph the solution over a time
+  interval that shows both the initial and long-term behaviour of the
+  temperature.
+
+  In your script, try to use the functions \verb#title#,
+  \verb#xlabel#, \verb#ylabel#, and \verb#legend# to annotate the
+  graph to make it easier for a reader to understand.
+
+  For the following questions, just use the graph or the numerical
+  prediction of the temperature. You are {\em not} expected to solve
+  the DE analytically.
+
+\item How many days does it take for the garage to get into a
+  consistent temperature cycle?  (You will need to estimate this by
+  eye.)
+
+\item How many degrees does the temperature in the building fluctuate
+  by, once the temperature gets into a steady cycle?
+
+\item Suppose the building were better insulated, so that the rate of
+  heat loss were cut in half.  Should $k$ be half as large, or twice
+  as large?  
+
+\item Generate a numerical prediction for the temperature over time in
+  the better-insulated scenario, and produce a graph of the
+  temperature vs time for both scenarios on the same axes.
+  
+\item How large are the temperature fluctuations in the building, now
+  that the extra insulation has been added?  Does halving the net heat
+  flow also halve the net temperature fluctuations?
+\end{enumerate}
+  
+\end{Question}
+
+\begin{Solution}
+\begin{enumerate}
+\item  A graph of the temperature over time is shown below: 
+  
+  \includegraphics[width=3in]{graphics/Week08_Spring/W08GarageTemp_1}
+
+The file 
+  \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W08GarageTemp.m}{W08GarageTemp.m} 
+has the MATLAB code that generated the graph above.
+
+\item From the graph, it takes the building roughly 2 days (48 hours)
+  to get into a repeating cycle of temperature variation.
+
+\item Careful zooming of the graph (or a look at the $y$ values in the
+  ode45 output) give a highest temperature of 12.5 (high) and 7.5
+  (low), for a net fluctuation of approximately 2.6 degrees per day.
+
+\item $k$ represents the coefficient of heat flow between the building
+  and the environment. The bigger $k$ is, the {\em larger} the
+  headflow between the two.  Since we're adding insulation, this
+  should {\em reduce} the heat flow, and so {\em lower} the value of
+  $k$.
+
+\item A graph of the heat change over time, given better insulation,
+  is shown below.
+
+  \includegraphics[width=3in]{graphics/Week08_Spring/W08GarageTemp_2}
+
+\item Zooming in on the peaks of the graph, the temperature now
+  fluctuates between approximately 11.3 and 8.8 degrees Celsius, for a
+  range of 2.5 degrees.  This {\em is} roughly half the magnitude of
+  the fluctuations we saw earlier.
+
+\end{enumerate}
+\end{Solution}
+
+
+\hrulefill
+
+\subsection*{Modelling Spring Systems}
+% ******************************
+\item  \label{SpringNoDamping}
+  \begin{Question}
+    \begin{minipage}[t]{0.6\linewidth}
+\vspace{0pt}
+Consider the single spring/mass system shown to the right, with no damper.
+
+Newton's second law gives us the relationship:
+\begin{align*}
+ma & = \sum F = \Fspring \\
+m x'' & = -k x 
+\end{align*}
+where $k$ is the spring constant.
+    \end{minipage}
+    \begin{minipage}[t]{0.3\linewidth}
+\vspace{0pt}
+\begin{center}
+\includegraphics[width=1.0in]{graphics/Week08_Spring/SpringNoDamping}
+\end{center}
+    \end{minipage}
+
+
+\begin{enumerate}
+\item By hand, write this second order DE as a system of 1st order
+  DEs, using the new variables $w_1 = x$ and $w_2 = x'$
+
+\item Write a MATLAB function file called \verb#springDE1.m# starting
+  with the first line \\
+\verb#function dw_dt = springDE1(t, w, m, k)# \\
+  that implements the system of differential equations from part (a).
+\end{enumerate}
+\end{Question}
+
+\begin{Solution}
+\end{Solution}
+
+
 
 % ******************************
-\item 
+\item  \label{SpringNoDampingWithFext}
   \begin{Question}
-    
-Consider the single spring/mass system shown below, with no damper:
+    \begin{minipage}[t]{0.6\linewidth}
+\vspace{0pt}
+Consider the single spring/mass system shown to the right, with no damper.
 
-\begin{center}
-\includegraphics[width=1in]{graphics/Week08_Spring/SpringNoDampingWithFext}
-\end{center}
-where $\Fext$ is an external applied force.
+The $\Fext$ shown is an external applied force.
 
 Newton's second law gives us the relationship:
 \begin{align*}
@@ -56,6 +187,14 @@ ma & = \sum F = \Fspring + \Fext \\
 m x'' & = -k x + \Fext 
 \end{align*}
 where $k$ is the spring constant.
+    \end{minipage}
+    \begin{minipage}[t]{0.3\linewidth}
+\vspace{0pt}
+\begin{center}
+\includegraphics[width=1.0in]{graphics/Week08_Spring/SpringNoDampingWithFext}
+\end{center}
+    \end{minipage}
+
 
 \begin{enumerate}
 \item By hand, write this second order DE as a system of 1st order
@@ -172,414 +311,181 @@ In the plot, we see
 \end{enumerate}
 \end{Solution}
 
-
-
-% ******************** Newton's Cooling  ********************************
+% ******************************
 \item 
-\begin{Question}
-Newton's law of heating and cooling states that an object with
-  temperature $T$ in an environment at temperature $T_{ext}$ will heat
-  up or cool down according to the differential equation
+  \begin{Question}
+    \begin{minipage}[t]{0.6\linewidth}
+      \vspace{0pt}
+      We return to the same single spring/mass system from Question \ref{SpringNoDampingWithFext}, shown to the right, with no damper.
+      
+The $\Fext$ shown is an external applied force.
+    \end{minipage}
+    \begin{minipage}[t]{0.3\linewidth}
+\vspace{0pt}
+\begin{center}
+\includegraphics[width=1.0in]{graphics/Week08_Spring/SpringNoDampingWithFext}
+\end{center}
+    \end{minipage}
 
- $$\frac{dT}{dt} = -k (T - T_{ext})$$
-
- Consider a garage used as a workshop.  Its insulation and surface
- area give $k$ a value of 0.1, if time $t$ is measured in hours and
- the temperatures, $T$ and $T_{ext}$, are in degrees Celsius.
-
-The temperature outside changes during the day, as described by
-the formula 
-$$T_{ext} =  10 + 7 \cos\left(\frac{\pi}{12} t\right)$$
-
-We now imagine that the power goes out, with the garage at 23$^o$ C at
-$t=0$.
 
 \begin{enumerate}
-\item Use ode45 and the DE to generate a numerical prediction of the
-  garage's temperature $T$ over time.  Graph the solution over a time
-  interval that shows both the initial and long-term behaviour of the
-  temperature.
-
-  In your script, try to use the functions \verb#title#,
-  \verb#xlabel#, \verb#ylabel#, and \verb#legend# to annotate the
-  graph to make it easier for a reader to understand.
-
-  For the following questions, just use the graph or the numerical
-  prediction of the temperature. You are {\em not} expected to solve
-  the DE analytically.
-
-\item How many days does it take for the garage to get into a
-  consistent temperature cycle?  (You will need to estimate this by
-  eye.)
-
-\item How many degrees does the temperature in the building fluctuate
-  by, once the temperature gets into a steady cycle?
-
-\item Suppose the building were better insulated, so that the rate of
-  heat loss were cut in half.  Should $k$ be half as large, or twice
-  as large?  
-
-\item Generate a numerical prediction for the temperature over time in
-  the better-insulated scenario, and produce a graph of the
-  temperature vs time for both scenarios on the same axes.
-  
-\item How large are the temperature fluctuations in the building, now
-  that the extra insulation has been added?  Does halving the net heat
-  flow also halve the net temperature fluctuations?
+\item For a mass of $m = 5$ kg , and a spring constant of $k = 2$ N/m,
+  what is the natural frequency of the system?
+\item Define an external force of the form $\Fext = \sin(b t)$ that will
+produce {\bf resonance} in the system.
+\item Use MATLAB to simulate the motion of the spring, with your
+  selected external force, using an initial condition where the mass
+  starts at its equilibrium and at rest.
+\item The system will break if the oscillations become too large,
+  specifically if $x(t)$ exceeds 0.4 m.  Does the system break, and if
+  so, how long does it take for the system to break?
 \end{enumerate}
-  
 \end{Question}
 
 \begin{Solution}
-\begin{enumerate}
-\item  A graph of the temperature over time is shown below: 
   
-  \includegraphics[width=3in]{graphics/Week08_Spring/W08GarageTemp_1}
-
-The file 
-  \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W08GarageTemp.m}{W08GarageTemp.m} 
-has the MATLAB code that generated the graph above.
-
-\item From the graph, it takes the building roughly 2 days (48 hours)
-  to get into a repeating cycle of temperature variation.
-
-\item Careful zooming of the graph (or a look at the $y$ values in the
-  ode45 output) give a highest temperature of 12.5 (high) and 7.5
-  (low), for a net fluctuation of approximately 2.6 degrees per day.
-
-\item $k$ represents the coefficient of heat flow between the building
-  and the environment. The bigger $k$ is, the {\em larger} the
-  headflow between the two.  Since we're adding insulation, this
-  should {\em reduce} the heat flow, and so {\em lower} the value of
-  $k$.
-
-\item A graph of the heat change over time, given better insulation,
-  is shown below.
-
-  \includegraphics[width=3in]{graphics/Week08_Spring/W08GarageTemp_2}
-
-\item Zooming in on the peaks of the graph, the temperature now
-  fluctuates between approximately 11.3 and 8.8 degrees Celsius, for a
-  range of 2.5 degrees.  This {\em is} roughly half the magnitude of
-  the fluctuations we saw earlier.
-
-\end{enumerate}
 \end{Solution}
 
-\subsection*{Numerical ODE Solutions With MATLAB}
 
-Study the effect of damping.
+% ******************************
+\item 
+  \begin{Question}
+    \begin{minipage}[t]{0.6\linewidth}
+      \vspace{0pt}
+Damped spring
 
+Give the differential equation.
+    \end{minipage}
+    \begin{minipage}[t]{0.3\linewidth}
+\vspace{0pt}
+\begin{center}
+\includegraphics[width=1.0in]{graphics/Week08_Spring/SpringNoDampingWithFext}
+\end{center}
+    \end{minipage}
 
-% %****************
-% \item 
-% \begin{Question}
-% For a spring/mass system with $m=1$ kg, $c=6$ N/(m/s), and
-%   $k=45$, approximately what frequency of external forcing would
-%   produce the largest amplitude steady-state vibration?
-% \end{Question}
+\begin{enumerate}
+\item We define a system with a mass of $m = 10$ kg, spring constant
+  $k = 2$ N/m, and a damping coefficient of $c = 0.2$ N/(m/s).  It the
+  system is displaced by 0.5 m and then let go with zero initial
+  velocity, how long (in both seconds and cycles) does it take for the
+  oscillations to reach approximately 10\% of their original
+  amplitude?
+\item What damping coefficient would be needed for the oscillations to
+  be reduced to 10\% of their original amplitude within 3 cycles?  You
+  will need to estimate your answer based on guessing and checking
+  against the graph.
+\item Double the mass to 20 kg.  What damping coefficient would be
+  needed now for the oscillations to be reduced to 10\% of their
+  original amplitude within 3 cycles?  You will need to estimate your
+  answer based on guessing and checking against the graph.
+\end{enumerate}
+\end{Question}
 
-% \begin{Solution}
-%   The natural frequency is found using the auxiliary equation $r^2 +
-%   6r + 45 = 0$, giving $r=-3 \pm 6i$, so $x_c = c_1 e^{-3t}\cos(6t) +
-%   c_2 e^{-3t} \sin(6t)$
-
-% Since this system's natural or intrinsic oscillations are at 6 rad/s,
-% the spring/mass will show the largest amplitude response to an outside
-% force if that outside force also has a frequency close to 6 rad/s.
-
-% \end{Solution}
-
-% %****************
-% \item 
-% \begin{Question}
-% For a spring/mass system with $m=1$ kg, $c=10$ N/(m/s), and
-%   $k=650$, approximately what frequency of external forcing would
-%   produce the largest amplitude steady-state vibration?
-% \end{Question}
-
-% \begin{Solution}
-% $m=1, c=10,k=650,F_0=100$, so
-% $$x'' + 10x' + 650x = \cos(\omega t)$$ 
-
-% The natural frequency is found using the auxiliary equation $r^2 + 10r
-% + 650 = 0$, giving $r=-5 \pm 25i$, so $x_c = c_1 e^{-5t}\cos(25t) +
-% c_2 e^{-5t} \sin(25t)$
-
-% It will show its largest amplitude response to stimuli with
-% frequencies close to 25 rad/s.
-% \end{Solution}
-
-% %**********  
-% \item \begin{Question}
-% Consider the undamped spring model $y'' + \omega_0^2 y = \cos(\omega t)$.
-%     \begin{enumerate}
-%     \item Solve $y'' + \omega_0^2 y = \cos(\omega t)$ where $\omega^2
-%       \neq \omega_0^2$.
-%     \item What does this predict will happen to the amplitude of the
-%       oscillations as the stimulus frequence $\omega$ is brought
-%       closer and closer to the natural frequency $\omega_0$?
-%     \end{enumerate}
-% \end{Question}
-
-% \begin{Solution}
-%   \begin{enumerate}[(a)]
-%   \item 
-%   The characteristic equation is $r^2+ \omega_0^2 = \bigl( r - \omega_0
-%   \sqrt{-1}\bigr) \bigl( r + \omega_0 \sqrt{-1}\bigr)$, so the general solution
-%   to the corresponding homogeneous equation is $C_1 \cos( \omega_0 t) + C_2
-%   \sin(\omega_0 t)$.  Using the method of undetermined coefficients, we consider
-%   a solution of the form $y_g(t) := A_1 \cos(\omega t) + A_2 \sin(\omega t)$ for
-%   some constants $A_1$ and $A_2$.  It follows that
-%   \begin{align*}
-%     \cos(\omega t) &= y_g'' + \omega_0^2 y_g = \bigl( - A_1 \omega^2 \cos(\omega
-%     t) - A_2 \omega^2 \sin( \omega t) \bigr) + \omega_0^2
-%     \bigl(A_1 \cos(\omega t) + A_2 \sin(\omega t) \bigr) \\
-%     &= (\omega_0^2-\omega^2) \bigl( A_1 \cos(\omega t) + A_2 \sin(\omega t)
-%     \bigr)
-%   \end{align*}
-%   Since $\ds A_1 = \tfrac{1}{\omega_0^2 -\omega^2}$ and $A_2 = 0$, the general
-%   solution is 
-%   \[
-%   C_1 \cos( \omega_0 t) + C_2 \sin(\omega_0 t) + \frac{1}{(\omega_0^2
-%   -\omega^2)}\cos(\omega t) \, . \qedhere
-%   \]
-% \item As the stimulus frequency $\omega$ approaches the natural
-%   frequency $\omega_0$, the amplitude given by $\frac{1}{(\omega_0^2 -
-%     \omega^2)} \to \infty$.  This corresponds to the result of
-%   resonance, when $\omega = \omega_0$, and the solutions change to
-%   $y_c = A t \cos(\omega t)$, which has an linearly growing
-%   (unbounded) amplitude.
-%   \end{enumerate}
-% \end{Solution}
-%   \vspace*{0.5em}
-
-% %****************
-% \item 
-%   \begin{Question} 
-% Consider the equation for the spring/mass system
-%     with $m=1$ kg, $c=4$ N/(m/s) and $k = 4$ N/m, and which is being
-%     forced by an external periodic force of $10 \cos(3t)$ N: $$x'' +
-%     4x' + 4x = 10 \cos(3t)$$ Find the formula for the steady-state
-%     oscillations, and find their amplitude.
-% \end{Question}
-
-% \begin{Solution}
-%   The system is damped, so the $x_c$ solution will have negative
-%   exponentials in it. i.e. that part of the solution will be {\bf
-%     transient} because its contribution $\to 0$ over time.  That is
-%   why $x_c$ is referred to as $x_{\mbox{transient}}$ or
-%   $x_{\mbox{tr}}$ throughout the problems in this section.
-
-%   Since the RHS is pure cos/sine, its differential family will not
-%   overlap with the exp sin/cos in $x_c$.  This means $x_p$ will be a
-%   simple linear combination of $\cos(3t)$ and $\sin(3t)$.
-
-% Let $x_p = A \cos(3t) + B \sin(3t)$. \\
-% $x_p' = -3A \sin(3t) + 3B \cos(3t)$ \\
-% $x_p'' = -9A \cos(3t) - 9B \sin(3t)$ \\
-
-% Substituting into the DE,
-% $$ ( -9A \cos(3t) - 9B \sin(3t))
-% +4( -3A \sin(3t) + 3B \cos(3t))
-% +4(A \cos(3t) + B \sin(3t))  = 10 \cos(3t)$$ 
-% \begin{align*}
-% \mbox{sine coeffs: ~~~} -9B-12A+4B & = 0 & -12A -5B &= 0 \\
-% \mbox{cos coeffs: ~~~} -9A+12B+4A & = 10 & -5A + 12B &= 10\\
-% \\
-% -60A -25B & = 0 \\
-% -60A + 144 B &= 120 \\
-% \\
-%  -169B &= -120 \\
-% \end{align*}
-
-
-% Solving gives $\ds A = \frac{-50}{169}, B = \frac{120}{169}$, so 
-
-% $$x_p = x_{sp} = \frac{-50}{169} \cos(3t) + \frac{120}{169} \sin(3t)$$
-
-% The amplitude of the sum $A \cos(bt) + B \sin(bt)$ is given by $C =
-% \sqrt{A^2 + B^2}$, so the amplitude here is $\ds \sqrt{
-%   \left(\frac{-50}{169}\right)^2 + \left(\frac{120}{169}\right)^2}
-% \approx 0.77$ meters or 77 cm.
-
-% \end{Solution}
-
-% %********** 
-% \item 
-% \begin{Question}
-%   Consider the equation for the spring/mass system 
-% $$x'' + 3x' + 5x = 4 \cos(5t)$$ 
-% Find the formula for the steady-state oscillations, and find their
-% amplitude.
-% \end{Question}
-% \begin{Solution}
+\begin{Solution}
   
-%   Again, because there is damping, $x_c$ will have negative
-%   exponentials, and will fade away with time (transient part of the
-%   solution).  Also, there is no overlap between the functions in the
-%   transient $x_c$ and steady-state $x_p$, so we can set the form of $x_p$ as a
-% linear combination of $\cos(5t)$ and $\sin(5t)$.
-
-% Let $x_p = A \cos(5t) + B\sin(5t)$ so\\
-% $x_p' = -5A \sin(5t) + 5B\cos(5t)$\\
-% $x_p'' = -25A \cos(5t) - 25B\sin(5t)$\\
-
-% Substituting into the DE,
-% $$ ( -25A \cos(5t) - 25B \sin(5t))
-% +3( -5A \sin(5t) + 5B \cos(5t))
-% +5(A \cos(5t) + B \sin(5t))  = 4 \cos(5t)$$ 
-% \begin{align*}
-% \mbox{sine coeffs: ~~~} -25B-15A+5B & = 0 & -15A -20B &= 0 \\
-% \mbox{cos coeffs: ~~~} -25A+15B+5A & = 4 & -20A + 15B &= 4\\
-% \\
-% -60A -80B & = 0 \\
-% -60A + 45 B &= 12 \\
-% \\
-%  -125B &= 12 \\
-% \end{align*}
-% Solving gives $\ds A = \frac{16}{125}, B = \frac{-12}{125}$ so
-% $$x_p = x_{sp} = \frac{16}{125} \cos(5t) - \frac{12}{125}\sin(5t)$$
-
-% The amplitude of the sum $A \cos(bt) + B \sin(bt)$ is given by $C =
-% \sqrt{A^2 + B^2}$, so the amplitude here is $\ds \sqrt{
-%   \left(\frac{16}{125}\right)^2 + \left(\frac{-12}{125}\right)^2} =
-% 0.16$ m, or 16 cm.
-
-% \end{Solution}
+\end{Solution}
 
 
 % %****************
-% \item 
-% \begin{Question}
-% The charge at a point in an electrical circuit is called
-%   $Q(t)$. For a particular series circuit with a resistor, a
-%   conductor, and a capacitor, $Q(t)$ satistifies the differential
-%   equation
-% $$ 2 Q'' + 60 Q' + 1/0.0025 Q = 100 e^{-t}$$
-% \begin{enumerate}[(a)]
-% \item Given the initial conditions that $Q(0) = 0$, $Q'(0) = 0$, 
-% find the particular solution for $Q(t)$.
-% \item Knowing that $I = Q'$ is the current in the circuit, find an
-%   expression for $I(t)$.
-% \end{enumerate}
-% \end{Question}
+\item 
+\begin{Question}
+  For a spring/mass system with $m=1$ kg, $c=6$ N/(m/s), and $k=45$,
+  approximately what frequency of external forcing would produce the
+  largest amplitude steady-state vibration?  
+You will need to estimate
+  the answer based on guessing and checking against the graph.
+ \end{Question}
 
-% \begin{Solution}
-%   \begin{enumerate}[(a)]
-%   \item \underline{Solving for $Q_c$}, we solve $2 r^2 + 60r + 400 = 0$, for $r = -20, -10$
+ \begin{Solution}
+   The natural frequency is found using the auxiliary equation $r^2 +
+   6r + 45 = 0$, giving $r=-3 \pm 6i$, so $x_c = c_1 e^{-3t}\cos(6t) +
+   c_2 e^{-3t} \sin(6t)$
 
-% $$Q_c = c_1 e^{-20t} + c_2 e^{-10t}$$
+ Since this system's natural or intrinsic oscillations are at 6 rad/s,
+ the spring/mass will show the largest amplitude response to an outside
+ force if that outside force also has a frequency close to 6 rad/s.
 
-% \underline{Solving for $Q_p$}, we assume $Q_p = A e^{-t}$.  Subbing
-% into the DE gives $2 A - 60 A + 400A = 100$ or $A = 100/342 = 50/171$.
+ \end{Solution}
 
-% $$Q_p = \frac{50}{171} e^{-t}$$
+%****************
+\item 
+\begin{Question}
+For a spring/mass system with $m=1$ kg, $c=10$ N/(m/s), and
+  $k=650$, approximately what frequency of external forcing would
+  produce the largest amplitude steady-state vibration?
+You will need to estimate
+  the answer based on guessing and checking against the graph.
+\end{Question}
 
-% This gives the general solution 
-% $$Q = Q_c + Q_p = c_1 e^{-20t} + c_2 e^{-10t} + \frac{50}{171} e^{-t}$$
+\begin{Solution}
+$m=1, c=10,k=650,F_0=100$, so
+$$x'' + 10x' + 650x = \cos(\omega t)$$ 
 
-% Solving for $c_1$ and $c_2$ given $Q(0) = 0$ and $Q'(0) = 0$, gives
-% \begin{align*}
-%   0 & = c_1  + c_2 + \frac{50}{171} \\
-%   0 & = -20c_1 -10 c_2 - \frac{50}{171}\\
-% \end{align*}
-% Solving gives $c_1 = 45/171 = 5/19$, $c_2 = -95/171 = -5/9 $, so
-% $$Q = \frac{5}{19} e^{-20t} + \frac{-5}{9} e^{-10t} + \frac{50}{171}e^{-t}$$
+The natural frequency is found using the auxiliary equation $r^2 + 10r
++ 650 = 0$, giving $r=-5 \pm 25i$, so $x_c = c_1 e^{-5t}\cos(25t) +
+c_2 e^{-5t} \sin(25t)$
 
-% \item Differentiating $Q(t)$ to find $I$ we obtain
-% $$ I = \frac{-100}{19} e^{-20t} + \frac{50}{9} e^{-10t} - \frac{50}{171} e^{-t}$$
-%   \end{enumerate}
-% \end{Solution}
+It will show its largest amplitude response to stimuli with
+frequencies close to 25 rad/s.
+\end{Solution}
 
+%****************
+\item 
+  \begin{Question} 
+    Consider the equation for the spring/mass system with $m=1$ kg,
+    $c=4$ N/(m/s) and $k = 4$ N/m, and which is being forced by an
+    external periodic force of $10 \cos(3t)$ N:
+    $$x'' + 4x' + 4x = 10 \cos(3t)$$
+    \begin{enumerate}[(a)]
+    \item Use a MATLAB simulation to estimate the amplitude of the
+      steady-state oscillations in this system.
+    \item If you modify the frequency of the external force, so
+      $\Fext = 10 \cos(bt)$, use trial and error to find a frequency
+      that produces steady-state oscillations with amplitude at least
+      twice as large as you found in part (a).
+    \end{enumerate}
+\end{Question}
 
-% %****************
-% \item
-% \begin{Question}
-% A cantilevered beam which is $L = 2$ m long, made out of a pine ``2 by 4'' has \\
-%   $I = 2.23 \times 10^{-6}$ m$^4$,\hspace{0.5in} $E = 9.1 \times
-%   10^{9}$ N/m$^2$, and its deformation satisfies the differential
-%   equation
-% $$ EI y^{(4)} = p(x)$$
-% where $p(x)$ is the loading on the beam in N/m, and boundary
-% conditions $y(0) = 0$, $y'(0) = 0$, $y''(2) = 0$, and $y'''(2) = 0$.
+\begin{Solution}
+  The system is damped, so the $x_c$ solution will have negative
+  exponentials in it. i.e. that part of the solution will be {\bf
+    transient} because its contribution $\to 0$ over time.  That is
+  why $x_c$ is referred to as $x_{\mbox{transient}}$ or
+  $x_{\mbox{tr}}$ throughout the problems in this section.
 
-% \begin{enumerate}
-% \item Find the formula for $y(x)$ if the load applied is {\em
-%     triangular} (increases linearly), given by $p(x) = 20 x$ N/m.
-%   I.e. as $x$ increases, moving away from the mounting point of the
-%   beam, the load increases, until at the tip of the beam ($x=2$), the
-%   load is 40 N/m.
-% \item Find the amount of deflection of the beam at the tip under this
-%   load.
-% \end{enumerate}
-% \begin{center}
-% \includegraphics[width=0.3\linewidth]{w05_triangular_load}
-% \end{center}
-% \end{Question}
+  Since the RHS is pure cos/sine, its differential family will not
+  overlap with the exp sin/cos in $x_c$.  This means $x_p$ will be a
+  simple linear combination of $\cos(3t)$ and $\sin(3t)$.
 
-% \begin{Solution}
-%   \begin{enumerate}[(a)]
-%   \item 
-%   Since the corresponding homogeneous DE is simply $E Iy^{(4)} = 0$, with
-%   roots to the characteristic equation of zero (repeated four times),
-%   $y_c = c_1 + c_2 x+ c_3 x^2 + c_4 x^3$.
-  
-%   Since the RHS = $20 x$, $y_{p}$ would usually have been $A + Bx$.
-%   However, this is not linearly independent with the functions in
-%   $y_c$, so we boost by powers of $x$ until it is, so we choose
-%   $y_p = A x^4 + Bx^5$.
-  
-%   Subbing $y_p$ into the DE and solving for $A$ and $B$,
-%   \begin{align*}
-%    EI \left(\underbrace{24 A + 120 Bx}_{y^{(4)}}\right) & = 20 x  \\
-% \mbox{const coeff's: ~~~} A & = 0 \mbox{ and } \\
-% \mbox{$x$ coeff's: ~~~} 120 EI B = 20, \mbox{ or } B & = \frac{1}{6 EI} \\
-% \mbox{ so } y_P & =  \frac{1}{6 EI} x^5
-%   \end{align*}
+Let $x_p = A \cos(3t) + B \sin(3t)$. \\
+$x_p' = -3A \sin(3t) + 3B \cos(3t)$ \\
+$x_p'' = -9A \cos(3t) - 9B \sin(3t)$ \\
 
-% This means the general solution is 
-% $$y = \underbrace{c_1 + c_2 x+ c_3 x^2 + c_4 x^3}_{y_c} + \underbrace{\frac{1}{6EI} x}_{y_p}$$
-% To solve for $c_1, \ldots, c_4$, we use the boundary conditions.
-% \begin{align*}
-% y(0)  = 0  \implies  0 & = c_1 \\
-% y'(0)  = 0  \implies  0 & = c_2 \\
-% y''(2)  = 0 \implies 0 & = 2 c_3 + 6 c_4 (2) + \frac{1}{6 EI} 20 (2)^3 \\ 
-% y'''(2)  = 0 \implies 0 & = 6 c_4  + \frac{1}{6 EI} 60 (2)^2  
-% \end{align*}
-% Solving gives $\ds c_4 = \frac{-20}{3 EI}$ and $\ds c_3 = \frac{80}{3 EI}$, so the particular 
-% solution, or the formula for the beam deflection at $x$ is 
-% $$y = \frac{1}{EI} \left(\frac{80}{3} x^2 - \frac{20}{3} x^3 + \frac{1}{6} x^5\right)$$ 
-% \item The deflection at the tip, $x=2$, is simply the value of $y(2)$:
-% $$y(2) = \frac{1}{EI} \left(\frac{80}{3} 2^2 - \frac{20}{3} 2^3 + \frac{1}{6} 2^5\right) \approx 0.00289$$ 
-% This means the tip of the beam deflects by 0.00289 m or roughly 3 mm
-% under this load.
-%   \end{enumerate}
-% \end{Solution}
+Substituting into the DE,
+$$ ( -9A \cos(3t) - 9B \sin(3t))
++4( -3A \sin(3t) + 3B \cos(3t))
++4(A \cos(3t) + B \sin(3t))  = 10 \cos(3t)$$ 
+\begin{align*}
+\mbox{sine coeffs: ~~~} -9B-12A+4B & = 0 & -12A -5B &= 0 \\
+\mbox{cos coeffs: ~~~} -9A+12B+4A & = 10 & -5A + 12B &= 10\\
+\\
+-60A -25B & = 0 \\
+-60A + 144 B &= 120 \\
+\\
+ -169B &= -120 \\
+\end{align*}
 
 
+Solving gives $\ds A = \frac{-50}{169}, B = \frac{120}{169}$, so 
 
-% \item \begin{Question}
-% Use the method of variation of parameters to find a particular solution to
-%   $y'' -y' -2y = 2e^{-t}$.  Check your answer by using the method of
-%   undetermined coefficients.
-% \end{Question}
+$$x_p = x_{sp} = \frac{-50}{169} \cos(3t) + \frac{120}{169} \sin(3t)$$
 
+The amplitude of the sum $A \cos(bt) + B \sin(bt)$ is given by $C =
+\sqrt{A^2 + B^2}$, so the amplitude here is $\ds \sqrt{
+  \left(\frac{-50}{169}\right)^2 + \left(\frac{120}{169}\right)^2}
+\approx 0.77$ meters or 77 cm.
 
-% \item \begin{Question}
-% Solve $x'' -2x' + x = \dfrac{e^t}{1+t^2}$.
-% \end{Question}
-
-%  \vspace*{0.5em}
-% \item \begin{Question}
-% The \define{Bessel equation} of order one-half $x^2 y'' + xy ' +
-%   \bigl(x^2- \tfrac{1}{4} \bigr) y = 0$ has two linearly independent solutions
-%   $y_1(x) = x^{-1/2} \cos(x)$ and $y_2(x) = x^{-1/2} \sin(x)$.  Find a general
-%   solution to the nonhomogenous equation $x^2 y'' + xy ' + \bigl(x^2-
-%   \tfrac{1}{4} \bigr) y = x^{5/2}$ where $x>0$.
-% \end{Question}
-
-
+\end{Solution}
 \end{enumerate}
 
 
