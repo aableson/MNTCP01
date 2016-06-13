@@ -456,7 +456,7 @@ coefficient in N/(m/s).
 \includegraphics[width=3in]{graphics/Week08_Spring/W08DampedSpring1A}
 \end{center}
 
-Achieving a 10\% reduction in the amplitude would take about 24
+
 seconds, or between 8 and 9 cycles.
 
 \begin{center}
@@ -479,103 +479,60 @@ of the oscillations below 10\% of their original magnitude after 3 cycles.
 % %****************
 \item 
 \begin{Question}
-  For a spring/mass system with $m=1$ kg, $c=6$ N/(m/s), and $k=45$,
+  For a spring/mass system with $m=1$ kg, $c=0.5$ N/(m/s), and $k=45$,
   approximately what frequency of external forcing would produce the
-  largest amplitude steady-state vibration?  
-You will need to estimate
-  the answer based on guessing and checking against the graph.
+  largest amplitude steady-state vibration?  Give your answer to the
+  nearest 0.5 rad/s.
+
+  You will need to estimate the answer based on guessing and checking
+  against the graph.
  \end{Question}
 
  \begin{Solution}
-   The natural frequency is found using the auxiliary equation $r^2 +
-   6r + 45 = 0$, giving $r=-3 \pm 6i$, so $x_c = c_1 e^{-3t}\cos(6t) +
-   c_2 e^{-3t} \sin(6t)$
+   The natural frequency is going to be near
+   $\omega = \sqrt{k/m} \approx 6.7$ rad/s.
 
- Since this system's natural or intrinsic oscillations are at 6 rad/s,
- the spring/mass will show the largest amplitude response to an outside
- force if that outside force also has a frequency close to 6 rad/s.
+   To run the simulation in MATLAB, we know we need to build the
+   differential equation based on the sum of the forces in MATLAB.  $ma = \sum F$ gives us
+$$ m x'' = -kx - c x' + \sin(bt)$$
+where $b$ is the frequency we can experiment with to maximize the
+steady-state oscillations.
+
+The first-order system version of this is: 
+ \begin{align*}
+ \frac{d}{dt} w_1 & = x' = w_2 \\
+ \frac{d}{dt} w_2 & = x'' =  \frac{1}{m} \left(-kx -c x'+ \sin(bt) \right) \\
+& = \frac{1}{m} \left(-k w_1  - c w_2 + \sin(bt) \right)
+ \end{align*}
+
+ We built this system of differential equations into the file
+ \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/springDEDampedAndForced.m}{springDEDampedAndForced.m} 
+and the main script
+ \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W08DampedSpringSystem3.m}{W08DampedSpringSystem3.m} 
+
+ If we are only interested in the steady-state behaviour, then the
+ initial conditions won't matter (their influence fades in the long
+ run). We make the easiest choice, which is the mass starting at
+ equilibrium at rest, $x(0) = 0$ and $x'(0) = 0$.
+
+ Below is a graph showing the response of the system to
+ $b = 5, 5.5, 6, 6.5$ and 7 rad/s, and then the graph for $b = 6.5$
+ rad/s only.
+
+\begin{center}
+\includegraphics[height=2.6in]{graphics/Week08_Spring/W08DampedAndForced1}
+\includegraphics[height=2.6in]{graphics/Week08_Spring/W08DampedAndForced2}
+\end{center}
+
+Looking for the steady-state oscillations means looking at the
+amplitudes once the graph steadies into a regular repeating pattern.
+The graph corresponding to $\Fext = \sin(6.5~t)$ is the graph with the
+highest amplitude once that steady-state oscillation pattern is
+reached.
+
 
  \end{Solution}
 
-%****************
-\item 
-\begin{Question}
-For a spring/mass system with $m=1$ kg, $c=10$ N/(m/s), and
-  $k=650$, approximately what frequency of external forcing would
-  produce the largest amplitude steady-state vibration?
-You will need to estimate
-  the answer based on guessing and checking against the graph.
-\end{Question}
-
-\begin{Solution}
-$m=1, c=10,k=650,F_0=100$, so
-$$x'' + 10x' + 650x = \cos(\omega t)$$ 
-
-The natural frequency is found using the auxiliary equation $r^2 + 10r
-+ 650 = 0$, giving $r=-5 \pm 25i$, so $x_c = c_1 e^{-5t}\cos(25t) +
-c_2 e^{-5t} \sin(25t)$
-
-It will show its largest amplitude response to stimuli with
-frequencies close to 25 rad/s.
-\end{Solution}
-
-%****************
-\item 
-  \begin{Question} 
-    Consider the equation for the spring/mass system with $m=1$ kg,
-    $c=4$ N/(m/s) and $k = 4$ N/m, and which is being forced by an
-    external periodic force of $10 \cos(3t)$ N:
-    $$x'' + 4x' + 4x = 10 \cos(3t)$$
-    \begin{enumerate}[(a)]
-    \item Use a MATLAB simulation to estimate the amplitude of the
-      steady-state oscillations in this system.
-    \item If you modify the frequency of the external force, so
-      $\Fext = 10 \cos(bt)$, use trial and error to find a frequency
-      that produces steady-state oscillations with amplitude at least
-      twice as large as you found in part (a).
-    \end{enumerate}
-\end{Question}
-
-\begin{Solution}
-  The system is damped, so the $x_c$ solution will have negative
-  exponentials in it. i.e. that part of the solution will be {\bf
-    transient} because its contribution $\to 0$ over time.  That is
-  why $x_c$ is referred to as $x_{\mbox{transient}}$ or
-  $x_{\mbox{tr}}$ throughout the problems in this section.
-
-  Since the RHS is pure cos/sine, its differential family will not
-  overlap with the exp sin/cos in $x_c$.  This means $x_p$ will be a
-  simple linear combination of $\cos(3t)$ and $\sin(3t)$.
-
-Let $x_p = A \cos(3t) + B \sin(3t)$. \\
-$x_p' = -3A \sin(3t) + 3B \cos(3t)$ \\
-$x_p'' = -9A \cos(3t) - 9B \sin(3t)$ \\
-
-Substituting into the DE,
-$$ ( -9A \cos(3t) - 9B \sin(3t))
-+4( -3A \sin(3t) + 3B \cos(3t))
-+4(A \cos(3t) + B \sin(3t))  = 10 \cos(3t)$$ 
-\begin{align*}
-\mbox{sine coeffs: ~~~} -9B-12A+4B & = 0 & -12A -5B &= 0 \\
-\mbox{cos coeffs: ~~~} -9A+12B+4A & = 10 & -5A + 12B &= 10\\
-\\
--60A -25B & = 0 \\
--60A + 144 B &= 120 \\
-\\
- -169B &= -120 \\
-\end{align*}
-
-
-Solving gives $\ds A = \frac{-50}{169}, B = \frac{120}{169}$, so 
-
-$$x_p = x_{sp} = \frac{-50}{169} \cos(3t) + \frac{120}{169} \sin(3t)$$
-
-The amplitude of the sum $A \cos(bt) + B \sin(bt)$ is given by $C =
-\sqrt{A^2 + B^2}$, so the amplitude here is $\ds \sqrt{
-  \left(\frac{-50}{169}\right)^2 + \left(\frac{120}{169}\right)^2}
-\approx 0.77$ meters or 77 cm.
-
-\end{Solution}
 \end{enumerate}
 
 
