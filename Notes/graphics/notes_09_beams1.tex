@@ -1,0 +1,32 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}                                                            
+\usepackage{pst-stru}                                                            
+\begin{document}                                                                
+\begin{pspicture}[showgrid=false](-1,0)(12,5)
+\pnode(0,3){A}  \pnode(8,3){B}
+\pnode(0,0){A1} \pnode(8,0){B1}
+\pnode(4,0){M}  
+\psframe[linewidth=1.5pt](0,2.9)(8,3.1)  % Beam AB
+
+\def\wall{
+\psframe[fillstyle=vlines,linestyle=none,hatchwidth=0.5\pslinewidth](-0.9,-0.3)(0.9,0)
+\psline[linewidth=1.5\pslinewidth](-0.9,0)(0.9,0)
+}
+\rput{-90}(A){\wall}  
+
+%overall dimension
+\pcline[offset=-10ex]{|-|}(0,3.7)(8,3.7)
+\lput*{:U}{2m}  % label put
+
+% Load
+\psframe[linewidth=.5pt](0,3.1)(8,3.7)  % Beam AB
+
+\multido{\nx=0.5+0.5}{15}
+{
+\psline[linewidth=1.5\pslinewidth]{->}(\nx,3.7)(\nx,3.2)
+}
+\rput(4,4.0){$p(x)$}
+
+\end{pspicture}
+\end{document}

@@ -23,6 +23,54 @@
 \end{itemize}
 \vspace{5mm}
 
+\newpage
+
+\subsection*{Example - Pendulum }
+\vfill
+\begin{align*}
+  \mbox{Newton's Second Law: }   m  L^2 \theta'' & = T_g + T_f  \\
+  & = - m L g \sin(\theta) - (\mu L^2 m) \theta' \\
+  \mbox{Solving for $\theta''$: }\theta'' & = - \frac{g}{L} \sin(\theta) - \mu 
+  \theta'
+\end{align*}
+
+\problem Turn this single second-order DE into a pair of first-order
+DEs.
+
+\newpage
+
+
+\problem Download the representation of this system of DEs,
+  \texttt{pendulumDE.m}.  Compare it to our DE system,
+\begin{align*}
+\frac{d y_1}{dt} & = y_2 \\
+\frac{d y_2}{dt} & = -\frac{g}{L}\sin(y_1)  - \mu y_2
+\end{align*}
+\vsc
+
+\problem Download and run the script \texttt{W8\_2.m}.
+
+\vsc
+
+\problem What were the initial conditions of the pendulum?
+
+\vfill
+
+\problem Based on that information, what do the two curves on the graph
+  represent?
+
+\vfill
+
+\newpage
+
+\problem Change the script so the pendulum also has an initial velocity.
+
+\vsc
+
+\problem If we keep the initial angle at $-\frac{\pi}{2}$ (pendulum
+  out horizontally), experiment and find the initial velocity that
+  will push the pendulum ``over the top''.
+
 \topic{Deformation of a Loaded Beam}
 \section*{Deformation of a Loaded Beam} 
 ~\\[1ex]

@@ -1,0 +1,40 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}                                                            
+\usepackage{pst-stru}                                                            
+\begin{document}                                                                
+\begin{pspicture}[showgrid=false](-1,0)(12,5)
+\pnode(0,3){A}  \pnode(8,3){B}
+\pnode(0,0){A1} \pnode(8,0){B1}
+\pnode(4,0){M}  
+\psframe[linewidth=1.5pt](0,2.9)(8,3.1)  % Beam AB
+
+\def\wall{
+\psframe[fillstyle=vlines,linestyle=none,hatchwidth=0.5\pslinewidth](-0.3,-0.3)(0.3,0)
+\psline[linewidth=1.5\pslinewidth](-0.3,0)(0.3,0)
+}
+\rput{-90}(A){\wall}  
+
+%overall dimension
+\pcline[offset=6ex]{|-|}(0,3.7)(8,3.7)
+\lput*{:U}{2m}  % label put
+
+% Load
+\psframe[linewidth=.5pt](0,3.1)(4,3.7)  % Beam AB
+\psline[linewidth=1.5\pslinewidth]{->}(0.5,3.7)(0.5,3.2)
+\psline[linewidth=1.5\pslinewidth]{->}(1.0,3.7)(1.0,3.2)
+\psline[linewidth=1.5\pslinewidth]{->}(1.5,3.7)(1.5,3.2)
+\psline[linewidth=1.5\pslinewidth]{->}(2.0,3.7)(2.0,3.2)
+\psline[linewidth=1.5\pslinewidth]{->}(2.5,3.7)(2.5,3.2)
+\psline[linewidth=1.5\pslinewidth]{->}(3.0,3.7)(3.0,3.2)
+\psline[linewidth=1.5\pslinewidth]{->}(3.5,3.7)(3.5,3.2)
+
+\pcline[offset=3ex]{|-|}(0,3.7)(4,3.7)
+\lput*{:U}{1m}  % label put
+
+\psline[linewidth=2.5\pslinewidth]{->}(10,3.4)(4,3.4)
+
+\rput(10,3.8){1500 N/m}  % label put
+
+\end{pspicture}
+\end{document}
