@@ -102,8 +102,8 @@ Generate a plot of the resulting angular position over time.
 
 
 \newpage 
-\topic{Pendulum - Period of Swings}
-\subsection*{Pendulum - Period of Swings}
+\topic{Application - Period of Pendulum Swings}
+\subsection*{Application - Period of Pendulum Swings}
 
 Galileo famously noticed the consistent period of pendulum swings,
 even if the amplitude of the swings was changed (so the actual
@@ -129,18 +129,12 @@ radians ($= 90$ degrees).
 
 \newpage
 
-\problem Use these observations to explain the designs you see for
-pendulum-based clocks.
-
-\newpage
-
 \topic{Pendulum -  Including an Initial Velocity}
 \subsection*{Pendulum -  Including an Initial Velocity}
 
 \problem Write a new simulation script that starts the pendulum
 swinging from $ \theta_0 = -\frac{\pi}{2}$, with no initial velocity.
-Simulate the motion for this scenario and generate a graph of the
-angle against time.
+Simulate the motion for this scenario.
 
 Use the  parameters $g = 9.8$ m/s$^2$, $L$ = 2 m, and $\mu = 0.1$. \\
 
@@ -148,18 +142,9 @@ Use the  parameters $g = 9.8$ m/s$^2$, $L$ = 2 m, and $\mu = 0.1$. \\
 
 \newpage
 
-If we add a high enough initial `kick', or initial velocity, it would
-be possible to make the mass of the pendulum go ``over the top'', or
-above the point of rotation.
-
-\problem Sketch what the anglular position graph would look like for
-this scenario.
-
-\newpage
-
 \problem If we keep the initial angle at $-\frac{\pi}{2}$ (pendulum
-out horizontally), experiment with the MATLAB code to find the initial
-velocity that will push the pendulum ``over the top''.
+out horizontally), experiment and find the initial velocity that will
+push the pendulum ``over the top''.
 
 \newpage
 
@@ -188,10 +173,10 @@ where
 \item $I$ is the moment of inertia of the beam (depends on beam shape and size) 
 \end{itemize}
 
-Also relevant are the properties for beam supported at one end,
+Also relevant are the properties 
 \begin{align*}
   V_0 & = \mbox{shear}(0) = \int_0^L p(x)~dx \mbox{ and }\\
-  M_0 & = \mbox{torque}(0) = \int_0^L x ~p(x)~dx ~~~~~~~~~~~~(L = \mbox{ length of beam}) 
+  M_0 & = \mbox{torque}(0) = \int_0^L x ~p(x)~dx 
 \end{align*}
 
  \newpage
@@ -270,7 +255,6 @@ be?
   $y(0) = 0$, $y'(0) = 0$,  \\
   $y''(0) = V_0$, and $y'''(0) = M_0$.
 \end{minipage}
-\vspace{0.5in}
 
 \problem Use a differential equation solver to generate a plot of the
 deflection of the beam shown above, for a $2\times10$ wood beam:
@@ -278,8 +262,8 @@ $I = 4.1 \times 10^{-5}$ m$^4$, and $E = 9 \times 10^9$ N/m.
 
 \newpage
 
-\topic{Application - Lake Mixing Model}
-\subsection{Application - Lake Mixing Model}
+\topic{Application - Simple Lake Scenario}
+\subsection{Application - Simple Lake Scenario}
 Consider a small lake that initially contains $10$ million litres of
 fresh water.  Water containing an undesirable chemical flows into the
 lake at the rate of $5$ million litres per year; the mixture in the
@@ -291,8 +275,8 @@ expression $c(t) = 2 + \sin(2t) \; \text{g} \cdot \text{L}^{-1}$.
 
 \newpage
 \problem Use MATLAB and a differential equation solver to determine
-the amount of chemical in the lake over time, assuming that the lake
-started without any contamination.
+the amount of chemical in the lake, assuming that the lake started
+without any contamination.
 
 \newpage
 
@@ -305,20 +289,18 @@ of the water.
 
 \begin{itemize}
 \item The volume of the pond is 40,000 cubic meters.
-\item Water is flowing in and out of the pond at a rate of 1,500 cubic
+\item Water is flowing in and out of the pond at a rate of 2,000 cubic
   meters per day.
 \item The water flowing into the pond contains 2 g of toxic chemical
   per cubic meter.
-\item The inflow water also contains 1\% sediments
+\item The inflow water also contains 
 \end{itemize}
 
 \problem Sketch a diagram of this scenario.
 
 \newpage
 
-\problem Write a differential equation that describes the rate of
-change of the concentration of the chemical in the water remaining in
-the tailings pond.
+\problem Write a differential equation that describes
 
 \newpage
 

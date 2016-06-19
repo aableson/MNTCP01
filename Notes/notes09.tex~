@@ -17,22 +17,36 @@
 \begin{itemize}
 \item Take problems that can be modeled by differential equations,
   both first and second order, and give solutions both by hand and
-  MATLAB (CLO5, CLO8)
+  MATLAB 
 \item Examine case studies of differential equations applied to
   engineering problems and reproduce those solutions
 \end{itemize}
 \vspace{5mm}
 
+%Falling body problem (maybe even the redbull stratos jump?)
+%Electric Circuits
+%Suspension cable bridge
+
 \newpage
 
-\subsection*{Example - Pendulum }
-\vfill
+\topic{Application - Pendulum}
+\subsection*{Application - Pendulum }
+\begin{minipage}[t]{0.25\linewidth}
+\vspace{0pt}
+\begin{center}
+\includegraphics[width=1.0\linewidth]{graphics/notes_09_pendulum_diagram}
+\end{center}
+\end{minipage}
+\begin{minipage}[t]{0.70\linewidth}
+\vspace{0pt}
 \begin{align*}
-  \mbox{Newton's Second Law: }   m  L^2 \theta'' & = T_g + T_f  \\
-  & = - m L g \sin(\theta) - (\mu L^2 m) \theta' \\
+  \mbox{Newton's }& \mbox{ Second Law: } \\
+   m  L^2 \theta'' & = T_g + T_f  \\
+  & = - m L g \sin(\theta) - (\mu L^2 m) \theta' \\[3ex]
   \mbox{Solving for $\theta''$: }\theta'' & = - \frac{g}{L} \sin(\theta) - \mu 
   \theta'
 \end{align*}
+\end{minipage}
 
 \problem Turn this single second-order DE into a pair of first-order
 DEs.
@@ -40,36 +54,72 @@ DEs.
 \newpage
 
 
-\problem Download the representation of this system of DEs,
-  \texttt{pendulumDE.m}.  Compare it to our DE system,
+\problem Create a new MATLAB function file called \texttt{pendulumDE.m}.
+Start with the first line
+\begin{verbatim}
+function dw_dt = pendulumDE(t, w, g, L, mu) 
+\end{verbatim}
+
+In the body of the function, implement the system of differential
+equations we constructed on the previous page.
 \begin{align*}
-\frac{d y_1}{dt} & = y_2 \\
-\frac{d y_2}{dt} & = -\frac{g}{L}\sin(y_1)  - \mu y_2
+  \frac{d w_1}{dt} & = w_2 \\
+  \frac{d w_2}{dt} & = -\frac{g}{L}\sin(w_1)  - \mu w_2
 \end{align*}
 \vsc
 
-\problem Download and run the script \texttt{W8\_2.m}.
+\newpage
 
-\vsc
+\problem Write a MATLAB that simulates the motion of the pendulum
+using  \\
+$g = 9.8$ m/s$^2$, $L$ = 2 m, $\mu = 0.1$, and \\
+initial amplitude of 0.05 radians ($\approx 2.9$ degrees).
 
-\problem What were the initial conditions of the pendulum?
 
-\vfill
+\newpage 
+\topic{Application - Period of Pendulum Swings}
+\subsection*{Application - Period of Pendulum Swings}
 
-\problem Based on that information, what do the two curves on the graph
-  represent?
+Galileo famously noticed the consistent period of pendulum swings,
+even if the amplitude of the swings was changed (so the actual
+distance travelled was different).
 
-\vfill
+\problem Compare the periods of the pendulum swings, using a range of
+initial angles from $\theta_0 = 0.05$ radians up to $\theta_0 = 0.25$
+radians ($\approx 14$ degrees).
+
+
+\newpage
+However, it turns out that pendulums are {\bf not} perfectly
+consistent in their period, due to the non-linear term
+$\ds -\frac{g}{L} \sin(\theta)$ in one of the forces: as the
+amplitudes get bigger, there is a graudal lengthening of the period.
+
+
+\problem Compare the periods of the pendulum swings, using a range of
+initial angles from $\theta_0 = 0.25$ radians up to $\theta_0 = \frac{\pi}{2}$
+radians ($= 90$ degrees).
 
 \newpage
 
-\problem Change the script so the pendulum also has an initial velocity.
+\topic{Pendulum -  Including an Initial Velocity}
+\subsection*{Pendulum -  Including an Initial Velocity}
+
+\problem Write a new simulation script that starts the pendulum
+swinging from $ \theta_0 = -\frac{\pi}{2}$, with no initial velocity.
+Simulate the motion for this scenario.
+
+Use the  parameters $g = 9.8$ m/s$^2$, $L$ = 2 m, and $\mu = 0.1$. \\
 
 \vsc
 
+\newpage
+
 \problem If we keep the initial angle at $-\frac{\pi}{2}$ (pendulum
-  out horizontally), experiment and find the initial velocity that
-  will push the pendulum ``over the top''.
+out horizontally), experiment and find the initial velocity that will
+push the pendulum ``over the top''.
+
+\newpage
 
 \topic{Deformation of a Loaded Beam}
 \section*{Deformation of a Loaded Beam} 
@@ -85,29 +135,27 @@ DEs.
 
 \newpage
 
-The physics of how beams deform isn't central to this course, and
-engineering students in particular will take a course on structures
-that goes into deeper detail.  For our purposes, it is enough to be
-able to use the resulting differential equations.
+The shape of a beam under load is defined by the differential equation
 
 $$EI y^{(4)} = p(x)$$
-where  \\
-$y(x)$ is the deflection (distance away from a straight line),  \\
-$p(x)$ is the loading in N/m at point $x$ along the beam, \\
-$E$ is a value related to the material of the beam, and  \\
-$I$ is a value derived from the cross-sectional size and shape of the
-beam.
+where 
+\begin{itemize}
+\item $y(x)$ is the deflection (distance away from a straight line),  
+\item $p(x)$ is the loading in N/m at point $x$ along the beam, 
+\item $E$ is the modulus of elasticity of the beam (depends on material), and  
+\item $I$ is the moment of inertia of the beam (depends on beam shape and size) 
+\end{itemize}
 
-\newpage
-\problem
-  Find the form of $y_c$ for the beam deflection DE, assuming $E$ and
-  $I$ are constant.
-$$EI y^{(4)} = p(x)$$
+Also relevant are the properties 
+\begin{align*}
+  V_0 & = \mbox{shear}(0) = \int_0^L p(x)~dx \mbox{ and }\\
+  M_0 & = \mbox{torque}(0) = \int_0^L x ~p(x)~dx 
+\end{align*}
 
  \newpage
 
 
-\topic{Cantilevered Beam Under Uniform Load} 
+\topic{Cantilevered Beam Under Uniform Load - Method A}  
 \subsection*{Cantilevered Beam Under Uniform Load} 
 
  Under a uniform loading (constant force per unit length), a {\em
@@ -115,28 +163,235 @@ $$EI y^{(4)} = p(x)$$
  $p(x) = 100$ N/m, (or roughly 10 kg applied to each meter) \\
  $I = 2.23 \times 10^{-6}$ m$^4$,\hspace{0.5in} $E = 9.1 \times
  10^{9}$ N/m$^2$,
- 
-\includegraphics[width=3in]{graphics/notes_09_CantileveredBeam_Diagram}
 
-and the {\em boundary} conditions 
-$y(0) = 0$, $y'(0) = 0$, $y''(2) = 0$, and $y'''(2) = 0$.
+ \begin{center}
+\includegraphics[width=0.6\linewidth]{graphics/notes_09_beams1}
+ \end{center}
 
-\problem
-  Find the amount of deflection of the beam at the tip under this
-  load.
+and the initial conditions \\
+$y(0) = 0$, $y'(0) = 0$, $y''(0) = V_0$, and $y'''(0) = M_0$.
 
 \newpage
-\hfill $EI y^{(4)} = 100$
- 
-~\hfill
-$y(0) = 0$, $y'(0) = 0$, 
 
-~\hfill $y''(2) = 0$, and $y'''(2) = 0$.
+\problem Find the amount of deflection of the beam at the tip under
+this load, using {\bf multiple integrals}.
+
+\begin{minipage}[t]{0.5\linewidth}
+\vspace{0pt}
+\includegraphics[width=1.0\linewidth]{graphics/notes_09_beams1}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.45\linewidth}
+\vspace{0pt}
+$EI y^{(4)} = 100$ \\
+$y(0) = 0$, $y'(0) = 0$,  \\
+$y''(0) = V_0$, and $y'''(0) = M_0$.
+\end{minipage}
 
 \newpage
+\topic{Cantilevered Beam Under Uniform Load - Method B}  
+\subsection{Cantilevered Beam Under Uniform Load - Differential Equation}  
+
+\problem Find the amount of deflection of the beam at the tip under
+this load, using a {\bf differential equation solver}.
+
+\begin{minipage}[t]{0.5\linewidth}
+\vspace{0pt}
+\includegraphics[width=1.0\linewidth]{graphics/notes_09_beams1}
+
+%\includegraphics[width=3in]{graphics/notes_09_CantileveredBeam_Diagram}
+\end{minipage}
+\begin{minipage}[t]{0.5\linewidth}
+\vspace{0pt}
+$EI y^{(4)} = 100$ \\
+$y(0) = 0$, $y'(0) = 0$,  \\
+$y''(0) = V_0$, and $y'''(0) = M_0$.
+\end{minipage}
+
+\newpage
+\problem If the maximum allowable deflection in such a beam is only
+0.2 cm (say in a building code), what would the maximum uniform load
+be?
+
+\newpage
+
+\topic{Cantilevered Beam - Non-Uniform Load}
+\subsection*{Cantilevered Beam - Non-Uniform Load}
+
+\begin{minipage}[t]{0.55\linewidth}
+\vspace{0pt}
+\includegraphics[width=1.0\linewidth]{graphics/notes_09_beams2}
+\end{minipage}
+\begin{minipage}[t]{0.45\linewidth}
+  \vspace{0pt}
+  $EI y^{(4)} = 100$ \\
+  $y(0) = 0$, $y'(0) = 0$,  \\
+  $y''(0) = V_0$, and $y'''(0) = M_0$.
+\end{minipage}
+
+\problem Use a differential equation solver to generate a plot of the
+deflection of the beam shown above, for a $2\times10$ wood beam:
+$I = 4.1 \times 10^{-5}$ m$^4$, and $E = 9 \times 10^9$ N/m.
+
+\newpage
+
+\topic{Application - Simple Lake Scenario}
+\subsection{Application - Simple Lake Scenario}
+Consider a small lake that initially contains $10$ million litres of
+fresh water.  Water containing an undesirable chemical flows into the
+lake at the rate of $5$ million litres per year; the mixture in the
+lake flows out at the same rate.  The concentration $c(t)$ of chemical
+in the incoming water varies periodically with time according to the
+expression $c(t) = 2 + \sin(2t) \; \text{g} \cdot \text{L}^{-1}$.
+
+  \problem Construct a mathematical model of this flow process.
+
+\newpage
+\problem Use MATLAB and a differential equation solver to determine
+the amount of chemical in the lake, assuming that the lake started
+without any contamination.
+
+\newpage
+
+\topic{Application - Tailings Pond With Sediment}
+\subsection*{Application - Tailings Pond With Sediment}
+% Source: http://faculty.sfasu.edu/judsontw/ode/html/firstlook05.html
+Consider a tailings pond, where the the inflow contains both an
+environmentally sensitive chemical, and sediments that will settle out
+of the water.
+
+\begin{itemize}
+\item The volume of the pond is 40,000 cubic meters.
+\item Water is flowing in and out of the pond at a rate of 2,000 cubic
+  meters per day.
+\item The water flowing into the pond contains 2 g of toxic chemical
+  per cubic meter.
+\item The inflow water also contains 
+\end{itemize}
+
+\problem Sketch a diagram of this scenario.
+
+\newpage
+
+\problem Write a differential equation that describes
+
+\newpage
+
+\problem Use MATLAB and a differential equation solver to determine
+the concentration of chemical in the water part of the tailings pond,
+assuming that the pond started without any contamination.
+
+
+\newpage
+
+\problem Comment on any mismatch between the model and the reality
+that should be addressed to make the model more accurate.
+
+\newpage
+\topic{Application - Interconnected Tanks}
+\section*{Application- Interconnected Tanks}
+
+\noindent
+Consider the tanks shown below, which shows water flowing between the
+tanks, and the concentration of a salt solution coming in.  Within
+each tank, the water/salt solution is kept well mixed.
+\begin{center}
+\includegraphics[width=0.7\linewidth]{graphics/notes_09_tanks1}
+\end{center}
+
+\begin{problem}
+  If both tanks start with no salt, sketch what you expect will happen
+  to the concentration within each tank over time.
+\end{problem}
+
+\newpage
+\begin{minipage}[h]{0.5\linewidth}
+\vspace{0pt}
+\begin{problem}
+Create a system of differential equations that dictate 
+how the two tank concentrations will evolve over time.
+\end{problem}
+\end{minipage} \hfill
+\begin{minipage}[h]{0.45\linewidth}
+\vspace{0pt}
+\includegraphics[width=1.0\linewidth]{graphics/notes_09_tanks1}
+\end{minipage}
+
+
+\newpage
+\begin{minipage}[t]{0.5\linewidth}
+\vspace{0pt}
 \problem
-  If the maximum allowable deflection in such a beam is only 0.2 cm
-  (say in a building code), what would the maximum uniform load be?
+  Use MATLAB and a differential equation solver to predict the exact salt concentrations over time
+in {\bf both tanks}. 
+% \begin{align*}
+% \frac{dc_A}{dt}    & = \frac{-1}{10} c_A + 3; \\
+% \frac{dc_B}{dt}    & = \frac{1}{20} c_A -\frac{1}{20} c_B 
+% \end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.45\linewidth}
+\vspace{0pt}
+\includegraphics[width=1.0\linewidth]{graphics/notes_09_tanks1}
+\end{minipage}
+
+\newpage
+
+\topic{Tank Model - Example 2}
+\subsection*{Tank Model - Example 2}
+
+Consider the more complicated tank arrangement shown below.
+\begin{center}
+\includegraphics[width=0.7\linewidth]{graphics/notes_09_tanks2}
+\end{center}
+\begin{problem}
+Given that the initial concentrations are \\
+$c_A(0) = 0 $ g/L and $c_B(0)  = 90$ g/L,  \\
+sketch what you would predict for the concentration in each tank over time.
+\end{problem}
+
+\newpage
+\begin{minipage}[h]{0.5\linewidth}
+\vspace{0pt}
+\begin{problem}
+  Construct the differential equation for the salt concentration in
+  each tank.
+\end{problem}
+\end{minipage} \hfill
+\begin{minipage}[h]{0.45\linewidth}
+\vspace{0pt}
+\includegraphics[width=1.0\linewidth]{graphics/notes_09_tanks2}
+\end{minipage}
+
+%\newpage
+%\hfill \includegraphics[width=0.5\linewidth]{graphics/notes_09_tanks2}
+
+\newpage
+
+\begin{minipage}[h]{0.5\linewidth}
+  \vspace{0pt} \problem Use MATLAB and a differential equation solver
+  to predict the salt concentrations over time by solving the system
+  of differential equations
+  \begin{align*}
+    \frac{dc_A}{dt} & = -0.09 c_A + 0.02 c_B + 2.1 \\
+    \frac{dc_B}{dt} & = 0.18 c_A - 0.18 c_B \\
+  \end{align*}
+\end{minipage} \hfill
+\begin{minipage}[h]{0.45\linewidth}
+\vspace{0pt}
+\includegraphics[width=1.0\linewidth]{graphics/notes_09_tanks2}
+\end{minipage}
+
+
+\newpage
+
+
+~\hfill \begin{minipage}[h]{0.45\linewidth}
+\vspace{0pt}
+\includegraphics[width=1.0\linewidth]{graphics/notes_09_tanks2}
+\end{minipage}
+
+
+
 \end{document}
 %Confirmation of deflection:
 %  http://www.efunda.com/formulae/solid_mechanics/beams/casestudy_display.cfm?case=cantilever_uniformload
