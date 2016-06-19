@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  19 JUN 2016 10:51
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  19 JUN 2016 11:12
 entering extended mode
 **\input notes09.tex
 (notes09.tex (PreambleCommon.tex (C:\MiKTeX2.9\tex\latex\base\article.cls
@@ -718,211 +718,130 @@ nation with the same identifier (name{page.1}) has been already used, duplicate
  ignored
 <to be read again> 
                    \relax 
-l.250 \newpage
+l.249 \newpage
                [1]pdfTeX warning (ext4): destination with the same identifier (
 name{page.2}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.253 \newpage
+l.254 \newpage
+               [2]pdfTeX warning (ext4): destination with the same identifier (
+name{page.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.274 \newpage
+               [1]pdfTeX warning (ext4): destination with the same identifier (
+name{page.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.278 \newpage
                [2]pdfTeX warning (ext4): destination with the same identifier (
 name{page.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.255 \newpage
-               [3] [4] [5]pdfTeX warning (ext4): destination with the same iden
-tifier (name{page.1}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.281 \newpage
-               [1]pdfTeX warning (ext4): destination with the same identifier (
-name{page.2}) has been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.286 \newpage
-               [2]
-<graphics/notes_09_tanks1.pdf, id=150, 147.95175pt x 56.9046pt>
+l.285 \newpage
+               [3] [4]
+<graphics/notes_09_tanks1.pdf, id=143, 330.23274pt x 120.45pt>
 File: graphics/notes_09_tanks1.pdf Graphic file (type pdf)
 
 <use graphics/notes_09_tanks1.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks1.pdf used on input line 295.
-(pdftex.def)             Requested size: 475.53423pt x 182.9146pt.
+Package pdftex.def Info: graphics/notes_09_tanks1.pdf used on input line 299.
+(pdftex.def)             Requested size: 475.53423pt x 173.45335pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.303 \newpage
+l.307 \newpage
                [1 <./graphics/notes_09_tanks1.pdf>]
 File: graphics/notes_09_tanks1.pdf Graphic file (type pdf)
 
 <use graphics/notes_09_tanks1.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks1.pdf used on input line 313.
-(pdftex.def)             Requested size: 305.69983pt x 117.5877pt.
+Package pdftex.def Info: graphics/notes_09_tanks1.pdf used on input line 317.
+(pdftex.def)             Requested size: 305.69983pt x 111.50455pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.317 \newpage
+l.321 \newpage
                [2]
 File: graphics/notes_09_tanks1.pdf Graphic file (type pdf)
  <use graphics/notes_09_tanks1.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks1.pdf used on input line 344.
-(pdftex.def)             Requested size: 305.69983pt x 117.5877pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.347 \newpage
-               [1]
-File: graphics/notes_09_tanks1.pdf Graphic file (type pdf)
- <use graphics/notes_09_tanks1.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks1.pdf used on input line 348.
-(pdftex.def)             Requested size: 339.66878pt x 130.65378pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.350 \newpage
-               [2]
-File: graphics/notes_09_tanks1.pdf Graphic file (type pdf)
- <use graphics/notes_09_tanks1.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks1.pdf used on input line 351.
-(pdftex.def)             Requested size: 339.66878pt x 130.65378pt.
+Package pdftex.def Info: graphics/notes_09_tanks1.pdf used on input line 334.
+(pdftex.def)             Requested size: 305.69983pt x 111.50455pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.353 \newpage
+l.337 \newpage
                [3]
-File: graphics/notes_09_tanks1.pdf Graphic file (type pdf)
- <use graphics/notes_09_tanks1.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks1.pdf used on input line 355.
-(pdftex.def)             Requested size: 203.80333pt x 78.39296pt.
-pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.405 \newpage
-               [4]
-<graphics/notes_09_tanks2.pdf, id=187, 308.15024pt x 120.45pt>
+<graphics/notes_09_tanks2.pdf, id=169, 308.15024pt x 120.45pt>
 File: graphics/notes_09_tanks2.pdf Graphic file (type pdf)
 
 <use graphics/notes_09_tanks2.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 411.
+Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 344.
 (pdftex.def)             Requested size: 475.53423pt x 185.89053pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.419 \newpage
+l.352 \newpage
                [1 <./graphics/notes_09_tanks2.pdf>]
 File: graphics/notes_09_tanks2.pdf Graphic file (type pdf)
 
 <use graphics/notes_09_tanks2.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 429.
+Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 362.
 (pdftex.def)             Requested size: 305.69983pt x 119.50131pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.432 \newpage
+l.368 \newpage
                [2]
 File: graphics/notes_09_tanks2.pdf Graphic file (type pdf)
  <use graphics/notes_09_tanks2.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 433.
-(pdftex.def)             Requested size: 339.66878pt x 132.78026pt.
+Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 381.
+(pdftex.def)             Requested size: 305.69983pt x 119.50131pt.
 pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.435 \newpage
-               [3]
-Overfull \hbox (73.43343pt too wide) in paragraph at lines 458--458
-[] 
- []
-
-File: graphics/notes_09_tanks2.pdf Graphic file (type pdf)
-<use graphics/notes_09_tanks2.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 463.
-(pdftex.def)             Requested size: 305.69983pt x 119.50131pt.
-
-Overfull \hbox (44.37578pt too wide) in paragraph at lines 438--465
-[]$[]$  $[]$ 
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.467 \newpage
-               [1]
-File: graphics/notes_09_tanks2.pdf Graphic file (type pdf)
- <use graphics/notes_09_tanks2.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 472.
-(pdftex.def)             Requested size: 305.69983pt x 119.50131pt.
-
-Overfull \hbox (36.303pt too wide) in paragraph at lines 489--489
-[] 
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.493 \newpage
-               [2]
-File: graphics/notes_09_tanks2.pdf Graphic file (type pdf)
- <use graphics/notes_09_tanks2.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 497.
-(pdftex.def)             Requested size: 305.69983pt x 119.50131pt.
-
-Overfull \hbox (36.303pt too wide) in paragraph at lines 514--514
-[] 
- []
-
-pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.517 \newpage
+l.385 \newpage
                [3]
 File: graphics/notes_09_tanks2.pdf Graphic file (type pdf)
  <use graphics/notes_09_tanks2.pdf>
-Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 522.
-(pdftex.def)             Requested size: 271.73088pt x 106.22237pt.
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 536.
+Package pdftex.def Info: graphics/notes_09_tanks2.pdf used on input line 390.
+(pdftex.def)             Requested size: 305.69983pt x 119.50131pt.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 395.
 pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
 been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.536 \end{document}
+l.395 \end{document}
                      [4]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 536.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 395.
  (notes09.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 536.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 536.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 395.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 395.
 Package rerunfilecheck Info: File `notes09.out' has not changed.
-(rerunfilecheck)             Checksum: 4D06C526456F81EF65393F45EA492E5D;168.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 536.
+(rerunfilecheck)             Checksum: 511E52334CEBBE44AE53DB11C84C17D3;168.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 395.
  ) 
 Here is how much of TeX's memory you used:
- 8366 strings out of 493634
- 119937 string characters out of 3149836
+ 8352 strings out of 493634
+ 119760 string characters out of 3149836
  216965 words of memory out of 3000000
- 11605 multiletter control sequences out of 15000+200000
- 12543 words of font info for 48 fonts, out of 3000000 for 9000
+ 11594 multiletter control sequences out of 15000+200000
+ 9751 words of font info for 37 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 44i,16n,43p,352b,412s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 44i,12n,43p,352b,328s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/MiKTeX2.9/fonts/t
 ype1/public/amsfonts/cm/cmex10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm
-/cmmi10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmmi12.pfb><C:/MiKTeX2
-.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/MiKTeX2.9/fonts/type1/public/am
-sfonts/cm/cmr10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/
-MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX2.9/fonts/type1/pu
-blic/amsfonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmti12
-.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on notes09.pdf (35 pages, 944276 bytes).
+/cmmi12.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmr12.pfb><C:/MiKTeX2.
+9/fonts/type1/public/amsfonts/cm/cmr17.pfb><C:/MiKTeX2.9/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb><C:/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmti12.pfb><C:
+/MiKTeX2.9/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
+Output written on notes09.pdf (28 pages, 916778 bytes).
 PDF statistics:
- 261 PDF objects out of 1000 (max. 8388607)
- 19 named destinations out of 1000 (max. 500000)
+ 231 PDF objects out of 1000 (max. 8388607)
+ 16 named destinations out of 1000 (max. 500000)
  57 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -237,39 +237,31 @@ $I = 4.1 \times 10^{-5}$ m$^4$, and $E = 9 \times 10^9$ N/m.
 
 \topic{Application - Simple Lake Scenario}
 \subsection{Application - Simple Lake Scenario}
-\begin{problem}
-  Consider a small lake that initially contains $10$ million litres of
-  fresh water.  Water containing an undesirable chemical flows into
-  the pond at the rate of $5$ million litres per year; the mixture in
-  the pond flows out at the same rate.  The concentration $\rho(t)$ of
-  chemical in the incoming water varies periodically with time
-  according to the expression
-  $\rho(t) = 2 + \sin(2t) \; \text{g} \cdot \text{L}^{-1}$.
-  \begin{enumerate}
-  \item Construct a mathematical model of this flow process.
-\newpage
-\item Use MATLAB and a differential equation solver to determine the
-  amount of chemical in the pond at any time.
+Consider a small lake that initially contains $10$ million litres of
+fresh water.  Water containing an undesirable chemical flows into the
+lake at the rate of $5$ million litres per year; the mixture in the
+lake flows out at the same rate.  The concentration $c(t)$ of chemical
+in the incoming water varies periodically with time according to the
+expression $c(t) = 2 + \sin(2t) \; \text{g} \cdot \text{L}^{-1}$.
+
+  \problem Construct a mathematical model of this flow process.
 
 \newpage
-~
-\newpage
-  \item Describe the effect of the variation in the incoming concentration.
-  \end{enumerate}
-\end{problem}
+\problem Use MATLAB and a differential equation solver to determine
+the amount of chemical in the lake, assuming that the lake started
+without any contamination.
 
-\newpage
-~ 
 \newpage
 
 \topic{Application - Tailings Pond With Sediment}
 \subsection*{Application - Tailings Pond With Sediment}
 % Source: http://faculty.sfasu.edu/judsontw/ode/html/firstlook05.html
-Consider another tailings pond, where the the inflow contains
-sediments that will settle out of the water.
+Consider a tailings pond, where the the inflow contains both an
+environmentally sensitive chemical, and sediments that will settle out
+of the water.
 
-In this pond, the volume is 40,000 cubic meters.  
 \begin{itemize}
+\item The volume of the pond is 40,000 cubic meters.
 \item Water is flowing in and out of the pond at a rate of 2,000 cubic
   meters per day.
 \item The water flowing into the pond contains 2 g of toxic chemical
@@ -281,8 +273,19 @@ In this pond, the volume is 40,000 cubic meters.
 
 \newpage
 
-Write a differential equation that describes
+\problem Write a differential equation that describes
 
+\newpage
+
+\problem Use MATLAB and a differential equation solver to determine
+the concentration of chemical in the water part of the tailings pond,
+assuming that the pond started without any contamination.
+
+
+\newpage
+
+\problem Comment on any mismatch between the model and the reality
+that should be addressed to make the model more accurate.
 
 \newpage
 \topic{Application - Interconnected Tanks}
@@ -316,96 +319,25 @@ how the two tank concentrations will evolve over time.
 
 
 \newpage
-\topic{Tank System - Example 1}
-\begin{minipage}[h]{0.5\linewidth}
+\begin{minipage}[t]{0.5\linewidth}
 \vspace{0pt}
-\begin{problem}
-  Predict the exact salt concentrations over time by 
-  solving the system of linear differential equations
-  \begin{align*}
-\frac{d}{dt}    
-\begin{bmatrix} c_A \\ c_B 
-    \end{bmatrix}
-=
-\begin{bmatrix}
-  \frac{-1}{10} & 0 \\
-  \frac{1}{20} &   \frac{-1}{20}   
-\end{bmatrix}
-\begin{bmatrix} c_A \\ c_B 
-    \end{bmatrix}
-+ 
-\begin{bmatrix}
-  3 \\ 0 
-\end{bmatrix}
-  \end{align*}
-\end{problem}
-\end{minipage} \hfill
-\begin{minipage}[h]{0.45\linewidth}
+\problem
+  Use MATLAB and a differential equation solver to predict the exact salt concentrations over time
+in {\bf both tanks}. 
+% \begin{align*}
+% \frac{dc_A}{dt}    & = \frac{-1}{10} c_A + 3; \\
+% \frac{dc_B}{dt}    & = \frac{1}{20} c_A -\frac{1}{20} c_B 
+% \end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.45\linewidth}
 \vspace{0pt}
 \includegraphics[width=1.0\linewidth]{graphics/notes_09_tanks1}
 \end{minipage}
 
 \newpage
-\hfill \includegraphics[width=0.5\linewidth]{graphics/notes_09_tanks1}
-
-\newpage
-\hfill \includegraphics[width=0.5\linewidth]{graphics/notes_09_tanks1}
-
-\newpage
-\hfill 
-\includegraphics[width=0.3\linewidth]{graphics/notes_09_tanks1}
-
-\begin{align*}
-  c_A & = -30 e^{-t/10} + 30; \\
-c_B & = 30 e^{-t/10} - 60 e^{-t/20} + 30
-\end{align*}
-
-\begin{center}
-%  \includegraphics[width=0.8\linewidth]{graphics/w11_tank_graph_1}
-\end{center}
-
-
-
-% \begin{proof}[Solution]
-%   Let $Q_A(t)$ and $Q_B(t)$ denote the amount (in kg) of salt in tanks $A$ and
-%   $B$ respectively at time $t$ (in minutes).  It follows that
-%   \begin{align*}
-%     Q_A'(t) &= \text{input rate} - \text{output rate} = (5 \; \text{L} \cdot
-%     \text{min}^{-1})(3 \; \text{kg} \cdot \text{L}^{-1}) - (5 \; \text{L} \cdot
-%     \text{min}^{-1}) \left( \frac{Q_A \; \text{kg}}{50 \; \text{L}} \right) = 15
-%     - \frac{Q_A}{10} \\
-%     Q_B'(t) &= (5 \; \text{L} \cdot \text{min}^{-1}) \left( \frac{Q_A \;
-%         \text{kg}}{50 \; \text{L}} \right) - (5 \; \text{L} \cdot
-%     \text{min}^{-1}) \left( \frac{Q_B \; \text{kg}}{50 \; \text{L}} \right) =
-%     \frac{Q_A}{10} - \frac{Q_B}{10} \, .
-%   \end{align*}
-%   In particular, we obtain
-%   \begin{xalignat*}{7}
-%     \frac{dQ_A}{dt} &= \frac{150 - Q_A}{10} &&\Longrightarrow & \int
-%     \frac{dQ_A}{Q_A-150} &= \int - \frac{1}{10} \; dt &&\Longrightarrow & \ln |
-%     Q_A - 150|  &= -\tfrac{1}{10}t + K \\
-%     &&&\Longrightarrow & Q_A(t) &= 150 - C e^{-t/10} \, .
-%   \end{xalignat*}
-%   Since $Q_A(0) = 50$, we have $C = 100$ and $Q_A(t) = 150 - 100 e^{-t/10}$.
-%   Hence, we have
-%   \begin{align*}
-%     \frac{dQ_B}{dt} + \frac{1}{10} Q_B &= 15 - 10e^{-t/10} \, ,
-%   \end{align*}
-%   so the integrating factor is $\exp\left( \displaystyle\int \tfrac{1}{10} \;
-%     dt \right) = e^{t/10}$ which gives
-%   \begin{align*}
-%     \frac{d}{dt} \Bigl( e^{t/10} Q_B \Bigr) &= e^{t/10} \left( \frac{dQ_B}{dt} +
-%       \frac{1}{10} Q_B \right) = e^{t/10} \Bigl( 15 - 10e^{-t/10} \Bigr) = 15
-%     e^{t/10} - 10 \\
-%     e^{t/10} Q_B &= \int 15 e^{t/10} - 10 \; dt = 150 e^{t/10} - 10 t + C' \\
-%     Q_B(t) &= 150 - 10te^{-t/10} + C' e^{-t/10} \, . 
-%   \end{align*}
-%   Since $Q_B(0) = 100$, we have $C' = -50$ and $Q_B(t) = 150 - 10te^{-t/10} + C'
-%   e^{-t/10}$.
-% \end{proof}
-\newpage
 
 \topic{Tank Model - Example 2}
+\subsection*{Tank Model - Example 2}
 
 Consider the more complicated tank arrangement shown below.
 \begin{center}
@@ -422,7 +354,7 @@ sketch what you would predict for the concentration in each tank over time.
 \vspace{0pt}
 \begin{problem}
   Construct the differential equation for the salt concentration in
-  each tank, and write it in matrix form.
+  each tank.
 \end{problem}
 \end{minipage} \hfill
 \begin{minipage}[h]{0.45\linewidth}
@@ -430,34 +362,19 @@ sketch what you would predict for the concentration in each tank over time.
 \includegraphics[width=1.0\linewidth]{graphics/notes_09_tanks2}
 \end{minipage}
 
-\newpage
-\hfill \includegraphics[width=0.5\linewidth]{graphics/notes_09_tanks2}
+%\newpage
+%\hfill \includegraphics[width=0.5\linewidth]{graphics/notes_09_tanks2}
 
 \newpage
 
-\topic{Tank Model - Example 2 Part 2}
 \begin{minipage}[h]{0.5\linewidth}
-\vspace{0pt}
-\begin{problem}
-  Predict the exact salt concentrations over time by 
-  solving the system of linear differential equations
+  \vspace{0pt} \problem Use MATLAB and a differential equation solver
+  to predict the salt concentrations over time by solving the system
+  of differential equations
   \begin{align*}
- \frac{d}{dt}    
- \begin{bmatrix} c_A \\ c_B 
-     \end{bmatrix}
- =
- \begin{bmatrix}
- -0.09 & 0.02 \\
- 0.18& -0.18 \\
- \end{bmatrix}
- \begin{bmatrix} c_A \\ c_B 
-     \end{bmatrix}
-+ 
-\begin{bmatrix}
-  2.1 \\ 0 
-\end{bmatrix}
+    \frac{dc_A}{dt} & = -0.09 c_A + 0.02 c_B + 2.1 \\
+    \frac{dc_B}{dt} & = 0.18 c_A - 0.18 c_B \\
   \end{align*}
-\end{problem}
 \end{minipage} \hfill
 \begin{minipage}[h]{0.45\linewidth}
 \vspace{0pt}
@@ -471,66 +388,7 @@ sketch what you would predict for the concentration in each tank over time.
 ~\hfill \begin{minipage}[h]{0.45\linewidth}
 \vspace{0pt}
 \includegraphics[width=1.0\linewidth]{graphics/notes_09_tanks2}
-\LARGE
-  \begin{align*}
-\frac{d}{dt}    
-\begin{bmatrix} c_A \\ c_B 
-    \end{bmatrix}
-=
-\begin{bmatrix}
--0.09 & 0.02 \\
-0.18& -0.18 \\
-\end{bmatrix}
-\begin{bmatrix} c_A \\ c_B 
-    \end{bmatrix}
-+ 
-\begin{bmatrix}
-  2.1 \\ 0 
-\end{bmatrix}
-  \end{align*}
 \end{minipage}
-
-
-\newpage
-
-~\hfill \begin{minipage}[h]{0.45\linewidth}
-\vspace{0pt}
-\includegraphics[width=1.0\linewidth]{graphics/notes_09_tanks2}
-\LARGE
-  \begin{align*}
-\frac{d}{dt}    
-\begin{bmatrix} c_A \\ c_B 
-    \end{bmatrix}
-=
-\begin{bmatrix}
--0.09 & 0.02 \\
-0.18& -0.18 \\
-\end{bmatrix}
-\begin{bmatrix} c_A \\ c_B 
-    \end{bmatrix}
-+ 
-\begin{bmatrix}
-  2.1 \\ 0 
-\end{bmatrix}
-  \end{align*}
-\end{minipage}
-
-\newpage
-\begin{center}
-  {\bf Solution} 
-\end{center}
-\hfill 
-\includegraphics[width=0.4\linewidth]{graphics/notes_09_tanks2}
-
-\begin{align*}
-  c_A & = -8(2) e^{-0.06t} - 14 (1) e^{-0.21t} + 30 \\
-c_B & = -8(3) e^{-0.06t} - 14 (-6)  e^{-0.21t} + 30
-\end{align*}
-
-\begin{center}
-%  \includegraphics[width=0.8\linewidth]{graphics/w11_tank_graph_2}
-\end{center}
-
 
 
 
