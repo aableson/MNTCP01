@@ -52,6 +52,29 @@
 DEs.
 
 \newpage
+\problem Compare the system of differential equations we obtained to
+the equations that define the motion of the damped spring/mass system.
+
+\begin{minipage}[t]{0.45\linewidth}
+\vspace{0pt}
+\includegraphics[width=0.4\linewidth]{graphics/notes_08_hanging_mass}
+\begin{align*}
+  \frac{dw_1}{dt} & = w_2 \\
+  \frac{dw_2}{dt} & = \left(\frac{1}{m}\right) (- k w_1-c w_2)
+\end{align*}
+\end{minipage}
+\begin{minipage}[t]{0.45\linewidth}
+\vspace{0pt}
+\begin{center}
+\includegraphics[width=0.2\linewidth]{graphics/notes_09_pendulum_diagram}
+\end{center}
+\begin{align*}
+  \frac{d w_1}{dt} & = w_2 \\
+  \frac{d w_2}{dt} & = -\frac{g}{L}\sin(w_1)  - \mu w_2
+\end{align*}
+\end{minipage}
+
+\newpage
 
 
 \problem Create a new MATLAB function file called \texttt{pendulumDE.m}.
@@ -61,7 +84,7 @@ function dw_dt = pendulumDE(t, w, g, L, mu)
 \end{verbatim}
 
 In the body of the function, implement the system of differential
-equations we constructed on the previous page.
+equations 
 \begin{align*}
   \frac{d w_1}{dt} & = w_2 \\
   \frac{d w_2}{dt} & = -\frac{g}{L}\sin(w_1)  - \mu w_2
@@ -70,19 +93,23 @@ equations we constructed on the previous page.
 
 \newpage
 
-\problem Write a MATLAB that simulates the motion of the pendulum
+\problem Write a MATLAB script that simulates the motion of the
+pendulum
 using  \\
 $g = 9.8$ m/s$^2$, $L$ = 2 m, $\mu = 0.1$, and \\
-initial amplitude of 0.05 radians ($\approx 2.9$ degrees).
+initial amplitude of 0.05 radians ($\approx 2.9$ degrees). \\
+Generate a plot of the resulting angular position over time.
 
 
 \newpage 
-\topic{Application - Period of Pendulum Swings}
-\subsection*{Application - Period of Pendulum Swings}
+\topic{Pendulum - Period of Swings}
+\subsection*{Pendulum - Period of Swings}
 
 Galileo famously noticed the consistent period of pendulum swings,
 even if the amplitude of the swings was changed (so the actual
 distance travelled was different).
+
+\vspace{2.5in}
 
 \problem Compare the periods of the pendulum swings, using a range of
 initial angles from $\theta_0 = 0.05$ radians up to $\theta_0 = 0.25$
@@ -93,7 +120,7 @@ radians ($\approx 14$ degrees).
 However, it turns out that pendulums are {\bf not} perfectly
 consistent in their period, due to the non-linear term
 $\ds -\frac{g}{L} \sin(\theta)$ in one of the forces: as the
-amplitudes get bigger, there is a graudal lengthening of the period.
+amplitudes get bigger, there is a gradual lengthening of the period.
 
 
 \problem Compare the periods of the pendulum swings, using a range of
@@ -102,12 +129,18 @@ radians ($= 90$ degrees).
 
 \newpage
 
+\problem Use these observations to explain the designs you see for
+pendulum-based clocks.
+
+\newpage
+
 \topic{Pendulum -  Including an Initial Velocity}
 \subsection*{Pendulum -  Including an Initial Velocity}
 
 \problem Write a new simulation script that starts the pendulum
 swinging from $ \theta_0 = -\frac{\pi}{2}$, with no initial velocity.
-Simulate the motion for this scenario.
+Simulate the motion for this scenario and generate a graph of the
+angle against time.
 
 Use the  parameters $g = 9.8$ m/s$^2$, $L$ = 2 m, and $\mu = 0.1$. \\
 
@@ -115,9 +148,18 @@ Use the  parameters $g = 9.8$ m/s$^2$, $L$ = 2 m, and $\mu = 0.1$. \\
 
 \newpage
 
+If we add a high enough initial `kick', or initial velocity, it would
+be possible to make the mass of the pendulum go ``over the top'', or
+above the point of rotation.
+
+\problem Sketch what the anglular position graph would look like for
+this scenario.
+
+\newpage
+
 \problem If we keep the initial angle at $-\frac{\pi}{2}$ (pendulum
-out horizontally), experiment and find the initial velocity that will
-push the pendulum ``over the top''.
+out horizontally), experiment with the MATLAB code to find the initial
+velocity that will push the pendulum ``over the top''.
 
 \newpage
 
@@ -146,10 +188,10 @@ where
 \item $I$ is the moment of inertia of the beam (depends on beam shape and size) 
 \end{itemize}
 
-Also relevant are the properties 
+Also relevant are the properties for beam supported at one end,
 \begin{align*}
   V_0 & = \mbox{shear}(0) = \int_0^L p(x)~dx \mbox{ and }\\
-  M_0 & = \mbox{torque}(0) = \int_0^L x ~p(x)~dx 
+  M_0 & = \mbox{torque}(0) = \int_0^L x ~p(x)~dx ~~~~~~~~~~~~(L = \mbox{ length of beam}) 
 \end{align*}
 
  \newpage
@@ -228,6 +270,7 @@ be?
   $y(0) = 0$, $y'(0) = 0$,  \\
   $y''(0) = V_0$, and $y'''(0) = M_0$.
 \end{minipage}
+\vspace{0.5in}
 
 \problem Use a differential equation solver to generate a plot of the
 deflection of the beam shown above, for a $2\times10$ wood beam:
@@ -235,8 +278,8 @@ $I = 4.1 \times 10^{-5}$ m$^4$, and $E = 9 \times 10^9$ N/m.
 
 \newpage
 
-\topic{Application - Simple Lake Scenario}
-\subsection{Application - Simple Lake Scenario}
+\topic{Application - Lake Mixing Model}
+\subsection{Application - Lake Mixing Model}
 Consider a small lake that initially contains $10$ million litres of
 fresh water.  Water containing an undesirable chemical flows into the
 lake at the rate of $5$ million litres per year; the mixture in the
@@ -248,8 +291,8 @@ expression $c(t) = 2 + \sin(2t) \; \text{g} \cdot \text{L}^{-1}$.
 
 \newpage
 \problem Use MATLAB and a differential equation solver to determine
-the amount of chemical in the lake, assuming that the lake started
-without any contamination.
+the amount of chemical in the lake over time, assuming that the lake
+started without any contamination.
 
 \newpage
 
@@ -262,18 +305,20 @@ of the water.
 
 \begin{itemize}
 \item The volume of the pond is 40,000 cubic meters.
-\item Water is flowing in and out of the pond at a rate of 2,000 cubic
+\item Water is flowing in and out of the pond at a rate of 1,500 cubic
   meters per day.
 \item The water flowing into the pond contains 2 g of toxic chemical
   per cubic meter.
-\item The inflow water also contains 
+\item The inflow water also contains 1\% sediments
 \end{itemize}
 
 \problem Sketch a diagram of this scenario.
 
 \newpage
 
-\problem Write a differential equation that describes
+\problem Write a differential equation that describes the rate of
+change of the concentration of the chemical in the water remaining in
+the tailings pond.
 
 \newpage
 
