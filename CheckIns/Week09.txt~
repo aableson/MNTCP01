@@ -1,0 +1,74 @@
+---Question
+To generate a solution for (or simulate the behaviour of) the pendulum
+in MATLAB, where the torque equations give us the differential equation 
+<br />
+\( \theta''  = -a_1 \sin(\theta) - a_2 \theta' \),
+<br />
+what standard substitution would be used to create a new system of first-order DEs?
+
+---Type
+onechoice
+---Answers
+~ We let \(w_1 = t, w_2 = 1\).
+~ We let \(w_1 = \sin(\theta), w_2 = \theta' \).
+= We let \(w_1 = \theta, w_2 = \theta' \).
+~ We let \(w_1 = \theta, w_2 = 1 \).
+---Comment
+<br />
+The standard substitution has to be about the <b>dependent
+variable</b> and its derivative.  We don't do any transformations
+of the variables in this step.
+
+
+---Question
+
+In the pendulum example, experimenting with trying to find the
+velocity that would push the pendulum "over the top", what was the
+<b>only</b> thing that was changed in the MATLAB code during the
+experiment?
+
+---Type
+onechoice
+---Answers
+~ The differential equation variables.
+~ The differential equation constants or parameters.
+~ The time span.
+= The initial conditions.
+---Comment
+
+We were experimenting with different <b>initial</b> angular velocities,
+to see how quickly the pendulum had to be moving to push itself over the top.
+<br />
+The physical rules (Newton's 2nd Law) didn't change, so that meant that the differential
+equation would not change during the experiment.
+
+
+---Question
+In the mixing model examples, when we converted from quantities \(Q\) to concentrations \(C\), there were two forms seen for the derivative relationship:
+<br />
+(a) \(\displaystyle \frac{dC}{dt} = \frac{1}{V} \frac{dQ}{dt} \)
+<br /> and
+<br />
+(b) \(\displaystyle \frac{dC}{dt} = \frac{\frac{dQ}{dt} V - Q \frac{dV}{dt}}{V^2} \)
+<br />
+
+
+---Type
+onechoice
+---Answers
+~ Form (a) was correct for changing water volumes, while (b) was correct for constant water volumes.
+= Form (a) was correct for constant water volumes, while (b) was correct for changing water volumes.
+~ Form (a) was correct for changing chemical amounts, while (b) was correct for constant chemical amounts.
+~ Form (a) was correct for constant chemical amounts, while (b) was correct for changing chemical amounts.
+---Comment
+
+In all cases, the relationship between concentration and amounts is given by
+<br />
+\(\displaystyle C = \frac{Q}{V}\)
+<br />
+The difference arises when you differentiate both sides.   \(C\) and \(Q\) are always changing, but <br />
+if the volume \(V\) is constant, then the RHS derivative is simply (a) \(\displaystyle \frac{dC}{dt} = \frac{1}{V} \frac{dQ}{dt} \)
+<br />
+If the volume is changing with time though, we need to use the product rules, which gives 
+(b) \(\displaystyle \frac{dC}{dt} = \frac{\frac{dQ}{dt} V - Q \frac{dV}{dt}}{V^2} \).
+

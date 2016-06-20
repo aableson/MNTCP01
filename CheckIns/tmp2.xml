@@ -1,2 +1,1 @@
-<math xmlns="http://www.w3.org/1998/Math/MathML"><mrow><mstyle displaystyle="true"><msub><mi>w</mi><mn>1</mn></msub><mo>=</mo><msub><mi>w</mi><mn>2</mn></msub><mo>,</mo><mi>&nbsp;</mi><mi>&nbsp;</mi><mi>&nbsp;</mi><mi>&nbsp;</mi><mi>&nbsp;</mi><msub><mi>w</mi><mn>2</mn></msub><mo>=</mo><mfrac linethickness="1"><mn>1</mn><mn>3</mn></mfrac><mrow><mo form="prefix">(</mo><mi>cos</mi><mo form="prefix">(</mo><mi>t</mi><mo form="postfix">)</mo><mo>-</mo><mn>7</mn><msub><mi>w</mi><mn>2</mn></msub><mo>+</mo><mn>4</mn><msub><mi>w</mi><mn>1</mn></msub><mo form="postfix">)</mo></mrow></mstyle></mrow></math>
-
+ Form (a) was correct for <b>constant chemical amounts</b>, while (b) was correct for <b>changing chemical amounts</b>.
