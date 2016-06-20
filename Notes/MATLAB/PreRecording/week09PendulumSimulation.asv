@@ -1,6 +1,0 @@
-% Constants
-g = 9.8;
-mu = 0.1;
-L = 2;
-
-tspan = 
