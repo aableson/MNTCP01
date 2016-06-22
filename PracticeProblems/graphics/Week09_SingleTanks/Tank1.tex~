@@ -1,0 +1,76 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\usepackage{pst-lens}
+\begin{document} 
+\psset{unit=0.4}
+\begin{pspicture}[showgrid=false](-1,0)(12,5)
+
+% *** Tanks
+\def\tank{
+\psline[linewidth=1.5\pslinewidth](5,0)(5,8)
+\psline[linewidth=1.5\pslinewidth](0,0)(0,8)
+\psellipse[linecolor=black](2.5,8)(2.5,1.2)	
+\pscurve[linecolor=black](0,0)
+(0.5,-0.72)
+(1.0,-0.96)
+(1.5,-1.10)
+(2.0,-1.18)
+(2.5,-1.20)
+(3.0,-1.18)
+(3.5,-1.10)
+(4.0,-0.96)
+(4.5,-0.72)
+(5.0,0)
+}
+ \def\tankk{
+ \psline[linewidth=1.5\pslinewidth](7,0)(7,8)
+ \psline[linewidth=1.5\pslinewidth](0,0)(0,8)
+ \psellipse[linecolor=black](3.5,8)(3.5,1.2)	
+ \pscurve[linecolor=black](0,0)
+ (0.7,-0.72)
+ (1.4,-0.96)
+ (2.1,-1.10)
+ (2.8,-1.18)
+ (3.5,-1.20)
+ (4.2,-1.18)
+ (4.9,-1.10)
+ (5.6,-0.96)
+ (6.3,-0.72)
+ (7.0,0)
+}
+\rput{0}(0,0){\tank}  
+\rput{0}(10,0){\tankk}  
+
+
+% Pipes
+\def\pipe{
+\psframe*[linecolor=white](0,0)(7,1)
+\psline[linewidth=1.5\pslinewidth](0,0)(7,0)
+\psline[linewidth=1.5\pslinewidth](0,1)(7,1)
+}
+%\rput{0}(4,1){\pipe}  
+\rput{0}(4,3){\pipe}  
+\rput{0}(-6,5){\pipe}  
+\rput{0}(16,1){\pipe}  
+
+% Direction arrows
+\psline[linewidth=2.5\pslinewidth]{->}(-5,5.5)(-3,5.5)
+\psline[linewidth=2.5\pslinewidth]{->}(6,3.5)(9,3.5)
+%\psline[linewidth=2.5\pslinewidth]{<-}(6,1.5)(9,1.5)
+\psline[linewidth=2.5\pslinewidth]{->}(19,1.5)(22,1.5)
+
+% Flow rates
+\rput(-4,7){5 L/min}
+\rput(7,5){5 L/min}
+%\rput(7,0){1 L/min}
+\rput(21,0){5 L/min}
+
+% In concentration
+\rput(-4,4){30 g/L}
+
+% Volumes
+\rput(2.5,2){$V_A =  50$ L}
+\rput(13.5,6){$V_B =  100$ L}
+\end{pspicture}
+\end{document}

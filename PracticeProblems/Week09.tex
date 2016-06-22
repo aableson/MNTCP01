@@ -10,159 +10,278 @@
 \subsection*{MNTC P01 - Week \#9 - \WeekTitleNine}
 \end{center}
 
-% %****************
-% \item
-% \begin{Question}
-% A cantilevered beam which is $L = 2$ m long, made out of a pine ``2 by 4'' has \\
-%   $I = 2.23 \times 10^{-6}$ m$^4$,\hspace{0.5in} $E = 9.1 \times
-%   10^{9}$ N/m$^2$, and its deformation satisfies the differential
-%   equation
-% $$ EI y^{(4)} = p(x)$$
-% where $p(x)$ is the loading on the beam in N/m, and boundary
-% conditions $y(0) = 0$, $y'(0) = 0$, $y''(2) = 0$, and $y'''(2) = 0$.
-
-% \begin{enumerate}
-% \item Find the formula for $y(x)$ if the load applied is {\em
-%     triangular} (increases linearly), given by $p(x) = 20 x$ N/m.
-%   I.e. as $x$ increases, moving away from the mounting point of the
-%   beam, the load increases, until at the tip of the beam ($x=2$), the
-%   load is 40 N/m.
-% \item Find the amount of deflection of the beam at the tip under this
-%   load.
-% \end{enumerate}
-% \begin{center}
-% \includegraphics[width=0.3\linewidth]{w05_triangular_load}
-% \end{center}
-% \end{Question}
-
-% \begin{Solution}
-%   \begin{enumerate}[(a)]
-%   \item 
-%   Since the corresponding homogeneous DE is simply $E Iy^{(4)} = 0$, with
-%   roots to the characteristic equation of zero (repeated four times),
-%   $y_c = c_1 + c_2 x+ c_3 x^2 + c_4 x^3$.
-  
-%   Since the RHS = $20 x$, $y_{p}$ would usually have been $A + Bx$.
-%   However, this is not linearly independent with the functions in
-%   $y_c$, so we boost by powers of $x$ until it is, so we choose
-%   $y_p = A x^4 + Bx^5$.
-  
-%   Subbing $y_p$ into the DE and solving for $A$ and $B$,
-%   \begin{align*}
-%    EI \left(\underbrace{24 A + 120 Bx}_{y^{(4)}}\right) & = 20 x  \\
-% \mbox{const coeff's: ~~~} A & = 0 \mbox{ and } \\
-% \mbox{$x$ coeff's: ~~~} 120 EI B = 20, \mbox{ or } B & = \frac{1}{6 EI} \\
-% \mbox{ so } y_P & =  \frac{1}{6 EI} x^5
-%   \end{align*}
-
-% This means the general solution is 
-% $$y = \underbrace{c_1 + c_2 x+ c_3 x^2 + c_4 x^3}_{y_c} + \underbrace{\frac{1}{6EI} x}_{y_p}$$
-% To solve for $c_1, \ldots, c_4$, we use the boundary conditions.
-% \begin{align*}
-% y(0)  = 0  \implies  0 & = c_1 \\
-% y'(0)  = 0  \implies  0 & = c_2 \\
-% y''(2)  = 0 \implies 0 & = 2 c_3 + 6 c_4 (2) + \frac{1}{6 EI} 20 (2)^3 \\ 
-% y'''(2)  = 0 \implies 0 & = 6 c_4  + \frac{1}{6 EI} 60 (2)^2  
-% \end{align*}
-% Solving gives $\ds c_4 = \frac{-20}{3 EI}$ and $\ds c_3 = \frac{80}{3 EI}$, so the particular 
-% solution, or the formula for the beam deflection at $x$ is 
-% $$y = \frac{1}{EI} \left(\frac{80}{3} x^2 - \frac{20}{3} x^3 + \frac{1}{6} x^5\right)$$ 
-% \item The deflection at the tip, $x=2$, is simply the value of $y(2)$:
-% $$y(2) = \frac{1}{EI} \left(\frac{80}{3} 2^2 - \frac{20}{3} 2^3 + \frac{1}{6} 2^5\right) \approx 0.00289$$ 
-% This means the tip of the beam deflects by 0.00289 m or roughly 3 mm
-% under this load.
-%   \end{enumerate}
-% \end{Solution}
-
-
-
-% \item \begin{Question}
-% Use the method of variation of parameters to find a particular solution to
-%   $y'' -y' -2y = 2e^{-t}$.  Check your answer by using the method of
-%   undetermined coefficients.
-% \end{Question}
-
-
-% \item \begin{Question}
-% Solve $x'' -2x' + x = \dfrac{e^t}{1+t^2}$.
-% \end{Question}
-
-%  \vspace*{0.5em}
-% \item \begin{Question}
-% The \define{Bessel equation} of order one-half $x^2 y'' + xy ' +
-%   \bigl(x^2- \tfrac{1}{4} \bigr) y = 0$ has two linearly independent solutions
-%   $y_1(x) = x^{-1/2} \cos(x)$ and $y_2(x) = x^{-1/2} \sin(x)$.  Find a general
-%   solution to the nonhomogenous equation $x^2 y'' + xy ' + \bigl(x^2-
-%   \tfrac{1}{4} \bigr) y = x^{5/2}$ where $x>0$.
-% \end{Question}
-
 
 % % ******************** PENDULUM ********************************
+\subsection*{Pendulum}
+\begin{enumerate}[1.]
 
-% \item In class, we saw the differential equation for the angular
-%   motion of a pendulum.  Here it is again, with no friction.
-% \begin{align*}
-%   \mbox{Newton's Second Law: }   m  L^2 \theta'' & = T_g \\
-%   & = - m L g \sin(\theta)  \\
-%   \mbox{Solving for $\theta''$: }\theta'' & = - \frac{g}{L} \sin(\theta) 
-% \end{align*}
+\item 
+  \begin{Question}
+    \begin{minipage}[h]{0.6\linewidth}
+\vspace{0pt}
+Consider the motion of a frictionless pendulum.
+\begin{align*}
+  \mbox{Newton's Second Law: }   m  L^2 \theta'' & = T_g \\
+  & = - m L g \sin(\theta)  \\
+  \mbox{Solving for $\theta''$: }\theta'' & = - \frac{g}{L} \sin(\theta) 
+\end{align*}
 
-% Without simulating the actual motion of the pendulum, we can compute
-% the period, $T$, using the formula below:
-% \begin{align*}
-%   T = 4 \sqrt{L/g} \int_0^{\pi/2} \frac{dx}{\sqrt{1 - k^2 \sin^2 x}}
-% \end{align*}
-% where $k = \sin\left(\frac{1}{2} \theta_0\right)$ and $g$ is the
-% acceleration due to gravity, $9.8 $ m/s.  
+{\bf Without} simulating the actual motion of the pendulum, we can
+compute the period, $T$, using the formula below:
+\begin{align*}
+  T = 4 \sqrt{L/g} \int_0^{\pi/2} \frac{dx}{\sqrt{1 - k^2 \sin^2 x}}
+\end{align*}
+where $k = \sin\left(\frac{1}{2} \theta_0\right)$ and $g$ is the
+acceleration due to gravity, $9.8 $ m/s.  
+    \end{minipage} \hfill
+    \begin{minipage}[h]{0.25\linewidth}
+     \includegraphics[width=1.0\linewidth]{graphics/Week09_Pendulum/pendulum_diagram}
+    \end{minipage}
+
+For each set of values for $L$ and $\theta_0$ given below,
+\begin{enumerate}[(a)]
+\item Use \verb#integral# to find the period of the pendulum oscillations,
+  and
+\item confirm the period by using \verb#ode45# to simulate the motion
+  pendulum for exactly that length of time, and plot a graph of the
+  angular {\bf velocity} against time.  The velocity should just reach
+  zero at the end of one cycle.
+\end{enumerate}
+
+\begin{enumerate}[(i)]
+\item $L = 2$ m, $\theta_0 = 40^o$, 
+\item $L =2.5$ m, $\theta_0 = 20^o$.
+\item $L =5.0$ m, $\theta_0 = 90^o$.
+\end{enumerate}
+  \end{Question}
+
+\begin{Solution}
+
+Link to the MATLAB code: \\
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W09Pendulum1.m}{W09Pendulum1.m} \\
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/pendulumDE.m}{pendulumDE.m} \\
+
+Note that we simply re-used the \verb#pendulumDE.m# from the lectures,
+and set the friction coefficient $\mu = 0$.
+  \begin{enumerate}[(i)]
+  \item $L = 2$ m, $\theta_0 = 40^o$:  {\bf T = 2.9274} seconds.
+  \item $L =2.5$ m, $\theta_0 = 20^o$: {\bf T = 3.1978} seconds.
+  \item $L =5.0$ m, $\theta_0 = 90^o$: {\bf T = 5.2974} seconds.
+  \end{enumerate}
+
+Plots: \\
+\includegraphics[width=0.33\linewidth]{graphics/Week09_Pendulum/pendulum_nofriction_1} 
+\includegraphics[width=0.33\linewidth]{graphics/Week09_Pendulum/pendulum_nofriction_2} 
+\includegraphics[width=0.33\linewidth]{graphics/Week09_Pendulum/pendulum_nofriction_3} 
+\end{Solution}
+
+%*******************************
+\item
+\begin{Question}
+    \begin{minipage}[t]{0.7\linewidth}
+\vspace{0pt}
+Consider the motion of a pendulum, this time {\bf with} friction.
+\begin{align*}
+  \mbox{Newton's }& \mbox{ Second Law: } \\
+   m  L^2 \theta'' & = T_g + T_f  \\
+  & = - m L g \sin(\theta) - (\mu L^2 m) \theta' \\[3ex]
+  \mbox{Solving for $\theta''$: }\theta'' & = - \frac{g}{L} \sin(\theta) - \mu 
+  \theta'
+\end{align*}
+\begin{enumerate}[(a)]
+\item Write a MATLAB function for the differential equation, and a
+  script that will simulate the scenario for $L = 1.5$ m, $g = 9.8$
+  m/s$^2$, and $\mu = 0.2$.  Use an initial condition of
+  $\theta_0 = \frac{7\pi}{8}$, which is close to vertical.
+\item Experiment with the initial {\bf angular velocity} of the
+  pendulum and find the smallest {\bf positive} initial velocity that
+  will result in the pendulum passing over the top of the axis of
+  rotation.  Find the value to the nearest 0.1 rad/s.  
+
+  Have MATLAB generate a plot of the angle vs time graph for both the
+  initial velocity that achieves this result, and for the initial velocity 0.1 rad/s smaller, which does {\em not} go `over the top'.
+\item Repeat the analysis in part (b), but this time using a {\bf
+    negative} initial velocity.
+\end{enumerate}
+\end{minipage} \hfill
+\begin{minipage}[t]{0.25\linewidth}
+\vspace{0pt}
+  \includegraphics[width=1.0\linewidth]{graphics/Week09_Pendulum/pendulum_diagram}
+\end{minipage}
 
 
-% For each set of values for $L$ and $\theta_0$,
-% \begin{enumerate}[(a)]
-% \item Use \verb#quad# to find the period of the pendulum oscillations,
-%   and
-% \item confirm the period by using \verb#ode45# to simulate the motion
-%   pendulum for exactly that length of time, and plot a graph of the
-%   angular {\bf velocity} against time.  The velocity should just reach
-%   zero at the end of one cycle.
-% \end{enumerate}
 
-% \begin{enumerate}[(i)]
-% \item $L = 2$ m, $\theta_0 = 40^o$, 
-% \item $L =2.5$ m, $\theta_0 = 20^o$.
-% \item $L =5.0$ m, $\theta_0 = 90^o$.
-% \end{enumerate}
+\end{Question}
 
-% \begin{solutions}
+\begin{Solution}
+Link to the MATLAB code: \\
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W09Pendulum1.m}{W09Pendulum2.m} \\
+\href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/pendulumDE.m}{pendulumDE.m} \\
 
-%   All of the problems are shown solved in \verb#q_pendulum.m#.
+\begin{enumerate}[(a)]
+\item Here is the graph of the angle over time for the pendulum, when it has no initial velocity.
 
-%   \begin{enumerate}[(i)]
-%   \item $L = 2$ m, $\theta_0 = 40^o$:  {\bf T = 2.9274}
-%   \item $L =2.5$ m, $\theta_0 = 20^o$: {\bf T = 3.1978}
-%   \item $L =5.0$ m, $\theta_0 = 90^o$: {\bf T = 5.2974}
-%   \end{enumerate}
+\includegraphics[width=0.33\linewidth]{graphics/Week09_Pendulum/pendulum_overtop_1} 
 
-% Plots: \\
-% \includegraphics[width=2in]{q_pendulum_1} 
-% \includegraphics[width=2in]{q_pendulum_2} 
-% \includegraphics[width=2in]{q_pendulum_3} 
+\item With some experimentation, we find that an initial angular
+  velocity of $\theta'(0) = 1.1$ rad/s will be enough to push the
+  pendulum over the top of the axis. Comparing $\theta'(0) = 1.1$ and
+  1.0, we obtain the following graph of angle against time.
 
-% \end{solutions}
+\includegraphics[width=0.5\linewidth]{graphics/Week09_Pendulum/pendulum_overtop_2} 
+
+\item With further experimentation, we find that using negative
+  initial angular velocities requires a higher initial velocity
+  compared to positive initial velocities, because friction eats away
+  at the effect of that first push when we are going down first and
+  then over the top.  Still, a value of $\theta'(0) = -3.3$ rad/s will
+  be enough to push the pendulum over the top of the axis. Comparing
+  $\theta'(0) = -3.3$ and -3.2, we obtain the following graph of angle
+  against time.
+
+\includegraphics[width=0.5\linewidth]{graphics/Week09_Pendulum/pendulum_overtop_3} 
+\end{enumerate}
+
+\end{Solution}
 
 
+\subsection*{Single Tank Problems}
+
+%********************
+\item 
+\begin{Question}
+  An aquarium pool has volume $2 \times 10^6$ liters.  The pool
+  initially contains pure fresh water. At $t=0$ minutes, water
+  containing 10 grams/liter of salt is poured into the pool at a rate
+  of 60 liters/minute. The salt water instantly mixes with the fresh
+  water, and the excess mixture is drained out of the pool at the same
+  rate (60 liters/minute).
+
+   \begin{enumerate}[(a)]
+
+   \item Write a differential equation for $S(t)$, the mass of
+     salt in the pool at time $t$.
+
+   \item Use MATLAB solve the differential equation to predict $S(t)$
+     over time.
+
+   \item Based on the graph of the solution, what happens to $S(t)$ as
+     $t \to \infty$?  
+
+   \item Find this same value using only the information about the
+     volume and the concentration of the incoming salt solution.
+
+   \end{enumerate}
 
 
+\end{Question}
+
+\begin{Solution}
 \begin{enumerate}
-\item A 150 litre tank initially contains 60 litres of water with 0.5
-  kgs of salt dissolved in it.  Water enters the tank at a rate of 0.9
+\item 
+\begin{align*}
+  \text{Rate of change of salt amount (g/min)} & = \text{ Rate in } - \text{ Rate out }  \\
+  \text{Rate in (g/min)} & = \text{Flow rate $\times$ Concentration} \\
+  & = (60 \text{ liters/min}) \times (10 \text{ g/liter}) = 600 \text{ g/min} \\
+  \text{Rate out (g/min)} & = \text{Flow rate $\times$ Concentration}  \\
+  & =\text{Flow rate $\times$ amount (g) / Pool volume (liters)} \\
+  & = (60 \text{ liters/min}) (S(t) \text{ grams}) / (2 \times 10^6 \text{ liters}) \\
+  & = (3 \times 10^{-5}) S(t) \\
+  \text{Finally, we get our DE: } ~~~~~ \ddt{S} &= 600 - (3 \times 10^{-5}) S \\
+\end{align*}
+
+\item Note: to see anything interesting in this simulation, you have
+  to simulate for a {\bf long} simulation time, i.e. a long
+  \verb#tspan#.  Here are two graphs of the simulation results, one
+  with 1000 minutes, and one with 1 million minutes.
+
+\includegraphics[width=0.45\linewidth]{graphics/Week09_Pendulum/single_tank_1a} \hfill
+\includegraphics[width=0.45\linewidth]{graphics/Week09_Pendulum/single_tank_1b} 
+
+\item As $t \to \infty$, we see the graph of $S(t)$ plateau at $S \to 2 \times 10^7$ grams.
+
+\item We expect that the salt in the aquarium will tend to the same
+  {\bf concentration} as the incoming water, as all of the original
+  water is replaced with the new inflow solution.  At a concentration
+  of 10 g/liter, in a volume of $ 2 \times 10^6$ liters, we expect to
+  see eventually $S = C\times V = (10)(2 \times 10^6) = 2 \times 10^7$
+  grams of salt in the aquarium, which matches our graphical results.
+
+\end{enumerate}
+\end{Solution}
+
+
+
+% ****************************************
+\item 
+\begin{Question}
+  A 150 litre tank initially contains 60 litres of water with 0.5 kgs
+  of salt dissolved in it.  Water enters the tank at a rate of 0.9
   litres/hr and the water entering the tank has a salt concentration
-  of $\frac{1}{5}(1 + \cos (t))$ kgs/litre. If a well mixed solution
-  leaves the tank at a rate of 0.6 litres/hr, how much salt is in the
-  tank when it overflows?
+  of $\frac{1}{5}(1 + \cos (t))$ kgs/litre. 
+  \begin{enumerate}[(a)]
+  \item Draw a diagram of the inflow and outflow for this scenario.
+  \item Build a formula for the volume of water in the tank over time.
+  \item Find out how long it will be until the tank overflows.
+  \item Write a differential equation that describest the rate of
+    change of the {\bf amount of salt} in the tank.
+  \item Use MATLAB to generate a graph of the amount of salt in the
+    tank over time, up until the tank overflows.
+  \item How much salt is in the tank when it overflows?
+  \end{enumerate}
+
+\end{Question}
+
+\begin{Solution}
+  \begin{enumerate}[(a)]
+  \item Here is a diagram of the system.
+
+\includegraphics[width=0.45\linewidth]{graphics/Week09_SingleTanks/Tank1} 
+ 
+  \item Since the tank has a volume of 150 L, is gaining 0.9 - 0.6 = 0.3
+  L/hour, and starts at 60 L, we obtain the volume expression $V(t) = 60 + 0.3 t$.
+
+\item Solving $V(t) = 150$ for $t$, gives us $ 60 + 0.3 t = 150$, or
+  $t = 300$ hours until the tank overflows.
+
+\item The differential equation will be the same ``rate in - rate
+  out'' form.
+\begin{align*}
+  \text{Rate of change of salt amount (kg/hr)} & = \text{ Rate in } - \text{ Rate out } 
+\end{align*}
+\begin{align*}
+  \text{Rate in (kg/hr)} & = \text{Flow rate $\times$ Concentration} \\
+                         & = (0.9 \text{ liters/hr}) \times (\frac{1}{5} (1 + \cos(t)) \text{ kg/liter}) \\
+                         & = 0.18(1 + \cos(t)) \text{kg/hr} \\
+  \text{Rate out (kg/hr)} & = \text{Flow rate $\times$ Concentration}  \\
+                         & =\text{Flow rate $\times$ amount (g) / Pool volume (liters)} \\
+                         & = (0.6 \text{ liters/hr}) (S(t) \text{ kg}) / (60 + 0.3 t) \text{ liters}) \\
+  \text{Finally, we get our DE: } ~~~~~ \ddt{S} &= 0.18 (1 + \cos(t)) - \frac{0.6}{60 + 0.3t} S
+\end{align*}
+
+\item Here is the graph of the predicted amount of salt in the tank over time. 
+
+  \includegraphics[width=0.75\linewidth]{graphics/Week09_SingleTanks/single_tank_2a}
+
+  Note that the $\cos(t)$ effect has a short period ($2 \pi \approx $ 6 hours)
+  relative to the 300 hours of the simulation time, which is why the
+  graph looks like it has the high-frequency oscillations in it.
+
+\item By either zooming in, or typing \verb#S# at the MATLAB command
+  line to show all the \verb#S# values coming out of the simulation
+  and grabbing the last one, we at the end of 300 hours that
+  $S(300) \approx 27.6212$ kg of salt in the tank.
+
+  \end{enumerate}
+  
+\end{Solution}
 
 % ******************** Fish Population ********************************
-
-\item Differential equations are not just well-suited for physics
+\subsection*{Other First Order Models}
+\item 
+  \begin{Question}
+    
+Differential equations are not only well-suited for physics
   applications: they are are also widely used in biology, particularly
   in population models.
 
@@ -170,7 +289,7 @@
   limited-resource population growth, minus a function of harvesting.
 
 $$\frac{dP}{dt} =\underbrace{ [(10 -P)\cdot P]}_{\mbox{natural population growth rate}} -\underbrace{h(t)}_{\mbox{harvesting rate}}$$
-where 
+where
 \begin{itemize}
 \item $P$  = population of fish (in thousands), and 
 \item $\frac{dP}{dt}$  = rate of population change, in thousands per 
@@ -185,7 +304,7 @@ We want to study the impact of two harvesting models:
 \item $h_2(t) = k_2 (\sin(\pi t) + 1)$; seasonal model where the
   harvesting has a yearly cycle.
 \end{itemize}
-\begin{enumerate}
+\begin{enumerate}[(a)]
 
 \item Generate a prediction of the population over time, starting at
   initial populations of $P(0) = 15$ for each model.  Use $k_1 = k_2 =
@@ -233,12 +352,16 @@ models as the {\em highest harvest rate for which the population is
   harvesting sustain a greater average harvest in the long run?
   Explain your reasoning.
 \end{enumerate}
+  \end{Question}
 
-\begin{solutions}
-\begin{solution}
-\begin{enumerate}
-\item The file \verb#q_fishHarvesting.m# shows the answer to this part of
-  the question.  It can be modified to answer the later parts.
+\begin{Solution}
+\begin{enumerate}[(a)]
+\item  The code in the link below generates the basic graph of the populations over time.  It can be adapted to help answer the later sections.
+
+  Link to the MATLAB code: \\
+  \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W09PopulationModel1.m}{W09PopulationModel1.m} \\
+
+\includegraphics[width=3in]{graphics/Week09_PopulationModels/population_harvesting_1a}
 
 \item Note that trial and error is just fine for this problem.  If the
   next paragraph doesn't make sense to you, feel free to skip it.  The
@@ -260,7 +383,7 @@ models as the {\em highest harvest rate for which the population is
   Plotting the solution for the constant harvest model at $k_1 = 25$
   and $k_1 = 26$ supports this hypothesis.
 \begin{center}
-\includegraphics[width=3in]{q_FishHarvestingConstant}
+\includegraphics[width=3in]{graphics/Week09_PopulationModels/population_harvesting_1b}
 \end{center}
 
 \item In the seasonal harvest scenario, using theory to find the
@@ -270,7 +393,7 @@ models as the {\em highest harvest rate for which the population is
   repeating and start reaching extinction:
 
 \begin{center}
-\includegraphics[width=3in]{q_FishHarvestingSeasonal}
+%\includegraphics[width=3in]{graphics/W09_PopulationModels/population_harvesting_1a}
 \end{center}
 
 \item Based on these experiments, it seems that seasonal harvesting
@@ -278,8 +401,76 @@ models as the {\em highest harvest rate for which the population is
   lower average rate of harvest (16 thousand fish per year) leads to
   extinction, compared to the constant harvest case (where 25 thousand
   fish per year can be harvested).
+\end{enumerate}
+\end{Solution}
+
+% ********************** Tank Systems ****************
+\item \begin{Question}
+Consider two interconnected tanks.  Tank A initially contains $100 \; \text{L}$
+of water and $20 \; \text{g}$ of salt, and tank $B$ initially contains $200 \;
+\text{L}$ of water and $75 \; \text{g}$ of salt.  The liquid inside each tank is
+kept well stirred.  Liquid flows from tank $A$ to tank $B$ at a rate of $3 \;
+\text{L} \cdot \text{min}^{-1}$ and liquid flows from tank $B$ to tank $A$ at
+rate of $2 \; \text{L} \cdot \text{min}^{-1}$.  A salt brine with concentration
+$7 \; \text{g} \cdot \text{L}^{-1}$ of salt flows into tank $A$ at a rate of $5
+\; \text{L} \cdot \text{min}^{-1}$ and the solution drains out at $4 \; \text{L}
+\cdot \text{min}^{-1}$.  Moreover, a salt brine with concentration $3 \;
+\text{g} \cdot \text{L}^{-1}$ of salt flows into tank $A$ at a rate of $7 \;
+\text{L} \cdot \text{min}^{-1}$ and the solution drains out at $8 \; \text{L}
+\cdot \text{min}^{-1}$. Determine the amount of salt in each tank at any time.
+  
+\end{Question}
+
+\begin{Solution}
+  Let $Q_A(t)$ and $Q_B(t)$ denote the amount (in grams) of salt in tanks $A$
+  and $B$ respectively at time $t$ (in minutes).  It follows that
+  \begin{align*}
+    Q_A'(t) &= \text{input rate} - \text{output rate} = \left( 7
+      \frac{\text{g}}{\text{L}} \right) \left( 5 \frac{\text{L}}{\text{min}}
+    \right) + \left( \frac{Q_B \; \text{g}}{200 \; \text{L}} \right) \left( 2
+      \tfrac{\text{L}}{\text{min}} \right) - \left( \frac{Q_A \; \text{g}}{100
+        \; \text{L}} \right) \left( 4 + 3 \frac{\text{L}}{\text{min}} \right) \\
+    &= - \frac{7}{100} Q_A + \frac{1}{100} Q_B + 35 \\
+    Q_B'(t) &= \left( 3 \frac{\text{g}}{\text{L}} \right) \left( 7
+      \frac{\text{L}}{\text{min}} \right) + \left( \frac{Q_A \; \text{g}}{100 \;
+        \text{L}} \right) \left( 3 \frac{\text{L}}{\text{min}} \right) - \left(
+      \frac{Q_B \; \text{g}}{200 \; \text{L}} \right) \left( 2+8
+      \tfrac{\text{L}}{\text{min}} \right) \\
+    &=  \frac{3}{100} Q_A - \frac{5}{100} Q_B + 21 \, ,
+  \end{align*}
+  which yields
+  \begin{align*}
+    \begin{bmatrix}
+      Q_A'(t) \\ Q_B'(t) 
+    \end{bmatrix}
+    &= 
+    \frac{1}{100}
+    \begin{bmatrix}
+      -7 & 1 \\
+      3 & -5
+    \end{bmatrix}
+    \begin{bmatrix}
+      Q_A(t) \\ Q_B(t) 
+    \end{bmatrix}
+    +
+    \begin{bmatrix}
+      35 \\ 21
+    \end{bmatrix} \, ,
+    &
+    \begin{bmatrix}
+      Q_A(0) \\ Q_B(0) 
+    \end{bmatrix}
+    &=
+    \begin{bmatrix}
+      20 \\ 75
+    \end{bmatrix} \, .
+  \end{align*}
+  
+\end{Solution}
+
+
+
 
 \end{enumerate}
-
 \end{document}
 

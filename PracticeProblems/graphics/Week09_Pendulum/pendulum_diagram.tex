@@ -1,0 +1,30 @@
+\documentclass{standalone}
+\usepackage{pstricks,auto-pst-pdf}
+\usepackage{pst-all}
+\usepackage{pst-lens}
+\begin{document} 
+\psset{unit=2.0cm}
+\begin{pspicture}[showgrid=false](-1,0)(12,5)
+% Lines
+\psline[linestyle=dashed]{-}(0,0)(0,-2)
+\psline[linewidth=1.5\pslinewidth]{-}(0,0)(2,-3)
+\psline[linewidth=1.5\pslinewidth]{->}(2,-3)(2,-4)
+\psline[linewidth=1.5\pslinewidth]{->}(2,-3)(1.5385,-3.3077)
+\psline[linestyle=dashed]{-}(2,-4)(1.5385,-3.3077)
+
+% text
+\rput[l](2.05,-3.5){$mg$}
+\rput[br](1.53,-3.3){$mg\sin(\theta)$}
+\uput{2ex}[33](1,-1.5){$L$}
+
+
+% Angle high
+\psarc[]{-}(0,0){1.5}{-90}{-56.31}
+\rput[](0.4347, -1.4356){\psframebox*{$\theta$}}
+
+% Angle low
+\rput[](1.90,-3.65){$\theta$}
+
+
+\end{pspicture}
+\end{document}
