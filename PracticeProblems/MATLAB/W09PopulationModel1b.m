@@ -19,4 +19,4 @@ tspan = [0, 30];
 plot(t, P1);
 hold on;
 
-ylim([0, P0]);
+% ylim([0, P0]);

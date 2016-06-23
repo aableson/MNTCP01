@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  22 JUN 2016 19:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.2.18)  22 JUN 2016 20:23
 entering extended mode
-**\input TankDiagram1.tex
-(TankDiagram1.tex
+**\input TankDiagram2.tex
+(TankDiagram2.tex
 (C:\Users\aableson\AppData\Roaming\MiKTeX\2.9\tex\latex\standalone\standalone.c
 ls
 Document Class: standalone 2015/07/15 v1.2 Class to compile TeX sub-files stand
@@ -266,27 +266,27 @@ runsystem(echo "auto-pst-pdf: Auxiliary LaTeX compilation")...executed.
 
 runsystem(echo "-------------------------------------------------")...executed.
 
-runsystem(del "TankDiagram1-pics.pdf")...executed.
+runsystem(del "TankDiagram2-pics.pdf")...executed.
 
-runsystem(latex -disable-write18 -jobname="TankDiagram1-autopp" -interaction=ba
-tchmode  "\let \APPmakepictures \empty \input  TankDiagram1.tex")...executed.
+runsystem(latex -disable-write18 -jobname="TankDiagram2-autopp" -interaction=ba
+tchmode  "\let \APPmakepictures \empty \input  TankDiagram2.tex")...executed.
 
-runsystem(dvips -Ppdf -o "TankDiagram1-autopp.ps" "TankDiagram1-autopp.dvi")...
+runsystem(dvips -Ppdf -o "TankDiagram2-autopp.ps" "TankDiagram2-autopp.dvi")...
 executed.
 
-runsystem(ps2pdf  "TankDiagram1-autopp.ps" "TankDiagram1-autopp.pdf")...execute
+runsystem(ps2pdf  "TankDiagram2-autopp.ps" "TankDiagram2-autopp.pdf")...execute
 d.
 
-runsystem(pdfcrop  "TankDiagram1-autopp.pdf" "TankDiagram1-pics.pdf")...execute
+runsystem(pdfcrop  "TankDiagram2-autopp.pdf" "TankDiagram2-pics.pdf")...execute
 d.
 
-runsystem(del "TankDiagram1-autopp.log")...executed.
+runsystem(del "TankDiagram2-autopp.log")...executed.
 
-runsystem(del "TankDiagram1-autopp.dvi")...executed.
+runsystem(del "TankDiagram2-autopp.dvi")...executed.
 
-runsystem(del "TankDiagram1-autopp.ps")...executed.
+runsystem(del "TankDiagram2-autopp.ps")...executed.
 
-runsystem(del "TankDiagram1-autopp.pdf")...executed.
+runsystem(del "TankDiagram2-autopp.pdf")...executed.
 
 runsystem(echo "-------------------------------------------------")...executed.
 
@@ -512,8 +512,8 @@ Package: pst-lens 2005/09/02 package wrapper for pst-lens.tex (hv)
 \PstLens@HandleWidth=\dimen169
 )
 File: pst-lens.tex 2006/06/06 v1.02 `PST-lens' (hv)
-) (TankDiagram1.aux)
-\openout1 = `TankDiagram1.aux'.
+) (TankDiagram2.aux)
+\openout1 = `TankDiagram2.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 5.
 LaTeX Font Info:    ... okay on input line 5.
@@ -543,28 +543,28 @@ LaTeX Font Info:    ... okay on input line 5.
 )
 Preview: Fontsize 10pt
 Preview: PDFoutput 1
-<TankDiagram1-pics.pdf, id=2, page=1, 308.15125pt x 120.45pt>
-File: TankDiagram1-pics.pdf Graphic file (type pdf)
+<TankDiagram2-pics.pdf, id=2, page=1, 287.0725pt x 152.57pt>
+File: TankDiagram2-pics.pdf Graphic file (type pdf)
 
-<use TankDiagram1-pics.pdf, page 1>
-Package pdftex.def Info: TankDiagram1-pics.pdf, page1 used on input line 8.
-(pdftex.def)             Requested size: 308.15048pt x 120.44969pt.
+<use TankDiagram2-pics.pdf, page 1>
+Package pdftex.def Info: TankDiagram2-pics.pdf, page1 used on input line 8.
+(pdftex.def)             Requested size: 287.0718pt x 152.56963pt.
  [1
 
 
 Non-PDF special ignored!
 Non-PDF special ignored!
-Non-PDF special ignored! <./TankDiagram1-pics.pdf>] (TankDiagram1.aux) ) 
+Non-PDF special ignored! <./TankDiagram2-pics.pdf>] (TankDiagram2.aux) ) 
 Here is how much of TeX's memory you used:
- 11228 strings out of 493634
- 201591 string characters out of 3149836
+ 11227 strings out of 493634
+ 201586 string characters out of 3149836
  308156 words of memory out of 3000000
- 14408 multiletter control sequences out of 15000+200000
+ 14407 multiletter control sequences out of 15000+200000
  3640 words of font info for 14 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  44i,5n,56p,602b,318s stack positions out of 5000i,500n,10000p,200000b,50000s
 
-Output written on TankDiagram1.pdf (1 page, 8295 bytes).
+Output written on TankDiagram2.pdf (1 page, 7817 bytes).
 PDF statistics:
  21 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)

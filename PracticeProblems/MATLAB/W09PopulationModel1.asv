@@ -1,4 +1,0 @@
-%% Population model with harvesting
-T0 = 
-
-DE = @(t, P) (10-P).*P - h(t);

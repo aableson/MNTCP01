@@ -39,8 +39,8 @@
  (6.3,-0.72)
  (7.0,0)
 }
-\rput{0}(-1,0){\tankk}  
-\rput{0}(10,0){\tank}  
+\rput{0}(0,0){\tank}  
+\rput{0}(10,0){\tankk}  
 
 
 % Pipes
@@ -60,17 +60,26 @@
 \psline[linewidth=2.5\pslinewidth]{<-}(7,1.5)(9,1.5)
 \psline[linewidth=2.5\pslinewidth]{->}(17,1.5)(20,1.5)
 
+% Extra inflow/outflow pipes
+\rput{0}(-6,1){\pipe}  
+\psline[linewidth=2.5\pslinewidth]{<-}(-5,1.5)(-3,1.5)
+\rput(-4,0){4 L/min}
+\rput{0}(14,5){\pipe}  
+\psline[linewidth=2.5\pslinewidth]{<-}(17,5.5)(20,5.5)
+\rput(19,7){7 L/min}
+\rput(19,4.5){3 g/L}
+
 % Flow rates
-\rput(-4,7){10 L/min}
-\rput(8,7){14 L/min}
-\rput(8,0){6 L/min}
-\rput(19,0){10 L/min}
+\rput(-4,7){5 L/min}
+\rput(8,7){3 L/min}
+\rput(8,0){2 L/min}
+\rput(19,0){8 L/min}
 
 % In concentration
-\rput(-4,4){70 g/L}
+\rput(-4,4.5){7 g/L}
 
 % Volumes
-\rput(2.5,3.5){$V_A $ L }
-\rput(12.5,3.5){$V_B $ L }
+\rput(2.5,3.5){$V_A=100 $ L }
+\rput(13.5,3.5){$V_B=200 $ L }
 \end{pspicture}
 \end{document}

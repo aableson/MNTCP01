@@ -40,16 +40,14 @@ acceleration due to gravity, $9.8 $ m/s.
 
 For each set of values for $L$ and $\theta_0$ given below,
 \begin{enumerate}[(a)]
-\item Use the MATLAB \verb#integral# function to find the period of
-  the pendulum oscillations by evaluating the integral given above,
+\item Use \verb#integral# to find the period of the pendulum oscillations,
   and
 \item confirm the period by using \verb#ode45# to simulate the motion
-  of the pendulum for exactly that length of time, and plot a graph of
-  the angular {\bf velocity} against time.  The velocity should just
-  reach zero at the end of one cycle.
+  pendulum for exactly that length of time, and plot a graph of the
+  angular {\bf velocity} against time.  The velocity should just reach
+  zero at the end of one cycle.
 \end{enumerate}
 
-Do this with the following sets of $L$ and $\theta_0$ values.
 \begin{enumerate}[(i)]
 \item $L = 2$ m, $\theta_0 = 40^o$, 
 \item $L =2.5$ m, $\theta_0 = 20^o$.
@@ -76,10 +74,6 @@ Plots: \\
 \includegraphics[width=0.33\linewidth]{graphics/Week09_Pendulum/pendulum_nofriction_2} 
 \includegraphics[width=0.33\linewidth]{graphics/Week09_Pendulum/pendulum_nofriction_3} 
 \end{Solution}
-
-In all the graphs, we see that that the velocity returns to 0 at the
-end of the cycle, indicating that our integral calculation of the
-period matches the period from the \verb#ode45# simulation.
 
 %*******************************
 \item
@@ -120,22 +114,19 @@ Consider the motion of a pendulum, this time {\bf with} friction.
 \end{Question}
 
 \begin{Solution}
-
-\begin{enumerate}[(a)]
-\item 
 Link to the MATLAB code: \\
 \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/W09Pendulum1.m}{W09Pendulum2.m} \\
 \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/pendulumDE.m}{pendulumDE.m} \\
 
-Here is the graph of the angle over time for the pendulum, when it has no initial velocity.
+\begin{enumerate}[(a)]
+\item Here is the graph of the angle over time for the pendulum, when it has no initial velocity.
 
-\includegraphics[width=0.45\linewidth]{graphics/Week09_Pendulum/pendulum_overtop_1} 
+\includegraphics[width=0.33\linewidth]{graphics/Week09_Pendulum/pendulum_overtop_1} 
 
 \item With some experimentation, we find that an initial angular
   velocity of $\theta'(0) = 1.1$ rad/s will be enough to push the
-  pendulum over the top of the axis of rotation. Comparing
-  $\theta'(0) = 1.1$ and 1.0, we obtain the following graph of angle
-  against time.
+  pendulum over the top of the axis. Comparing $\theta'(0) = 1.1$ and
+  1.0, we obtain the following graph of angle against time.
 
 \includegraphics[width=0.5\linewidth]{graphics/Week09_Pendulum/pendulum_overtop_2} 
 
@@ -202,13 +193,11 @@ Here is the graph of the angle over time for the pendulum, when it has no initia
 \item Note: to see anything interesting in this simulation, you have
   to simulate for a {\bf long} simulation time, i.e. a long
   \verb#tspan#.  Here are two graphs of the simulation results, one
-  with 1000 minutes, and then with 1 million minutes.
+  with 1000 minutes, and one with 1 million minutes.
 
 \includegraphics[width=0.45\linewidth]{graphics/Week09_Pendulum/single_tank_1a} \hfill
 \includegraphics[width=0.45\linewidth]{graphics/Week09_Pendulum/single_tank_1b} 
 
-The reason a long simulation time is needed is because adding 60 L/min
-to a 2 million liter pool takes a long time to have an effect.
 \item As $t \to \infty$, we see the graph of $S(t)$ plateau at $S \to 2 \times 10^7$ grams.
 
 \item We expect that the salt in the aquarium will tend to the same
@@ -226,15 +215,15 @@ to a 2 million liter pool takes a long time to have an effect.
 % ****************************************
 \item 
 \begin{Question}
-  A 150 liter tank initially contains 60 liters of water with 0.5 kgs
+  A 150 litre tank initially contains 60 litres of water with 0.5 kgs
   of salt dissolved in it.  Water enters the tank at a rate of 0.9
-  liters/hr and the water entering the tank has a salt concentration
-  of $\frac{1}{5}(1 + \cos (t))$ kgs/liter. 
+  litres/hr and the water entering the tank has a salt concentration
+  of $\frac{1}{5}(1 + \cos (t))$ kgs/litre. 
   \begin{enumerate}[(a)]
   \item Draw a diagram of the inflow and outflow for this scenario.
   \item Build a formula for the volume of water in the tank over time.
   \item Find out how long it will be until the tank overflows.
-  \item Write a differential equation that describes the rate of
+  \item Write a differential equation that describest the rate of
     change of the {\bf amount of salt} in the tank.
   \item Use MATLAB to generate a graph of the amount of salt in the
     tank over time, up until the tank overflows.
@@ -280,8 +269,8 @@ to a 2 million liter pool takes a long time to have an effect.
 
 \item By either zooming in, or typing \verb#S# at the MATLAB command
   line to show all the \verb#S# values coming out of the simulation
-  and grabbing the last one, we find at the end of 300 hours that
-  there is $S(300) \approx 27.6212$ kg of salt in the tank.
+  and grabbing the last one, we at the end of 300 hours that
+  $S(300) \approx 27.6212$ kg of salt in the tank.
 
   \end{enumerate}
   
@@ -374,8 +363,25 @@ models as the {\em highest harvest rate for which the population is
 
 \includegraphics[width=3in]{graphics/Week09_PopulationModels/population_harvesting_1a}
 
-\item Through trial and error, we find that there is a transition in
-  behaviour between $k_1 = 25$ and $k_1 = 26$.
+\item Note that trial and error is just fine for this problem.  If the
+  next paragraph doesn't make sense to you, feel free to skip it.  The
+  important thing is to be able to do the simulations, and to generate
+  the appropriate graphs.
+
+  To get an analytic answer for the maximum sustainable harvest rate,
+  we look more closely at the differential equation. We're worried
+  about the population of the fish always decreasing, which would mean
+  a derivative $\frac{dP}{dt}$ always being negative.  That would
+  happen if the quadratic part was always smaller than $h_1 = k_1$.
+  Looking at the quadratic $(10-P)P$, it will be largest at $P= 5$
+  (halfway between the roots of $P=0$ and $P=10$, and will produce a
+  maximum growth rate then of $(10 - 5)5 = 25$.  If we set $k_1 = 25$,
+  we should just be on the threshold of sustainability.  Any value
+  larger than that, and the population rate of change will always be
+  negative, leading to population collapse.
+
+  Plotting the solution for the constant harvest model at $k_1 = 25$
+  and $k_1 = 26$ supports this hypothesis.
 \begin{center}
 \includegraphics[width=3in]{graphics/Week09_PopulationModels/population_harvesting_1b}
 \end{center}
@@ -385,7 +391,7 @@ important, because once the population $P$ drops below zero, the
 differential equation solution will keep going down forever.  Here's
 the graph {\em without} the \verb#ylim# command:
 \begin{center}
-\includegraphics[width=3in]{graphics/Week09_PopulationModels/population_harvesting_1c}
+\includegraphics[width=3in]{graphics/Week09_PopulationModels/population_harvesting_1b}
 \end{center}
 Notice the vertical scales shows $10^{13}$, indicating that the
 negative values predicted by the model are huge, and much larger than
@@ -394,9 +400,10 @@ values are essentially meaningless for populations, so using the
 \verb#ylim# command to focus the attention on the relevant population
 range is a reasonable tactic to make the graphs useful.
 
-\item In the seasonal harvest scenario, we experiment with values of
-  $k_2$, and find that between $k_2 = 16$ and $k_2 = 17$, we see our
-  seasonal pattern stop repeating and start reaching extinction:
+\item In the seasonal harvest scenario, we simply experiment with
+  values of $k_2$, and find that between $k_2 = 16$ and $k_2 = 17$, we
+  see our seasonal pattern stop repeating and start reaching
+  extinction:
 
 \begin{center}
 \includegraphics[width=3in]{graphics/Week09_PopulationModels/population_harvesting_1d}
@@ -404,9 +411,9 @@ range is a reasonable tactic to make the graphs useful.
 
 \item Based on these experiments, it seems that seasonal harvesting
   leads to extinction at lower average harvesting levels, because a
-  lower average rate of harvest ($k_2$ = 17 thousand fish per year)
-  leads to extinction, compared to the constant harvest case (where
-  $k_1$ = 26 thousand fish per year can be harvested).
+  lower average rate of harvest (16 thousand fish per year) leads to
+  extinction, compared to the constant harvest case (where 25 thousand
+  fish per year can be harvested).
 \end{enumerate}
 \end{Solution}
 
@@ -470,7 +477,7 @@ kept well stirred.
   rate of $2$ L/min, a volume of 200 L in Tank B, and the amount of
   salt $S_B$.
 
-\item To implement this system of equations in MATLAB, we define a
+\item To implement this syste of equations in MATLAB, we define a
   vector $\vec{w} = [S_A, S_B]$, and then write the differential
   equation system in a separate MATLAB function file, here called \\
 \href{http://www.mast.queensu.ca/~apsc171/MNTCP01/PracticeProblems/MATLAB/tankSystem1.m}{tankSystem1.m} 
@@ -575,11 +582,11 @@ $\ds  C = \frac{S}{V}$ and $\ds \frac{dC}{dt} = \frac{1}{V} \frac{dS}{dt}$.
   $S_A(0) = C_A(0) V_A = (10 \text{ g/L})(100 \text{ L}) = 1000 \text{
     g}$
 
-  After all the mixing the 1000 g of salt will be evenly distributed
+  After all the mixing the 1000 g of salt will be evenl distrubted
   over the whole volume which is
   $V_A + V_B + V_C = 100 + 200 + 100 = 400$ L, so a final
   concentration of $ \ds\frac{1000 \text{ g}}{400 \text{ L}} = 2.5$
-  g/L in every tank.
+  g/L.
   \end{enumerate}
 \end{Solution}
 
