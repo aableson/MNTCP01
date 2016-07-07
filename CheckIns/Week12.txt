@@ -3,10 +3,10 @@ The determinant of a matrix:
 ---Type
 onechoice
 ---Answers
-=\( Is a way to find out whether a matrix is a basis or not. \)
-~\( Gives information about what a matrix does to a vector. \)
-~\( Determines how much work is involved in finding an orthonormal basis. \)
-~\( Answers 1 and 2. \)
+= Is a way to find out whether a matrix is a basis or not. 
+~ Gives information about what a matrix does to a vector. 
+~ Determines how much work is involved in finding an orthonormal basis. 
+~ Answers (a) and (b).
 ---Comment
 Check the notes!
 
@@ -16,14 +16,14 @@ Diagonalizing a symmetric matrix yields:
 ---Type
 onechoice
 ---Answers
-~\( A matrix of zeros. \)
-~\( A matrix of 1's along the diagonal, zeros everywhere else. \)
-=\( A matrix that has the eigenvalues along the diagonal, zeros everywhere else. \)
-~\( A matrix that has the eigenvalues along the diagonal, ones everywhere else. \)
+~ A matrix of zeros. 
+~ A matrix of 1's along the diagonal, zeros everywhere else. 
+= A matrix that has the eigenvalues along the diagonal, zeros everywhere else. 
+~ A matrix that has the eigenvalues along the diagonal, ones everywhere else. 
 ---Comment
 
 ---Question
-When setting up the system of first order differential equations, we have to choose the following variable substitutions.
+When setting up a system of first order differential equations, we have to choose the following variable substitutions.
 ---Type
 onechoice
 ---Answers
@@ -32,4 +32,6 @@ onechoice
 ~\(y_1 = y, y_2 = y'' \)
 ~\(y_1 = y', y_2' = y'' \)
 ---Comment
+
+See the notes from Week 8 and 9 as a reminder.
 
