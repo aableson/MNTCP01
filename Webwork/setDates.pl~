@@ -1,0 +1,114 @@
+#!/usr/bin/perl -w
+use File::Copy;
+use DateTime;
+
+opendir($dir, ".") or die "Unable to open current directory";
+#$term = "S";
+ $term = "FW";
+
+
+FILE: while($filename = readdir($dir)) {
+$first_webwork_due_date_fall = DateTime->new(      
+      year       => 2015,
+      month      => 9,
+      day        => 23,
+      hour       => 10, minute     => 00, 
+    locale => "en_US", 
+    );
+
+$first_webwork_due_date_winter = DateTime->new(      
+      year       => 2016,
+      month      => 1,
+      day        => 13,
+      hour       => 10, minute     => 00, 
+    locale => "en_US", 
+    );
+
+$webwork_open_date = DateTime->new(      
+      year       => 2015,
+      month      => 9,
+      day        => 1,
+      hour       => 10, minute     => 00, 
+    locale => "en_US", 
+    );
+    if ($filename !~ /.def$/) {
+	next FILE;
+    }
+
+
+    # If the file has Unit_##_.... or Review then it is a grouping set 
+#    if ($filename =~ /_(\d\d)_/) {
+#	$unit = $1;
+#	print "Unit $1: $filename\n";
+#
+# 	open(OUTPUT_FILE, ">tmpfile") or die "Unable to open tmpfile\n";
+# 	open(INPUT_FILE, $filename) or die "Unable to open $filename\n";
+#	@lines = <INPUT_FILE>;
+#	for ($i = 0; $i < @lines; $i++) {
+#	    if ($lines[$i] =~ /openDate/) {
+#		$lines[$i] = "openDate          = 01/$unit/2010 at 01:00pm EDT\n";
+#	    }
+#	    elsif ($lines[$i] =~ /dueDate/) {
+#		$lines[$i] = "dueDate           = 01/$unit/2010 at 02:00pm EDT\n";
+#		
+#	    } 	
+#	    elsif ($lines[$i] =~ /answerDate/) {
+#		$lines[$i] = "answerDate        = 01/$unit/2010 at 02:00pm EDT\n";
+#		
+#	    } 	
+#	}
+#	print OUTPUT_FILE @lines;
+#
+#	close(OUTPUT_FILE);
+#	close(INPUT_FILE);
+#	copy("tmpfile", $filename);
+#	
+#    }
+
+    # *** Actual unit 
+    elsif ($filename =~ /setUnit_(\d\d).def/) {
+	$unit = $1;
+	print "Unit $1: $filename\n";
+	$unit_text = $unit; # nice text - no leading zeros
+	$unit_text =~  s/^0+//;
+
+	$week_count = ($unit_text+0);
+	print "Week count: $week_count\n";
+	if ($week_count <= 12) {
+	    $webwork_due_date = $first_webwork_due_date_fall;
+	    $webwork_due_date->add( days => 7*($week_count - 1) );
+	} elsif ($week_count > 12 && $week_count <= 18) {
+	    $webwork_due_date = $first_webwork_due_date_winter;
+	    $webwork_due_date->add( days => 7*($week_count - 13) );
+	} else {
+	    $webwork_due_date = $first_webwork_due_date_winter;
+	    $webwork_due_date->add( days => 7*($week_count - 12) ); # advance by one week for reading week.
+	}
+
+ 	open(OUTPUT_FILE, ">tmpfile") or die "Unable to open tmpfile\n";
+ 	open(INPUT_FILE, $filename) or die "Unable to open $filename\n";
+	@lines = <INPUT_FILE>;
+	for ($i = 0; $i < @lines; $i++) {
+	    if ($lines[$i] =~ /openDate/) {
+		$lines[$i] = "openDate          = " . $webwork_open_date->strftime('%m/%d/%Y at 10:00am EDT') . "\n";
+	    }
+	    elsif ($lines[$i] =~ /dueDate/) {
+		$lines[$i] = "dueDate           = " . $webwork_due_date->strftime('%m/%d/%Y at 10:00am EDT') . "\n";
+		
+	    } 	
+	    elsif ($lines[$i] =~ /answerDate/) {
+		$lines[$i] = "answerDate        = " . $webwork_due_date->strftime('%m/%d/%Y at 10:00am EDT') . "\n";
+		
+	    } 	
+	}
+	print OUTPUT_FILE @lines;
+
+	close(OUTPUT_FILE);
+	close(INPUT_FILE);
+	copy("tmpfile", $filename);
+	
+    }
+
+
+
+}
