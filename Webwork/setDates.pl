@@ -27,7 +27,7 @@ $webwork_open_date = DateTime->new(
 	$unit_text =~  s/^0+//;
 
 	# Replace the current header with the default gateway quiz header
-	$/ = 'perl'; 	
+	$/ = ''; 	
 	open(INPUT_FILE, $filename) or die "Unable to open $filename\n";
 	
  	close(INPUT_FILE);
