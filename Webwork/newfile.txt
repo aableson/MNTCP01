@@ -1,8 +1,8 @@
 assignmentType      = gateway
-openDate          = 09/01/2016 at 10:00am EDT
+openDate          = 08/01/2016 at 11:59pm EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 10/07/2016 at 10:00am EDT
-answerDate        = 10/07/2016 at 10:00am EDT
+dueDate           = 08/25/2016 at 11:59pm EDT
+answerDate        = 08/27/2016 at 11:59pm EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
@@ -19,7 +19,5 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week03_TaylorPolynomials,	1,	-1
-group:Week03_TaylorPolynomials_MATLAB,	1,	-1
-group:Week03_OptimizationWordProblems,	1,	-1
-group:Week03_Optimization_MATLAB,	1,	-1
+LibraryQueens/MNTC/MATLAB_12_DeterminantsAndDiagonalization/q_001.pg,	1,	-1
+LibraryQueens/MNTC/MATLAB_13_HigherOrderDEs/q_001.pg,	1,	-1

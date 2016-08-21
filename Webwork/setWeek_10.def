@@ -1,9 +1,23 @@
- 
+assignmentType      = gateway
 openDate          = 09/01/2016 at 10:00am EDT
+reducedScoringDate = 12/31/1969 at 07:00pm EST
 dueDate           = 11/25/2016 at 10:00am EDT
 answerDate        = 11/25/2016 at 10:00am EDT
-paperHeaderFile   = 
+enableReducedScoring = N
+paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
+attemptsPerVersion  = 3
+timeInterval        = 0
+versionsPerInterval = 0
+versionTimeLimit    = 3600
+problemRandOrder    = 0
+problemsPerPage     = 0
+hideScore           = N
+hideWork            = N
+capTimeLimit        = 1
+description       = 
+restrictProbProgression = 0
+emailInstructor   = 0
 problemList       =  
 group:Week10_UnitVectors,	1,	-1
 LibraryQueens/MNTC/Concepts_04_DotProduct/q_001.pg,	1,	-1
