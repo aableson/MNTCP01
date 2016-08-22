@@ -53,7 +53,7 @@ $webwork_open_date = DateTime->new(
 
 	$week_count = ($unit_text+0);
 	print "Week count: $week_count\n";
-	$webwork_due_date = $first_webwork_due_date_fall;
+	$webwork_due_date = $first_webwork_due_date_fall->clone;
 	$webwork_due_date->add( days => 7*($week_count - 1) );
  	open(OUTPUT_FILE, ">tmpfile") or die "Unable to open tmpfile\n";
  	open(INPUT_FILE, $filename) or die "Unable to open $filename\n";

@@ -2,8 +2,13 @@
 use File::Copy;
 use DateTime;
 
-opendir($dir, ".") or die "Unable to open current directory";
+# Read in the gateway template information
+$gateway_header_filename = "gateway_template.txt";
+open(GATEWAY_HEADER_FILE, $gateway_header_filename) or die "Unable to open $gateway_header_filename\n"; 
+@gateway_header = <GATEWAY_HEADER_FILE>;
+close(GATEWAY_HEADER_FILE);
 
+opendir($dir, ".") or die "Unable to open current directory";
 FILE: while($filename = readdir($dir)) {
 $first_webwork_due_date_fall = DateTime->new(      
       year       => 2016,
@@ -27,11 +32,24 @@ $webwork_open_date = DateTime->new(
 	$unit_text =~  s/^0+//;
 
 	# Replace the current header with the default gateway quiz header
-	$/ = ''; 	
+	@updated_file_lines = @gateway_header;
 	open(INPUT_FILE, $filename) or die "Unable to open $filename\n";
-	
+	$in_header = 1;
+      LINE: while ($line = <INPUT_FILE>) {
+	  if ($line =~ /^problemList/) {
+	      $in_header = 0;
+	  }
+	  if ($in_header == 0) {
+	      push(@updated_file_lines, $line);
+	  }
+	  
+      }
  	close(INPUT_FILE);
-	
+	map(s/[\r\n]$//, @updated_file_lines);
+	map(s/[\r\n]$//, @updated_file_lines);
+	open(OUTPUT_FILE, ">$filename");
+	print OUTPUT_FILE join("\n", @updated_file_lines) . "\n";
+	close(OUTPUT_FILE);
 
 	$week_count = ($unit_text+0);
 	print "Week count: $week_count\n";
@@ -63,4 +81,5 @@ $webwork_open_date = DateTime->new(
 }
 
 # Package all the .def files into a tar gz archive for uploading
+print "Creating the tar file AllSets.tgz\n";
 system("tar cvzf AllSets.tgz *.def");

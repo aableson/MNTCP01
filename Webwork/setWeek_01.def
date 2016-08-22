@@ -19,13 +19,13 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week01_constant,	1,	-1
-group:Week01_dec_powers,	1,	-1
-group:Week01_trig,	1,	-1
-group:Week01_exp,	1,	-1
-group:Week01_not_natural_exp,	1,	-1
-group:Week01_logs,	1,	-1
-group:Week01_Prod_Rule,	1,	-1
-group:Week01_Quot_Rule,	1,	-1
-group:Week01_Chain_Rule,	1,	-1
-group:Week01_Two_rules,	1,	-1
+group:Week_01_constant,	1,	-1
+group:Week_01_dec_powers,	1,	-1
+group:Week_01_trig,	1,	-1
+group:Week_01_exp,	1,	-1
+group:Week_01_not_natural_exp,	1,	-1
+group:Week_01_logs,	1,	-1
+group:Week_01_Prod_Rule,	1,	-1
+group:Week_01_Quot_Rule,	1,	-1
+group:Week_01_Chain_Rule,	1,	-1
+group:Week_01_Two_rules,	1,	-1

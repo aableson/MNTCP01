@@ -19,7 +19,7 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week05_ByParts,	1,	-1
-group:Week05_Exp,	1,	-1
-group:Week05_Powers,	1,	-1
-group:Week05_Substitution,	1,	-1
+group:Week_05_ByParts,	1,	-1
+group:Week_05_Exp,	1,	-1
+group:Week_05_Powers,	1,	-1
+group:Week_05_Substitution,	1,	-1

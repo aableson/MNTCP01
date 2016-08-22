@@ -19,6 +19,6 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week06_AverageValue,	1,	-1
+group:Week_06_AverageValue,	1,	-1
 LibraryQueens/MNTC/MATLAB_06_IntegrationAndLHR/q_001.pg,	1,	-1
 LibraryQueens/MNTC/MATLAB_07_IntegralMATLAB/q_001.pg,	1,	-1

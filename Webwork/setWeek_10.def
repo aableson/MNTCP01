@@ -19,6 +19,6 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week10_UnitVectors,	1,	-1
+group:Week_10_UnitVectors,	1,	-1
 LibraryQueens/MNTC/Concepts_04_DotProduct/q_001.pg,	1,	-1
 LibraryQueens/MNTC/Concepts_05_MatrixTransposeAndInverse/q_001.pg,	1,	-1

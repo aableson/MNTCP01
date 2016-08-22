@@ -19,7 +19,7 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week04_DistanceAndVelocity,	1,	-1
-group:Week04_TheDefiniteIntegral,	1,	-1
-group:Week04_InterpretingDefiniteIntegrals,	1,	-1
-group:Week04_IntegrationByAntiDerivatives,	1,	-1
+group:Week_04_DistanceAndVelocity,	1,	-1
+group:Week_04_TheDefiniteIntegral,	1,	-1
+group:Week_04_InterpretingDefiniteIntegrals,	1,	-1
+group:Week_04_IntegrationByAntiDerivatives,	1,	-1

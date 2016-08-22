@@ -19,7 +19,7 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week03_TaylorPolynomials,	1,	-1
-group:Week03_TaylorPolynomials_MATLAB,	1,	-1
-group:Week03_OptimizationWordProblems,	1,	-1
-group:Week03_Optimization_MATLAB,	1,	-1
+group:Week_03_TaylorPolynomials,	1,	-1
+group:Week_03_TaylorPolynomials_MATLAB,	1,	-1
+group:Week_03_OptimizationWordProblems,	1,	-1
+group:Week_03_Optimization_MATLAB,	1,	-1

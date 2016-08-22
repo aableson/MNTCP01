@@ -19,6 +19,6 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week11_AugmentedMatrix,	1,	-1
-group:Week11_SolvingLinearSystems,	1,	-1
+group:Week_11_AugmentedMatrix,	1,	-1
+group:Week_11_SolvingLinearSystems,	1,	-1
 LibraryQueens/MNTC/MATLAB_12_DeterminantsAndDiagonalization/q_001.pg,	1,	-1

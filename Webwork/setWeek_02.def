@@ -19,7 +19,7 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Unit_04_Tangent_Lines,	1,	-1
+group:Week_02_Tangent_Lines,	1,	-1
 LibraryQueens/MNTC/MATLAB_01_Graphing/q_001.pg,	1,	-1
 LibraryQueens/MNTC/MATLAB_02_GraphingMultipleGraphs/q_001.pg,	1,	-1
-group:Unit_04_NewtonsMethod,	1,	-1
+group:Week_02_NewtonsMethod,	1,	-1
