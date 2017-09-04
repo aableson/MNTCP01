@@ -11,7 +11,7 @@ close(GATEWAY_HEADER_FILE);
 opendir($dir, ".") or die "Unable to open current directory";
 FILE: while($filename = readdir($dir)) {
 $first_webwork_due_date_fall = DateTime->new(      
-      year       => 2016,
+      year       => 2017,
       month      => 9,
       day        => 23,
       hour       => 10, minute     => 00, 
@@ -19,7 +19,7 @@ $first_webwork_due_date_fall = DateTime->new(
     );
 
 $webwork_open_date = DateTime->new(      
-      year       => 2016,
+      year       => 2017,
       month      => 9,
       day        => 1,
       hour       => 10, minute     => 00, 
@@ -60,14 +60,14 @@ $webwork_open_date = DateTime->new(
 	@lines = <INPUT_FILE>;
 	for ($i = 0; $i < @lines; $i++) {
 	    if ($lines[$i] =~ /openDate/) {
-		$lines[$i] = "openDate          = " . $webwork_open_date->strftime('%m/%d/%Y at %H:00am EDT') . "\n";
+		$lines[$i] = "openDate          = " . $webwork_open_date->strftime('%m/%d/%Y at %H:00%P EDT') . "\n";
 	    }
 	    elsif ($lines[$i] =~ /dueDate/) {
-		$lines[$i] = "dueDate           = " . $webwork_due_date->strftime('%m/%d/%Y at %H:00am EDT') . "\n";
+		$lines[$i] = "dueDate           = " . $webwork_due_date->strftime('%m/%d/%Y at %H:00%P EDT') . "\n";
 		
 	    } 	
 	    elsif ($lines[$i] =~ /answerDate/) {
-		$lines[$i] = "answerDate        = " . $webwork_due_date->strftime('%m/%d/%Y at %H:00am EDT') . "\n";
+		$lines[$i] = "answerDate        = " . $webwork_due_date->strftime('%m/%d/%Y at %H:00%P EDT') . "\n";
 		
 	    } 	
 	}

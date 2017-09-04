@@ -1,8 +1,8 @@
 assignmentType      = gateway
-openDate          = 09/01/2016 at 10:00am EDT
+openDate          = 09/01/2017 at 10:00am EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 11/04/2016 at 10:00am EDT
-answerDate        = 11/04/2016 at 10:00am EDT
+dueDate           = 11/18/2017 at 10:00am EDT
+answerDate        = 11/18/2017 at 10:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
@@ -19,5 +19,7 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week_07_VerifyingSolutions,	1,	-1
-LibraryQueens/MNTC/MATLAB_08_SimpleDifferentialEquations/q_001.pg,	1,	-1
+LibraryQueens/MNTC/Concepts_01_ConvertingDEToFirstOrder/q_001.pg,	1,	-1
+group:Week_08_SpringSystemConcepts,	1,	-1
+LibraryQueens/MNTC/MATLAB_09_TemperatureAndSpringModels/q_001.pg,	1,	-1
+LibraryQueens/MNTC/Concepts_02_ClassifyingDEs/q_001.pg,	1,	-1

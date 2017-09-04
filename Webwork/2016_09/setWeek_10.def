@@ -1,8 +1,8 @@
 assignmentType      = gateway
-openDate          = 09/01/2016 at 10:00am EDT
+openDate          = 09/01/2017 at 10:00am EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 09/30/2016 at 10:00am EDT
-answerDate        = 09/30/2016 at 10:00am EDT
+dueDate           = 11/25/2017 at 10:00am EDT
+answerDate        = 11/25/2017 at 10:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
@@ -19,7 +19,6 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week_02_Tangent_Lines,	1,	-1
-LibraryQueens/MNTC/MATLAB_01_Graphing/q_001.pg,	1,	-1
-LibraryQueens/MNTC/MATLAB_02_GraphingMultipleGraphs/q_001.pg,	1,	-1
-group:Week_02_NewtonsMethod,	1,	-1
+group:Week_10_UnitVectors,	1,	-1
+LibraryQueens/MNTC/Concepts_04_DotProduct/q_001.pg,	1,	-1
+LibraryQueens/MNTC/Concepts_05_MatrixTransposeAndInverse/q_001.pg,	1,	-1

@@ -1,8 +1,8 @@
 assignmentType      = gateway
-openDate          = 09/01/2016 at 10:00am EDT
+openDate          = 09/01/2017 at 10:00am EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 10/14/2016 at 10:00am EDT
-answerDate        = 10/14/2016 at 10:00am EDT
+dueDate           = 10/21/2017 at 10:00am EDT
+answerDate        = 10/21/2017 at 10:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
@@ -19,7 +19,7 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-group:Week_04_DistanceAndVelocity,	1,	-1
-group:Week_04_TheDefiniteIntegral,	1,	-1
-group:Week_04_InterpretingDefiniteIntegrals,	1,	-1
-group:Week_04_IntegrationByAntiDerivatives,	1,	-1
+group:Week_05_ByParts,	1,	-1
+group:Week_05_Exp,	1,	-1
+group:Week_05_Powers,	1,	-1
+group:Week_05_Substitution,	1,	-1
