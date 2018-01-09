@@ -1,8 +1,8 @@
 assignmentType      = gateway
 openDate          = 01/01/2018 at 10:00am EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 04/01/2018 at 10:00am EDT
-answerDate        = 04/01/2018 at 10:00am EDT
+dueDate           = 03/04/2018 at 10:00am EDT
+answerDate        = 03/04/2018 at 10:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
@@ -19,5 +19,7 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-LibraryQueens/MNTC/MATLAB_12_DeterminantsAndDiagonalization/q_001.pg,	1,	-1
-LibraryQueens/MNTC/MATLAB_13_HigherOrderDEs/q_001.pg,	1,	-1
+LibraryQueens/MNTC/Concepts_01_ConvertingDEToFirstOrder/q_001.pg,	1,	-1
+group:Week_08_SpringSystemConcepts,	1,	-1
+LibraryQueens/MNTC/MATLAB_09_TemperatureAndSpringModels/q_001.pg,	1,	-1
+LibraryQueens/MNTC/Concepts_02_ClassifyingDEs/q_001.pg,	1,	-1

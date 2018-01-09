@@ -1,8 +1,8 @@
 assignmentType      = gateway
 openDate          = 01/01/2018 at 10:00am EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 04/01/2018 at 10:00am EDT
-answerDate        = 04/01/2018 at 10:00am EDT
+dueDate           = 02/04/2018 at 10:00am EDT
+answerDate        = 02/04/2018 at 10:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 
@@ -19,5 +19,7 @@ description       =
 restrictProbProgression = 0
 emailInstructor   = 0
 problemList       =  
-LibraryQueens/MNTC/MATLAB_12_DeterminantsAndDiagonalization/q_001.pg,	1,	-1
-LibraryQueens/MNTC/MATLAB_13_HigherOrderDEs/q_001.pg,	1,	-1
+group:Week_04_DistanceAndVelocity,	1,	-1
+group:Week_04_TheDefiniteIntegral,	1,	-1
+group:Week_04_InterpretingDefiniteIntegrals,	1,	-1
+group:Week_04_IntegrationByAntiDerivatives,	1,	-1
