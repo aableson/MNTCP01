@@ -1,8 +1,8 @@
 assignmentType      = gateway
-openDate          = 01/01/2018 at 10:00am EDT
+openDate          = 04/01/2019 at 10:00am EDT
 reducedScoringDate = 12/31/1969 at 07:00pm EST
-dueDate           = 01/14/2018 at 10:00am EDT
-answerDate        = 01/14/2018 at 10:00am EDT
+dueDate           = 05/15/2019 at 10:00am EDT
+answerDate        = 05/15/2019 at 10:00am EDT
 enableReducedScoring = N
 paperHeaderFile   = defaultHeader
 screenHeaderFile  = 

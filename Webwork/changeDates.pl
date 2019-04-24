@@ -11,16 +11,16 @@ close(GATEWAY_HEADER_FILE);
 opendir($dir, ".") or die "Unable to open current directory";
 FILE: while($filename = readdir($dir)) {
 $first_webwork_due_date_fall = DateTime->new(      
-      year       => 2018,
-      month      => 1,
-      day        => 14,
+      year       => 2019,
+      month      => 5,
+      day        => 15,
       hour       => 10, minute     => 00, 
     locale => "en_US", 
     );
 
 $webwork_open_date = DateTime->new(      
-      year       => 2018,
-      month      => 1,
+      year       => 2019,
+      month      => 4,
       day        => 1,
       hour       => 10, minute     => 00, 
     locale => "en_US", 
